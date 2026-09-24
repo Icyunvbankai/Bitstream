@@ -164,7 +164,7 @@
       var note=document.getElementById('platform-notice');document.querySelectorAll('button.platform').forEach(function(btn){btn.addEventListener('click',function(){note.textContent=btn.dataset.platform+' is coming soon. The link will appear here when that feed is live.';});});
 
       var dform=document.getElementById('deals-form');
-      if(dform){dform.addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('join-msg');var ep=dform.getAttribute('action');if(ep.indexOf('YOUR_FORM_ID')!==-1){msg.textContent='Signup opens soon \u2014 the list is being connected.';return;}fetch(ep,{method:'POST',body:new FormData(dform),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){dform.reset();msg.textContent='You\u2019re in! Watch your inbox for this week\u2019s drops.';}else{msg.textContent='Something went wrong \u2014 please try again.';}}).catch(function(){msg.textContent='Something went wrong \u2014 please try again.';});});}
+      if(dform){dform.addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('join-msg');var ep=dform.getAttribute('action');fetch(ep,{method:'POST',body:new FormData(dform),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){dform.reset();msg.textContent='You\u2019re in! Watch your inbox for this week\u2019s drops.';}else{msg.textContent='Something went wrong \u2014 please try again.';}}).catch(function(){msg.textContent='Something went wrong \u2014 please try again.';});});}
     }());
   </script>
 </body>
