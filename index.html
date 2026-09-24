@@ -29,6 +29,40 @@
     .launch{border-top:1px solid var(--line);padding:32px 0 50px}.launch-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.launch h3{margin:0 0 9px}.launch p{margin:0;color:var(--muted);font-size:14px}.footnote{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:26px}
     @media(max-width:780px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:660px;background-position:62% center}.hero:after{background:linear-gradient(90deg,rgba(9,12,13,.96),rgba(9,12,13,.64)),linear-gradient(0deg,rgba(9,12,13,.94),transparent 55%)}.hero-inner{padding:58px 0}.hero h1{font-size:52px}.ticker .wrap{font-size:10px;gap:10px}.section{padding:66px 0}.section-head,.why-grid,.newsletter,.launch-grid{grid-template-columns:1fr}.episode{grid-template-columns:52px 1fr;padding:20px;gap:16px}.ep-num{font-size:24px}.episode-btn{grid-column:1/-1;width:100%;height:44px}.details{grid-column:1/-1}.why-grid{gap:30px}.platforms{grid-template-columns:1fr 1fr}.ad-grid{grid-template-columns:1fr}.newsletter{margin-bottom:60px;padding:30px 22px}.newsletter .btn{width:100%;justify-content:center}.section-head{gap:15px}}
     @media(max-width:430px){.hero h1{font-size:43px}.platforms{grid-template-columns:1fr}.ticker .wrap span:last-child{display:none}.section h2{font-size:38px}.episode h3{font-size:20px}.reasons li{grid-template-columns:36px 1fr}}
+
+    .store{background:var(--dark);color:var(--white)}
+    .store .kicker{color:#62dfeb}
+    .store .lede{color:#b9c2bf}
+    .store-cat{font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#ff7967;margin:46px 0 18px}
+    .store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .deal{background:var(--dark2);border:1px solid #2b3334;display:flex;flex-direction:column;overflow:hidden}
+    .deal-img{background:#0b0e0e;aspect-ratio:4/3;overflow:hidden}
+    .deal-img img{width:100%;height:100%;object-fit:contain;padding:20px;display:block}
+    .deal-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .deal-tag{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#54dce8}
+    .deal h3{margin:0;font-size:19px;letter-spacing:-.02em;line-height:1.25}
+    .deal-spec{font-size:13px;color:#9aa4a1;margin:0}
+    .deal-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+    .deal-was{color:#8b9492;text-decoration:line-through;font-size:14px}
+    .deal-now{font-size:26px;font-weight:800;letter-spacing:-.02em}
+    .deal-save{font:600 11px 'IBM Plex Mono',monospace;background:var(--coral);color:#151515;padding:4px 8px;letter-spacing:.06em}
+    .deal .btn{justify-content:center;background:#55dfeb;color:#071012;margin-top:6px}
+    .deal-note{font-size:12px;color:#8b9492;margin:0}
+    .store-fine{margin-top:28px;font:500 11px 'IBM Plex Mono',monospace;color:#8b9492}
+    .join{background:var(--cyan);color:#071012}
+    .join-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .join .kicker{color:#071012}
+    .join h2{color:#071012}
+    .join p{color:#0c1a1c}
+    .join-form{display:grid;gap:12px;background:rgba(255,255,255,.16);padding:28px;border:1px solid rgba(7,16,18,.3)}
+    .join-form>label{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em}
+    .join-form input[type=text],.join-form input[type=email],.join-form input[type=tel]{padding:13px 14px;border:1px solid rgba(7,16,18,.35);background:#fff;color:#101315;width:100%}
+    .join-check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#0c1a1c}
+    .join-check input{margin-top:4px;accent-color:#101315}
+    .join-form .btn{background:#101315;color:#fff;justify-content:center;border:0;cursor:pointer}
+    .join-msg{font-weight:700;min-height:24px}
+    @media(max-width:900px){.store-grid{grid-template-columns:1fr 1fr}.join-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.store-grid{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
@@ -79,12 +113,58 @@
 
     <section class="wrap newsletter" aria-labelledby="newsletter-title"><div><h2 id="newsletter-title">Three briefings. One useful rhythm.</h2><p>Start the day at 7am, check in at 11am, and finish with one more practical idea at 4pm ET.</p></div><a class="btn" href="#episodes">Explore the latest episodes</a></section>
 
+
+    <section class="section store" id="store"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">BITSTREAM STORE &middot; THIS WEEK&rsquo;S DROPS</div><h2>Great gear. Real discounts.</h2></div><p class="lede">A short, rotating shelf of the AI gear we talk about on the show &mdash; local-LLM rigs, smart glasses, and home miners &mdash; checked against MSRP every week. When a deal ends, it&rsquo;s gone.</p></div>
+      <div class="store-cat">01 &middot; RUN AI AT HOME</div>
+      <div class="store-grid">
+<article class="deal"><div class="deal-img"><img src="store/img/minisforum-ms-s1-max.jpg" alt="MINISFORUM MS-S1 Max" loading="lazy"></div><div class="deal-body"><div class="deal-tag">LOCAL LLM RIG</div><h3>MINISFORUM MS-S1 Max</h3><p class="deal-spec">Ryzen AI Max+ 395 &middot; 64GB unified memory &middot; 2TB SSD — runs 30&ndash;70B models locally</p><div class="deal-price"><span class="deal-was">$4,699</span><span class="deal-now">$2,599</span><span class="deal-save">SAVE 45%</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.newegg.com/minisforum-barebone-systems-mini-pc-amd-ryzen-ai-max-395-deskmini/p/2SW-002G-00117" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Sale ends Sep 27 &middot; Newegg</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/gmktec-evo-x2.jpg" alt="GMKtec EVO-X2 AI Mini PC" loading="lazy"></div><div class="deal-body"><div class="deal-tag">LOCAL LLM RIG</div><h3>GMKtec EVO-X2 AI Mini PC</h3><p class="deal-spec">Ryzen AI Max+ 395 &middot; 128GB LPDDR5X &middot; 2TB SSD — built for 70B-class local LLMs</p><div class="deal-price"><span class="deal-now">$3,649</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.newegg.com/gmktec-barebone-systems-mini-pc-amd-ryzen-ai-max-395-evo-x2-128-2t/p/2SW-007C-00016" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Flagship Strix Halo mini PC &middot; Newegg</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/mac-mini-m5-pro.jpg" alt="Apple Mac mini &mdash; M5 Pro, 24GB" loading="lazy"></div><div class="deal-body"><div class="deal-tag">LOCAL LLM RIG</div><h3>Apple Mac mini &mdash; M5 Pro, 24GB</h3><p class="deal-spec">M5 Pro &middot; 24GB unified memory &middot; 512GB SSD — the simplest path to local LLMs on macOS</p><div class="deal-price"><span class="deal-now">$1,699</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.apple.com/us/shop/buy-mac/mac-mini" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Free delivery &middot; Apple</p></div></article>
+      </div>
+      <div class="store-cat">02 &middot; SMART GLASSES</div>
+      <div class="store-grid">
+<article class="deal"><div class="deal-img"><img src="store/img/rokid-ai-glasses.png" alt="Rokid AI Glasses" loading="lazy"></div><div class="deal-body"><div class="deal-tag">SMART GLASSES</div><h3>Rokid AI Glasses</h3><p class="deal-spec">ChatGPT + Gemini built in &middot; live translation &middot; teleprompter mode</p><div class="deal-price"><span class="deal-was">$399</span><span class="deal-now">$299</span><span class="deal-save">SAVE 25%</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://global.rokid.com/products/rokid-ai-glasses-style" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">25% off this week &middot; Rokid</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/xreal-one-pro.jpg" alt="XREAL One Pro" loading="lazy"></div><div class="deal-body"><div class="deal-tag">SMART GLASSES</div><h3>XREAL One Pro</h3><p class="deal-spec">171&Prime; FHD 120Hz spatial display &middot; Bose audio &middot; iPhone / Mac / PC / Android</p><div class="deal-price"><span class="deal-now">$599.99</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.bestbuy.com/product/xreal-one-pro-ar-glasses-w-x1-chip-171-fhd-120hz-display-w-sound-by-bose-for-iphone16-15-steam-rog-mac-pc-android-ios-57-66mm-ipd/CZTVG22GYF" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Premium AR pick &middot; Best Buy</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/rayban-meta-display.jpg" alt="Meta Ray-Ban Display" loading="lazy"></div><div class="deal-body"><div class="deal-tag">SMART GLASSES</div><h3>Meta Ray-Ban Display</h3><p class="deal-spec">In-lens display + Neural Band gesture control &middot; Meta AI &middot; live captioning</p><div class="deal-price"><span class="deal-now">$799</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.bestbuy.com/product/meta-ray-ban-display-neural-band--ai-glasses-with-in-lens-display-shiny-frame-large-band-size-3-black/J3LHRV8TWF" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Meta's 2026 flagship &middot; Best Buy</p></div></article>
+      </div>
+      <div class="store-cat">03 &middot; CRYPTO MINERS</div>
+      <div class="store-grid">
+<article class="deal"><div class="deal-img"><img src="store/img/goldshell-e-ka1m.png" alt="Goldshell E-KA1M" loading="lazy"></div><div class="deal-body"><div class="deal-tag">CRYPTO MINER</div><h3>Goldshell E-KA1M</h3><p class="deal-spec">5.5TH/s Kaspa &middot; 1800W &middot; Wi-Fi — the week's biggest home-miner deal</p><div class="deal-price"><span class="deal-was">$1,409</span><span class="deal-now">$1,210</span><span class="deal-save">SAVE 14%</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.goldshell.com/product/goldshell-e-ka1m/" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">14% off this week &middot; Goldshell</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/iceriver-ks7-lite.png" alt="IceRiver KS7 Lite" loading="lazy"></div><div class="deal-body"><div class="deal-tag">CRYPTO MINER</div><h3>IceRiver KS7 Lite</h3><p class="deal-spec">4.2TH/s Kaspa &middot; 500W — quiet, home-friendly miner</p><div class="deal-price"><span class="deal-now">$799</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.iceriver.io/product/iceriver-kas-ks7-lite/" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Home-friendly pick &middot; IceRiver</p></div></article>
+<article class="deal"><div class="deal-img"><img src="store/img/goldshell-mini-doge-3-plus.png" alt="Goldshell Mini Doge III Plus" loading="lazy"></div><div class="deal-body"><div class="deal-tag">CRYPTO MINER</div><h3>Goldshell Mini Doge III Plus</h3><p class="deal-spec">810MH/s LTC/DOGE &middot; 500W &middot; &le;35dB — apartment-quiet</p><div class="deal-price"><span class="deal-now">$474</span></div><!-- TODO: swap href for affiliate-tagged URL after program approval --><a class="btn" href="https://www.goldshell.com/product/goldshell-mini-doge-iii-plus/" target="_blank" rel="noopener sponsored">Buy now</a><p class="deal-note">Best starter miner &middot; Goldshell</p></div></article>
+      </div>
+      <p class="store-fine">PRICES VERIFIED SEPTEMBER 24, 2026 &middot; SUBJECT TO CHANGE. AS AN AFFILIATE PARTNER WE MAY EARN A COMMISSION ON QUALIFYING PURCHASES &mdash; IT KEEPS THE EPISODES FREE. ZERO FILLER, ALL VALUE.</p>
+    </div></section>
+
+    <section class="section join" id="join"><div class="wrap join-grid">
+      <div><div class="kicker">JOIN THE LIST</div><h2>Get the drops first.</h2><p>Join the Bitstream deals list and we&rsquo;ll email or text you when new weekly deals go live &mdash; plus a heads-up on each day&rsquo;s episodes at 7am, 11am, and 4pm ET. No spam, just the good stuff.</p></div>
+      <!-- Join form: create a free form at https://formspree.io, then replace YOUR_FORM_ID below with your form ID. -->
+      <form class="join-form" id="deals-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="join-name">NAME</label>
+        <input id="join-name" type="text" name="name" required autocomplete="name">
+        <label for="join-email">EMAIL</label>
+        <input id="join-email" type="email" name="email" required autocomplete="email">
+        <label for="join-phone">PHONE (FOR TEXT ALERTS &mdash; OPTIONAL)</label>
+        <input id="join-phone" type="tel" name="phone" autocomplete="tel" placeholder="(555) 123-4567">
+        <div class="join-check"><input type="checkbox" id="pref-deals" name="pref_deals" checked><label for="pref-deals">Weekly deal drops</label></div>
+        <div class="join-check"><input type="checkbox" id="pref-eps" name="pref_episodes" checked><label for="pref-eps">New episode alerts (7am / 11am / 4pm ET)</label></div>
+        <div class="join-check"><input type="checkbox" id="sms-consent" name="sms_consent" value="yes"><label for="sms-consent">I agree to receive recurring automated marketing text messages from Bitstream at the number provided. Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to cancel.</label></div>
+        <input type="hidden" name="_subject" value="New Bitstream deals list signup">
+        <button class="btn" type="submit">Join now</button>
+        <div class="join-msg" id="join-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div></section>
+
     <footer class="launch"><div class="wrap"><div class="launch-grid"><div><h3>What Bitstream covers</h3><p>New ways to use Muse, worthwhile free AI utilities, and practical AI workflows for everyday users.</p></div><div><h3>When episodes drop</h3><p>Three focused 5-minute episodes every day at 7am, 11am, and 4pm Eastern Time.</p></div></div><div class="footnote">BITSTREAM // ZERO FILLER. ALL VALUE. // THREE TIMES DAILY</div></div></footer>
   </main>
   <script>
     (function(){
       document.querySelectorAll('.episode-btn').forEach(function(btn){btn.addEventListener('click',function(){var panel=document.getElementById(btn.getAttribute('aria-controls'));var open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!open));btn.textContent=open?'＋':'−';panel.classList.toggle('open',!open);});});
       var note=document.getElementById('platform-notice');document.querySelectorAll('button.platform').forEach(function(btn){btn.addEventListener('click',function(){note.textContent=btn.dataset.platform+' is coming soon. The link will appear here when that feed is live.';});});
+
+      var dform=document.getElementById('deals-form');
+      if(dform){dform.addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('join-msg');var ep=dform.getAttribute('action');if(ep.indexOf('YOUR_FORM_ID')!==-1){msg.textContent='Signup opens soon \u2014 the list is being connected.';return;}fetch(ep,{method:'POST',body:new FormData(dform),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){dform.reset();msg.textContent='You\u2019re in! Watch your inbox for this week\u2019s drops.';}else{msg.textContent='Something went wrong \u2014 please try again.';}}).catch(function(){msg.textContent='Something went wrong \u2014 please try again.';});});}
     }());
   </script>
 </body>
