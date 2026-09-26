@@ -4,99 +4,168 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#050508">
+  <meta name="theme-color" content="#000000">
   <meta name="description" content="Win a one-of-a-kind Terp Basel 2026 tee — a 1 of 1 shirt with just a ? on it ($139 value). Free entry with your name, email, and shirt size — bonus entries $1 each, 10 max per person. Ends Halloween, October 31, 2026.">
   <link rel="canonical" href="https://icyunvbankai.github.io/Bitstream/giveaway.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://icyunvbankai.github.io/Bitstream/giveaway.html">
   <meta property="og:title" content="WIN a 1 of 1 Terp Basel Tee — Free Entry">
   <meta property="og:description" content="Terp Basel 2026 giveaway: a one-of-a-kind 1 of 1 shirt with just a ? on it ($139 value, never made again). Enter free — bonus entries $1 each (10 max per person). Ends Halloween.">
-  <meta property="og:image" content="https://icyunvbankai.github.io/Bitstream/giveaway/giveaway-ad-a.jpg">
+  <meta property="og:image" content="https://icyunvbankai.github.io/Bitstream/giveaway/prize-acid.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="WIN a 1 of 1 Terp Basel Tee — Free Entry">
   <meta name="twitter:description" content="A one-of-a-kind 1 of 1 shirt with just a ? on it ($139 value, never made again). Enter free — bonus entries $1 each (10 max per person). Ends Halloween.">
-  <meta name="twitter:image" content="https://icyunvbankai.github.io/Bitstream/giveaway/giveaway-ad-a.jpg">
+  <meta name="twitter:image" content="https://icyunvbankai.github.io/Bitstream/giveaway/prize-acid.jpg">
   <link rel="icon" href="data:,">
   <title>WIN a 1 of 1 Terp Basel Tee — Free Entry Giveaway</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap');
     :root{
-      --pink:#ff2fb3; --cyan:#22e6ff; --purple:#8b2fff; --orange:#ff7a18;
-      --bg:#050508; --panel:rgba(255,255,255,.04); --ink:#f4f2ff; --muted:#a7a3c7;
-      --line:rgba(255,255,255,.12);
+      --acid:#7CFF00; --volt:#E9FF4A; --mag:#FF2FB3; --purp:#8B2FFF;
+      --bg:#000000; --panel:#0a0f08; --ink:#F2FFE9; --muted:#9DB89A;
+      --line:rgba(124,255,0,.28);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;line-height:1.5;overflow-x:hidden}
     a{color:inherit}
+    ::selection{background:var(--acid);color:#000}
     .wrap{width:min(960px,calc(100% - 40px));margin:auto;position:relative;z-index:2}
+
+    /* ambient glow */
     .bg-motion{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-    .blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.35;animation:drift 22s ease-in-out infinite alternate}
-    .blob.b1{width:520px;height:520px;background:var(--pink);top:-140px;left:-120px}
-    .blob.b2{width:620px;height:620px;background:var(--purple);bottom:-200px;right:-160px;animation-delay:-8s}
-    .blob.b3{width:420px;height:420px;background:var(--cyan);top:40%;left:55%;opacity:.22;animation-delay:-14s}
+    .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.28;animation:drift 24s ease-in-out infinite alternate}
+    .blob.b1{width:560px;height:560px;background:#2a5c00;top:-160px;left:-140px}
+    .blob.b2{width:640px;height:640px;background:#3d0a63;bottom:-220px;right:-180px;animation-delay:-9s}
+    .blob.b3{width:420px;height:420px;background:#5c0a3d;top:42%;left:58%;opacity:.2;animation-delay:-15s}
     @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.15)}}
-    .hero{position:relative;padding:110px 0 60px;text-align:center}
-    .kicker{font:600 12px/1.4 'IBM Plex Mono',monospace;letter-spacing:.22em;color:var(--cyan);margin-bottom:20px}
-    .hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(46px,8vw,96px);line-height:.95;margin:0 0 18px;
-      background:linear-gradient(100deg,#ff2fb3 5%,#ff7a18 35%,#22e6ff 75%,#8b2fff 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      filter:drop-shadow(0 4px 30px rgba(255,47,179,.35))}
-    .hero p{font-size:clamp(16px,2vw,20px);color:#dcd8f5;max-width:620px;margin:0 auto 26px}
-    .hero p strong{color:#fff}
-    .prize-img{width:min(560px,100%);border-radius:20px;border:1px solid var(--line);box-shadow:0 24px 80px rgba(255,47,179,.25);margin:0 auto 30px;display:block}
-    .countdown{display:flex;gap:12px;justify-content:center;margin:0 0 34px;flex-wrap:wrap}
-    .cd-cell{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:84px;backdrop-filter:blur(10px)}
-    .cd-cell b{display:block;font-family:'Archivo Black',sans-serif;font-size:30px;color:#fff}
-    .cd-cell span{font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:var(--muted)}
-    .btn{border:0;text-decoration:none;padding:16px 28px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-size:16px;transition:transform .2s,box-shadow .2s}
-    .btn.primary{background:linear-gradient(100deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 32px rgba(255,47,179,.4)}
-    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,47,179,.55)}
-    .btn.ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.05)}
-    .btn.ghost:hover{border-color:var(--cyan);transform:translateY(-2px)}
-    .section{position:relative;z-index:1;padding:70px 0}
-    .section h2{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4vw,48px);margin:0 0 14px;text-align:center}
-    .section h2 .grad{background:linear-gradient(100deg,var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lede{color:var(--muted);font-size:17px;max-width:640px;margin:0 auto 34px;text-align:center}
-    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-    .step{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px;backdrop-filter:blur(10px);position:relative;overflow:hidden}
-    .step:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--cyan))}
-    .step-num{font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:var(--pink);margin-bottom:10px}
-    .step h3{margin:0 0 8px;font-size:20px}
+    .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+      background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 3px)}
+
+    /* ticker */
+    .ticker{background:var(--acid);color:#000;overflow:hidden;white-space:nowrap;
+      transform:rotate(-1.2deg) scale(1.02);border-top:3px solid #000;border-bottom:3px solid #000;
+      position:relative;z-index:3;margin:14px 0 0}
+    .ticker-inner{display:inline-block;padding:10px 0;font:700 15px/1 'Space Mono',monospace;
+      letter-spacing:.12em;animation:tick 22s linear infinite}
+    @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* hero */
+    .hero{position:relative;padding:90px 0 50px;text-align:center;overflow:hidden}
+    .big-q{position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);
+      font-family:'Rubik Glitch',cursive;font-size:clamp(300px,60vw,640px);line-height:1;
+      color:transparent;-webkit-text-stroke:2px rgba(124,255,0,.16);
+      animation:qfloat 9s ease-in-out infinite;pointer-events:none;user-select:none}
+    @keyframes qfloat{0%,100%{transform:translate(-50%,-52%) rotate(-3deg)}50%{transform:translate(-50%,-56%) rotate(3deg)}}
+    .kicker{font:700 12px/1.4 'Space Mono',monospace;letter-spacing:.28em;color:var(--acid);
+      margin-bottom:22px;position:relative}
+    .kicker .dot{color:var(--mag)}
+    .hero h1{font-family:'Rubik Glitch',cursive;font-weight:400;
+      font-size:clamp(52px,10vw,118px);line-height:.95;margin:0 0 20px;color:var(--volt);
+      text-shadow:4px 4px 0 var(--acid),8px 8px 0 rgba(255,47,179,.55),0 0 60px rgba(124,255,0,.4);
+      animation:flicker 4s infinite;position:relative}
+    @keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.6}94%{opacity:1}96%{opacity:.75}97%{opacity:1}}
+    .hero p{font-size:clamp(16px,2vw,20px);color:#d9e8d4;max-width:640px;margin:0 auto 28px;position:relative}
+    .hero p strong{color:var(--volt)}
+    .prize-frame{position:relative;display:inline-block;transform:rotate(-1.5deg);margin:0 auto 34px}
+    .prize-img{width:min(560px,92vw);border-radius:14px;border:3px solid var(--acid);display:block;
+      box-shadow:0 0 0 3px #000,0 0 44px rgba(124,255,0,.45),12px 12px 0 rgba(255,47,179,.5)}
+    .prize-tag{position:absolute;top:-18px;right:-14px;background:var(--mag);color:#000;
+      font:700 13px/1 'Space Mono',monospace;letter-spacing:.08em;padding:10px 14px;
+      transform:rotate(6deg);box-shadow:4px 4px 0 #000}
+    .countdown{display:flex;gap:12px;justify-content:center;margin:0 0 36px;flex-wrap:wrap;position:relative}
+    .cd-cell{background:#000;border:2px solid var(--acid);border-radius:10px;padding:14px 18px;min-width:86px;
+      box-shadow:0 0 18px rgba(124,255,0,.25),4px 4px 0 rgba(124,255,0,.35)}
+    .cd-cell b{display:block;font-family:'Archivo Black',sans-serif;font-size:32px;color:var(--acid)}
+    .cd-cell span{font:700 10px/1 'Space Mono',monospace;letter-spacing:.22em;color:var(--volt)}
+
+    .btn{border:0;text-decoration:none;padding:16px 30px;font-weight:800;cursor:pointer;
+      display:inline-flex;align-items:center;gap:10px;font-size:16px;font-family:'Space Mono',monospace;
+      letter-spacing:.04em;transition:transform .15s,box-shadow .15s;text-transform:uppercase}
+    .btn.primary{background:var(--acid);color:#000;box-shadow:6px 6px 0 var(--mag)}
+    .btn.primary:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--mag)}
+    .btn.primary:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mag)}
+    .btn.ghost{border:2px solid var(--line);color:var(--ink);background:rgba(124,255,0,.05)}
+    .btn.ghost:hover{border-color:var(--acid);transform:translateY(-2px)}
+
+    /* zipper divider */
+    .zipper{position:relative;height:30px;z-index:2;margin:10px 0;
+      background:repeating-linear-gradient(90deg,#161616 0 7px,#2e2e2e 7px 9px,#161616 9px 16px);
+      border-top:2px solid #3a3a3a;border-bottom:2px solid #3a3a3a}
+    .zipper .pull{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+      width:34px;height:44px;background:linear-gradient(180deg,#4a4a4a,#222);border:2px solid #555;
+      border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.8)}
+    .zipper .pull:after{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);
+      width:10px;height:16px;border:2px solid #777;border-radius:5px}
+
+    /* drip divider */
+    .drip{display:block;width:100%;height:46px;position:relative;z-index:2}
+
+    .section{position:relative;z-index:2;padding:64px 0}
+    .section h2{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4.5vw,52px);margin:0 0 14px;
+      text-align:center;color:var(--ink);text-transform:uppercase;letter-spacing:.02em}
+    .section h2 .hl{color:var(--acid);text-shadow:3px 3px 0 rgba(255,47,179,.6)}
+    .lede{color:var(--muted);font-size:17px;max-width:640px;margin:0 auto 36px;text-align:center}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .step{background:#050805;border:2px solid var(--acid);border-radius:6px;padding:28px;position:relative;
+      box-shadow:6px 6px 0 rgba(255,47,179,.45)}
+    .step:nth-child(1){transform:rotate(-1.2deg)}
+    .step:nth-child(2){transform:rotate(.8deg)}
+    .step:nth-child(3){transform:rotate(-.6deg)}
+    .step-num{font:700 12px/1 'Space Mono',monospace;letter-spacing:.22em;color:var(--mag);margin-bottom:10px}
+    .step h3{margin:0 0 8px;font-size:20px;color:var(--volt);font-family:'Archivo Black',sans-serif}
     .step p{color:var(--muted);margin:0;font-size:15px}
     .step p strong{color:var(--ink)}
-    .entry-form{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:36px;backdrop-filter:blur(12px);margin-top:10px;box-shadow:0 24px 80px rgba(139,47,255,.15);max-width:620px;margin-left:auto;margin-right:auto}
-    .entry-form h3{margin:0 0 6px;font-size:24px;text-align:center}
-    .entry-form>p{color:var(--muted);margin:0 0 24px;text-align:center}
-    .field{margin-bottom:16px}
-    .field label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}
-    .field input,.field select{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.35);color:var(--ink);font:inherit}
-    .field input:focus,.field select:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,47,179,.2)}
-    .field select option{background:#12121a}
-    .form-note{font-size:13px;color:var(--muted);text-align:center;margin-top:14px}
-    .form-ok{display:none;text-align:center;padding:30px 10px}
-    .form-ok h3{color:var(--cyan);margin:0 0 10px}
-    .bonus{background:linear-gradient(135deg,rgba(255,47,179,.12),rgba(34,230,255,.08));border:1px solid rgba(255,47,179,.35);border-radius:20px;padding:36px;max-width:620px;margin:40px auto 0;text-align:center;backdrop-filter:blur(10px)}
-    .bonus h3{margin:0 0 10px;font-size:24px}
-    .bonus h3 .grad{background:linear-gradient(100deg,var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .bonus p{color:var(--muted);margin:0 0 20px}
-    .bonus p strong{color:var(--ink)}
-    .rules{max-width:680px;margin:0 auto;color:var(--muted);font-size:14px}
+
+    .entry-form{background:#050805;border:2px solid var(--acid);border-radius:6px;padding:30px;
+      box-shadow:8px 8px 0 rgba(124,255,0,.3);max-width:660px;margin:0 auto}
+    .entry-form h3{margin:0 0 6px;font-size:24px;text-align:center;font-family:'Archivo Black',sans-serif;color:var(--volt)}
+    .entry-form>p{color:var(--muted);margin:0 0 20px;text-align:center}
+    .sms-note{margin-top:18px;text-align:center;font:700 13px/1.6 'Space Mono',monospace;color:var(--acid);
+      border:1px dashed var(--line);border-radius:6px;padding:12px 16px}
+    .sms-note b{color:var(--volt)}
+
+    .bonus{background:linear-gradient(135deg,rgba(255,47,179,.14),rgba(139,47,255,.1));
+      border:2px solid var(--mag);border-radius:6px;padding:38px;max-width:660px;margin:44px auto 0;
+      text-align:center;box-shadow:8px 8px 0 rgba(255,47,179,.35);transform:rotate(.6deg)}
+    .bonus h3{margin:0 0 10px;font-size:26px;font-family:'Archivo Black',sans-serif;color:#fff}
+    .bonus h3 .hl{color:var(--mag);text-shadow:2px 2px 0 rgba(124,255,0,.5)}
+    .bonus p{color:#e6cfe0;margin:0 0 22px}
+    .bonus p strong{color:#fff}
+    .form-note{font-size:13px;color:var(--muted);text-align:center;margin-top:16px;font-family:'Space Mono',monospace}
+
+    .rules{max-width:700px;margin:0 auto;color:var(--muted);font-size:14px;
+      background:#050805;border:1px solid var(--line);border-radius:6px;padding:30px 34px}
     .rules li{margin-bottom:10px}
+    .rules li::marker{color:var(--acid);font-weight:700}
     .rules strong{color:var(--ink)}
-    footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:34px 0 44px;text-align:center;color:var(--muted);font-size:13px}
-    footer a{color:var(--cyan)}
+
+    footer{position:relative;z-index:2;border-top:2px solid var(--line);padding:34px 0 48px;
+      text-align:center;color:var(--muted);font-size:13px;font-family:'Space Mono',monospace}
+    footer a{color:var(--acid)}
+    @media (max-width:560px){
+      .prize-tag{right:2px}
+      .step:nth-child(n){transform:none}
+      .bonus{transform:none}
+    }
   </style>
 </head>
 <body>
   <div class="bg-motion"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <div class="grain"></div>
+
+  <div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
 
   <header class="hero">
+    <div class="big-q">?</div>
     <div class="wrap">
-      <div class="kicker">TERP BASEL 2026 &bull; OFFICIAL GIVEAWAY</div>
-      <h1>WIN A 1 OF 1 TEE</h1>
+      <div class="kicker">TERP BASEL 2026 <span class="dot">?</span> OFFICIAL GIVEAWAY <span class="dot">?</span> 1 OF 1</div>
+      <h1>WIN A<br>1 OF 1 TEE</h1>
       <p>We're giving away a <strong>one-of-a-kind Terp Basel 2026 tee</strong> — a single <strong>1 of 1</strong> shirt with just a <strong>?</strong> on it. $139 value. This exact shirt will never be made again. Your size is collected at signup.</p>
-      <img class="prize-img" src="giveaway/prize-mystery.jpg" alt="One-of-a-kind Terp Basel 2026 mystery tee — a 1 of 1 shirt with a question mark">
+      <div class="prize-frame">
+        <img class="prize-img" src="giveaway/prize-acid.jpg" alt="One-of-a-kind Terp Basel 2026 tee — a 1 of 1 black shirt with a melting neon green question mark">
+        <div class="prize-tag">1 OF 1 ? NEVER AGAIN</div>
+      </div>
       <div class="countdown" id="countdown">
         <div class="cd-cell"><b id="cd-d">–</b><span>DAYS</span></div>
         <div class="cd-cell"><b id="cd-h">–</b><span>HOURS</span></div>
@@ -107,9 +176,11 @@
     </div>
   </header>
 
+  <div class="zipper"><div class="pull"></div></div>
+
   <section class="section">
     <div class="wrap">
-      <h2>HOW IT <span class="grad">WORKS</span></h2>
+      <h2>HOW IT <span class="hl">WORKS</span></h2>
       <p class="lede">Three steps between you and a $139 limited tee.</p>
       <div class="steps">
         <div class="step">
@@ -131,18 +202,23 @@
     </div>
   </section>
 
-  <section class="section" id="enter" style="padding-top:20px">
+  <svg class="drip" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#7CFF00" d="M0,0 H1200 V14 C1130,40 1090,8 1020,22 C950,36 920,6 850,20 C780,34 740,8 670,22 C600,36 560,6 490,20 C420,34 380,8 310,22 C240,36 200,6 130,20 C80,30 40,12 0,24 Z"/>
+  </svg>
+
+  <section class="section" id="enter" style="padding-top:30px">
     <div class="wrap">
-      <h2>ENTER <span class="grad">FREE</span></h2>
+      <h2>ENTER <span class="hl">FREE</span></h2>
       <p class="lede">One free entry per person. Ends Halloween — October 31, 2026 at 11:59 PM ET.</p>
-      <div class="entry-form" style="padding:24px">
-        <h3 style="text-align:center">Free Entry</h3>
-        <p style="text-align:center">Takes ten seconds — you'll get your raffle ticket # by email.</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdx-jPE9TYoomyys57t7nzw9BoadTuMmL5Z0EyJE_eJhhyL2g/viewform?embedded=true" width="100%" height="560" frameborder="0" marginheight="0" marginwidth="0" style="border:0;border-radius:12px;background:#fff" title="Giveaway entry form">Loading…</iframe>
+      <div class="entry-form">
+        <h3>Free Entry</h3>
+        <p>Takes ten seconds — you'll get your raffle ticket # by email.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdx-jPE9TYoomyys57t7nzw9BoadTuMmL5Z0EyJE_eJhhyL2g/viewform?embedded=true" width="100%" height="740" frameborder="0" marginheight="0" marginwidth="0" style="border:0;border-radius:6px;background:#fff" title="Giveaway entry form">Loading…</iframe>
+        <div class="sms-note">? CHECK THE <b>TEXT OPT-IN</b> BOX IN THE FORM ?<br>get your ticket + the winner announcement by text</div>
       </div>
 
       <div class="bonus">
-        <h3>WANT BETTER <span class="grad">ODDS?</span></h3>
+        <h3>WANT BETTER <span class="hl">ODDS?</span></h3>
         <p><strong>$1 = 1 bonus entry.</strong> Up to <strong>10 total entries per person</strong> (including your free one). Send your payment with the <strong>same name and email</strong> you registered so we can match your entries.</p>
         <a class="btn primary" href="https://ko-fi.com/bitstreamfm" target="_blank" rel="noopener">Get Bonus Entries — $1 Each</a>
         <p class="form-note" style="margin-top:16px">Example: send $4 on Ko-fi with your registered name/email = 4 bonus entries (5 total with your free entry).</p>
@@ -150,9 +226,11 @@
     </div>
   </section>
 
+  <div class="zipper"><div class="pull"></div></div>
+
   <section class="section">
     <div class="wrap">
-      <h2>THE FINE <span class="grad">PRINT</span></h2>
+      <h2>THE FINE <span class="hl">PRINT</span></h2>
       <div class="rules">
         <ol>
           <li><strong>Prize:</strong> one (1) one-of-a-kind Terp Basel 2026 tee — a <strong>1 of 1</strong> shirt with just a <strong>?</strong> on it, $139 value. Winner receives it in the size submitted at signup. This exact shirt will never be made again.</li>
@@ -175,6 +253,11 @@
   </footer>
 
   <script>
+    // Ticker
+    (function(){
+      var msg = '1 OF 1 ? \u00A0?\u00A0 FREE ENTRY \u00A0?\u00A0 $139 VALUE \u00A0?\u00A0 ENDS HALLOWEEN \u00A0?\u00A0 NEVER MADE AGAIN \u00A0?\u00A0 ';
+      document.getElementById('ticker').textContent = msg + msg + msg + msg;
+    })();
     // Countdown to Oct 31, 2026 11:59 PM ET
     var end = new Date('2026-10-31T23:59:00-04:00').getTime();
     function tick(){
@@ -186,6 +269,6 @@
       document.getElementById('cd-s').textContent = String(Math.floor(d/1e3)%60).padStart(2,'0');
     }
     tick(); setInterval(tick, 1000);
-    </script>
+  </script>
 </body>
 </html>
