@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icyunvbankai.github.io/Bitstream/sitemap.xml
