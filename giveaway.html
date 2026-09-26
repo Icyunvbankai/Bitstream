@@ -135,35 +135,11 @@
     <div class="wrap">
       <h2>ENTER <span class="grad">FREE</span></h2>
       <p class="lede">One free entry per person. Ends Halloween — October 31, 2026 at 11:59 PM ET.</p>
-      <form class="entry-form" id="giveaway-form" action="https://formspree.io/f/xjykobrp" method="POST">
-        <div id="form-fields">
-          <h3>Free Entry</h3>
-          <p>Takes ten seconds.</p>
-          <input type="hidden" name="form_type" value="tshirt-giveaway">
-          <input type="hidden" name="_subject" value="New T-shirt Giveaway Entry">
-          <div class="field">
-            <label for="g-name">Your name</label>
-            <input id="g-name" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
-          </div>
-          <div class="field">
-            <label for="g-email">Email</label>
-            <input id="g-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-          </div>
-          <div class="field">
-            <label for="g-size">Shirt size</label>
-            <select id="g-size" name="size" required>
-              <option value="" disabled selected>Pick your size</option>
-              <option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option>
-            </select>
-          </div>
-          <button class="btn primary" type="submit" style="width:100%;justify-content:center">Enter the Giveaway</button>
-          <p class="form-note">By entering you agree to the rules below. We'll only email you about the giveaway unless you opt into updates.</p>
-        </div>
-        <div class="form-ok" id="form-ok">
-          <h3>You're in.</h3>
-          <p style="color:var(--muted)">Good luck — winner drawn November 1. Want better odds? Grab bonus entries below.</p>
-        </div>
-      </form>
+      <div class="entry-form" style="padding:24px">
+        <h3 style="text-align:center">Free Entry</h3>
+        <p style="text-align:center">Takes ten seconds — you'll get your raffle ticket # by email.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdx-jPE9TYoomyys57t7nzw9BoadTuMmL5Z0EyJE_eJhhyL2g/viewform?embedded=true" width="100%" height="560" frameborder="0" marginheight="0" marginwidth="0" style="border:0;border-radius:12px;background:#fff" title="Giveaway entry form">Loading…</iframe>
+      </div>
 
       <div class="bonus">
         <h3>WANT BETTER <span class="grad">ODDS?</span></h3>
@@ -210,15 +186,6 @@
       document.getElementById('cd-s').textContent = String(Math.floor(d/1e3)%60).padStart(2,'0');
     }
     tick(); setInterval(tick, 1000);
-
-    // AJAX form submit
-    document.getElementById('giveaway-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      var form = this;
-      fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
-        .then(function(r){ if(r.ok){ document.getElementById('form-fields').style.display='none'; document.getElementById('form-ok').style.display='block'; } else { form.submit(); } })
-        .catch(function(){ form.submit(); });
-    });
-  </script>
+    </script>
 </body>
 </html>
