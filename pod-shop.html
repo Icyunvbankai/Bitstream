@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICYUNV — Tees</title>
+<meta name="description" content="ICYUNV original tee graphics. Printed to order on premium garment-dyed heavyweight tees." />
+<style>
+  :root { --bg:#0b0b0c; --card:#141416; --ink:#f4f2ec; --muted:#a7a39a; --line:rgba(244,242,236,.14); --acid:#c8ff2e; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5; }
+  header { padding:28px 20px 10px; text-align:center; }
+  header h1 { font-size:2rem; letter-spacing:.35em; font-weight:800; }
+  header h1 span { color:var(--acid); }
+  header p { color:var(--muted); margin-top:8px; font-size:.95rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:22px; padding:26px 20px; max-width:1100px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+  .card img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#000; }
+  .card .body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .card h2 { font-size:1.15rem; letter-spacing:.04em; }
+  .price { font-size:1.3rem; font-weight:800; color:var(--acid); }
+  .price small { color:var(--muted); font-weight:400; font-size:.8rem; }
+  .row { display:flex; gap:10px; }
+  select, input { background:#0b0b0c; color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:10px; font-size:1rem; width:100%; }
+  label { font-size:.8rem; color:var(--muted); display:block; margin-bottom:4px; }
+  .btn { background:var(--acid); color:#0b0b0c; border:0; border-radius:10px; padding:13px; font-size:1.05rem; font-weight:800; cursor:pointer; letter-spacing:.03em; }
+  .btn:active { transform:scale(.98); }
+  #orderbox { display:none; max-width:640px; margin:10px auto 40px; padding:22px; background:var(--card); border:1px solid var(--acid); border-radius:14px; }
+  #orderbox h3 { margin-bottom:10px; }
+  #orderbox ol { margin:10px 0 14px 20px; color:var(--muted); }
+  #orderbox ol b { color:var(--ink); }
+  #orderbox textarea { width:100%; min-height:90px; background:#0b0b0c; color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:10px; font-size:.95rem; margin:8px 0; }
+  .paybtn { display:inline-block; background:#ff5e5b; color:#fff; text-decoration:none; border-radius:10px; padding:13px 22px; font-weight:800; margin:6px 8px 6px 0; }
+  .mailbtn { display:inline-block; background:var(--ink); color:#0b0b0c; text-decoration:none; border-radius:10px; padding:13px 22px; font-weight:800; margin:6px 0; }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:26px 20px 40px; }
+  footer a { color:var(--acid); }
+</style>
+</head>
+<body>
+<header>
+  <h1>ICY<span>UNV</span></h1>
+  <p>Original tee graphics. Printed to order on premium garment-dyed heavyweight tees.<br/>Please allow up to 2 weeks for printing &amp; delivery.</p>
+</header>
+
+<main class="grid" id="grid"></main>
+
+<section id="orderbox">
+  <h3>Your order</h3>
+  <div id="summary"></div>
+  <ol>
+    <li><b>Pay</b> — send <b id="payamt">$35.00</b> per shirt (+ $4.49 shipping) via Ko-fi:</li>
+  </ol>
+  <a class="paybtn" id="paylink" href="https://ko-fi.com/bitstreamfm" target="_blank" rel="noopener">Pay on Ko-fi</a>
+  <ol start="2">
+    <li><b>Send your order</b> — tap below, add your name, shipping address &amp; Ko-fi receipt name, then hit send:</li>
+  </ol>
+  <a class="mailbtn" id="maillink" href="#">Email your order</a>
+  <p style="color:var(--muted);font-size:.85rem;margin-top:10px;">Your tee is printed after payment clears. You'll get a confirmation email.</p>
+</section>
+
+<footer>
+  ICYUNV — Fort Pierce, FL · <a href="https://icyunvbankai.github.io/Bitstream/">Bitstream</a>
+</footer>
+
+<script>
+const PRODUCTS = [
+  { id:"twisted-figure",  name:"Twisted Figure",      img:"pod-tees/twisted-figure.jpg" },
+  { id:"venom-world-tour",name:"Venom World Tour 2026", img:"pod-tees/venom-world-tour.jpg" },
+  { id:"midnight-reaper", name:"Midnight Reaper",     img:"pod-tees/midnight-reaper.jpg" },
+  { id:"manga",           name:"Manga",               img:"pod-tees/manga.jpg" },
+  { id:"old-captain",     name:"Old Captain",         img:"pod-tees/old-captain.jpg" },
+];
+const PRICE = 35, SHIP = 4.49, SIZES = ["S","M","L","XL","2XL"];
+const grid = document.getElementById("grid");
+PRODUCTS.forEach(p => {
+  const el = document.createElement("div");
+  el.className = "card";
+  el.innerHTML = `
+    <img src="${p.img}" alt="${p.name}" loading="lazy" />
+    <div class="body">
+      <h2>${p.name}</h2>
+      <div class="price">$${PRICE}.00 <small>+ $${SHIP} shipping</small></div>
+      <div class="row">
+        <div style="flex:1"><label>Size</label><select data-size>${SIZES.map(s=>`<option>${s}</option>`).join("")}</select></div>
+        <div style="flex:1"><label>Qty</label><input data-qty type="number" min="1" max="10" value="1" /></div>
+      </div>
+      <button class="btn" data-order>Order this tee</button>
+    </div>`;
+  el.querySelector("[data-order]").onclick = () => {
+    const size = el.querySelector("[data-size]").value;
+    const qty = Math.max(1, parseInt(el.querySelector("[data-qty]").value || "1", 10));
+    startOrder(p, size, qty);
+  };
+  grid.appendChild(el);
+});
+
+function startOrder(p, size, qty) {
+  const total = (PRICE * qty + SHIP).toFixed(2);
+  document.getElementById("payamt").textContent = "$" + total;
+  document.getElementById("summary").innerHTML =
+    `<p><b>${p.name}</b> — Size ${size} × ${qty}<br/>Total: <b>$${total}</b> ($${PRICE} × ${qty} + $${SHIP} shipping)</p>`;
+  const body = encodeURIComponent(
+`Hi! I'd like to order:\n\n${p.name} — Size ${size} × ${qty}\nTotal paid: $${total}\n\nMy name:\nShipping address:\nKo-fi name on the payment:\n`);
+  document.getElementById("maillink").href =
+    `mailto:icyunvbtyg42g@gmail.com?subject=${encodeURIComponent("Tee order: " + p.name + " " + size + " x" + qty)}&body=${body}`;
+  const box = document.getElementById("orderbox");
+  box.style.display = "block";
+  box.scrollIntoView({ behavior:"smooth" });
+}
+</script>
+</body>
+</html>
