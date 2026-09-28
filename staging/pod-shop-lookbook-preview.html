@@ -388,9 +388,11 @@ if (sform) {
     var total = scrollBox.offsetHeight - vh;
     var p = Math.min(1, Math.max(0, -r.top / total));
     var pos = p * (N - 1);
+    var best = 0, bestVis = -1;
     for (var i = 0; i < N; i++) {
       var d = pos - i;
       var vis = Math.max(0, 1 - Math.abs(d));
+      if (vis > bestVis) { bestVis = vis; best = i; }
       var s = scenes[i];
       s.style.opacity = vis.toFixed(3);
       var img = s.querySelector('img');
@@ -400,6 +402,11 @@ if (sform) {
       var cap = s.querySelector('figcaption');
       cap.style.opacity = vis.toFixed(3);
       cap.style.transform = 'translateY(' + ((1 - vis) * 34).toFixed(1) + 'px)';
+    }
+    // only the dominant scene receives pointer events, so its CTA is clickable
+    // and stacked transparent scenes never intercept clicks
+    for (var j = 0; j < N; j++) {
+      scenes[j].style.pointerEvents = (j === best) ? 'auto' : 'none';
     }
     fill.style.transform = 'scaleX(' + p.toFixed(4) + ')';
     cur.textContent = String(Math.round(pos) + 1).padStart(2, '0');
