@@ -82,6 +82,7 @@
 
 /* ===== brik-inspired motion: kinetic type + reveals ===== */
 .ch{display:inline-block;will-change:transform,opacity}
+.kinetic .word{display:inline-block;white-space:nowrap} /* never break inside a word */
 .kinetic .ch{opacity:0;transform:translateY(.55em) rotate(5deg);animation:chIn .65s cubic-bezier(.16,.8,.26,1) forwards;animation-play-state:paused;animation-delay:calc(var(--i,0)*30ms)}
 .kinetic.go .ch{animation-play-state:running}
 @keyframes chIn{to{opacity:1;transform:translateY(0) rotate(0)}}
@@ -453,14 +454,25 @@
   function split(el, autoplay){
     var i = 0, frag = document.createDocumentFragment();
     Array.prototype.forEach.call(el.childNodes, function(node){
-      function pushCh(c, cls){
-        var s = document.createElement('span');
-        s.className = 'ch' + (cls ? ' ' + cls : '');
-        s.textContent = (c === ' ' || c === '\u00A0') ? '\u00A0' : c;
-        s.style.setProperty('--i', i++);
-        frag.appendChild(s);
+      function pushWord(text, cls){
+        var w = document.createElement('span');
+        w.className = 'word'; /* unbreakable: wrap only between words */
+        Array.prototype.forEach.call(text, function(c){
+          var s = document.createElement('span');
+          s.className = 'ch' + (cls ? ' ' + cls : '');
+          s.textContent = c;
+          s.style.setProperty('--i', i++);
+          w.appendChild(s);
+        });
+        frag.appendChild(w);
       }
-      if(node.nodeType === 3){ Array.prototype.forEach.call(node.textContent, function(c){ pushCh(c, ''); }); }
+      if(node.nodeType === 3){
+        node.textContent.split(/(\s+)/).forEach(function(part){
+          if(!part) return;
+          if(/^\s+$/.test(part)) frag.appendChild(document.createTextNode(' '));
+          else pushWord(part, '');
+        });
+      }
       else if(node.nodeName === 'BR'){ frag.appendChild(document.createElement('br')); }
       else { frag.appendChild(node.cloneNode(true)); }
     });
