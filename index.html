@@ -79,6 +79,32 @@
 .series-head h3{margin:0;font-size:24px}
 .series-head .sched{font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--cyan)}
 .series-head p{flex-basis:100%;margin:6px 0 0;color:var(--muted);font-size:14px}
+
+/* ===== brik-inspired motion: kinetic type + reveals ===== */
+.ch{display:inline-block;will-change:transform,opacity}
+.kinetic .ch{opacity:0;transform:translateY(.55em) rotate(5deg);animation:chIn .65s cubic-bezier(.16,.8,.26,1) forwards;animation-play-state:paused;animation-delay:calc(var(--i,0)*30ms)}
+.kinetic.go .ch{animation-play-state:running}
+@keyframes chIn{to{opacity:1;transform:translateY(0) rotate(0)}}
+.brandline span{position:relative;display:inline-block}
+.brandline span:hover{animation:bsGlitch .38s steps(2,end) 2;cursor:default}
+@keyframes bsGlitch{
+  0%{text-shadow:2px 0 var(--cyan),-2px 0 var(--coral);transform:translateX(0)}
+  25%{text-shadow:-3px 0 var(--cyan),3px 0 var(--coral);transform:translateX(2px) skewX(5deg)}
+  50%{text-shadow:3px 0 var(--cyan),-3px 0 var(--coral);transform:translateX(-2px) skewX(-4deg)}
+  100%{text-shadow:none;transform:none}
+}
+.rv{opacity:0;translate:0 30px;transition:opacity .7s ease,translate .7s cubic-bezier(.16,.8,.26,1);transition-delay:var(--d,0ms)}
+.rv.in{opacity:1;translate:0 0}
+.deal{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.deal:hover{transform:translateY(-5px);border-color:#55dfeb;box-shadow:0 16px 44px rgba(85,223,235,.14)}
+.deal-img img{transition:transform .5s cubic-bezier(.16,.8,.26,1)}
+.deal:hover .deal-img img{transform:scale(1.05)}
+.episode{transition:transform .22s ease}
+.episode:hover{transform:translateY(-3px)}
+@media(prefers-reduced-motion:reduce){
+  .kinetic .ch{opacity:1;transform:none;animation:none}
+  .rv{opacity:1;translate:0 0;transition:none}
+}
 </style>
   <script type="application/ld+json">
 {
@@ -356,5 +382,45 @@
       if(dform){dform.addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('join-msg');var ep=dform.getAttribute('action');fetch(ep,{method:'POST',body:new FormData(dform),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){dform.reset();msg.textContent='You\u2019re in! Watch your inbox for this week\u2019s drops.';}else{msg.textContent='Something went wrong \u2014 please try again.';}}).catch(function(){msg.textContent='Something went wrong \u2014 please try again.';});});}
     }());
   </script>
+<script>
+/* kinetic hero type + scroll reveals */
+(function(){
+  function split(el, autoplay){
+    var i = 0, frag = document.createDocumentFragment();
+    Array.prototype.forEach.call(el.childNodes, function(node){
+      function pushCh(c, cls){
+        var s = document.createElement('span');
+        s.className = 'ch' + (cls ? ' ' + cls : '');
+        s.textContent = (c === ' ' || c === '\u00A0') ? '\u00A0' : c;
+        s.style.setProperty('--i', i++);
+        frag.appendChild(s);
+      }
+      if(node.nodeType === 3){ Array.prototype.forEach.call(node.textContent, function(c){ pushCh(c, ''); }); }
+      else if(node.nodeName === 'BR'){ frag.appendChild(document.createElement('br')); }
+      else { frag.appendChild(node.cloneNode(true)); }
+    });
+    el.textContent = '';
+    el.appendChild(frag);
+    el.classList.add('kinetic');
+    if(autoplay) el.classList.add('go');
+  }
+  var h1 = document.getElementById('hero-title');
+  if(h1) split(h1, true);
+  var bl = document.querySelector('.brandline span');
+  if(bl) split(bl, true);
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.08});
+  [['.episode', 70], ['.deal', 80]].forEach(function(cfg){
+    var items = document.querySelectorAll(cfg[0]);
+    Array.prototype.forEach.call(items, function(el, ix){
+      el.classList.add('rv');
+      el.style.setProperty('--d', ((ix % 6) * cfg[1]) + 'ms');
+    });
+  });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
 </body>
 </html>
