@@ -35,6 +35,19 @@
   .mailbtn { display:inline-block; background:var(--ink); color:#0b0b0c; text-decoration:none; border-radius:10px; padding:13px 22px; font-weight:800; margin:6px 0; }
   footer { text-align:center; color:var(--muted); font-size:.85rem; padding:26px 20px 40px; }
   footer a { color:var(--acid); }
+  #signup { max-width:1100px; margin:0 auto; padding:6px 20px 0; }
+  .signup-inner { background:var(--card); border:1px solid var(--acid); border-radius:14px; padding:20px 22px; display:flex; flex-direction:column; gap:14px; }
+  #signup h2 { font-size:1.25rem; letter-spacing:.04em; }
+  #signup h2 .off { color:var(--acid); }
+  #signup p { color:var(--muted); font-size:.95rem; }
+  #signup p b, .terms b { color:var(--ink); }
+  #signup-form { display:flex; gap:10px; flex-wrap:wrap; }
+  #signup-form input[type=email] { flex:1 1 220px; }
+  #signup-form .btn { flex:0 0 auto; }
+  #signup-done .code-label { margin:0; }
+  #signup-done .code { font-size:2rem; font-weight:800; letter-spacing:.25em; color:var(--acid); margin:2px 0 6px; }
+  .terms { margin:6px 0 0 20px; color:var(--muted); font-size:.9rem; display:flex; flex-direction:column; gap:6px; }
+  #signup-msg { color:var(--muted); font-size:.9rem; margin:0; }
 </style>
 </head>
 <body>
@@ -44,6 +57,31 @@
 </header>
 
 <main class="grid" id="grid"></main>
+
+<section id="signup" aria-label="Email signup for 10% off">
+  <div class="signup-inner">
+    <div>
+      <h2><span class="off">10% off</span> your first order</h2>
+      <p>Join the email list and take <b>10% off your first purchase over $75</b> (3 or more tees). Your code appears right here after you sign up.</p>
+    </div>
+    <form id="signup-form" action="https://formspree.io/f/xjykobrp" method="POST">
+      <input type="email" name="email" placeholder="you@email.com" required autocomplete="email" aria-label="Email address" />
+      <input type="hidden" name="_subject" value="New pod shop 10%-off signup" />
+      <input type="hidden" name="tag" value="podshop10" />
+      <button class="btn" type="submit">Send my code</button>
+    </form>
+    <div id="signup-done" hidden>
+      <p class="code-label">Your code:</p>
+      <p class="code">WELCOME10</p>
+      <ul class="terms">
+        <li>One per customer, first purchase only.</li>
+        <li>Minimum $75 shirt subtotal before shipping.</li>
+        <li>To redeem: mention <b>WELCOME10</b> in your order email &mdash; 10% comes off before your order is placed. There is no automatic checkout discount; it is applied by hand when your order email arrives.</li>
+      </ul>
+    </div>
+    <p id="signup-msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
 
 <section id="orderbox">
   <h3>Your order</h3>
@@ -121,12 +159,29 @@ function startOrder(p, size, qty) {
   document.getElementById("summary").innerHTML =
     `<p><b>${p.name}</b> — Size ${size} × ${qty}<br/>Total: <b>$${total}</b> ($${PRICE} × ${qty} + $${SHIP} shipping)</p>`;
   const body = encodeURIComponent(
-`Hi! I'd like to order:\n\n${p.name} — Size ${size} × ${qty}\nTotal paid: $${total}\n\nMy name:\nShipping address:\nKo-fi name on the payment:\n`);
+`Hi! I'd like to order:\n\n${p.name} — Size ${size} × ${qty}\nTotal paid: $${total}\n\nDiscount code (if you have one):\n\nMy name:\nShipping address:\nKo-fi name on the payment:\n`);
   document.getElementById("maillink").href =
     `mailto:icyunvbtyg42g@gmail.com?subject=${encodeURIComponent("Tee order: " + p.name + " " + size + " x" + qty)}&body=${body}`;
   const box = document.getElementById("orderbox");
   box.style.display = "block";
   box.scrollIntoView({ behavior:"smooth" });
+}
+
+var sform = document.getElementById("signup-form");
+if (sform) {
+  sform.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var msg = document.getElementById("signup-msg");
+    fetch(sform.getAttribute("action"), { method:"POST", body:new FormData(sform), headers:{ "Accept":"application/json" } })
+      .then(function(r) {
+        if (r.ok) {
+          sform.hidden = true;
+          document.getElementById("signup-done").hidden = false;
+          msg.textContent = "You\u2019re on the list. The code above is yours to use.";
+        } else { msg.textContent = "Something went wrong \u2014 please try again."; }
+      })
+      .catch(function() { msg.textContent = "Something went wrong \u2014 please try again."; });
+  });
 }
 </script>
 </body>
