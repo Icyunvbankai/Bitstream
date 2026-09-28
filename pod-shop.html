@@ -18,6 +18,7 @@
   .card img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#000; }
   .card .body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
   .card h2 { font-size:1.15rem; letter-spacing:.04em; }
+  .desc { color:var(--muted); font-size:.9rem; }
   .price { font-size:1.3rem; font-weight:800; color:var(--acid); }
   .price small { color:var(--muted); font-weight:400; font-size:.8rem; }
   .row { display:flex; gap:10px; }
@@ -39,7 +40,7 @@
 <body>
 <header>
   <h1>ICY<span>UNV</span></h1>
-  <p>Original tee graphics. Printed to order on premium garment-dyed heavyweight tees.<br/>Please allow up to 2 weeks for printing &amp; delivery.</p>
+  <p>Original tee graphics. Printed to order on premium garment-dyed heavyweight tees.<br/>New duotone drop runs <b style="color:var(--ink)">M–2XL</b>. Please allow up to 2 weeks for printing &amp; delivery.</p>
 </header>
 
 <main class="grid" id="grid"></main>
@@ -64,13 +65,32 @@
 
 <script>
 const PRODUCTS = [
-  { id:"twisted-figure",  name:"Twisted Figure",      img:"pod-tees/twisted-figure.jpg" },
-  { id:"venom-world-tour",name:"Venom World Tour 2026", img:"pod-tees/venom-world-tour.jpg" },
-  { id:"midnight-reaper", name:"Midnight Reaper",     img:"pod-tees/midnight-reaper.jpg" },
-  { id:"manga",           name:"Manga",               img:"pod-tees/manga.jpg" },
-  { id:"old-captain",     name:"Old Captain",         img:"pod-tees/old-captain.jpg" },
+  { id:"twisted-figure", name:"Twisted Figure", img:"pod-tees/twisted-figure.jpg",
+    desc:"A dark, surreal figure study — a gaunt screaming form flanked by hooded demons, embers burning in the dark. For the ones who like their art strange." },
+  { id:"venom-world-tour", name:"Venom World Tour 2026", img:"pod-tees/venom-world-tour.jpg",
+    desc:"The scorpion hits ten cities — the full-color Venom World Tour 2026 graphic, Los Angeles to London. Heavyweight ink, heavyweight statement." },
+  { id:"midnight-reaper", name:"Midnight Reaper", img:"pod-tees/midnight-reaper.jpg",
+    desc:"The reaper rises in full color — the original Midnight Reaper comic-cover graphic, scythe up over a haunted graveyard." },
+  { id:"manga", name:"Manga", img:"pod-tees/manga.jpg",
+    desc:"Ink, motion, and steel — a wild-haired manga warrior draws his katana as a dragon coils behind him." },
+  { id:"old-captain", name:"Old Captain", img:"pod-tees/old-captain.jpg",
+    desc:"The original Old Captain in full color — the bearded sage with his heavy chain and walking staff." },
+  { id:"mech-poster", name:"Mech Poster", img:"pod-tees/drop2-01-mech-poster.jpg", sizes:["M","L","XL","2XL"],
+    desc:"A recruitment poster from the war for tomorrow — a towering mech raises its blade over a swarm of winged demons. Cream and gold ink." },
+  { id:"manga-draw", name:"Manga Draw", img:"pod-tees/drop2-02-manga-draw.jpg", sizes:["M","L","XL","2XL"],
+    desc:"One breath, one draw. A manga swordsman caught mid quick-draw, blade slicing through speed lines with DRAW! slashed in red." },
+  { id:"venom-tour", name:"Venom Tour 2026", img:"pod-tees/drop2-03-venom-tour.jpg", sizes:["M","L","XL","2XL"],
+    desc:"Ten cities, one sting. A vintage scorpion anatomy chart turned world-tour poster, Los Angeles to London, April–May 2026. Single cream ink." },
+  { id:"old-captain-duotone", name:"Old Captain Duotone", img:"pod-tees/drop2-04-old-captain.jpg", sizes:["M","L","XL","2XL"],
+    desc:"The old captain has seen some things — bearded sage, heavy chain, walking staff, ringed in flame. White and orange ink." },
+  { id:"mascot", name:"Mascot", img:"pod-tees/drop2-05-mascot.jpg", sizes:["M","L","XL","2XL"],
+    desc:"The mascot lost its mind and it looks good on it — a grinning head melting into neon-green graffiti splatter. White and neon green." },
+  { id:"midnight-reaper-duotone", name:"Midnight Reaper Duotone", img:"pod-tees/drop2-06-midnight-reaper.jpg", sizes:["M","L","XL","2XL"],
+    desc:"Issue #1, only $3.99 — if you survive the cover. A hooded reaper stalks a graveyard of bats and tombstones like a vintage horror comic. Single white ink." },
+  { id:"we-outside", name:"We Outside", img:"pod-tees/drop2-07-we-outside.jpg", sizes:["M","L","XL","2XL"],
+    desc:"Taking it to the street. Wildstyle WE OUTSIDE burns over a night scene — spray can in hand, Freedom Tunnel on the wall. White and amber." },
 ];
-const PRICE = 35, SHIP = 4.49, SIZES = ["S","M","L","XL","2XL"];
+const PRICE = 35, SHIP = 4.49, DEFAULT_SIZES = ["S","M","L","XL","2XL"];
 const grid = document.getElementById("grid");
 PRODUCTS.forEach(p => {
   const el = document.createElement("div");
@@ -79,9 +99,10 @@ PRODUCTS.forEach(p => {
     <img src="${p.img}" alt="${p.name}" loading="lazy" />
     <div class="body">
       <h2>${p.name}</h2>
+      <p class="desc">${p.desc}</p>
       <div class="price">$${PRICE}.00 <small>+ $${SHIP} shipping</small></div>
       <div class="row">
-        <div style="flex:1"><label>Size</label><select data-size>${SIZES.map(s=>`<option>${s}</option>`).join("")}</select></div>
+        <div style="flex:1"><label>Size</label><select data-size>${(p.sizes||DEFAULT_SIZES).map(s=>`<option>${s}</option>`).join("")}</select></div>
         <div style="flex:1"><label>Qty</label><input data-qty type="number" min="1" max="10" value="1" /></div>
       </div>
       <button class="btn" data-order>Order this tee</button>
