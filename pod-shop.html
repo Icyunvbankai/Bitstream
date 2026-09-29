@@ -176,7 +176,7 @@ PRODUCTS.forEach(p => {
     <div class="body">
       <h2>${p.name}</h2>
       <p class="desc">${p.desc}</p>
-      <div class="price">$${PRICE}.00 <small>+ $${SHIP} shipping</small></div>
+      <div class="price">$${p.price||PRICE}.00 <small>+ $${SHIP} shipping</small></div>
       <div class="row">
         <div style="flex:1"><label>Size</label><select data-size>${(p.sizes||DEFAULT_SIZES).map(s=>`<option>${s}</option>`).join("")}</select></div>
         <div style="flex:1"><label>Qty</label><input data-qty type="number" min="1" max="10" value="1" /></div>
@@ -192,10 +192,11 @@ PRODUCTS.forEach(p => {
 });
 
 function startOrder(p, size, qty) {
-  const total = (PRICE * qty + SHIP).toFixed(2);
+  const unit = p.price||PRICE;
+  const total = (unit * qty + SHIP).toFixed(2);
   document.getElementById("payamt").textContent = "$" + total;
   document.getElementById("summary").innerHTML =
-    `<p><b>${p.name}</b> — Size ${size} × ${qty}<br/>Total: <b>$${total}</b> ($${PRICE} × ${qty} + $${SHIP} shipping)</p>`;
+    `<p><b>${p.name}</b> — Size ${size} × ${qty}<br/>Total: <b>$${total}</b> ($${unit} × ${qty} + $${SHIP} shipping)</p>`;
   const body = encodeURIComponent(
 `Hi! I'd like to order:\n\n${p.name} — Size ${size} × ${qty}\nTotal paid: $${total}\n\nDiscount code (if you have one):\n\nMy name:\nShipping address:\nKo-fi name on the payment:\n`);
   document.getElementById("maillink").href =
