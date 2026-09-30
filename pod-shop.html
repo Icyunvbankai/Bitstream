@@ -89,7 +89,7 @@
   <h3>Your order</h3>
   <div id="summary"></div>
   <ol>
-    <li><b>Pay</b> — send <b id="payamt">$24.00</b> per shirt (+ $4.49 shipping) via Ko-fi:</li>
+    <li><b>Pay</b> — send <b id="payamt">$35.00</b> via Ko-fi (price varies by item, + $4.49 shipping):</li>
   </ol>
   <a class="paybtn" id="paylink" href="https://ko-fi.com/bitstreamfm" target="_blank" rel="noopener">Pay on Ko-fi</a>
   <ol start="2">
@@ -105,29 +105,29 @@
 
 <script>
 const PRODUCTS = [
-  { id:"twisted-figure", name:"Twisted Figure", img:"pod-tees/twisted-figure.jpg",
+  { id:"twisted-figure", price:24, name:"Twisted Figure", img:"pod-tees/twisted-figure.jpg",
     desc:"A dark, surreal figure study — a gaunt screaming form flanked by hooded demons, embers burning in the dark. For the ones who like their art strange." },
-  { id:"venom-world-tour", name:"Venom World Tour 2026", img:"pod-tees/venom-world-tour.jpg",
+  { id:"venom-world-tour", price:24, name:"Venom World Tour 2026", img:"pod-tees/venom-world-tour.jpg",
     desc:"The scorpion hits ten cities — the full-color Venom World Tour 2026 graphic, Los Angeles to London. Heavyweight ink, heavyweight statement." },
-  { id:"midnight-reaper", name:"Midnight Reaper", img:"pod-tees/midnight-reaper.jpg",
+  { id:"midnight-reaper", price:24, name:"Midnight Reaper", img:"pod-tees/midnight-reaper.jpg",
     desc:"The reaper rises in full color — the original Midnight Reaper comic-cover graphic, scythe up over a haunted graveyard." },
-  { id:"manga", name:"Manga", img:"pod-tees/manga.jpg",
+  { id:"manga", price:24, name:"Manga", img:"pod-tees/manga.jpg",
     desc:"Ink, motion, and steel — a wild-haired manga warrior draws his katana as a dragon coils behind him." },
-  { id:"old-captain", name:"Old Captain", img:"pod-tees/old-captain.jpg",
+  { id:"old-captain", price:24, name:"Old Captain", img:"pod-tees/old-captain.jpg",
     desc:"The original Old Captain in full color — the bearded sage with his heavy chain and walking staff." },
-  { id:"mech-poster", name:"Mech Poster", img:"pod-tees/orig-mech.jpg", sizes:["M","L","XL","2XL"],
+  { id:"mech-poster", price:24, name:"Mech Poster", img:"pod-tees/orig-mech.jpg", sizes:["M","L","XL","2XL"],
     desc:"A recruitment poster from the war for tomorrow — a towering mech raises its blade over a swarm of winged demons. Original artwork." },
-  { id:"manga-draw", name:"Manga Draw", img:"pod-tees/orig-manga.jpg", sizes:["M","L","XL","2XL"],
+  { id:"manga-draw", price:24, name:"Manga Draw", img:"pod-tees/orig-manga.jpg", sizes:["M","L","XL","2XL"],
     desc:"One breath, one draw. A manga swordsman caught mid quick-draw, blade slicing through speed lines with DRAW! slashed in red. Original artwork." },
-  { id:"venom-tour", name:"Venom Tour 2026", img:"pod-tees/orig-venom.jpg", sizes:["M","L","XL","2XL"],
+  { id:"venom-tour", price:24, name:"Venom Tour 2026", img:"pod-tees/orig-venom.jpg", sizes:["M","L","XL","2XL"],
     desc:"Ten cities, one sting. A vintage scorpion anatomy chart turned world-tour poster, Los Angeles to London, April–May 2026. Original artwork." },
-  { id:"old-captain-duotone", name:"Old Captain", img:"pod-tees/orig-captain.jpg", sizes:["M","L","XL","2XL"],
+  { id:"old-captain-duotone", price:24, name:"Old Captain", img:"pod-tees/orig-captain.jpg", sizes:["M","L","XL","2XL"],
     desc:"The old captain has seen some things — bearded sage, heavy chain, walking staff, ringed in flame. Full-color original." },
-  { id:"mascot", name:"Mascot", img:"pod-tees/orig-mascot.jpg", sizes:["M","L","XL","2XL"],
+  { id:"mascot", price:24, name:"Mascot", img:"pod-tees/orig-mascot.jpg", sizes:["M","L","XL","2XL"],
     desc:"The mascot lost its mind and it looks good on it — a grinning head melting into neon-green graffiti splatter. Full-color original." },
-  { id:"midnight-reaper-duotone", name:"Midnight Reaper", img:"pod-tees/orig-reaper.jpg", sizes:["M","L","XL","2XL"],
+  { id:"midnight-reaper-duotone", price:24, name:"Midnight Reaper", img:"pod-tees/orig-reaper.jpg", sizes:["M","L","XL","2XL"],
     desc:"Issue #1, only $3.99 — if you survive the cover. A hooded reaper stalks a graveyard of bats and tombstones like a vintage horror comic. Original artwork." },
-  { id:"we-outside", name:"We Outside", img:"pod-tees/orig-weoutside.jpg", sizes:["M","L","XL","2XL"],
+  { id:"we-outside", price:24, name:"We Outside", img:"pod-tees/orig-weoutside.jpg", sizes:["M","L","XL","2XL"],
     desc:"Taking it to the street. Wildstyle WE OUTSIDE burns over a night scene — spray can in hand, Freedom Tunnel on the wall. Full-color original." },
   { id:"shorts-varsity-iced", name:"ICYUNV Varsity Shorts — Iced Out", img:"icyunv-tees/shorts-varsity-iced.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black mesh shorts — iced-out varsity graphic on the leg." },
@@ -141,32 +141,32 @@ const PRODUCTS = [
     desc:"Matching black mesh shorts — bolt sun emblem on the leg." },
   { id:"shorts-crown", name:"Crown ICYUNV Shorts", img:"icyunv-tees/shorts-crown.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black mesh shorts — gold crown emblem on the leg." },
-  { id:"hoodie-varsity-iced", name:"ICYUNV Varsity Hoodie — Iced Out", img:"icyunv-tees/hoodie-varsity-iced.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-varsity-iced", price:48, name:"ICYUNV Varsity Hoodie — Iced Out", img:"icyunv-tees/hoodie-varsity-iced.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — iced-out varsity graphic on the chest." },
-  { id:"hoodie-varsity-fire-ice", name:"ICYUNV Varsity Hoodie — Fire & Ice", img:"icyunv-tees/hoodie-varsity-fire-ice.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-varsity-fire-ice", price:48, name:"ICYUNV Varsity Hoodie — Fire & Ice", img:"icyunv-tees/hoodie-varsity-fire-ice.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — fire & ice varsity graphic on the chest." },
-  { id:"hoodie-varsity-heaven-hell", name:"ICYUNV Varsity Hoodie — Heaven & Hell", img:"icyunv-tees/hoodie-varsity-heaven-hell.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-varsity-heaven-hell", price:48, name:"ICYUNV Varsity Hoodie — Heaven & Hell", img:"icyunv-tees/hoodie-varsity-heaven-hell.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — heaven & hell varsity graphic on the chest." },
-  { id:"hoodie-varsity-graffiti-art", name:"ICYUNV Varsity Hoodie — Graffiti x Fine Art", img:"icyunv-tees/hoodie-varsity-graffiti-art.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-varsity-graffiti-art", price:48, name:"ICYUNV Varsity Hoodie — Graffiti x Fine Art", img:"icyunv-tees/hoodie-varsity-graffiti-art.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — graffiti x fine art varsity graphic on the chest." },
-  { id:"hoodie-bolt-sun", name:"Bolt Sun Hoodie", img:"icyunv-tees/hoodie-bolt-sun.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-bolt-sun", price:48, name:"Bolt Sun Hoodie", img:"icyunv-tees/hoodie-bolt-sun.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — bolt sun emblem on the chest." },
-  { id:"hoodie-crown", name:"Crown ICYUNV Hoodie", img:"icyunv-tees/hoodie-crown.png", sizes:["S","M","L","XL","2XL"],
+  { id:"hoodie-crown", price:48, name:"Crown ICYUNV Hoodie", img:"icyunv-tees/hoodie-crown.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black pullover hoodie — gold crown emblem on the chest." },
-  { id:"sweats-varsity-iced", name:"ICYUNV Varsity Sweats — Iced Out", img:"icyunv-tees/sweats-varsity-iced.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-varsity-iced", price:64, name:"ICYUNV Varsity Sweats — Iced Out", img:"icyunv-tees/sweats-varsity-iced.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — iced-out varsity graphic on the thigh." },
-  { id:"sweats-varsity-fire-ice", name:"ICYUNV Varsity Sweats — Fire & Ice", img:"icyunv-tees/sweats-varsity-fire-ice.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-varsity-fire-ice", price:64, name:"ICYUNV Varsity Sweats — Fire & Ice", img:"icyunv-tees/sweats-varsity-fire-ice.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — fire & ice varsity graphic on the thigh." },
-  { id:"sweats-varsity-heaven-hell", name:"ICYUNV Varsity Sweats — Heaven & Hell", img:"icyunv-tees/sweats-varsity-heaven-hell.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-varsity-heaven-hell", price:64, name:"ICYUNV Varsity Sweats — Heaven & Hell", img:"icyunv-tees/sweats-varsity-heaven-hell.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — heaven & hell varsity graphic on the thigh." },
-  { id:"sweats-varsity-graffiti-art", name:"ICYUNV Varsity Sweats — Graffiti x Fine Art", img:"icyunv-tees/sweats-varsity-graffiti-art.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-varsity-graffiti-art", price:64, name:"ICYUNV Varsity Sweats — Graffiti x Fine Art", img:"icyunv-tees/sweats-varsity-graffiti-art.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — graffiti x fine art varsity graphic on the thigh." },
-  { id:"sweats-bolt-sun", name:"Bolt Sun Sweats", img:"icyunv-tees/sweats-bolt-sun.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-bolt-sun", price:64, name:"Bolt Sun Sweats", img:"icyunv-tees/sweats-bolt-sun.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — bolt sun emblem on the thigh." },
-  { id:"sweats-crown", name:"Crown ICYUNV Sweats", img:"icyunv-tees/sweats-crown.png", sizes:["S","M","L","XL","2XL"],
+  { id:"sweats-crown", price:64, name:"Crown ICYUNV Sweats", img:"icyunv-tees/sweats-crown.png", sizes:["S","M","L","XL","2XL"],
     desc:"Matching black sweatpants — gold crown emblem on the thigh." },
 ];
-const PRICE = 24, SHIP = 4.49, DEFAULT_SIZES = ["S","M","L","XL","2XL"];
+const PRICE = 35, SHIP = 4.49, DEFAULT_SIZES = ["S","M","L","XL","2XL"];
 const grid = document.getElementById("grid");
 PRODUCTS.forEach(p => {
   const el = document.createElement("div");
