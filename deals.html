@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Deals Marquee — Bitstream's Hand-Picked Affiliate Showcase</title>
+<meta name="description" content="Eight hand-picked deals with real margins and verified prices — local-LLM rigs, smart glasses, and home crypto miners. Curated by Bitstream.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0A09; --surface:#1C1917; --surface-2:#292524;
+  --gold:#D9A62E; --gold-deep:#A16207; --gold-soft:rgba(217,166,46,.12);
+  --text:#FAFAF9; --muted:#A8A29E; --faint:#78716C;
+  --border:rgba(217,166,46,.18); --border-soft:#292524;
+  --radius:18px; --maxw:1200px;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Montserrat',system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:#0C0A09}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(12,10,9,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:34px;height:34px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:20px;line-height:1}
+.brand-name{font-family:var(--font-display);font-size:24px;font-weight:700;letter-spacing:.04em}
+.brand-name em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+@media(max-width:640px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 28px;border-radius:999px;background:var(--gold);color:#0C0A09;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(217,166,46,.35);background:#E8B83E}
+.btn-ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-ghost:hover{background:var(--gold-soft);box-shadow:none;color:#E8B83E}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:110px 0 70px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% -5%,rgba(217,166,46,.16),transparent 70%);pointer-events:none}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);border-radius:999px;padding:10px 22px;margin-bottom:28px;background:var(--gold-soft)}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(52px,9vw,118px);line-height:1.02;letter-spacing:.01em;margin-bottom:22px}
+.hero h1 .gold{color:var(--gold);font-style:italic}
+.hero .lede{max-width:640px;margin:0 auto 40px;color:var(--muted);font-size:18px;font-weight:300}
+.hero-stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:54px}
+.stat{padding:6px 34px;text-align:center;border-left:1px solid var(--border-soft)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font-family:var(--font-display);font-size:38px;font-weight:700;color:var(--gold);line-height:1.1}
+.stat span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:640px){.stat{padding:6px 18px}.stat b{font-size:30px}}
+
+/* ---------- marquee ticker ---------- */
+.ticker{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(217,166,46,.05);overflow:hidden;white-space:nowrap;padding:16px 0;position:relative}
+.ticker-track{display:inline-flex;gap:0;animation:tick 36s linear infinite;will-change:transform}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{display:inline-flex;align-items:center;gap:14px;padding:0 28px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.ticker span i{font-style:normal;color:var(--gold)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+/* ---------- spotlight ---------- */
+.section{padding:90px 0}
+.section-head{text-align:center;margin-bottom:56px}
+.section-head .kicker{margin-bottom:18px}
+.section-head h2{font-family:var(--font-display);font-size:clamp(36px,5vw,58px);font-weight:600;margin-bottom:14px}
+.section-head p{color:var(--muted);max-width:620px;margin:0 auto;font-weight:300}
+.spotlight{display:grid;grid-template-columns:1.05fr 1fr;gap:0;background:linear-gradient(135deg,var(--surface) 0%,#141210 100%);border:1px solid var(--border);border-radius:26px;overflow:hidden;position:relative}
+.spotlight::after{content:"";position:absolute;inset:0;border-radius:26px;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.spot-img{position:relative;min-height:420px;background:#000}
+.spot-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.spot-badge{position:absolute;top:22px;left:22px;background:var(--gold);color:#0C0A09;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:9px 18px;border-radius:999px;z-index:2}
+.spot-body{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.spot-tag{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.spot-body h3{font-family:var(--font-display);font-size:clamp(30px,3.6vw,46px);font-weight:600;line-height:1.1;margin-bottom:16px}
+.spot-body .spec{color:var(--muted);font-weight:300;margin-bottom:26px;font-size:16px}
+.price-row{display:flex;align-items:baseline;gap:14px;margin-bottom:30px;flex-wrap:wrap}
+.price-now{font-family:var(--font-display);font-size:52px;font-weight:700;color:var(--gold);line-height:1}
+.price-was{color:var(--faint);text-decoration:line-through;font-size:20px}
+.save-badge{background:rgba(220,38,38,.14);color:#F87171;border:1px solid rgba(248,113,113,.35);font-size:12px;font-weight:700;letter-spacing:.12em;padding:6px 14px;border-radius:999px}
+.spot-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.merchant-note{font-size:12px;color:var(--faint);letter-spacing:.06em}
+@media(max-width:860px){.spotlight{grid-template-columns:1fr}.spot-img{min-height:300px}.spot-body{padding:38px 30px}}
+
+/* ---------- controls ---------- */
+.controls{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:44px}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+.filter-btn{min-height:44px;padding:0 22px;border-radius:999px;background:transparent;border:1px solid var(--border-soft);color:var(--muted);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+.filter-btn.active{background:var(--gold);border-color:var(--gold);color:#0C0A09}
+.sort-wrap{display:flex;align-items:center;gap:12px}
+.sort-wrap label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.sort-select{background:var(--surface);color:var(--text);border:1px solid var(--border-soft);border-radius:12px;min-height:44px;padding:0 16px;font-family:var(--font-body);font-size:14px;cursor:pointer}
+.sort-select:hover{border-color:var(--gold)}
+.result-count{font-size:13px;color:var(--faint);letter-spacing:.06em}
+
+/* ---------- deal grid ---------- */
+.deal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:1024px){.deal-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.deal-grid{grid-template-columns:1fr}}
+.deal{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;position:relative}
+.deal:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(217,166,46,.12)}
+.deal-img{position:relative;aspect-ratio:4/3;background:#111;overflow:hidden}
+.deal-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.deal:hover .deal-img img{transform:scale(1.05)}
+.deal-discount{position:absolute;top:14px;right:14px;background:#DC2626;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;padding:7px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(220,38,38,.4)}
+.deal-rank{position:absolute;top:14px;left:14px;width:36px;height:36px;border-radius:50%;background:rgba(12,10,9,.75);backdrop-filter:blur(6px);border:1px solid var(--border);display:grid;place-items:center;font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:17px}
+.deal-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.deal-tag{font-size:10px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.deal-body h3{font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.15;margin-bottom:10px}
+.deal-spec{color:var(--muted);font-size:14px;font-weight:300;margin-bottom:20px;flex:1}
+.deal-price{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.deal-price .now{font-family:var(--font-display);font-size:34px;font-weight:700;color:var(--text)}
+.deal-price .was{color:var(--faint);text-decoration:line-through;font-size:16px}
+.deal-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.deal-foot .btn{min-height:44px;padding:0 22px;font-size:12px}
+.deal-merchant{font-size:11px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- why section ---------- */
+.why{background:var(--surface);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr}}
+.why-card{border:1px solid var(--border-soft);border-radius:var(--radius);padding:36px 32px;background:rgba(12,10,9,.4)}
+.why-icon{width:52px;height:52px;border-radius:14px;background:var(--gold-soft);border:1px solid var(--border);display:grid;place-items:center;margin-bottom:20px;color:var(--gold)}
+.why-icon svg{width:26px;height:26px}
+.why-card h3{font-family:var(--font-display);font-size:24px;font-weight:600;margin-bottom:10px}
+.why-card p{color:var(--muted);font-size:14px;font-weight:300}
+
+/* ---------- disclosure + footer ---------- */
+.disclosure{padding:60px 0 0}
+.disclosure-box{border:1px dashed var(--border);border-radius:var(--radius);padding:28px 32px;background:rgba(217,166,46,.04);font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+.disclosure-box strong{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:8px}
+footer{border-top:1px solid var(--border-soft);margin-top:70px;padding:44px 0}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-inner p{font-size:13px;color:var(--faint)}
+.foot-inner .credit{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.foot-inner .credit b{color:var(--gold);font-weight:600}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.empty-state{grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--muted);border:1px dashed var(--border-soft);border-radius:var(--radius);display:none}
+.empty-state.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Bitstream home">
+      <span class="brand-mark">B</span>
+      <span class="brand-name">BITSTREAM<em>.</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#episodes">Episodes</a>
+      <a href="deals.html" aria-current="page">Deals</a>
+      <a class="btn btn-ghost nav-cta" href="index.html#join" style="min-height:44px">Join the list</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Bitstream &middot; Affiliate Showcase</span>
+    <h1>The <span class="gold">Deals</span> Marquee</h1>
+    <p class="lede">Eight products. Zero filler. Every item on this page is hand-picked, price-verified weekly, and earns its place — these are the highest-margin picks from the last ninety days of the Bitstream shelf.</p>
+    <div class="hero-stats" role="list">
+      <div class="stat" role="listitem"><b>8</b><span>Curated deals</span></div>
+      <div class="stat" role="listitem"><b>20%</b><span>Top discount</span></div>
+      <div class="stat" role="listitem"><b>90d</b><span>Shelf window</span></div>
+      <div class="stat" role="listitem"><b>100%</b><span>Price-verified</span></div>
+    </div>
+    <a class="btn" href="#spotlight">See the top pick</a>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span><i>&#10022;</i> GMKtec EVO-X2 &mdash; $3,649</span>
+    <span><i>&#10022;</i> MINISFORUM MS-S1 Max &mdash; Save 20%</span>
+    <span><i>&#10022;</i> Mac mini M5 Pro &mdash; $1,669</span>
+    <span><i>&#10022;</i> Goldshell E-KA1M &mdash; 14% off</span>
+    <span><i>&#10022;</i> Meta Ray-Ban Display &mdash; $799</span>
+    <span><i>&#10022;</i> XREAL One Pro &mdash; $599</span>
+    <span><i>&#10022;</i> Mini Doge III Plus &mdash; $474</span>
+    <span><i>&#10022;</i> Rokid AI Glasses &mdash; $299</span>
+  </div>
+</div>
+
+<section class="section" id="spotlight" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">No. 1 &middot; Top margin pick</span>
+      <h2>The Spotlight Deal</h2>
+      <p>The single highest-ticket item on the shelf — flagship silicon for running serious AI at home.</p>
+    </div>
+    <article class="spotlight reveal">
+      <div class="spot-img">
+        <span class="spot-badge">Top Pick</span>
+        <img src="store/img/gmktec-evo-x2.jpg" alt="GMKtec EVO-X2 AI Mini PC" fetchpriority="high">
+      </div>
+      <div class="spot-body">
+        <div class="spot-tag">Local LLM Rig</div>
+        <h3>GMKtec EVO-X2 AI Mini PC</h3>
+        <p class="spec">Ryzen AI Max+ 395 &middot; 128GB LPDDR5X &middot; 2TB SSD — built for 70B-class local LLMs. The Strix Halo flagship: more unified memory than anything else this size, which is exactly what big local models are hungry for.</p>
+        <div class="price-row">
+          <span class="price-now">$3,649</span>
+        </div>
+        <div class="spot-cta">
+          <a class="btn" href="https://www.amazon.com/s?k=GMKtec+EVO-X2+AI+Mini+PC&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+          <span class="merchant-note">Ships via Amazon</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="deals" style="padding-top:50px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">The full marquee</span>
+      <h2>Every Deal, Ranked</h2>
+      <p>Filter by category or sort by price and discount. Prices checked September 30, 2026 — when a deal ends, it's gone.</p>
+    </div>
+
+    <div class="controls reveal">
+      <div class="filters" role="group" aria-label="Filter deals by category">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="ai-rigs" aria-pressed="false">AI Rigs</button>
+        <button class="filter-btn" data-filter="glasses" aria-pressed="false">Smart Glasses</button>
+        <button class="filter-btn" data-filter="miners" aria-pressed="false">Miners</button>
+      </div>
+      <div class="sort-wrap">
+        <span class="result-count" id="resultCount" aria-live="polite"></span>
+        <label for="sortSelect">Sort</label>
+        <select class="sort-select" id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="discount">Biggest discount</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="deal-grid" id="dealGrid">
+
+      <article class="deal reveal" data-category="ai-rigs" data-price="3649" data-discount="0" data-featured="1">
+        <div class="deal-img">
+          <span class="deal-rank">1</span>
+          <img src="store/img/gmktec-evo-x2.jpg" alt="GMKtec EVO-X2 AI Mini PC" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Local LLM Rig</div>
+          <h3>GMKtec EVO-X2 AI Mini PC</h3>
+          <p class="deal-spec">Ryzen AI Max+ 395 &middot; 128GB LPDDR5X &middot; 2TB SSD — built for 70B-class local LLMs</p>
+          <div class="deal-price"><span class="now">$3,649</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=GMKtec+EVO-X2+AI+Mini+PC&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="ai-rigs" data-price="2599" data-discount="20" data-featured="2">
+        <div class="deal-img">
+          <span class="deal-rank">2</span>
+          <span class="deal-discount">Save 20%</span>
+          <img src="store/img/minisforum-ms-s1-max.jpg" alt="MINISFORUM MS-S1 Max" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Local LLM Rig</div>
+          <h3>MINISFORUM MS-S1 Max</h3>
+          <p class="deal-spec">Ryzen AI Max+ 395 &middot; 64GB unified memory &middot; 2TB SSD — runs 30&ndash;70B models locally</p>
+          <div class="deal-price"><span class="was">$3,249</span><span class="now">$2,599</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=MINISFORUM+MS-S1+Max&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="ai-rigs" data-price="1669" data-discount="0" data-featured="3">
+        <div class="deal-img">
+          <span class="deal-rank">3</span>
+          <img src="store/img/mac-mini-m5-pro.jpg" alt="Apple Mac mini with M5 Pro, 24GB" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Local LLM Rig</div>
+          <h3>Apple Mac mini &mdash; M5 Pro, 24GB</h3>
+          <p class="deal-spec">M5 Pro &middot; 24GB unified memory &middot; 512GB SSD — the simplest path to local LLMs on macOS</p>
+          <div class="deal-price"><span class="now">$1,669</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=Apple+Mac+mini+M5+Pro&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="miners" data-price="1210" data-discount="14" data-featured="4">
+        <div class="deal-img">
+          <span class="deal-rank">4</span>
+          <span class="deal-discount">14% off</span>
+          <img src="store/img/goldshell-e-ka1m.png" alt="Goldshell E-KA1M Kaspa miner" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Home Miner</div>
+          <h3>Goldshell E-KA1M</h3>
+          <p class="deal-spec">5.5TH/s Kaspa &middot; 1800W &middot; Wi-Fi — the week's biggest home-miner deal</p>
+          <div class="deal-price"><span class="was">$1,409</span><span class="now">$1,210</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.goldshell.com/gsaf/mr_clyburn/product/goldshell-e-ka1m/" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Goldshell</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="glasses" data-price="799" data-discount="0" data-featured="5">
+        <div class="deal-img">
+          <span class="deal-rank">5</span>
+          <img src="store/img/rayban-meta-display.jpg" alt="Meta Ray-Ban Display smart glasses" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Smart Glasses</div>
+          <h3>Meta Ray-Ban Display</h3>
+          <p class="deal-spec">In-lens display + Neural Band gesture control &middot; Meta AI &middot; live captioning</p>
+          <div class="deal-price"><span class="now">$799</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=Meta+Ray-Ban+Display&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="glasses" data-price="599" data-discount="0" data-featured="6">
+        <div class="deal-img">
+          <span class="deal-rank">6</span>
+          <img src="store/img/xreal-one-pro.jpg" alt="XREAL One Pro AR glasses" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Smart Glasses</div>
+          <h3>XREAL One Pro</h3>
+          <p class="deal-spec">171&Prime; FHD 120Hz spatial display &middot; Bose audio &middot; iPhone / Mac / PC / Android</p>
+          <div class="deal-price"><span class="now">$599</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=XREAL+One+Pro&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="miners" data-price="474" data-discount="0" data-featured="7">
+        <div class="deal-img">
+          <span class="deal-rank">7</span>
+          <img src="store/img/goldshell-mini-doge-3-plus.png" alt="Goldshell Mini Doge III Plus" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Home Miner</div>
+          <h3>Goldshell Mini Doge III Plus</h3>
+          <p class="deal-spec">810MH/s LTC/DOGE &middot; 500W &middot; &le;35dB — apartment-quiet</p>
+          <div class="deal-price"><span class="now">$474</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.goldshell.com/gsaf/mr_clyburn/product/goldshell-mini-doge-iii-plus/" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Goldshell</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal reveal" data-category="glasses" data-price="299" data-discount="0" data-featured="8">
+        <div class="deal-img">
+          <span class="deal-rank">8</span>
+          <img src="store/img/rokid-ai-glasses.png" alt="Rokid AI Glasses" loading="lazy">
+        </div>
+        <div class="deal-body">
+          <div class="deal-tag">Smart Glasses</div>
+          <h3>Rokid AI Glasses</h3>
+          <p class="deal-spec">ChatGPT + Gemini built in &middot; live translation &middot; teleprompter mode</p>
+          <div class="deal-price"><span class="now">$299</span></div>
+          <div class="deal-foot">
+            <a class="btn" href="https://www.amazon.com/s?k=Rokid+AI+Glasses&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+            <span class="deal-merchant">Amazon</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="empty-state" id="emptyState">
+        <h3 style="font-family:var(--font-display);font-size:28px;margin-bottom:10px">Nothing on this shelf right now.</h3>
+        <p>Try a different category — the marquee rotates weekly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Why this page exists</span>
+      <h2>Curated Like It Matters</h2>
+      <p>Anyone can paste affiliate links. This shelf earns its keep — here's the bar every product clears.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z"/></svg>
+        </div>
+        <h3>Verified live</h3>
+        <p>Every price on this page is checked against the merchant weekly. Dead deals and drifted prices get pulled — no stale links, no bait pricing.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </div>
+        <h3>Margin-first picks</h3>
+        <p>Only products with real earning power make the marquee — high-ticket gear with genuine discounts. Thin-margin filler stays off the page.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Fresh 90-day window</h3>
+        <p>The shelf only holds products listed in the last ninety days. Stale inventory rotates out so the page never goes dusty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="disclosure">
+  <div class="wrap">
+    <div class="disclosure-box reveal">
+      <strong>Affiliate disclosure</strong>
+      Bitstream is reader-supported. As an Amazon Associate we earn from qualifying purchases made through links on this page — it costs you nothing extra. Goldshell links are referral links that may earn us a commission. Prices and availability are accurate as of September 30, 2026 and may change.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <a class="brand" href="index.html" aria-label="Bitstream home">
+      <span class="brand-mark">B</span>
+      <span class="brand-name" style="font-size:20px">BITSTREAM<em>.</em></span>
+    </a>
+    <p>&copy; 2026 Bitstream. Zero filler. All value.</p>
+    <p class="credit">Web design by <b>Sunrise Local Media Group</b></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var grid = document.getElementById('dealGrid');
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.deal'));
+  var emptyState = document.getElementById('emptyState');
+  var resultCount = document.getElementById('resultCount');
+  var sortSelect = document.getElementById('sortSelect');
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
+  var activeFilter = 'all';
+
+  /* duplicate ticker content for a seamless loop */
+  var ticker = document.getElementById('tickerTrack');
+  ticker.innerHTML += ticker.innerHTML;
+
+  function updateCount(n){
+    resultCount.textContent = n + (n === 1 ? ' deal' : ' deals');
+  }
+
+  function apply(){
+    var visible = [];
+    cards.forEach(function(card){
+      var show = activeFilter === 'all' || card.dataset.category === activeFilter;
+      card.style.display = show ? '' : 'none';
+      if (show) visible.push(card);
+    });
+
+    var mode = sortSelect.value;
+    visible.sort(function(a, b){
+      if (mode === 'price-desc') return (+b.dataset.price) - (+a.dataset.price);
+      if (mode === 'price-asc')  return (+a.dataset.price) - (+b.dataset.price);
+      if (mode === 'discount')   return (+b.dataset.discount) - (+a.dataset.discount);
+      return (+a.dataset.featured) - (+b.dataset.featured);
+    });
+    visible.forEach(function(card){ grid.appendChild(card); });
+    /* keep the empty-state message last */
+    grid.appendChild(emptyState);
+
+    emptyState.classList.toggle('show', visible.length === 0);
+    updateCount(visible.length);
+  }
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      activeFilter = btn.dataset.filter;
+      apply();
+    });
+  });
+
+  sortSelect.addEventListener('change', apply);
+
+  /* scroll-reveal */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function(el){ el.classList.add('visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  apply();
+})();
+</script>
+</body>
+</html>
