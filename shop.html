@@ -7,7 +7,7 @@
 <meta name="description" content="Bitstream affiliate gear deals plus ICYUNV clothing. Clothing orders go through WhatsApp chat.">
 <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&display=swap');
     :root{color-scheme:light dark;--bg:#f3f2ed;--paper:#fff;--ink:#101315;--muted:#535a5c;--line:#c9cbc5;--cyan:#007c8a;--coral:#e14f3d;--wash:#e5eaE8;--dark:#101315;--dark2:#191e20;--white:#f7f8f4;--shadow:0 18px 45px rgba(16,19,21,.10)}
     @media(prefers-color-scheme:dark){:root{--bg:#0d1011;--paper:#151a1c;--ink:#f4f6f2;--muted:#aeb7b5;--line:#333b3d;--cyan:#45d7e6;--coral:#ff7967;--wash:#1c2325;--dark:#07090a;--dark2:#111517;--white:#f7f8f4;--shadow:0 18px 45px rgba(0,0,0,.30)}}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;line-height:1.5}button,input{font:inherit}a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
@@ -158,11 +158,10 @@
 .pkg-meta{font-size:.82rem;color:var(--muted);margin:8px 0 0}
 
 /* ============ ICYUNV FROZEN-STREET HERO ============ */
-.icy-hero{position:relative;overflow:hidden;background:#04060b;color:#f4f8ff;padding:104px 0 0}
+.icy-hero{position:relative;overflow:hidden;background:transparent;color:#f4f8ff;padding:104px 0 0}
 .icy-beams{position:absolute;inset:-15%;pointer-events:none;background:radial-gradient(620px 340px at 16% 10%,rgba(124,199,245,.22),transparent 70%),radial-gradient(760px 400px at 86% 26%,rgba(47,127,196,.20),transparent 70%),radial-gradient(560px 520px at 50% 112%,rgba(212,175,55,.10),transparent 70%);animation:beamDrift 16s ease-in-out infinite alternate}
 @keyframes beamDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(2%,3%,0) scale(1.07)}}
 .icy-hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(124,199,245,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(124,199,245,.08) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 90% 82% at 50% 18%,#000 25%,transparent 78%);mask-image:radial-gradient(ellipse 90% 82% at 50% 18%,#000 25%,transparent 78%)}
-.icy-snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .icy-hero-inner{position:relative;z-index:1;text-align:center;padding-bottom:60px}
 .icy-hero-inner>*{animation:heroIn .8s cubic-bezier(.16,.8,.26,1) both}
 .icy-hero-inner>*:nth-child(2){animation-delay:.1s}
@@ -202,13 +201,69 @@
 .deal,.deal-img img{transition:none}
 }
 
+
+/* ============ SITE-WIDE FROZEN FIELD + GRAFFITI ============ */
+body{background:#04060b;color:#eaf2fb;--bg:#04060b;--paper:#0a1018;--ink:#f2f7fd;--muted:#93a9c4;--line:#1e2c42;--cyan:#62dfeb;--coral:#ff7a67;--wash:#0a1220;--dark:#04060b;--dark2:#0a0f16;--white:#f7f8f4;--shadow:0 18px 45px rgba(0,0,0,.45)}
+.site-beams,.site-grid,.graf-layer,#siteSnow{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.site-beams{inset:-12%;background:radial-gradient(700px 380px at 12% 8%,rgba(124,199,245,.16),transparent 70%),radial-gradient(820px 440px at 88% 22%,rgba(47,127,196,.15),transparent 70%),radial-gradient(640px 560px at 50% 108%,rgba(212,175,55,.08),transparent 70%);animation:beamDrift 22s ease-in-out infinite alternate}
+.site-grid{background-image:linear-gradient(rgba(124,199,245,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,199,245,.05) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 120% 90% at 50% 0%,#000 20%,transparent 85%);mask-image:radial-gradient(ellipse 120% 90% at 50% 0%,#000 20%,transparent 85%)}
+.graf{position:absolute;color:rgba(169,221,255,.15);filter:url(#spray) drop-shadow(0 0 12px rgba(124,199,245,.22))}
+.graf.gold{color:rgba(212,175,55,.13)}
+.graf.coral{color:rgba(255,122,103,.12)}
+.graf use{fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.g1{top:5%;left:3%;width:min(150px,24vw);transform:rotate(-12deg)}
+.g2{top:11%;right:5%;width:min(120px,20vw);transform:rotate(8deg)}
+.g3{top:33%;left:1%;width:min(210px,32vw);transform:rotate(-6deg)}
+.g4{top:43%;right:2%;width:min(130px,22vw);transform:rotate(10deg)}
+.g5{top:61%;left:4%;width:min(140px,24vw);transform:rotate(6deg)}
+.g6{top:69%;right:7%;width:min(120px,20vw);transform:rotate(-10deg)}
+.g7{top:83%;left:9%;width:min(150px,26vw);transform:rotate(-4deg)}
+.g8{top:87%;right:11%;width:min(100px,18vw);transform:rotate(12deg)}
+.g9{top:25%;left:44%;width:90px;transform:rotate(-8deg);opacity:.55}
+.g10{top:55%;left:47%;width:80px;transform:rotate(14deg);opacity:.5}
+.wordtag{position:absolute;font-family:'Permanent Marker',cursive;color:rgba(169,221,255,.15);filter:url(#spray);white-space:nowrap;line-height:1}
+.w1{top:19%;left:68%;font-size:clamp(28px,4vw,44px);transform:rotate(8deg)}
+.w2{top:51%;left:11%;font-size:clamp(24px,3.4vw,38px);transform:rotate(-10deg);color:rgba(212,175,55,.13)}
+.w3{top:77%;left:58%;font-size:clamp(34px,5vw,58px);transform:rotate(5deg)}
+@media (max-width:640px){.g9,.g10,.w2{display:none}}
+@media (prefers-reduced-motion:reduce){.site-beams{animation:none}}
+
 </style>
 </head>
 <body>
+<div class="site-beams" aria-hidden="true"></div>
+<div class="site-grid" aria-hidden="true"></div>
+<div class="graf-layer" aria-hidden="true">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<filter id="spray" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+<symbol id="tag-btc" viewBox="0 0 100 100"><path d="M50 14 C70 14 86 30 86 50 C86 70 70 86 50 86 C30 86 14 70 14 50 C14 30 30 14 50 14 Z"/><path d="M44 34 L44 68 M44 34 C56 32 60 38 60 44 C60 50 52 52 44 52 M44 52 C58 52 64 56 64 64 C64 72 54 70 44 68"/></symbol>
+<symbol id="tag-eth" viewBox="0 0 100 100"><path d="M50 8 L78 48 L50 60 L22 48 Z"/><path d="M22 48 L50 92 L78 48"/></symbol>
+<symbol id="tag-sol" viewBox="0 0 100 100"><path d="M28 32 L72 24 M28 54 L72 46 M28 76 L72 68"/></symbol>
+<symbol id="tag-doge" viewBox="0 0 100 100"><path d="M36 26 L36 74 M36 26 C58 26 72 38 72 50 C72 62 58 74 36 74 M28 50 L64 50"/></symbol>
+<symbol id="tag-swoosh" viewBox="0 0 100 100"><path d="M10 66 C32 64 56 50 90 20 C72 52 44 70 14 68"/></symbol>
+<symbol id="tag-arches" viewBox="0 0 100 100"><path d="M18 86 C18 56 26 32 36 32 C46 32 50 56 50 86 M50 86 C50 56 58 32 68 32 C78 32 84 56 84 86"/></symbol>
+<symbol id="tag-apple" viewBox="0 0 100 100"><path d="M52 18 C70 18 84 34 84 52 C84 70 68 86 50 86 C32 86 16 70 16 52 C16 34 34 18 52 18"/><path d="M52 18 C54 10 60 6 66 6"/><path d="M82 42 L90 47 L82 52"/></symbol>
+<symbol id="tag-stripes" viewBox="0 0 100 100"><path d="M30 22 L44 78 M48 22 L62 78 M66 22 L80 78"/></symbol>
+<symbol id="tag-play" viewBox="0 0 100 100"><path d="M36 26 L74 50 L36 74 Z"/></symbol>
+<symbol id="tag-ltc" viewBox="0 0 100 100"><path d="M56 24 L40 76 L68 76 M30 52 L58 52"/></symbol>
+</defs></svg>
+<svg class="graf g1" viewBox="0 0 100 100"><use href="#tag-btc"/></svg>
+<svg class="graf g2 gold" viewBox="0 0 100 100"><use href="#tag-eth"/></svg>
+<svg class="graf g3" viewBox="0 0 100 100"><use href="#tag-swoosh"/></svg>
+<svg class="graf g4" viewBox="0 0 100 100"><use href="#tag-sol"/></svg>
+<svg class="graf g5 coral" viewBox="0 0 100 100"><use href="#tag-arches"/></svg>
+<svg class="graf g6 gold" viewBox="0 0 100 100"><use href="#tag-doge"/></svg>
+<svg class="graf g7" viewBox="0 0 100 100"><use href="#tag-stripes"/></svg>
+<svg class="graf g8" viewBox="0 0 100 100"><use href="#tag-play"/></svg>
+<svg class="graf g9" viewBox="0 0 100 100"><use href="#tag-apple"/></svg>
+<svg class="graf g10" viewBox="0 0 100 100"><use href="#tag-ltc"/></svg>
+<span class="wordtag w1">HODL</span>
+<span class="wordtag w2">WAGMI</span>
+<span class="wordtag w3">ICYUNV</span>
+</div>
+<canvas id="siteSnow" aria-hidden="true"></canvas>
 <div class="wrap shop-top"><a class="back" href="index.html">&larr; BACK TO BITSTREAM</a><span class="brandline" style="margin:0">BITSTREAM<span>&middot;</span>SHOP</span></div>
 <header class="shop-hero icy-hero">
-<canvas class="icy-snow" aria-hidden="true"></canvas>
-<div class="icy-beams" aria-hidden="true"></div>
 <div class="wrap icy-hero-inner">
 <img class="icy-logo" src="whatsapp-shop/img/icyunv-logo-transparent-web.png" alt="ICYUNV &mdash; frozen-metal wordmark with snowflake" width="1024" height="975" fetchpriority="high">
 <h1 class="icy-title"><span class="ice-text">SHOP THE DROP</span></h1>
@@ -593,11 +648,11 @@ document.querySelectorAll('.section-head,.store-cat,.reel-label').forEach(functi
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 if(reduce)return;
-var cv=document.querySelector('.icy-snow');if(!cv||!cv.getContext)return;
+var cv=document.getElementById('siteSnow');if(!cv||!cv.getContext)return;
 var ctx=cv.getContext('2d'),W=0,H=0,fl=[],i;
-function size(){var r=cv.parentElement.getBoundingClientRect();W=cv.width=Math.max(1,Math.floor(r.width));H=cv.height=Math.max(1,Math.floor(r.height));}
+function size(){W=cv.width=Math.max(1,window.innerWidth);H=cv.height=Math.max(1,window.innerHeight);}
 size();window.addEventListener('resize',size);
-for(i=0;i<70;i++)fl.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+0.6,s:Math.random()*0.0009+0.0003,o:Math.random()*0.5+0.2,ph:Math.random()*6.28});
+for(i=0;i<90;i++)fl.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+0.6,s:Math.random()*0.0009+0.0003,o:Math.random()*0.5+0.2,ph:Math.random()*6.28});
 var run=true;document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick();});
 (function tick(){if(!run)return;ctx.clearRect(0,0,W,H);ctx.fillStyle='#bfe3ff';for(i=0;i<fl.length;i++){var p=fl[i];p.y+=p.s;p.ph+=0.012;if(p.y>1.02){p.y=-0.02;p.x=Math.random();}ctx.globalAlpha=p.o;ctx.beginPath();ctx.arc(p.x*W+Math.sin(p.ph)*14,p.y*H,p.r,0,6.29);ctx.fill();}ctx.globalAlpha=1;requestAnimationFrame(tick);})();
 })();
