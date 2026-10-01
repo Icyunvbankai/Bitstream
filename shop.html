@@ -7,7 +7,7 @@
 <meta name="description" content="Bitstream affiliate gear deals plus ICYUNV clothing. Clothing orders go through WhatsApp chat.">
 <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
     :root{color-scheme:light dark;--bg:#f3f2ed;--paper:#fff;--ink:#101315;--muted:#535a5c;--line:#c9cbc5;--cyan:#007c8a;--coral:#e14f3d;--wash:#e5eaE8;--dark:#101315;--dark2:#191e20;--white:#f7f8f4;--shadow:0 18px 45px rgba(16,19,21,.10)}
     @media(prefers-color-scheme:dark){:root{--bg:#0d1011;--paper:#151a1c;--ink:#f4f6f2;--muted:#aeb7b5;--line:#333b3d;--cyan:#45d7e6;--coral:#ff7967;--wash:#1c2325;--dark:#07090a;--dark2:#111517;--white:#f7f8f4;--shadow:0 18px 45px rgba(0,0,0,.30)}}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;line-height:1.5}button,input{font:inherit}a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
@@ -156,15 +156,72 @@
 .pkg-list li{position:relative;padding:4px 0 4px 22px;font-size:.93rem;color:#c9ced7}
 .pkg-list li::before{content:"✓";position:absolute;left:2px;color:#d4af37;font-weight:700}
 .pkg-meta{font-size:.82rem;color:var(--muted);margin:8px 0 0}
+
+/* ============ ICYUNV FROZEN-STREET HERO ============ */
+.icy-hero{position:relative;overflow:hidden;background:#04060b;color:#f4f8ff;padding:104px 0 0}
+.icy-beams{position:absolute;inset:-15%;pointer-events:none;background:radial-gradient(620px 340px at 16% 10%,rgba(124,199,245,.22),transparent 70%),radial-gradient(760px 400px at 86% 26%,rgba(47,127,196,.20),transparent 70%),radial-gradient(560px 520px at 50% 112%,rgba(212,175,55,.10),transparent 70%);animation:beamDrift 16s ease-in-out infinite alternate}
+@keyframes beamDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(2%,3%,0) scale(1.07)}}
+.icy-hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(124,199,245,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(124,199,245,.08) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 90% 82% at 50% 18%,#000 25%,transparent 78%);mask-image:radial-gradient(ellipse 90% 82% at 50% 18%,#000 25%,transparent 78%)}
+.icy-snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.icy-hero-inner{position:relative;z-index:1;text-align:center;padding-bottom:60px}
+.icy-hero-inner>*{animation:heroIn .8s cubic-bezier(.16,.8,.26,1) both}
+.icy-hero-inner>*:nth-child(2){animation-delay:.1s}
+.icy-hero-inner>*:nth-child(3){animation-delay:.2s}
+.icy-hero-inner>*:nth-child(4){animation-delay:.3s}
+.icy-hero-inner>*:nth-child(5){animation-delay:.4s}
+@keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.icy-logo{width:min(600px,86vw);height:auto;display:block;margin:0 auto 4px;filter:drop-shadow(0 0 30px rgba(124,199,245,.45)) drop-shadow(0 8px 44px rgba(47,127,196,.35));animation:heroIn .8s cubic-bezier(.16,.8,.26,1) both,logoFloat 5.5s ease-in-out 1s infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.icy-title{font-family:Anton,Manrope,sans-serif;font-weight:400;font-size:clamp(58px,10vw,132px);line-height:.94;letter-spacing:.015em;margin:12px 0 10px;filter:drop-shadow(0 6px 28px rgba(124,199,245,.30))}
+.ice-text{background:linear-gradient(180deg,#f4fbff 12%,#a9ddff 42%,#5faae8 70%,#2f7fc4 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.icy-tag{font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.44em;text-indent:.44em;color:#a9ddff;margin:0 0 20px}
+.icy-sub{max-width:650px;margin:0 auto 32px;color:#c2d4e6;font-size:clamp(15px,1.8vw,18px)}
+.icy-sub strong{color:#fff}
+.icy-cta{justify-content:center}
+.btn.icy-primary{background:linear-gradient(180deg,#b9e2ff,#5faae8);color:#051019;border:1px solid rgba(185,226,255,.7);box-shadow:0 8px 30px rgba(95,170,232,.35)}
+.btn.icy-primary:hover{filter:brightness(1.08)}
+.icy-hero .btn.ghost{border-color:rgba(169,221,255,.45);color:#eaf4ff}
+.icy-marquee{position:relative;z-index:1;border-top:1px solid rgba(124,199,245,.30);border-bottom:1px solid rgba(124,199,245,.30);background:rgba(8,14,24,.78);overflow:hidden;padding:13px 0}
+.icy-marquee-track{display:flex;align-items:center;gap:36px;width:max-content;white-space:nowrap;animation:marquee 30s linear infinite;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:#a9ddff}
+.icy-marquee-track i{color:#d4af37;font-style:normal}
+@keyframes marquee{to{transform:translateX(-50%)}}
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s cubic-bezier(.16,.8,.26,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+/* ============ STREET CARD ENERGY ============ */
+.deal{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.deal:hover{transform:translateY(-4px);border-color:rgba(124,199,245,.55);box-shadow:0 18px 46px rgba(124,199,245,.14)}
+.deal-img img{transition:transform .45s cubic-bezier(.16,.8,.26,1)}
+.deal:hover .deal-img img{transform:scale(1.045)}
+.store-cat{font-family:Anton,Manrope,sans-serif;font-weight:400;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:14px}
+.store-cat::before{content:"";width:36px;height:5px;flex:none;background:linear-gradient(90deg,#2f7fc4,#a9ddff)}
+@media (prefers-reduced-motion:reduce){
+.icy-hero-inner>*,.icy-logo{animation:none}
+.icy-beams,.icy-marquee-track{animation:none}
+.reveal{opacity:1;transform:none;transition:none}
+.deal,.deal-img img{transition:none}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap shop-top"><a class="back" href="index.html">&larr; BACK TO BITSTREAM</a><span class="brandline" style="margin:0">BITSTREAM<span>&middot;</span>SHOP</span></div>
-<header class="shop-hero"><div class="wrap">
-<div class="brandline">BITSTREAM<span>&middot;</span>SHOP</div>
-<h1>ICYUNV Shop &mdash; Deals &amp; Clothing</h1>
-<p>Two shelves, one page. <strong>Affiliate Deals</strong> are the gear we talk about on the show &mdash; buying through those links supports Bitstream at no extra cost to you. <strong>ICYUNV Clothing</strong> is the merch line &mdash; tap <strong>Order on WhatsApp</strong> on any item and your order message is pre-filled; just add your size and send.</p>
-</div></header>
+<header class="shop-hero icy-hero">
+<canvas class="icy-snow" aria-hidden="true"></canvas>
+<div class="icy-beams" aria-hidden="true"></div>
+<div class="wrap icy-hero-inner">
+<img class="icy-logo" src="whatsapp-shop/img/icyunv-logo.png" alt="ICYUNV &mdash; frozen-metal wordmark with snowflake" width="1024" height="975" fetchpriority="high">
+<h1 class="icy-title"><span class="ice-text">SHOP THE DROP</span></h1>
+<p class="icy-tag">ZERO FILLER. ALL VALUE.</p>
+<p class="icy-sub">Two shelves, one page. <strong>Affiliate deals</strong> are the gear we talk about on the show &mdash; buying through those links supports Bitstream at no extra cost to you. <strong>ICYUNV clothing</strong> is the merch line &mdash; tap <strong>Order on WhatsApp</strong> on any item and your order message is pre-filled; just add your size and send.</p>
+<div class="actions icy-cta">
+<a class="btn icy-primary" href="#clothing">Shop the merch</a>
+<a class="btn ghost" href="#deals">Today&rsquo;s deals</a>
+<a class="btn ghost" href="https://chat.whatsapp.com/BxVw69FPiHxEpmFlFjS2Rm" target="_blank" rel="noopener">Join the WhatsApp group</a>
+</div>
+</div>
+<div class="icy-marquee" aria-hidden="true"><div class="icy-marquee-track"><span>ICYUNV</span><i>&#10022;</i><span>ZERO FILLER. ALL VALUE.</span><i>&#10022;</i><span>TEES $29</span><i>&#10022;</i><span>HOODIES + SWEATS $49</span><i>&#10022;</i><span>STREAMER PACKS FROM $25</span><i>&#10022;</i><span>IRL KITS FROM $299</span><i>&#10022;</i><span>ORDER ON WHATSAPP</span><i>&#10022;</i><span>ICYUNV</span><i>&#10022;</i><span>ZERO FILLER. ALL VALUE.</span><i>&#10022;</i><span>TEES $29</span><i>&#10022;</i><span>HOODIES + SWEATS $49</span><i>&#10022;</i><span>STREAMER PACKS FROM $25</span><i>&#10022;</i><span>IRL KITS FROM $299</span><i>&#10022;</i><span>ORDER ON WHATSAPP</span><i>&#10022;</i></div></div>
+</header>
 
 
 <div class="wrap">
@@ -507,12 +564,43 @@
 </div>
 </section>
 
+
+<section class="section" id="irl-kits">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">ICYUNV HARDWARE</div><h2>IRL backpack kits.</h2></div><p class="lede">Complete mobile streaming rigs for Kick IRL &mdash; curated parts that work together, assembled and tested by ICYUNV. One box instead of six separate orders, with a printed Kick quick-start guide in every kit. Order through WhatsApp chat.</p></div>
+<div class="store-grid">
+<article class="deal"><div class="deal-img"><img src="whatsapp-shop/img/ICY-K01-irl-starter.png" alt="Kick IRL Backpack Kit — Starter (ICY-K01)" loading="lazy"></div><div class="deal-body"><div class="deal-tag">ICY-K01</div><h3>Kick IRL Kit &mdash; Starter</h3><p class="deal-spec">Phone-first IRL kit &mdash; your phone is the camera.</p><ul class="pkg-list"><li>65W 20000mAh power bank</li><li>Hollyland LARK A1 2-person wireless mic</li><li>Tripod/selfie stick + mini LED light</li><li>SD card case + printed Kick quick-start guide</li></ul><p class="pkg-meta">Assembled to order &middot; ground shipping only</p><div class="deal-price"><span class="deal-now">$299</span></div><a class="btn whatsapp" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20the%20Kick%20IRL%20Backpack%20Kit%20%E2%80%94%20STARTER%20%28%24299%29.%20My%20shipping%20city%2Fstate%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a></div></article><article class="deal"><div class="deal-img"><img src="whatsapp-shop/img/ICY-K02-irl-pro.png" alt="Kick IRL Backpack Kit — Pro (ICY-K02)" loading="lazy"></div><div class="deal-body"><div class="deal-tag">ICY-K02</div><h3>Kick IRL Kit &mdash; Pro</h3><p class="deal-spec">The classic Kick IRL backpack &mdash; bonded cellular, action cam, pro audio.</p><ul class="pkg-list"><li>DJI Osmo Action 5 Pro camera</li><li>GL.iNet Slate AX bonding router + setup guide</li><li>Anker 737 140W power bank + DJI Mic 2</li><li>Camera backpack, RGB light + card case</li></ul><p class="pkg-meta">Assembled to order &middot; ground shipping only &middot; Speedify plan (~$5/mo) + your SIMs required</p><div class="deal-price"><span class="deal-now">$1,299</span></div><a class="btn whatsapp" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20the%20Kick%20IRL%20Backpack%20Kit%20%E2%80%94%20PRO%20%28%241%2C299%29.%20My%20shipping%20city%2Fstate%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a></div></article><article class="deal"><div class="deal-img"><img src="whatsapp-shop/img/ICY-K03-irl-ultimate.png" alt="Kick IRL Backpack Kit — Ultimate (ICY-K03)" loading="lazy"></div><div class="deal-body"><div class="deal-tag">ICY-K03</div><h3>Kick IRL Kit &mdash; Ultimate</h3><p class="deal-spec">Flagship rig &mdash; gimbal cam, 5G hotspot, field monitor.</p><ul class="pkg-list"><li>DJI Osmo Pocket 3 gimbal camera</li><li>Netgear Nighthawk M6 5G hotspot (unlocked)</li><li>Anker Prime 200W power bank + DJI Mic 2</li><li>Peak Design 20L backpack + 15.6" field monitor + card case</li></ul><p class="pkg-meta">Assembled to order &middot; ground shipping only &middot; bring your own data plan</p><div class="deal-price"><span class="deal-now">$2,399</span></div><a class="btn whatsapp" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20the%20Kick%20IRL%20Backpack%20Kit%20%E2%80%94%20ULTIMATE%20%28%242%2C399%29.%20My%20shipping%20city%2Fstate%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a></div></article>
+</div>
+<p class="footnote">IRL kits are assembled to order and ship ground only &mdash; lithium batteries can&rsquo;t fly. The Pro kit&rsquo;s bonding runs on a Speedify plan (~$5/mo) with your own SIMs; the Ultimate hotspot ships unlocked and needs your data plan.</p>
+</div>
+</section>
+
 <footer class="wrap" style="padding:0 0 60px"><p class="store-fine" style="color:var(--muted)">BITSTREAM &middot; ZERO FILLER. ALL VALUE.</p></footer>
 
 <script>
 (function(){var v=document.querySelector('.reel-viewport'),t=document.querySelector('.reel-track');if(!v||!t)return;
 v.addEventListener('touchstart',function(){t.style.animationPlayState='paused';},{passive:true});
 v.addEventListener('touchend',function(){setTimeout(function(){t.style.animationPlayState='';},1500);});})();
+</script>
+
+
+<script>
+(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.store-grid').forEach(function(g){
+Array.prototype.forEach.call(g.children,function(c,i){c.style.setProperty('--d',(Math.min(i,11)*0.06).toFixed(2)+'s');c.classList.add('reveal');});});
+document.querySelectorAll('.section-head,.store-cat,.reel-label').forEach(function(el){el.classList.add('reveal');});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+if(reduce)return;
+var cv=document.querySelector('.icy-snow');if(!cv||!cv.getContext)return;
+var ctx=cv.getContext('2d'),W=0,H=0,fl=[],i;
+function size(){var r=cv.parentElement.getBoundingClientRect();W=cv.width=Math.max(1,Math.floor(r.width));H=cv.height=Math.max(1,Math.floor(r.height));}
+size();window.addEventListener('resize',size);
+for(i=0;i<70;i++)fl.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+0.6,s:Math.random()*0.0009+0.0003,o:Math.random()*0.5+0.2,ph:Math.random()*6.28});
+var run=true;document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick();});
+(function tick(){if(!run)return;ctx.clearRect(0,0,W,H);ctx.fillStyle='#bfe3ff';for(i=0;i<fl.length;i++){var p=fl[i];p.y+=p.s;p.ph+=0.012;if(p.y>1.02){p.y=-0.02;p.x=Math.random();}ctx.globalAlpha=p.o;ctx.beginPath();ctx.arc(p.x*W+Math.sin(p.ph)*14,p.y*H,p.r,0,6.29);ctx.fill();}ctx.globalAlpha=1;requestAnimationFrame(tick);})();
+})();
 </script>
 
 </body>
