@@ -133,6 +133,37 @@
 .btn.whatsapp:hover{filter:brightness(.92)}
 @media(max-width:560px){.shop-hero{padding:44px 0 40px}}
 
+
+/* morphing hero carousel */
+.morph{position:relative;margin:26px 0 6px;border-radius:22px;overflow:hidden;background:#101315;min-height:460px;box-shadow:var(--shadow)}
+.morph-track{position:absolute;inset:0}
+.morph-slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity 1.15s ease}
+.morph-slide.active{opacity:1;pointer-events:auto;z-index:2}
+.morph-bg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transform:scale(1.18) rotate(.5deg);filter:blur(14px) brightness(.92) saturate(1.15);transition:transform 1.7s cubic-bezier(.22,.8,.3,1),filter 1.2s ease}
+.morph-slide.active .morph-bg{transform:scale(1.02) rotate(0deg);filter:blur(0) brightness(1) saturate(1.06)}
+.morph-shade{position:absolute;inset:0;background:linear-gradient(78deg,rgba(7,10,11,.92) 0%,rgba(7,10,11,.62) 34%,rgba(7,10,11,.05) 62%),linear-gradient(0deg,rgba(7,10,11,.75),transparent 46%)}
+.morph-cap{position:absolute;left:34px;bottom:36px;max-width:min(480px,72%);color:#f7f8f4;z-index:3}
+.morph-cap>*{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.3,1)}
+.morph-slide.active .morph-cap>*{opacity:1;transform:none}
+.morph-slide.active .morph-cap>*:nth-child(1){transition-delay:.35s}
+.morph-slide.active .morph-cap>*:nth-child(2){transition-delay:.45s}
+.morph-slide.active .morph-cap>*:nth-child(3){transition-delay:.55s}
+.morph-slide.active .morph-cap>*:nth-child(4){transition-delay:.65s}
+.morph-tag{display:inline-block;font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;background:rgba(69,215,230,.16);border:1px solid rgba(69,215,230,.55);color:#7ce7f2;padding:8px 12px;border-radius:999px;margin-bottom:12px}
+.morph-cap h3{margin:0 0 10px;font-size:clamp(24px,3.4vw,40px);line-height:1.08;font-weight:800;letter-spacing:-.01em}
+.morph-price{margin:0 0 18px;display:flex;align-items:baseline;gap:10px}
+.morph-was{text-decoration:line-through;opacity:.6;font-size:17px}
+.morph-now{font-size:26px;font-weight:800}
+.morph-cta.wa{background:#22b358;border-color:#22b358;color:#06130a}
+.morph-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(10,14,15,.55);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(6px);display:grid;place-items:center}
+.morph-arrow:hover{background:rgba(10,14,15,.85)}
+.morph-arrow.prev{right:76px}.morph-arrow.next{right:20px}
+.morph-dots{position:absolute;z-index:4;left:34px;bottom:14px;display:flex;gap:8px}
+.morph-dot{width:34px;height:6px;border-radius:99px;border:0;background:rgba(255,255,255,.28);cursor:pointer;padding:0}
+.morph-dot.on{background:#45d7e6}
+@media(max-width:640px){.morph{min-height:400px}.morph-cap{left:20px;right:20px;bottom:64px;max-width:none}.morph-arrow{top:auto;bottom:14px;transform:none;width:44px;height:44px}.morph-arrow.prev{right:72px}.morph-arrow.next{right:16px}.morph-dots{left:20px;bottom:28px}}
+@media(prefers-reduced-motion:reduce){.morph-slide,.morph-bg,.morph-cap>*{transition:none}}
+
 </style>
 </head>
 <body>
@@ -142,6 +173,173 @@
 <h1>ICYUNV Shop &mdash; Deals &amp; Clothing</h1>
 <p>Two shelves, one page. <strong>Affiliate Deals</strong> are the gear we talk about on the show &mdash; buying through those links supports Bitstream at no extra cost to you. <strong>ICYUNV Clothing</strong> is the merch line &mdash; tap <strong>Order on WhatsApp</strong> on any item and your order message is pre-filled; just add your size and send.</p>
 </div></header>
+
+<div class="wrap">
+<section class="morph" role="region" aria-roledescription="carousel" aria-label="Featured products">
+  <div class="morph-track">
+
+    <div class="morph-slide active" role="group" aria-roledescription="slide" aria-label="1 of 14: MINISFORUM MS-S1 Max">
+      <img class="morph-bg" src="store/img/minisforum-ms-s1-max.jpg" alt="MINISFORUM MS-S1 Max" loading="eager">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">RUN AI AT HOME</span>
+        <h3>MINISFORUM MS-S1 Max</h3>
+        <p class="morph-price"><span class="morph-was">$3,249</span><span class="morph-now">$2,599</span></p>
+        <a class="btn morph-cta" href="https://www.amazon.com/s?k=MINISFORUM+MS-S1+Max&amp;tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="2 of 14: GMKtec EVO-X2 AI Mini PC">
+      <img class="morph-bg" src="store/img/gmktec-evo-x2.jpg" alt="GMKtec EVO-X2 AI Mini PC" loading="eager">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">RUN AI AT HOME</span>
+        <h3>GMKtec EVO-X2 AI Mini PC</h3>
+        <p class="morph-price"><span class="morph-now">$3,649</span></p>
+        <a class="btn morph-cta" href="https://www.amazon.com/s?k=GMKtec+EVO-X2+AI+Mini+PC&amp;tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="3 of 14: Rokid AI Glasses">
+      <img class="morph-bg" src="store/img/rokid-ai-glasses.png" alt="Rokid AI Glasses" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">SMART GLASSES</span>
+        <h3>Rokid AI Glasses</h3>
+        <p class="morph-price"><span class="morph-now">$299</span></p>
+        <a class="btn morph-cta" href="https://www.amazon.com/s?k=Rokid+AI+Glasses&amp;tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="4 of 14: XREAL One Pro">
+      <img class="morph-bg" src="store/img/xreal-one-pro.jpg" alt="XREAL One Pro" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">SMART GLASSES</span>
+        <h3>XREAL One Pro</h3>
+        <p class="morph-price"><span class="morph-now">$599</span></p>
+        <a class="btn morph-cta" href="https://www.amazon.com/s?k=XREAL+One+Pro&amp;tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="5 of 14: Goldshell E-KA1M">
+      <img class="morph-bg" src="store/img/goldshell-e-ka1m.png" alt="Goldshell E-KA1M" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">CRYPTO MINERS</span>
+        <h3>Goldshell E-KA1M</h3>
+        <p class="morph-price"><span class="morph-was">$1,409</span><span class="morph-now">$1,210</span></p>
+        <a class="btn morph-cta" href="https://www.goldshell.com/gsaf/mr_clyburn/product/goldshell-e-ka1m/" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="6 of 14: IceRiver KS7 Lite">
+      <img class="morph-bg" src="store/img/iceriver-ks7-lite.png" alt="IceRiver KS7 Lite" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">CRYPTO MINERS</span>
+        <h3>IceRiver KS7 Lite</h3>
+        <p class="morph-price"><span class="morph-now">$799</span></p>
+        <a class="btn morph-cta" href="https://www.iceriver.io/product/iceriver-kas-ks7-lite/" target="_blank" rel="noopener sponsored">Buy now</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="7 of 14: ICYUNV Varsity Tee (ICY-T01)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-T01-prod-wordmark.png" alt="ICYUNV Varsity Tee (ICY-T01)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">TEES</span>
+        <h3>ICYUNV Varsity Tee (ICY-T01)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-T01%20%E2%80%94%20ICYUNV%20Varsity%20Tee%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="8 of 14: Bolt Sun Tee (ICY-T05)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-T05-prod-sun.png" alt="Bolt Sun Tee (ICY-T05)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">TEES</span>
+        <h3>Bolt Sun Tee (ICY-T05)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-T05%20%E2%80%94%20Bolt%20Sun%20Tee%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="9 of 14: ICYUNV Varsity Hoodie — Iced Out (ICY-H01)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-H01-hoodie-varsity-iced.png" alt="ICYUNV Varsity Hoodie — Iced Out (ICY-H01)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">HOODIES</span>
+        <h3>ICYUNV Varsity Hoodie — Iced Out (ICY-H01)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-H01%20%E2%80%94%20ICYUNV%20Varsity%20Hoodie%20%E2%80%94%20Iced%20Out%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="10 of 14: Bolt Sun Hoodie (ICY-H05)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-H05-hoodie-bolt-sun.png" alt="Bolt Sun Hoodie (ICY-H05)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">HOODIES</span>
+        <h3>Bolt Sun Hoodie (ICY-H05)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-H05%20%E2%80%94%20Bolt%20Sun%20Hoodie%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="11 of 14: ICYUNV Varsity Sweats — Iced Out (ICY-S01)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-S01-sweats-varsity-iced.png" alt="ICYUNV Varsity Sweats — Iced Out (ICY-S01)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">SWEATS</span>
+        <h3>ICYUNV Varsity Sweats — Iced Out (ICY-S01)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-S01%20%E2%80%94%20ICYUNV%20Varsity%20Sweats%20%E2%80%94%20Iced%20Out%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="12 of 14: Bolt Sun Sweats (ICY-S05)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-S05-sweats-bolt-sun.png" alt="Bolt Sun Sweats (ICY-S05)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">SWEATS</span>
+        <h3>Bolt Sun Sweats (ICY-S05)</h3>
+        <p class="morph-price"><span class="morph-now">$35</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-S05%20%E2%80%94%20Bolt%20Sun%20Sweats%20%28%2435%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="13 of 14: Hydrocolloid Pimple Patches (ICY-B01)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-B01-pimple-patches.png" alt="Hydrocolloid Pimple Patches (ICY-B01)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">BEAUTY &amp; HOME</span>
+        <h3>Hydrocolloid Pimple Patches (ICY-B01)</h3>
+        <p class="morph-price"><span class="morph-now">$9.99</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-B01%20%E2%80%94%20Hydrocolloid%20Pimple%20Patches%20%28%249.99%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="morph-slide" role="group" aria-roledescription="slide" aria-label="14 of 14: Sunset Projection Lamp (ICY-B05)">
+      <img class="morph-bg" src="whatsapp-shop/img/ICY-B05-sunset-lamp.png" alt="Sunset Projection Lamp (ICY-B05)" loading="lazy">
+      <div class="morph-shade"></div>
+      <div class="morph-cap">
+        <span class="morph-tag">BEAUTY &amp; HOME</span>
+        <h3>Sunset Projection Lamp (ICY-B05)</h3>
+        <p class="morph-price"><span class="morph-now">$19.99</span></p>
+        <a class="btn morph-cta wa" href="https://wa.me/17162550756?text=Hi%20ICYUNV%21%20I%20want%20to%20order%20ICY-B05%20%E2%80%94%20Sunset%20Projection%20Lamp%20%28%2419.99%29.%20My%20size%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <button class="morph-arrow prev" aria-label="Previous slide">&#8592;</button>
+  <button class="morph-arrow next" aria-label="Next slide">&#8594;</button>
+  <div class="morph-dots">
+      <button class="morph-dot on" data-i="0" aria-label="Go to slide 1"></button>
+      <button class="morph-dot" data-i="1" aria-label="Go to slide 2"></button>
+      <button class="morph-dot" data-i="2" aria-label="Go to slide 3"></button>
+      <button class="morph-dot" data-i="3" aria-label="Go to slide 4"></button>
+      <button class="morph-dot" data-i="4" aria-label="Go to slide 5"></button>
+      <button class="morph-dot" data-i="5" aria-label="Go to slide 6"></button>
+      <button class="morph-dot" data-i="6" aria-label="Go to slide 7"></button>
+      <button class="morph-dot" data-i="7" aria-label="Go to slide 8"></button>
+      <button class="morph-dot" data-i="8" aria-label="Go to slide 9"></button>
+      <button class="morph-dot" data-i="9" aria-label="Go to slide 10"></button>
+      <button class="morph-dot" data-i="10" aria-label="Go to slide 11"></button>
+      <button class="morph-dot" data-i="11" aria-label="Go to slide 12"></button>
+      <button class="morph-dot" data-i="12" aria-label="Go to slide 13"></button>
+      <button class="morph-dot" data-i="13" aria-label="Go to slide 14"></button>
+  </div>
+</section>
+</div>
+
 
 <section class="section store" id="deals"><div class="wrap">
 <div class="section-head"><div><div class="kicker">AFFILIATE DEALS</div><h2>Great gear. Real discounts.</h2></div><p class="lede">A short, rotating shelf of the AI gear we talk about on the show &mdash; local-LLM rigs, smart glasses, and home miners &mdash; checked against MSRP every week. When a deal ends, it&rsquo;s gone.</p></div>
@@ -207,5 +405,26 @@
 </div></section>
 
 <footer class="wrap" style="padding:0 0 60px"><p class="store-fine" style="color:var(--muted)">BITSTREAM &middot; ZERO FILLER. ALL VALUE.</p></footer>
+
+<script>
+(function(){
+  var root=document.querySelector('.morph');if(!root)return;
+  var slides=Array.prototype.slice.call(root.querySelectorAll('.morph-slide'));
+  var dots=Array.prototype.slice.call(root.querySelectorAll('.morph-dot'));
+  var prev=root.querySelector('.morph-arrow.prev'),next=root.querySelector('.morph-arrow.next');
+  var i=0,timer=null;var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(n){slides[i].classList.remove('active');dots[i].classList.remove('on');
+    i=(n+slides.length)%slides.length;slides[i].classList.add('active');dots[i].classList.add('on');}
+  function play(){if(reduce||timer)return;timer=setInterval(function(){go(i+1);},5000);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  prev.addEventListener('click',function(){stop();go(i-1);play();});
+  next.addEventListener('click',function(){stop();go(i+1);play();});
+  dots.forEach(function(d){d.addEventListener('click',function(){stop();go(parseInt(d.dataset.i,10));play();});});
+  root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',play);
+  root.addEventListener('focusin',stop);root.addEventListener('focusout',play);
+  play();
+})();
+</script>
+
 </body>
 </html>
