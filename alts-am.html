@@ -23,7 +23,8 @@ a{color:var(--gold-bright)}
 .btn:hover{transform:translateY(-2px)}
 .btn-gold{background:var(--gold);color:#fff}
 .btn-ghost{border:1px solid var(--gold);color:var(--gold-bright)}
-.edition{padding:48px 0}
+.edition{padding:48px 0;border-top:1px solid var(--line)}
+.edition:first-of-type{border-top:none}
 .edition-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:32px}
 .edition-head .num{letter-spacing:.3em;font-size:12px;color:var(--gold-bright);text-transform:uppercase}
 .edition-head h2{font-family:Cormorant,serif;font-size:clamp(26px,4vw,38px);margin:.3em 0 .1em}
@@ -65,80 +66,123 @@ footer a{color:var(--muted)}
 </header>
 
 <main class="wrap">
-<article class="edition" id="edition-001">
-  <div class="edition-head">
-    <div class="num">Edition #001</div>
-    <h2>The Week in Alts</h2>
-    <div class="date">Saturday, October 3, 2026 — launch edition</div>
-  </div>
-
-  <section class="block">
-    <h3>The Lead</h3>
-    <p><strong>Private credit just had its loudest week of the year.</strong> Ares Management raised <strong>$4.2 billion</strong> for its debut structured solutions strategy — more than <strong>4x</strong> the vehicle's original $1 billion target — on demand for financing aimed directly at private equity managers. Two days earlier, Audax Private Debt stacked <strong>$10 billion</strong> for direct lending, the largest pool of capital in its nearly three-decade history ($5.4B in equity commitments plus leverage and SMAs). And Oaktree closed its first asset-backed finance fund at <strong>$2 billion</strong>, with parent Brookfield's wider ABF platform now past <strong>$60 billion</strong>. Three data points, one story: the bid for private credit paper is not slowing down.</p>
-    <div class="sources">Sources: <a href="https://www.altassets.net/category/private-equity-news/by-news-type/fund-news/funds-closed">AltAssets</a>, WSJ Pro Private Equity, <a href="https://alternativecreditinvestor.com/2026/10/01/oaktree-closes-debut-abf-fund-on-2bn/">Alternative Credit Investor</a></div>
-  </section>
-
-  <section class="sponsor">
-    <div class="lbl">A message from our sponsor</div>
-    <p style="margin:0;color:var(--muted)">Launch partner slot open. One native sponsor per issue, in front of the highest-CPM audience in newsletters. <a href="https://icyunvbankai.github.io/Bitstream/">Inquire via Bitstream</a>.</p>
-  </section>
-
-  <section class="block">
-    <h3>Fund Closes</h3>
-    <ul>
-      <li><strong>Ares</strong> — $4.2B debut structured solutions raise, 4x target.</li>
-      <li><strong>Oaktree (Brookfield)</strong> — $2B debut asset-backed finance fund; commitments from US public pensions and sovereign wealth funds.</li>
-      <li><strong>Audax Private Debt</strong> — $10B direct-lending strategy; lends to PE-owned middle-market companies at $15–75M EBITDA.</li>
-      <li><strong>Pinegrove</strong> — $1.5B oversubscribed Strategic Investors Fund XII, anchored by Florida State Board of Administration.</li>
-      <li><strong>Stride Consumer Partners</strong> — $550M Fund II, hit the hard cap in under six months, 31% bigger than Fund I.</li>
-      <li><strong>Princeton Equity Group</strong> — $1.3B for franchise and multi-location businesses, 2x its predecessor.</li>
-      <li><strong>Carlyle</strong> — $2.3B close for sophomore infrastructure credit fund, beating target.</li>
-      <li><strong>DIG Ventures</strong> — $120M third fund for Europe's AI infrastructure startups.</li>
-      <li><strong>SWEN Capital</strong> — €236M first close on Article 9 Europa PE fund, 80% already committed.</li>
-    </ul>
-  </section>
-
-  <section class="block">
-    <h3>Deals</h3>
-    <ul>
-      <li><strong>Harrison Street</strong> agreed to acquire a majority stake in <strong>Vicinity Energy</strong> (district energy) at a <strong>$2.92B</strong> valuation.</li>
-      <li><strong>India's primary market is on fire:</strong> companies raised a record <strong>$25.27B</strong> in H1 FY27, up 75% year-on-year, even as the secondary market slumped.</li>
-      <li><strong>a16z's American Dynamism</strong> teamed with <strong>Atlas Holdings</strong> to launch Foundry Management, embedding technical founders inside industrial portfolio companies.</li>
-    </ul>
-    <div class="sources">Sources: <a href="https://www.altassets.net/category/private-equity-news/by-news-type/fund-news/funds-closed">AltAssets</a>, <a href="https://www.reuters.com/world/india/indian-firms-defy-stock-market-slump-with-record-25-billion-half-year-equity-2026-10-01/">Reuters</a>, WSJ Pro</div>
-  </section>
-
-  <section class="block">
-    <h3>Regulation &amp; Policy</h3>
-    <ul>
-      <li><strong>The SEC wants to open private markets to retail.</strong> The Commission approved three measures making it easier for private-fund managers to raise from ordinary Americans — including changes to the accredited-investor definition and performance-fee rules.</li>
-      <li><strong>Apax</strong> is set to launch <strong>Apax XII</strong> at ~<strong>€12B</strong> (~$13.5B), joining CVC, Permira, and Bridgepoint in a crowded European megafund field.</li>
-    </ul>
-    <div class="sources">Source: WSJ Pro Private Equity</div>
-  </section>
-
-  <section class="block">
-    <h3>Allocator Intel</h3>
-    <ul>
-      <li><strong>Florida State Board of Administration</strong> anchored Pinegrove's $1.5B SIF XII. Florida pensions also backed Stride's $550M close alongside Colorado, Indiana, and New York retirement systems.</li>
-      <li><strong>PitchBook:</strong> distressed debt among the 15 largest listed BDCs rose <strong>64%</strong> to <strong>$6.8B</strong> in the year to June 30 — the dislocation bid behind this week's credit raises.</li>
-    </ul>
-  </section>
-
-  <section class="block">
-    <h3>The Number</h3>
-    <p><strong>$25.27B</strong> — record Indian equity fundraising in half a year, up 75%, while the Nifty managed 1.3%. Domestic liquidity is doing the heavy lifting where foreign flows won't.</p>
-  </section>
-
-  <section class="block">
-    <h3>Meme Cleanser</h3>
-    <p>Ares targeted $1B and raised $4.2B. Somewhere a placement agent is updating their LinkedIn headline to "4.2x oversubscribed" as we speak.</p>
-  </section>
+<article class="edition" id="edition-002">
+<div class="edition-head">
+<div class="num">Edition #002</div>
+<h2>The Week in Alts: the liquidity trade</h2>
+<div class="date">Saturday, October 3, 2026</div>
+</div>
+<section class="block">
+<h3>THE LEAD</h3>
+<p><strong>Private equity's newest product is itself.</strong> Blue Owl is nearing the close of a <strong>$2.7 billion</strong> secondary transaction on its Dyal Capital Partners IV flagship — structured as a fund-backed note that moves a slice of its minority stakes in private asset managers into a new vehicle with <strong>$1 billion</strong> of equity plus <strong>$1.7 billion</strong> of debt raised against the underlying assets (Bloomberg Law). Meanwhile Clearlake wrapped a <strong>$1 billion</strong> collateralized fund obligation — pledging $600M of its private credit exposure, $200M of a PE secondaries fund, and another $200M PE stake to sell $775M of bonds and $225M of equity (Bloomberg). GPs aren't waiting for exits anymore; they're securitizing their own balance sheets. In a year when H1 secondary volume ran at a record pace, the exit has become a product line.</p>
+<div class="sources"><em>Sources: Bloomberg Law; Bloomberg via AltGoesMainstream (Oct 2)</em></div>
+</section>
+<section class="block">
+<h3>FUND CLOSES</h3>
+<ul>
+<li><strong>Investcorp</strong> — $1.22B for its second North American private equity fund, beating its $1.1B target, targeting growing middle-market services businesses. (AltAssets, Oct 2)</li>
+<li><strong>Headline</strong> — $400M eighth European early-stage fund, doubling down on AI (backed Mistral, Black Forest Labs). (AltAssets, Oct 2)</li>
+<li><strong>The record week that was:</strong> Ares $4.2B (4x target), Audax Private Debt $10B, Oaktree $2B asset-backed finance, Carlyle $2.3B infra credit, Pinegrove $1.5B, Stride $550M, Princeton Equity $1.3B, DIG Ventures $120M, SWEN €236M — all closed in the last five days. (AltAssets; covered in full in Edition #001)</li>
+</ul>
+</section>
+<section class="block">
+<h3>DEALS</h3>
+<ul>
+<li><strong>SoftBank</strong> completed its <strong>$3.1B</strong> acquisition of DigitalBridge, taking the digital infrastructure specialist private as a controlled subsidiary. (AltAssets, Oct 2)</li>
+<li><strong>Wendel</strong> sealed a <strong>€2.1B</strong> exit of Stahl. (AltAssets, Oct 2)</li>
+<li><strong>Blackstone</strong> is investing <strong>$1B</strong> to form Falcata, a US defense technology company specializing in missile and drone interceptors, with plans to bolt on more companies. The firm has invested $20B in defense and aerospace over the past five years. (Bloomberg via AltGoesMainstream, Oct 2)</li>
+<li><strong>Harrison Street</strong> agreed to acquire a majority stake in Vicinity Energy at a <strong>$2.92B</strong> valuation from Antin Infrastructure Partners. (AltAssets)</li>
+</ul>
+</section>
+<section class="block">
+<h3>REGULATION &amp; POLICY</h3>
+<ul>
+<li><strong>The SEC voted September 30</strong> to propose rules expanding retail access to private markets: a framework letting advisers to regulated funds take performance-based compensation of up to <strong>20%</strong> of net gains, a modernized interval fund rule, and multi-share-class issuance for closed-end funds — plus a comment request on letting accredited status come from professional credentials. Chairman Atkins tied it to Trump's Executive Order on democratizing alt access for 401(k)s. (securities.io, citing SEC release)</li>
+<li><strong>The cautionary counterpoint:</strong> Australia's <strong>Metrics Credit Partners</strong> (A$40B) suspended trading in three ASX-listed funds after auditor KPMG disagreed with valuation assumptions — net tangible asset values cut up to <strong>12.16%</strong>, with "greater weight given to downside scenarios." Australia's corporate regulator has warned of unrealistic valuations and poor governance across the country's booming private credit sector. (Reuters, Sep 28)</li>
+</ul>
+</section>
+<section class="block">
+<h3>ALLOCATOR INTEL</h3>
+<ul>
+<li><strong>Colorado FPPA</strong> deployed <strong>$491M</strong> across alternatives: $336M to six new manager relationships, $139M to four existing firms, $15.8M in co-invests. The largest ticket: $150M to Aldine Capital Fund V (subordinated debt + equity for lower-middle-market companies). (Connect Money, Oct 2)</li>
+<li><strong>Singapore's GIC</strong> is testing the market with a <strong>~$1B</strong> PE secondary sale of stakes in ~30 funds (Blackstone, Apollo, TDR; average vintage 2016), Evercore advising — routine portfolio management from a fund that remains a buyer too. (PE Insights / Bloomberg)</li>
+<li><strong>Korea Investment Corp</strong> is separately exploring a <strong>$1B+</strong> PE secondary sale, PJT Partners advising — two of Asia's biggest sovereign funds in the same market at once. (Markets Group)</li>
+<li>In September, <strong>Ardian</strong> preemptively acquired a GIC private credit portfolio at a <strong>premium to book value</strong> — bids are that competitive for quality paper. (Markets Group)</li>
+</ul>
+</section>
+<section class="block">
+<h3>THE NUMBER</h3>
+<p><strong>$124B</strong> — global secondary transaction volume in H1 2026, up roughly 28% year-on-year ($63B LP-led, $61B GP-led), per Markets Group's Institutional Allocator Outlook. The liquidity market is now big enough to absorb a sovereign wealth fund's portfolio twice over.</p>
+</section>
+<section class="block">
+<h3>MEME CLEANSER</h3>
+<p>Clearlake raised $1 billion by collateralizing its own funds. Blue Owl raised $2.7 billion against stakes in other managers' funds. The industry that charges 2-and-20 to deploy capital has discovered the ultimate fee arbitrage: deploying capital against itself.</p>
+<p><em>ALTS AM — Edition #002. Tomorrow: the full daily, 6:00 AM ET.</em></p>
+<div class="sources"><em>Sources: AltAssets, Bloomberg, Bloomberg Law, Connect Money, Markets Group, PE Insights, Reuters, securities.io.</em></div>
+</section>
 </article>
-
+<article class="edition" id="edition-001">
+<div class="edition-head">
+<div class="num">Edition #001</div>
+<h2>The Week in Alts (launch edition)</h2>
+<div class="date">Saturday, October 3, 2026</div>
+</div>
+<section class="block">
+<h3>THE LEAD</h3>
+<p><strong>Private credit just had its loudest week of the year.</strong> Ares Management raised <strong>$4.2 billion</strong> for its debut structured solutions strategy — more than <strong>4x</strong> the vehicle's original $1 billion target — on demand for financing aimed directly at private equity managers. Two days earlier, Audax Private Debt stacked <strong>$10 billion</strong> for direct lending, the largest pool of capital in its nearly three-decade history ($5.4B in equity commitments plus leverage and SMAs). And Oaktree closed its first asset-backed finance fund at <strong>$2 billion</strong>, with parent Brookfield's wider ABF platform now past <strong>$60 billion</strong>. Three data points, one story: the bid for private credit paper is not slowing down.</p>
+<div class="sources"><em>Sources: AltAssets (Oct 2), WSJ Pro Private Equity (Sep 30), Alternative Credit Investor (Oct 1)</em></div>
+</section>
+<section class="block">
+<h3>FUND CLOSES</h3>
+<ul>
+<li><strong>Ares</strong> — $4.2B debut structured solutions raise, 4x target. (AltAssets)</li>
+<li><strong>Oaktree (Brookfield)</strong> — $2B debut asset-backed finance fund; commitments from US public pensions and sovereign wealth funds. (Alternative Credit Investor)</li>
+<li><strong>Audax Private Debt</strong> — $10B direct-lending strategy; lends to PE-owned middle-market companies at $15–75M EBITDA. (WSJ Pro)</li>
+<li><strong>Pinegrove</strong> — $1.5B oversubscribed Strategic Investors Fund XII (venture managers + co-invests), anchored by Florida State Board of Administration. (Connect Money)</li>
+<li><strong>Stride Consumer Partners</strong> — $550M Fund II, hit the hard cap in under six months (31% bigger than Fund I). (WSJ Pro)</li>
+<li><strong>Princeton Equity Group</strong> — $1.3B for franchise and multi-location businesses, 2x its predecessor. (WSJ Pro)</li>
+<li><strong>Carlyle</strong> — $2.3B close for sophomore infrastructure credit fund, beating target. (Creditflux)</li>
+<li><strong>DIG Ventures</strong> — $120M third fund for Europe's AI infrastructure startups. (AltAssets)</li>
+<li><strong>SWEN Capital</strong> — €236M first close on Article 9 Europa PE fund, 80% already committed. (AltAssets)</li>
+</ul>
+</section>
+<section class="block">
+<h3>DEALS</h3>
+<ul>
+<li><strong>Harrison Street</strong> agreed to acquire a majority stake in <strong>Vicinity Energy</strong> (district energy) at a <strong>$2.92B</strong> valuation, from Antin Infrastructure Partners. (AltAssets)</li>
+<li><strong>India's primary market is on fire:</strong> companies raised a record <strong>$25.27B</strong> in H1 FY27, up 75% year-on-year, even as the secondary market slumped — NSE's $2.3B issue and SBI Funds Management's $1.03B IPO led the way. (Reuters)</li>
+<li><strong>a16z's American Dynamism</strong> teamed with <strong>Atlas Holdings</strong> to launch Foundry Management, embedding technical founders inside industrial portfolio companies. (WSJ Pro)</li>
+</ul>
+</section>
+<section class="block">
+<h3>REGULATION &amp; POLICY</h3>
+<ul>
+<li><strong>The SEC wants to open private markets to retail.</strong> The Commission approved three measures making it easier for private-fund managers to raise from ordinary Americans — including changes to the accredited-investor definition and performance-fee rules. A structural demand unlock if it sticks. (WSJ Pro, Oct 1)</li>
+<li><strong>Apax</strong> is set to launch <strong>Apax XII</strong> at ~<strong>€12B</strong> (~$13.5B), joining CVC, Permira, and Bridgepoint in a crowded European megafund field. (WSJ Pro, Oct 2)</li>
+</ul>
+</section>
+<section class="block">
+<h3>ALLOCATOR INTEL</h3>
+<ul>
+<li><strong>Florida State Board of Administration</strong> anchored Pinegrove's $1.5B SIF XII — "one of our most important and successful partnerships," per its PE head. Florida pensions also backed Stride's $550M close alongside Colorado, Indiana, and New York retirement systems.</li>
+<li><strong>PitchBook:</strong> distressed debt among the 15 largest listed BDCs rose <strong>64%</strong> to <strong>$6.8B</strong> in the year to June 30 — the dislocation bid behind this week's credit raises.</li>
+</ul>
+</section>
+<section class="block">
+<h3>THE NUMBER</h3>
+<p><strong>$25.27B</strong> — record Indian equity fundraising in half a year, up 75%, while the Nifty managed 1.3%. Domestic liquidity is doing the heavy lifting where foreign flows won't.</p>
+</section>
+<section class="block">
+<h3>MEME CLEANSER</h3>
+<p>Ares targeted $1B and raised $4.2B. Somewhere a placement agent is updating their LinkedIn headline to "4.2x oversubscribed" as we speak.</p>
+<p><em>ALTS AM — Edition #001. Tomorrow: the first full daily, 6:00 AM ET.</em></p>
+<div class="sources"><em>Sources: AltAssets, Alternative Credit Investor, Connect Money, Creditflux, Reuters, WSJ Pro Private Equity.</em></div>
+</section>
+</article>
 <section class="archive">
   <h3>Archive</h3>
-  <a href="#edition-001">#001 — The Week in Alts <span>Saturday, October 3, 2026</span></a>
+  <a href="#edition-002">#002 — The Week in Alts: the liquidity trade<span>Saturday, October 3, 2026</span></a>
+<a href="#edition-001">#001 — The Week in Alts (launch edition)<span>Saturday, October 3, 2026</span></a>
 </section>
 </main>
 
