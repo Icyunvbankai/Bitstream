@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Subscribe — ALTS AM</title>
+<meta name="description" content="Subscribe to ALTS AM: the daily 6am ET briefing on private credit, secondaries, fund closes, and alternatives.">
+<link rel="canonical" href="https://icyunvbankai.github.io/Bitstream/alts-am-subscribe.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--bg:#0C0A09;--paper:#1C1917;--ink:#FAFAF9;--muted:#A8A29E;--gold:#A16207;--gold-bright:#D4A017;--line:#292524}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+.wrap{width:min(560px,calc(100% - 40px));margin:auto;text-align:center;padding:64px 0}
+img.logo{max-width:340px;width:75%;height:auto}
+.kicker{letter-spacing:.35em;font-size:12px;color:var(--gold-bright);text-transform:uppercase;margin:24px 0 8px}
+h1{font-family:Cormorant,serif;font-weight:600;font-size:clamp(30px,5vw,44px);margin:.3em 0 .2em}
+p.lede{color:var(--muted);max-width:440px;margin:0 auto 32px}
+form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px 28px;text-align:left}
+label{display:block;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+input[type=text],input[type=email]{width:100%;padding:14px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:16px;margin-bottom:20px}
+input:focus{outline:2px solid var(--gold-bright);outline-offset:2px;border-color:var(--gold-bright)}
+button{width:100%;padding:15px;border:none;border-radius:999px;background:var(--gold);color:#fff;font:inherit;font-weight:700;font-size:15px;letter-spacing:.06em;cursor:pointer;transition:transform .2s,opacity .2s}
+button:hover{transform:translateY(-2px)}
+button:disabled{opacity:.6;cursor:default;transform:none}
+.fine{font-size:12px;color:var(--muted);margin-top:16px;text-align:center}
+#msg{display:none;margin-top:16px;padding:14px;border-radius:10px;font-size:14px;text-align:center}
+#msg.ok{display:block;background:rgba(161,98,7,.15);border:1px solid var(--gold);color:var(--gold-bright)}
+#msg.err{display:block;background:rgba(220,38,38,.12);border:1px solid #DC2626;color:#f87171}
+.back{margin-top:28px;font-size:13px}
+.back a{color:var(--muted)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="assets/alts-am-logo.png" alt="ALTS AM">
+  <div class="kicker">A Bitstream publication</div>
+  <h1>Private markets, before the market opens.</h1>
+  <p class="lede">One email, every morning at 6am ET. Private credit, secondaries, fund closes, and alternatives — for accredited investors and finance professionals. Free. Zero filler.</p>
+  <form id="sub-form" action="https://formspree.io/f/xjykobrp" method="POST">
+    <input type="hidden" name="list" value="alts-am">
+    <input type="hidden" name="_subject" value="New ALTS AM subscriber">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Ellis">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@firm.com">
+    <button type="submit" id="btn">Subscribe — it's free</button>
+    <div id="msg" role="status"></div>
+    <p class="fine">You'll get Edition #003 tomorrow at 6:00 AM ET. Unsubscribe anytime.</p>
+  </form>
+  <p class="back"><a href="alts-am.html">Read the latest edition first</a></p>
+</div>
+<script>
+document.getElementById('sub-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var btn = document.getElementById('btn'), msg = document.getElementById('msg');
+  btn.disabled = true; btn.textContent = 'Subscribing…'; msg.className = ''; msg.textContent = '';
+  try {
+    var res = await fetch(this.action, {method:'POST', body:new FormData(this), headers:{'Accept':'application/json'}});
+    if (res.ok) {
+      msg.className = 'ok';
+      msg.textContent = "You're in. See you at 6am ET.";
+      btn.textContent = 'Subscribed';
+      this.querySelectorAll('input[type=text],input[type=email]').forEach(function(i){i.value='';});
+    } else {
+      msg.className = 'err';
+      msg.textContent = 'Something went wrong — please try again.';
+      btn.disabled = false; btn.textContent = 'Subscribe — it\u2019s free';
+    }
+  } catch(err) {
+    msg.className = 'err';
+    msg.textContent = 'Something went wrong — please try again.';
+    btn.disabled = false; btn.textContent = 'Subscribe — it\u2019s free';
+  }
+});
+</script>
+</body>
+</html>
