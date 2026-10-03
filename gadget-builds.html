@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Muse Gadget Builds — Bitstream</title>
+<meta name="description" content="8 build-it-yourself Muse gadgets: parts lists with buy links and step-by-step instructions. ESP32 + Muse SDK.">
+<link rel="canonical" href="https://icyunvbankai.github.io/Bitstream/gadget-builds.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{color-scheme:light dark;--bg:#f3f2ed;--paper:#fff;--ink:#101315;--muted:#535a5c;--line:#c9cbc5;--cyan:#007c8a;--coral:#e14f3d;--gold:#A16207;--shadow:0 18px 45px rgba(16,19,21,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1011;--paper:#151a1c;--ink:#f4f6f2;--muted:#aeb7b5;--line:#333b3d;--cyan:#45d7e6;--coral:#ff7967;--gold:#D4A017;--shadow:0 18px 45px rgba(0,0,0,.30)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;line-height:1.6}
+.wrap{width:min(1060px,calc(100% - 40px));margin:auto}
+a{color:var(--cyan)}
+.hero{padding:56px 0 32px;text-align:center}
+.kicker{letter-spacing:.3em;font-size:12px;color:var(--gold);text-transform:uppercase;font-weight:700}
+.hero h1{font-size:clamp(30px,5vw,48px);margin:.3em 0 .2em;font-weight:800}
+.hero p.lede{color:var(--muted);max-width:640px;margin:0 auto}
+.start{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin:28px 0;box-shadow:var(--shadow)}
+.start h2{font-size:18px;margin:0 0 12px}
+.start ol{margin:0;padding-left:20px}
+.start li{margin:8px 0}
+.start code{font-family:'IBM Plex Mono',monospace;background:var(--bg);padding:2px 8px;border-radius:6px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding:8px 0 64px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.2em}
+.card h3{margin:8px 0 4px;font-size:21px}
+.card .tag{color:var(--muted);font-size:14px;margin:0 0 12px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pill{font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.cost{border-color:var(--gold);color:var(--gold)}
+.parts{margin:0 0 14px;padding:0;list-style:none;font-size:14px}
+.parts li{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.parts li:last-child{border-bottom:none}
+.parts .pr{font-family:'IBM Plex Mono',monospace;font-size:13px;white-space:nowrap}
+.buy{display:inline-block;margin-top:4px;font-size:13px;font-weight:700;text-decoration:none}
+.steps{margin:0 0 16px;padding-left:20px;font-size:14px;color:var(--muted)}
+.steps li{margin:6px 0}
+.steps code{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--bg);padding:1px 6px;border-radius:4px}
+.card .cta{margin-top:auto;padding-top:8px}
+.btn{display:inline-block;padding:10px 22px;border-radius:999px;background:var(--cyan);color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);font-size:13px;text-align:center}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">Bitstream · Muse Gadgets</div>
+<h1>Build it yourself.</h1>
+<p class="lede">8 gadget builds for Meta's open-source Muse hardware platform. Every build: a real parts list with buy links, and step-by-step instructions. No soldering required — breadboard-friendly.</p>
+</div></header>
+
+<main class="wrap">
+<div class="start">
+<h2>Before you build anything</h2>
+<ol>
+<li>Get your free SDK token at <a href="https://gadgets.muse.ai">gadgets.muse.ai</a>.</li>
+<li>Grab the firmware + examples: <a href="https://github.com/facebookincubator/muse-gadget-sdk">facebookincubator/muse-gadget-sdk</a> (ESP32 and Linux/Raspberry Pi).</li>
+<li>Flash the ESP32 example to your board with ESP-IDF, then pair in the Muse app: <code>Settings &gt; Devices</code> — turn on Developer mode, look for devices starting with <code>MuseGadget</code>.</li>
+<li>Wire the parts per the build below, install the matching skill from the repo, and talk to Muse through your hardware.</li>
+</ol>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="num">BUILD 01</div>
+<h3>Briefing Display</h3>
+<p class="tag">E-paper desk display. Your morning briefing, calendar, and weather — always on, sips power.</p>
+<div class="meta"><span class="pill cost">~$57</span><span class="pill">Easy</span><span class="pill">~1 hr</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://openelab.com/products/waveshare-epaper-module-4p2-13">Waveshare 4.2" e-paper module</a></span><span class="pr">$31.49</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-w">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
+</ul>
+<ol class="steps">
+<li>Connect the e-paper module to the ESP32 over SPI: <code>MOSI→23, SCK→18, CS→5, DC→17, RST→16, BUSY→4</code>.</li>
+<li>Flash the SDK's display example; set your location in the config.</li>
+<li>Pair the board in the Muse app (Developer mode → <code>MuseGadget</code>).</li>
+<li>Install the briefing skill from the repo's <code>skills/</code> folder.</li>
+<li>Ask Muse "what's my morning briefing" — it renders to the e-paper.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 02</div>
+<h3>Voice Button</h3>
+<p class="tag">Big satisfying arcade button. Smack it, talk, Muse answers out loud. The whole agent in one button.</p>
+<div class="meta"><span class="pill cost">~$65</span><span class="pill">Medium</span><span class="pill">~2 hrs</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.dfrobot.com/product-2677.html">FireBeetle ESP32-S3 board</a></span><span class="pr">$20.90</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.adafruit.com/product/1193">60mm arcade button w/ LED</a></span><span class="pr">$5.95</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.newegg.com/p/2S7-09HN-01C77">INMP441 I2S microphone</a></span><span class="pr">$12.90</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.newegg.com/aitrip-max98357/p/231-01HK-00021">MAX98357A amp (5-pack)</a></span><span class="pr">$22.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.adafruit.com/product/1314">3" 4Ω 3W speaker</a></span><span class="pr">$1.95</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the button between <code>GPIO 0</code> and GND (internal pull-up).</li>
+<li>Wire INMP441 over I2S: <code>WS→25, SCK→32, SD→33</code>. Wire the amp: <code>DIN→22, BCLK→26, LRCK→27</code>, speaker to amp output.</li>
+<li>Flash the SDK's audio example (I2S in + out).</li>
+<li>Pair in the Muse app; enable the voice skill.</li>
+<li>Press the button, speak, release — Muse replies through the speaker.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 03</div>
+<h3>Command Dial</h3>
+<p class="tag">A rotary knob that talks to Muse. Twist for volume, click for lights, hold for "goodnight" routine.</p>
+<div class="meta"><span class="pill cost">~$16</span><span class="pill">Easy</span><span class="pill">45 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.dfrobot.com/product-1611.html">EC11 rotary encoder module</a></span><span class="pr">$2.90</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the encoder: <code>CLK→14, DT→12, SW→13, +→3V3, GND→GND</code>.</li>
+<li>Flash the SDK input example; map rotate/click/hold events.</li>
+<li>Pair in the Muse app.</li>
+<li>Bind events to skills: rotate → speaker volume, click → toggle lights, hold → bedtime routine.</li>
+<li>Mount it in a small enclosure — done.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 04</div>
+<h3>Plant Guardian</h3>
+<p class="tag">Soil sensor node. Muse watches your plants' moisture and nags you before they die.</p>
+<div class="meta"><span class="pill cost">~$19</span><span class="pill">Easy</span><span class="pill">30 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/capacitive-soil-moisture">Capacitive soil moisture sensor</a></span><span class="pr">$6.39</span></li>
+</ul>
+<ol class="steps">
+<li>Stick the sensor in the pot; wire <code>AOUT→34, VCC→3V3, GND→GND</code>.</li>
+<li>Flash the SDK sensor example; calibrate wet vs. dry readings once.</li>
+<li>Pair in the Muse app.</li>
+<li>Set a rule in the skill: below 30% → Muse messages you "water the monstera".</li>
+<li>Add more sensors per plant — one ESP32 handles several.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 05</div>
+<h3>Door Sentinel</h3>
+<p class="tag">Motion sensor by the door. Muse announces visitors and keeps a comings-and-goings log.</p>
+<div class="meta"><span class="pill cost">~$20</span><span class="pill">Easy</span><span class="pill">30 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/hcsr501-human-sensor">HC-SR501 PIR sensor (3-pack)</a></span><span class="pr">$6.99</span></li>
+</ul>
+<ol class="steps">
+<li>Mount the PIR facing the door; wire <code>OUT→15, VCC→5V, GND→GND</code>.</li>
+<li>Adjust the sensitivity + delay pots on the sensor.</li>
+<li>Flash the SDK sensor example; pair in the Muse app.</li>
+<li>Enable the notify skill — motion events become Muse messages.</li>
+<li>Ask "who came by today" for the log.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 06</div>
+<h3>Bedside Clock</h3>
+<p class="tag">Color TFT clock showing time, weather, and whatever Muse wants to tell you overnight.</p>
+<div class="meta"><span class="pill cost">~$22</span><span class="pill">Easy</span><span class="pill">~1 hr</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.robotshop.com/products/elecrow-24-320x240-spi-se">Elecrow 2.4" TFT (ILI9341)</a></span><span class="pr">$8.76</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the TFT over SPI: <code>MOSI→23, SCK→18, CS→5, DC→2, RST→4</code>.</li>
+<li>Flash the SDK display example with the clock face.</li>
+<li>Pair in the Muse app; set your timezone + weather location.</li>
+<li>Overnight alerts (calendar, reminders) render as cards on the screen.</li>
+<li>Dim schedule: screen sleeps 11pm–6am, wakes on motion (add Build 05's PIR).</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 07</div>
+<h3>Air Node</h3>
+<p class="tag">Temperature, humidity, and pressure sensing. Ask Muse "how's the studio air?" and get a real answer.</p>
+<div class="meta"><span class="pill cost">~$25</span><span class="pill">Easy</span><span class="pill">30 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.newegg.com/p/2A6-0227-02EK5">BME280 sensor module</a></span><span class="pr">$12.19</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the BME280 over I2C: <code>SDA→21, SCL→22, VCC→3V3, GND→GND</code>.</li>
+<li>Flash the SDK sensor example; confirm readings on serial.</li>
+<li>Pair in the Muse app.</li>
+<li>Ask Muse for readings anytime; set alerts for humidity spikes.</li>
+<li>Drop nodes in every room — Muse maps the whole house.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 08</div>
+<h3>NFC Command Tags</h3>
+<p class="tag">Tap a sticker, trigger a Muse routine. One tag by the door for "I'm leaving", one on the desk for "focus mode".</p>
+<div class="meta"><span class="pill cost">~$82</span><span class="pill">Medium</span><span class="pill">~1.5 hrs</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.newegg.com/p/2S7-09HN-01T23">PN532 NFC module</a></span><span class="pr">$28.88</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://vxb.com/products/50-pcs-nfc-tags-stickers-with-ntag2">NTAG215 stickers (50-pack)</a></span><span class="pr">$39.99</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the PN532 over I2C: <code>SDA→21, SCL→22</code>; set its switch to I2C mode.</li>
+<li>Flash the SDK NFC example; pair in the Muse app.</li>
+<li>Tap each sticker to the reader to register its UID.</li>
+<li>Bind UIDs to routines in the skill: door tag → lock up + lights off; desk tag → focus playlist + do-not-disturb.</li>
+<li>Stick tags everywhere. 50 is more than enough.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+</div>
+
+<div class="start">
+<h2>Starter bench kit</h2>
+<p style="margin:0 0 12px;color:var(--muted)">Building more than one? These two cover every build above.</p>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-w">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.microcenter.com/product/486799/inland-uno-breadb">Breadboard kit</a></span><span class="pr">$17.99</span></li>
+</ul>
+</div>
+</main>
+
+<footer><div class="wrap">
+<p>Bitstream gadget builds — parts link out to merchant checkout (sponsored). Prices checked October 2026.<br>
+<a href="https://icyunvbankai.github.io/Bitstream/">Back to Bitstream</a></p>
+</div></footer>
+</body>
+</html>
