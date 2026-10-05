@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Muse Gadget Builds — Bitstream</title>
-<meta name="description" content="8 build-it-yourself Muse gadgets: parts lists with buy links and step-by-step instructions. ESP32 + Muse SDK.">
+<meta name="description" content="10 build-it-yourself Muse gadgets: parts lists with buy links and step-by-step instructions. ESP32 + Muse SDK.">
 <link rel="canonical" href="https://icyunvbankai.github.io/Bitstream/gadget-builds.html">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -48,7 +48,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <header class="hero"><div class="wrap">
 <div class="kicker">Bitstream · Muse Gadgets</div>
 <h1>Build it yourself.</h1>
-<p class="lede">8 gadget builds for Meta's open-source Muse hardware platform. Every build: a real parts list with buy links, and step-by-step instructions. No soldering required — breadboard-friendly.</p>
+<p class="lede">10 gadget builds for Meta's open-source Muse hardware platform. Every build: a real parts list with buy links, and step-by-step instructions. No soldering required — breadboard-friendly.</p>
 </div></header>
 
 <main class="wrap">
@@ -217,6 +217,44 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <li>Tap each sticker to the reader to register its UID.</li>
 <li>Bind UIDs to routines in the skill: door tag → lock up + lights off; desk tag → focus playlist + do-not-disturb.</li>
 <li>Stick tags everywhere. 50 is more than enough.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 09</div>
+<h3>Mood Lamp</h3>
+<p class="tag">Addressable LED strip that takes lighting orders from Muse. "Set the vibe" actually works now.</p>
+<div class="meta"><span class="pill cost">~$28</span><span class="pill">Easy</span><span class="pill">45 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.adafruit.com/product/2541">NeoPixel LED strip, 60 LED / 1m</a></span><span class="pr">$14.95</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the strip: <code>DIN→16, 5V→5V, GND→GND</code>. For full brightness, power the strip from a separate 5V supply — 60 LEDs can pull ~3.5A.</li>
+<li>Flash the SDK's LED example (NeoPixel library).</li>
+<li>Pair in the Muse app.</li>
+<li>Bind routines: "focus mode" → cool white, "movie night" → dim amber, "party" → rainbow chase.</li>
+<li>Mount the strip behind your desk or shelf — instant bias lighting.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 10</div>
+<h3>Relay Switch</h3>
+<p class="tag">Let Muse flip real-world switches. "Turn off the living room lamp" — and it actually happens.</p>
+<div class="meta"><span class="pill cost">~$20</span><span class="pill">Medium</span><span class="pill">~1 hr</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.microcenter.com/product/659888/inland-4-channel-5v-relay-module-for-arduino">4-channel 5V relay module</a></span><span class="pr">$6.99</span></li>
+</ul>
+<ol class="steps">
+<li>Wire channel 1: <code>IN1→26, VCC→5V, GND→GND</code>. Channels 2–4 are spares for more devices.</li>
+<li>Wire your lamp through the relay's <code>COM/NO</code> terminals — off means off.</li>
+<li>Flash the SDK relay example; pair in the Muse app.</li>
+<li>Say "turn on the desk lamp" — Muse flips the relay.</li>
+<li>Safety: mains wiring bites. If you're not comfortable, switch a low-voltage USB lamp instead.</li>
 </ol>
 <div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
 </div>
