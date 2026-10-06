@@ -100,6 +100,54 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
 .foot-in a:hover{color:var(--gold)}
 @media(max-width:640px){.card img{height:340px}.nav-links{gap:16px;font-size:.7rem}.brand span{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn{transition:none}}
+/* ---------- card order button ---------- */
+.card-btn{display:block;width:100%;margin-top:16px;font-family:'Orbitron',sans-serif;font-weight:700;font-size:.78rem;
+  letter-spacing:.2em;padding:14px;background:transparent;border:1px solid var(--gold);color:var(--gold);cursor:pointer;
+  transition:all .22s}
+.card-btn:hover{background:var(--gold);color:#000;box-shadow:0 0 20px rgba(201,162,39,.4)}
+/* ---------- private order modal ---------- */
+.modal-veil{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);
+  display:none;align-items:center;justify-content:center;padding:20px}
+.modal-veil.open{display:flex}
+.modal{width:min(560px,100%);max-height:92vh;overflow-y:auto;background:var(--panel);border:1px solid var(--line);
+  position:relative;animation:mIn .28s ease-out}
+@keyframes mIn{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.modal{animation:none}}
+.modal::before{content:"";display:block;height:8px;
+  background:repeating-linear-gradient(90deg,var(--mosaic) 0 14px,var(--bone) 14px 28px,var(--blood) 28px 42px,var(--gold) 42px 56px)}
+.modal-body{padding:30px 30px 34px}
+.modal-body h3{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.3rem;letter-spacing:.1em;margin-bottom:6px;color:var(--bone)}
+.modal-body .m-sub{color:var(--mut);font-size:.84rem;margin-bottom:24px}
+.modal-body .m-sub b{color:var(--gold)}
+.m-close{position:absolute;top:18px;right:18px;background:none;border:1px solid var(--line);color:var(--mut);
+  width:38px;height:38px;font-size:1.1rem;cursor:pointer;line-height:1}
+.m-close:hover{color:var(--blood-hi);border-color:var(--blood-hi)}
+.f-row{margin-bottom:18px}
+.f-row label{display:block;font-size:.72rem;letter-spacing:.22em;color:var(--mut);margin-bottom:8px}
+.f-row input,.f-row select,.f-row textarea{width:100%;background:#0b0b0e;border:1px solid var(--line);color:var(--txt);
+  font-family:'JetBrains Mono',monospace;font-size:.95rem;padding:13px 14px;outline:none;transition:border-color .2s}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--gold)}
+.f-row textarea{min-height:84px;resize:vertical}
+.weight-pick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.weight-opt{border:1px solid var(--line);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center}
+.weight-opt b{display:block;font-family:'Orbitron',sans-serif;font-size:.82rem;letter-spacing:.12em;margin-bottom:4px}
+.weight-opt span{font-size:.74rem;color:var(--mut)}
+.weight-opt input{position:absolute;opacity:0;pointer-events:none}
+.weight-opt.sel{border-color:var(--gold);background:rgba(201,162,39,.08);box-shadow:0 0 18px rgba(201,162,39,.15)}
+.weight-opt.sel b{color:var(--gold)}
+.distress{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);padding:14px;cursor:pointer;transition:all .2s}
+.distress input{width:20px;height:20px;margin-top:2px;accent-color:var(--blood);cursor:pointer;flex:none}
+.distress.off{opacity:.38;cursor:not-allowed}
+.distress div b{display:block;font-size:.85rem;letter-spacing:.08em}
+.distress div span{font-size:.76rem;color:var(--mut)}
+.m-submit{width:100%;font-family:'Orbitron',sans-serif;font-weight:800;font-size:.9rem;letter-spacing:.16em;
+  padding:17px;background:linear-gradient(180deg,#d21f2c,var(--blood));border:2px solid var(--blood);color:#fff;cursor:pointer;
+  transition:all .22s;margin-top:6px}
+.m-submit:hover{background:var(--blood-hi);box-shadow:0 6px 30px rgba(255,43,43,.45)}
+.m-done{text-align:center;padding:18px 0 6px}
+.m-done h4{font-family:'Orbitron',sans-serif;font-size:1.15rem;letter-spacing:.1em;color:var(--gold);margin-bottom:12px}
+.m-done p{color:var(--mut);font-size:.88rem;max-width:400px;margin:0 auto}
+.m-done p b{color:var(--bone)}
 </style>
 </head>
 <body>
@@ -147,6 +195,7 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
           <h3>FALLEN CHOIR</h3>
           <p>Portland-vase mosaic, re-cut for the street. Cherubs and angels in ice-blue tile &mdash; and every one of them laced in sneakers.</p>
           <span class="tag">MOSAIC SERIES</span>
+          <button class="card-btn" data-piece="001 — FALLEN CHOIR">CONTACT THE ARTIST</button>
         </div>
       </article>
 
@@ -157,6 +206,7 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
           <h3>SINS &mdash; F11</h3>
           <p>An ice angel holds the line while fire demons riot below in wildstyle script. The flagship &mdash; heaven and hell on one chest.</p>
           <span class="tag">FLAGSHIP</span>
+          <button class="card-btn" data-piece="002 — SINS (F11)">CONTACT THE ARTIST</button>
         </div>
       </article>
 
@@ -167,6 +217,7 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
           <h3>BUILD SOMETHING &mdash; D7</h3>
           <p>Classical stone, caught red-handed. Statues on ladders bombing orange wildstyle across cracked marble. The maker's creed.</p>
           <span class="tag">STONE / WILDSTYLE</span>
+          <button class="card-btn" data-piece="003 — BUILD SOMETHING (D7)">CONTACT THE ARTIST</button>
         </div>
       </article>
 
@@ -177,6 +228,7 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
           <h3>ICE ANGEL</h3>
           <p>A frozen portrait cracking apart &mdash; gold SINS across the chest, halo burning at the edges. Beauty under pressure.</p>
           <span class="tag">ICE SERIES</span>
+          <button class="card-btn" data-piece="004 — ICE ANGEL">CONTACT THE ARTIST</button>
         </div>
       </article>
 
@@ -187,6 +239,7 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
           <h3>TRAIN FIGHT</h3>
           <p>Mech angels over a burning sky. The fight for the future begins now &mdash; and it wants to know if you're coming.</p>
           <span class="tag">POSTER SERIES</span>
+          <button class="card-btn" data-piece="005 — TRAIN FIGHT">CONTACT THE ARTIST</button>
         </div>
       </article>
 
@@ -230,6 +283,145 @@ footer{padding:32px 0;color:var(--mut);font-size:.76rem;letter-spacing:.1em}
     </div>
   </div>
 </footer>
+
+<div class="modal-veil" id="orderVeil" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+  <div class="modal">
+    <button class="m-close" id="orderClose" aria-label="Close">&times;</button>
+    <div class="modal-body" id="orderFormWrap">
+      <h3 id="orderTitle">PRIVATE ORDER REQUEST</h3>
+      <p class="m-sub">Every piece is made to order and confirmed personally. Tell us how you want it &mdash; <b>we reply to every request.</b></p>
+      <form id="orderForm" novalidate>
+        <div class="f-row">
+          <label for="fPiece">PIECE</label>
+          <select id="fPiece" required>
+            <option value="001 — FALLEN CHOIR">001 — FALLEN CHOIR</option>
+            <option value="002 — SINS (F11)">002 — SINS (F11)</option>
+            <option value="003 — BUILD SOMETHING (D7)">003 — BUILD SOMETHING (D7)</option>
+            <option value="004 — ICE ANGEL">004 — ICE ANGEL</option>
+            <option value="005 — TRAIN FIGHT">005 — TRAIN FIGHT</option>
+          </select>
+        </div>
+        <div class="f-row">
+          <label for="fName">YOUR NAME</label>
+          <input id="fName" type="text" autocomplete="name" placeholder="What do we call you?" required>
+        </div>
+        <div class="f-row">
+          <label for="fEmail">EMAIL</label>
+          <input id="fEmail" type="email" autocomplete="email" placeholder="you@email.com" required>
+        </div>
+        <div class="f-row">
+          <label for="fPhone">PHONE</label>
+          <input id="fPhone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" required>
+        </div>
+        <div class="f-row">
+          <label for="fSize">SIZE</label>
+          <select id="fSize" required>
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+          </select>
+        </div>
+        <div class="f-row">
+          <label>TEE WEIGHT</label>
+          <div class="weight-pick" role="radiogroup" aria-label="Tee weight">
+            <label class="weight-opt sel" id="wHeavy">
+              <input type="radio" name="weight" value="Heavyweight" checked>
+              <b>HEAVYWEIGHT</b><span>8.5 oz &mdash; boxy, structured</span>
+            </label>
+            <label class="weight-opt" id="wLight">
+              <input type="radio" name="weight" value="Lightweight">
+              <b>LIGHTWEIGHT</b><span>4.3 oz &mdash; soft, draped</span>
+            </label>
+          </div>
+        </div>
+        <div class="f-row">
+          <label class="distress" id="distressWrap">
+            <input type="checkbox" id="fDistress">
+            <div><b>ADD DISTRESSED FINISH</b><span>Hand-distressed wash &mdash; heavyweight only</span></div>
+          </label>
+        </div>
+        <div class="f-row">
+          <label for="fNotes">ANYTHING ELSE? <span style="letter-spacing:.05em">(optional)</span></label>
+          <textarea id="fNotes" placeholder="Fit notes, gift, deadline..."></textarea>
+        </div>
+        <button type="submit" class="m-submit">SEND PRIVATE REQUEST</button>
+      </form>
+    </div>
+    <div class="modal-body m-done" id="orderDoneWrap" style="display:none">
+      <h4>REQUEST READY</h4>
+      <p>Your email app should have opened with everything filled in &mdash; <b>hit send to complete your private order.</b> We confirm every piece personally.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var veil=document.getElementById('orderVeil'),
+      formWrap=document.getElementById('orderFormWrap'),
+      doneWrap=document.getElementById('orderDoneWrap'),
+      form=document.getElementById('orderForm'),
+      pieceSel=document.getElementById('fPiece'),
+      wHeavy=document.getElementById('wHeavy'),
+      wLight=document.getElementById('wLight'),
+      distressWrap=document.getElementById('distressWrap'),
+      fDistress=document.getElementById('fDistress');
+
+  function openModal(piece){
+    if(piece) pieceSel.value=piece;
+    formWrap.style.display=''; doneWrap.style.display='none';
+    veil.classList.add('open'); document.body.style.overflow='hidden';
+    document.getElementById('fName').focus();
+  }
+  function closeModal(){ veil.classList.remove('open'); document.body.style.overflow=''; }
+
+  document.querySelectorAll('.card-btn').forEach(function(b){
+    b.addEventListener('click',function(){ openModal(b.getAttribute('data-piece')); });
+  });
+  document.getElementById('orderClose').addEventListener('click',closeModal);
+  veil.addEventListener('click',function(e){ if(e.target===veil) closeModal(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeModal(); });
+
+  function syncWeight(){
+    var heavy=wHeavy.querySelector('input').checked;
+    wHeavy.classList.toggle('sel',heavy); wLight.classList.toggle('sel',!heavy);
+    distressWrap.classList.toggle('off',!heavy);
+    if(!heavy){ fDistress.checked=false; }
+  }
+  wHeavy.addEventListener('click',syncWeight); wLight.addEventListener('click',syncWeight);
+  distressWrap.addEventListener('click',function(e){
+    if(!wHeavy.querySelector('input').checked){ e.preventDefault(); }
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('fName').value.trim(),
+        email=document.getElementById('fEmail').value.trim(),
+        phone=document.getElementById('fPhone').value.trim(),
+        size=document.getElementById('fSize').value,
+        weight=form.querySelector('input[name=weight]:checked').value,
+        distressed=fDistress.checked?'Yes':'No',
+        notes=document.getElementById('fNotes').value.trim();
+    if(!name||!email||!phone){ alert('Name, email and phone are required.'); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ alert('That email doesn\u2019t look right.'); return; }
+    var body='ZONA DEIECTUS \u2014 private order request\n\n'
+      +'Piece: '+pieceSel.value+'\n'
+      +'Name: '+name+'\n'
+      +'Email: '+email+'\n'
+      +'Phone: '+phone+'\n'
+      +'Size: '+size+'\n'
+      +'Tee weight: '+weight+'\n'
+      +'Distressed finish: '+distressed+'\n'
+      +(notes?('Notes: '+notes+'\n'):'');
+    var href='mailto:icyunvbtyg42g@gmail.com'
+      +'?subject='+encodeURIComponent('ZONA DEIECTUS order request \u2014 '+pieceSel.value)
+      +'&body='+encodeURIComponent(body);
+    window.location.href=href;
+    formWrap.style.display='none'; doneWrap.style.display='';
+  });
+})();
+</script>
 
 </body>
 </html>
