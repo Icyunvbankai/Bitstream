@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Packs — Bitstream · Zero Filler. All Value.</title>
+<style>
+  :root { --bg:#0b0e0e; --card:#121615; --cyan:#62dfeb; --coral:#ff7967; --txt:#f4f6f5; --mut:#b9c2bf; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: Helvetica, Arial, sans-serif; background:var(--bg); color:var(--txt); line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  header.nav { padding:18px 0; border-bottom:1px solid #1e2423; }
+  header.nav .wrap { display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-weight:800; letter-spacing:.18em; font-size:13px; color:var(--cyan); text-decoration:none; }
+  .navlink { color:var(--mut); text-decoration:none; font-size:14px; }
+  .hero { text-align:center; padding:64px 20px 40px; }
+  .kicker { font-weight:700; font-size:12px; letter-spacing:.28em; color:var(--cyan); margin-bottom:14px; }
+  .hero h1 { font-size:44px; line-height:1.1; margin-bottom:12px; }
+  .hero p { color:var(--mut); font-size:17px; max-width:640px; margin:0 auto 24px; }
+  .bundle-banner { background:linear-gradient(135deg,#14201f,#0b0e0e); border:2px solid var(--coral); border-radius:14px; padding:26px 28px; margin:10px auto 46px; max-width:860px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
+  .bundle-banner h2 { font-size:24px; margin-bottom:6px; }
+  .bundle-banner h2 span { color:var(--coral); }
+  .bundle-banner p { color:var(--mut); font-size:15px; }
+  .price-big { font-size:38px; font-weight:800; color:var(--coral); }
+  .price-big small { font-size:15px; color:var(--mut); font-weight:400; text-decoration:line-through; margin-left:8px; }
+  .btn { display:inline-block; background:var(--cyan); color:#0b0e0e; font-weight:800; padding:13px 30px; border-radius:10px; text-decoration:none; font-size:16px; border:none; cursor:pointer; }
+  .btn:hover { filter:brightness(1.1); }
+  .btn.coral { background:var(--coral); }
+  .btn.ghost { background:transparent; color:var(--cyan); border:2px solid var(--cyan); }
+  .btn.soon { background:#2a3130; color:var(--mut); cursor:default; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; padding:10px 0 60px; }
+  .card { background:var(--card); border:1px solid #1e2423; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+  .card img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
+  .card .body { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .card .tier { font-size:11px; font-weight:700; letter-spacing:.2em; color:var(--cyan); }
+  .card h3 { font-size:20px; line-height:1.25; }
+  .card ul { color:var(--mut); font-size:13.5px; padding-left:18px; }
+  .card ul li { margin-bottom:4px; }
+  .card .buyrow { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px; }
+  .price { font-size:24px; font-weight:800; }
+  .drops { text-align:center; padding:34px 20px; border-top:1px solid #1e2423; border-bottom:1px solid #1e2423; margin-bottom:50px; }
+  .drops h2 { font-size:26px; margin-bottom:8px; }
+  .drops p { color:var(--mut); max-width:600px; margin:0 auto; }
+  .giveaway { background:linear-gradient(180deg,#171310,#0b0e0e); border:2px dashed var(--coral); border-radius:16px; padding:40px 30px; margin:0 auto 60px; max-width:860px; text-align:center; }
+  .giveaway .tag { display:inline-block; background:var(--coral); color:#0b0e0e; font-weight:800; font-size:12px; letter-spacing:.2em; padding:6px 16px; border-radius:20px; margin-bottom:16px; }
+  .giveaway h2 { font-size:32px; margin-bottom:10px; }
+  .giveaway h2 span { color:var(--coral); }
+  .giveaway p { color:var(--mut); max-width:600px; margin:0 auto 22px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:0 auto 24px; max-width:700px; text-align:left; }
+  .step { background:#0b0e0e; border:1px solid #2a3130; border-radius:10px; padding:16px; }
+  .step .n { font-size:22px; font-weight:800; color:var(--coral); }
+  .step p { font-size:14px; margin:6px 0 0; }
+  .counter { font-size:15px; color:var(--mut); margin-bottom:20px; }
+  .counter strong { color:var(--txt); font-size:20px; }
+  footer { border-top:1px solid #1e2423; padding:30px 0 50px; text-align:center; color:var(--mut); font-size:14px; }
+  @media (max-width:600px){ .hero h1{font-size:32px;} .bundle-banner{flex-direction:column; text-align:center;} }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">BITSTREAM</a>
+  <a class="navlink" href="index.html">← Back to Bitstream</a>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
+    <h1>Prompt Packs</h1>
+    <p>100+ copy-paste AI prompts per pack. Open a free AI tool, paste, fill in the blanks, done. Works with ChatGPT, Claude, Gemini, and Meta AI.</p>
+  </section>
+
+  <div class="bundle-banner">
+    <div>
+      <h2>Any 3 packs for <span>$20</span></h2>
+      <p>Pick any three — get the fourth one free. 400 prompts, one price.</p>
+    </div>
+    <div style="text-align:center">
+      <div class="price-big">$20<small>$31.96</small></div>
+      <a class="btn coral" data-buy="bundle" href="#" style="margin-top:10px">Get the bundle</a>
+    </div>
+  </div>
+
+  <section class="grid" id="packs"></section>
+
+  <section class="drops">
+    <h2>Fresh packs drop daily</h2>
+    <p>We're building a full catalog — niche packs (diabetic-kid parents, cheer parents…) and pro packs (plumbers, HVAC, roofers, electricians…) landing every day. Grab the bundle once and watch the shelf grow.</p>
+  </section>
+
+  <section class="giveaway" id="giveaway">
+    <div class="tag">GIVEAWAY · FIRST 100 ONLY</div>
+    <h2>Win a <span>FREE</span> prompt pack</h2>
+    <p>We're giving away 100 prompt packs (winner's pick of any pack). Here's how to claim yours:</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><p><strong>Like</strong> the giveaway post on our Instagram.</p></div>
+      <div class="step"><div class="n">2</div><p><strong>Share</strong> the post to your story.</p></div>
+      <div class="step"><div class="n">3</div><p><strong>Tag 3 friends</strong> in the comments who need this.</p></div>
+    </div>
+    <div class="counter"><strong>100</strong> free packs available · first come, first served</div>
+    <a class="btn ghost" href="https://www.instagram.com/mr_sunshine_state/" target="_blank" rel="noopener">Enter on Instagram</a>
+    <p style="font-size:13px; margin-top:16px;">Winners get DM'd their free pack. One entry per person. Ends when all 100 are claimed.</p>
+  </section>
+</div>
+
+<footer><div class="wrap">
+  <p>© 2026 Bitstream · Zero Filler. All Value. · Packs are for personal use.</p>
+  <p style="margin-top:8px"><a href="index.html#join">Join the deals list</a> for new pack drops.</p>
+</div></footer>
+
+<script>
+// >>> PASTE YOUR GUMROAD PRODUCT LINKS HERE (one manual step after creating the products)
+const BUY_LINKS = {
+  "mom-prompts": "",
+  "dad-prompts": "",
+  "college-prompts": "",
+  "small-biz-prompts": "",
+  "bundle": ""
+};
+// <<<
+
+const PACKS = [
+  { slug:"mom-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts That Really Help Moms",
+    img:"prompt-packs/covers/mom.jpg", price:"$7.99",
+    points:["Meal plans & picky-eater fixes","Homework help & kid activities","Family budgeting & saving","Mom's self-care & balance"] },
+  { slug:"dad-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for the World's Best Dad",
+    img:"prompt-packs/covers/dad.jpg", price:"$7.99",
+    points:["Bonding & quality time","Coaching & life skills","DIY & home projects","Grilling, money & presence"] },
+  { slug:"college-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for College Students",
+    img:"prompt-packs/covers/college.jpg", price:"$7.99",
+    points:["Study smarter & exam prep","Essays, outlines & research","Student budgeting","Resumes & internships"] },
+  { slug:"small-biz-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for Small Business Owners",
+    img:"prompt-packs/covers/biz.jpg", price:"$7.99",
+    points:["Marketing that converts","Pricing & profit math","Customers & reviews","Hiring & operations"] },
+];
+
+function buyBtn(slug, label) {
+  const url = BUY_LINKS[slug];
+  if (url) return `<a class="btn" href="${url}" target="_blank" rel="noopener">${label}</a>`;
+  return `<span class="btn soon">${label} · soon</span>`;
+}
+
+document.getElementById('packs').innerHTML = PACKS.map(p => `
+  <div class="card">
+    <img src="${p.img}" alt="${p.title}" loading="lazy">
+    <div class="body">
+      <div class="tier">${p.tier}</div>
+      <h3>${p.title}</h3>
+      <ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <div class="buyrow"><div class="price">${p.price}</div>${buyBtn(p.slug, "Get the pack")}</div>
+    </div>
+  </div>`).join('');
+
+document.querySelectorAll('[data-buy]').forEach(a => {
+  const slug = a.dataset.buy, url = BUY_LINKS[slug];
+  if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+  else { a.textContent = "Bundle · soon"; a.classList.add('soon'); a.removeAttribute('href'); }
+});
+</script>
+</body>
+</html>
