@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prompt Packs — Bitstream · Zero Filler. All Value.</title>
 <style>
-  :root { --bg:#0b0e0e; --card:#121615; --cyan:#62dfeb; --coral:#ff7967; --txt:#f4f6f5; --mut:#b9c2bf; }
+  :root { --bg:#0b0e0e; --card:#121615; --cyan:#62dfeb; --coral:#ff7967; --gold:#f2c14e; --txt:#f4f6f5; --mut:#b9c2bf; }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { font-family: Helvetica, Arial, sans-serif; background:var(--bg); color:var(--txt); line-height:1.6; }
   a { color:var(--cyan); }
@@ -18,7 +18,7 @@
   .kicker { font-weight:700; font-size:12px; letter-spacing:.28em; color:var(--cyan); margin-bottom:14px; }
   .hero h1 { font-size:44px; line-height:1.1; margin-bottom:12px; }
   .hero p { color:var(--mut); font-size:17px; max-width:640px; margin:0 auto 24px; }
-  .bundle-banner { background:linear-gradient(135deg,#14201f,#0b0e0e); border:2px solid var(--coral); border-radius:14px; padding:26px 28px; margin:10px auto 46px; max-width:860px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
+  .bundle-banner { background:linear-gradient(135deg,#14201f,#0b0e0e); border:2px solid var(--coral); border-radius:14px; padding:26px 28px; margin:10px auto 50px; max-width:860px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
   .bundle-banner h2 { font-size:24px; margin-bottom:6px; }
   .bundle-banner h2 span { color:var(--coral); }
   .bundle-banner p { color:var(--mut); font-size:15px; }
@@ -29,17 +29,24 @@
   .btn.coral { background:var(--coral); }
   .btn.ghost { background:transparent; color:var(--cyan); border:2px solid var(--cyan); }
   .btn.soon { background:#2a3130; color:var(--mut); cursor:default; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; padding:10px 0 60px; }
+  .tierhead { margin:46px 0 6px; }
+  .tierhead .tier { font-size:12px; font-weight:800; letter-spacing:.26em; }
+  .tierhead h2 { font-size:28px; margin:6px 0 4px; }
+  .tierhead p { color:var(--mut); font-size:15px; max-width:640px; }
+  .tier-essential .tier { color:var(--cyan); }
+  .tier-niche .tier { color:var(--gold); }
+  .tier-pro .tier { color:var(--coral); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; padding:22px 0 10px; }
   .card { background:var(--card); border:1px solid #1e2423; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
   .card img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
   .card .body { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .card .tier { font-size:11px; font-weight:700; letter-spacing:.2em; color:var(--cyan); }
+  .card .tiertag { font-size:11px; font-weight:700; letter-spacing:.2em; }
   .card h3 { font-size:20px; line-height:1.25; }
   .card ul { color:var(--mut); font-size:13.5px; padding-left:18px; }
   .card ul li { margin-bottom:4px; }
   .card .buyrow { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px; }
   .price { font-size:24px; font-weight:800; }
-  .drops { text-align:center; padding:34px 20px; border-top:1px solid #1e2423; border-bottom:1px solid #1e2423; margin-bottom:50px; }
+  .drops { text-align:center; padding:40px 20px; border-top:1px solid #1e2423; border-bottom:1px solid #1e2423; margin:50px 0; }
   .drops h2 { font-size:26px; margin-bottom:8px; }
   .drops p { color:var(--mut); max-width:600px; margin:0 auto; }
   .giveaway { background:linear-gradient(180deg,#171310,#0b0e0e); border:2px dashed var(--coral); border-radius:16px; padding:40px 30px; margin:0 auto 60px; max-width:860px; text-align:center; }
@@ -67,13 +74,13 @@
   <section class="hero">
     <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
     <h1>Prompt Packs</h1>
-    <p>100+ copy-paste AI prompts per pack. Open a free AI tool, paste, fill in the blanks, done. Works with ChatGPT, Claude, Gemini, and Meta AI.</p>
+    <p>100–250 copy-paste AI prompts per pack. Open a free AI tool, paste, fill in the blanks, done. Works with ChatGPT, Claude, Gemini, and Meta AI.</p>
   </section>
 
   <div class="bundle-banner">
     <div>
       <h2>Any 3 packs for <span>$20</span></h2>
-      <p>Pick any three — get the fourth one free. 400 prompts, one price.</p>
+      <p>Pick any three — get the rest of the shelf's attention free. 400+ prompts, one price.</p>
     </div>
     <div style="text-align:center">
       <div class="price-big">$20<small>$31.96</small></div>
@@ -81,11 +88,30 @@
     </div>
   </div>
 
-  <section class="grid" id="packs"></section>
+  <section class="tierhead tier-essential">
+    <div class="tier">ESSENTIAL · $7.99 EACH · 100 PROMPTS</div>
+    <h2>Everyday life, handled</h2>
+    <p>For parents, students, and small business owners who want AI doing the busywork.</p>
+  </section>
+  <section class="grid" id="packs-essential"></section>
+
+  <section class="tierhead tier-niche">
+    <div class="tier">NICHE · $10.99 EACH · 250 PROMPTS</div>
+    <h2>Built for your exact situation</h2>
+    <p>Hyper-specific packs for families with real, specific challenges.</p>
+  </section>
+  <section class="grid" id="packs-niche"></section>
+
+  <section class="tierhead tier-pro">
+    <div class="tier">PRO · $14.99 EACH · 250 PROMPTS</div>
+    <h2>For the trades that run on estimates</h2>
+    <p>Win more jobs, quote faster, get paid quicker. Written in plain tradesperson language.</p>
+  </section>
+  <section class="grid" id="packs-pro"></section>
 
   <section class="drops">
     <h2>Fresh packs drop daily</h2>
-    <p>We're building a full catalog — niche packs (diabetic-kid parents, cheer parents…) and pro packs (plumbers, HVAC, roofers, electricians…) landing every day. Grab the bundle once and watch the shelf grow.</p>
+    <p>We're building a full catalog — marketers, realtors, Etsy sellers, teachers, coaches, recruiters and more landing every day. Grab the bundle once and watch the shelf grow.</p>
   </section>
 
   <section class="giveaway" id="giveaway">
@@ -115,24 +141,46 @@ const BUY_LINKS = {
   "dad-prompts": "",
   "college-prompts": "",
   "small-biz-prompts": "",
+  "niche-diabetic-kids-parents": "",
+  "niche-cheer-parents": "",
+  "pro-plumber": "",
+  "pro-hvac": "",
   "bundle": ""
 };
 // <<<
 
-const PACKS = [
-  { slug:"mom-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts That Really Help Moms",
-    img:"prompt-packs/covers/mom.jpg", price:"$7.99",
-    points:["Meal plans & picky-eater fixes","Homework help & kid activities","Family budgeting & saving","Mom's self-care & balance"] },
-  { slug:"dad-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for the World's Best Dad",
-    img:"prompt-packs/covers/dad.jpg", price:"$7.99",
-    points:["Bonding & quality time","Coaching & life skills","DIY & home projects","Grilling, money & presence"] },
-  { slug:"college-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for College Students",
-    img:"prompt-packs/covers/college.jpg", price:"$7.99",
-    points:["Study smarter & exam prep","Essays, outlines & research","Student budgeting","Resumes & internships"] },
-  { slug:"small-biz-prompts", tier:"ESSENTIAL · 100 PROMPTS", title:"100 Prompts for Small Business Owners",
-    img:"prompt-packs/covers/biz.jpg", price:"$7.99",
-    points:["Marketing that converts","Pricing & profit math","Customers & reviews","Hiring & operations"] },
-];
+const PACKS = {
+  essential: [
+    { slug:"mom-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts That Really Help Moms",
+      img:"prompt-packs/covers/mom.jpg", price:"$7.99",
+      points:["Meal plans & picky-eater fixes","Homework help & kid activities","Family budgeting & saving","Mom's self-care & balance"] },
+    { slug:"dad-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for the World's Best Dad",
+      img:"prompt-packs/covers/dad.jpg", price:"$7.99",
+      points:["Bonding & quality time","Coaching & life skills","DIY & home projects","Grilling, money & presence"] },
+    { slug:"college-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for College Students",
+      img:"prompt-packs/covers/college.jpg", price:"$7.99",
+      points:["Study smarter & exam prep","Essays, outlines & research","Student budgeting","Resumes & internships"] },
+    { slug:"small-biz-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for Small Business Owners",
+      img:"prompt-packs/covers/biz.jpg", price:"$7.99",
+      points:["Marketing that converts","Pricing & profit math","Customers & reviews","Hiring & operations"] },
+  ],
+  niche: [
+    { slug:"niche-diabetic-kids-parents", tag:"NICHE PACK · $10.99", tagcolor:"#f2c14e", title:"250 Prompts for Parents of Diabetic Kids",
+      img:"prompt-packs/covers/diabetic.jpg", price:"$10.99",
+      points:["Blood sugar tracking & logbooks","Carb counting & meal planning","School days & 504 plans","Questions for the diabetes care team"] },
+    { slug:"niche-cheer-parents", tag:"NICHE PACK · $10.99", tagcolor:"#f2c14e", title:"250 Prompts for Cheer Parents",
+      img:"prompt-packs/covers/cheer.jpg", price:"$10.99",
+      points:["Tryout prep & skill tracking","Competition day survival","Budgeting the cheer season","Fundraising ideas"] },
+  ],
+  pro: [
+    { slug:"pro-plumber", tag:"PRO PACK · $14.99", tagcolor:"#ff7967", title:"250 Pro Prompts for Plumbers",
+      img:"prompt-packs/covers/plumber.jpg", price:"$14.99",
+      points:["Estimates & quoting jobs","Winning more jobs","Scheduling & dispatch","Invoicing & getting paid faster"] },
+    { slug:"pro-hvac", tag:"PRO PACK · $14.99", tagcolor:"#ff7967", title:"250 Pro Prompts for HVAC Techs",
+      img:"prompt-packs/covers/hvac.jpg", price:"$14.99",
+      points:["Estimates & quoting installs","Seasonal tune-up campaigns","Scheduling during heat waves","Troubleshooting checklists"] },
+  ]
+};
 
 function buyBtn(slug, label) {
   const url = BUY_LINKS[slug];
@@ -140,16 +188,18 @@ function buyBtn(slug, label) {
   return `<span class="btn soon">${label} · soon</span>`;
 }
 
-document.getElementById('packs').innerHTML = PACKS.map(p => `
-  <div class="card">
-    <img src="${p.img}" alt="${p.title}" loading="lazy">
-    <div class="body">
-      <div class="tier">${p.tier}</div>
-      <h3>${p.title}</h3>
-      <ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul>
-      <div class="buyrow"><div class="price">${p.price}</div>${buyBtn(p.slug, "Get the pack")}</div>
-    </div>
-  </div>`).join('');
+for (const tier of ["essential","niche","pro"]) {
+  document.getElementById('packs-'+tier).innerHTML = PACKS[tier].map(p => `
+    <div class="card">
+      <img src="${p.img}" alt="${p.title}" loading="lazy">
+      <div class="body">
+        <div class="tiertag" style="color:${p.tagcolor}">${p.tag}</div>
+        <h3>${p.title}</h3>
+        <ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul>
+        <div class="buyrow"><div class="price">${p.price}</div>${buyBtn(p.slug, "Get the pack")}</div>
+      </div>
+    </div>`).join('');
+}
 
 document.querySelectorAll('[data-buy]').forEach(a => {
   const slug = a.dataset.buy, url = BUY_LINKS[slug];
