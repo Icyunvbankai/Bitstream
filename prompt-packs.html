@@ -5,66 +5,118 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prompt Packs — Bitstream · Zero Filler. All Value.</title>
 <style>
-  :root { --bg:#0b0e0e; --card:#121615; --cyan:#62dfeb; --coral:#ff7967; --gold:#f2c14e; --txt:#f4f6f5; --mut:#b9c2bf; }
+  :root { --cyan:#62dfeb; --coral:#ff7967; --gold:#f2c14e; --txt:#f4f6f5; --mut:#c3cfcd; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family: Helvetica, Arial, sans-serif; background:var(--bg); color:var(--txt); line-height:1.6; }
-  a { color:var(--cyan); }
-  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
-  header.nav { padding:18px 0; border-bottom:1px solid #1e2423; }
+  html { scroll-behavior:smooth; }
+  body { font-family: Helvetica, Arial, sans-serif; background:#070b12; color:var(--txt); line-height:1.6; overflow-x:hidden; }
+
+  /* ---- scrolling office panorama ---- */
+  #office-bg { position:fixed; top:0; left:0; height:100vh; width:auto; z-index:-3; will-change:transform; }
+  #office-bg img { height:100vh; width:auto; display:block; }
+  #wash { position:fixed; inset:0; z-index:-2;
+    background:linear-gradient(180deg, rgba(4,8,14,.72) 0%, rgba(4,8,14,.42) 30%, rgba(4,8,14,.52) 65%, rgba(4,8,14,.85) 100%); }
+  #motes { position:fixed; inset:0; z-index:-1; pointer-events:none; }
+  .orb { position:fixed; border-radius:50%; filter:blur(90px); z-index:-1; pointer-events:none; opacity:.35;
+    animation:drift 10s ease-in-out infinite; }
+  .orb.o1 { width:420px; height:420px; left:-120px; top:12%; background:radial-gradient(circle,#1e6f8e,transparent 70%); }
+  .orb.o2 { width:520px; height:520px; right:-160px; top:44%; background:radial-gradient(circle,#7a2d3f,transparent 70%); animation-delay:-3.3s; }
+  .orb.o3 { width:380px; height:380px; left:30%; bottom:-140px; background:radial-gradient(circle,#1e4a8e,transparent 70%); animation-delay:-6.6s; }
+  @keyframes drift { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(46px,-34px) scale(1.08);} }
+
+  #zone { position:fixed; left:18px; bottom:16px; z-index:5; font-size:11px; letter-spacing:.3em; font-weight:700;
+    color:var(--cyan); background:rgba(7,11,18,.55); border:1px solid rgba(98,223,235,.35);
+    padding:8px 14px; border-radius:20px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+
+  .wrap { max-width:1060px; margin:0 auto; padding:0 20px; position:relative; }
+  .glass { background:rgba(13,20,30,.55); border:1px solid rgba(255,255,255,.14); border-radius:18px;
+    backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
+    box-shadow:0 18px 50px rgba(0,0,0,.45); }
+
+  header.nav { padding:18px 0; position:sticky; top:0; z-index:10;
+    background:rgba(7,11,18,.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08); }
   header.nav .wrap { display:flex; justify-content:space-between; align-items:center; }
   .brand { font-weight:800; letter-spacing:.18em; font-size:13px; color:var(--cyan); text-decoration:none; }
   .navlink { color:var(--mut); text-decoration:none; font-size:14px; }
-  .hero { text-align:center; padding:64px 20px 40px; }
-  .kicker { font-weight:700; font-size:12px; letter-spacing:.28em; color:var(--cyan); margin-bottom:14px; }
-  .hero h1 { font-size:44px; line-height:1.1; margin-bottom:12px; }
-  .hero p { color:var(--mut); font-size:17px; max-width:640px; margin:0 auto 24px; }
-  .bundle-banner { background:linear-gradient(135deg,#14201f,#0b0e0e); border:2px solid var(--coral); border-radius:14px; padding:26px 28px; margin:10px auto 50px; max-width:860px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
-  .bundle-banner h2 { font-size:24px; margin-bottom:6px; }
-  .bundle-banner h2 span { color:var(--coral); }
-  .bundle-banner p { color:var(--mut); font-size:15px; }
-  .price-big { font-size:38px; font-weight:800; color:var(--coral); }
+
+  .hero { text-align:center; padding:110px 20px 70px; }
+  .kicker { font-weight:700; font-size:12px; letter-spacing:.28em; color:var(--cyan); margin-bottom:16px; }
+  .hero h1 { font-size:52px; line-height:1.05; margin-bottom:14px; text-shadow:0 4px 30px rgba(0,0,0,.6); }
+  .hero p { color:var(--mut); font-size:18px; max-width:640px; margin:0 auto 26px; text-shadow:0 2px 12px rgba(0,0,0,.7); }
+  .scrollhint { margin-top:34px; color:var(--mut); font-size:13px; letter-spacing:.2em; animation:bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 0%,100%{transform:translateY(0); opacity:.7;} 50%{transform:translateY(10px); opacity:1;} }
+
+  .bundle { padding:30px 32px; margin:0 auto 20px; max-width:880px; display:flex; flex-wrap:wrap; gap:18px;
+    align-items:center; justify-content:space-between; border:1px solid rgba(255,121,103,.5); }
+  .bundle h2 { font-size:26px; margin-bottom:6px; }
+  .bundle h2 span { color:var(--coral); }
+  .bundle p { color:var(--mut); font-size:15px; }
+  .price-big { font-size:40px; font-weight:800; color:var(--coral); }
   .price-big small { font-size:15px; color:var(--mut); font-weight:400; text-decoration:line-through; margin-left:8px; }
-  .btn { display:inline-block; background:var(--cyan); color:#0b0e0e; font-weight:800; padding:13px 30px; border-radius:10px; text-decoration:none; font-size:16px; border:none; cursor:pointer; }
-  .btn:hover { filter:brightness(1.1); }
-  .btn.coral { background:var(--coral); }
-  .btn.ghost { background:transparent; color:var(--cyan); border:2px solid var(--cyan); }
-  .btn.soon { background:#2a3130; color:var(--mut); cursor:default; }
-  .tierhead { margin:46px 0 6px; }
+
+  .btn { display:inline-block; background:var(--cyan); color:#06121a; font-weight:800; padding:13px 30px;
+    border-radius:12px; text-decoration:none; font-size:16px; border:none; cursor:pointer; transition:transform .15s; }
+  .btn:hover { transform:translateY(-2px); filter:brightness(1.08); }
+  .btn.coral { background:var(--coral); color:#1a0a06; }
+  .btn.ghost { background:rgba(98,223,235,.08); color:var(--cyan); border:2px solid var(--cyan); }
+  .btn.soon { background:rgba(255,255,255,.08); color:var(--mut); cursor:default; border:1px solid rgba(255,255,255,.12); }
+  .btn.soon:hover { transform:none; filter:none; }
+
+  .tierhead { margin:70px 0 4px; text-shadow:0 3px 18px rgba(0,0,0,.7); }
   .tierhead .tier { font-size:12px; font-weight:800; letter-spacing:.26em; }
-  .tierhead h2 { font-size:28px; margin:6px 0 4px; }
+  .tierhead h2 { font-size:30px; margin:8px 0 4px; }
   .tierhead p { color:var(--mut); font-size:15px; max-width:640px; }
   .tier-essential .tier { color:var(--cyan); }
   .tier-niche .tier { color:var(--gold); }
   .tier-pro .tier { color:var(--coral); }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; padding:22px 0 10px; }
-  .card { background:var(--card); border:1px solid #1e2423; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; padding:24px 0 10px; }
+  .card { overflow:hidden; display:flex; flex-direction:column; transition:transform .2s; }
+  .card:hover { transform:translateY(-6px); }
   .card img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
   .card .body { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
   .card .tiertag { font-size:11px; font-weight:700; letter-spacing:.2em; }
   .card h3 { font-size:20px; line-height:1.25; }
   .card ul { color:var(--mut); font-size:13.5px; padding-left:18px; }
   .card ul li { margin-bottom:4px; }
-  .card .buyrow { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px; }
+  .card .buyrow { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:10px; }
   .price { font-size:24px; font-weight:800; }
-  .drops { text-align:center; padding:40px 20px; border-top:1px solid #1e2423; border-bottom:1px solid #1e2423; margin:50px 0; }
-  .drops h2 { font-size:26px; margin-bottom:8px; }
-  .drops p { color:var(--mut); max-width:600px; margin:0 auto; }
-  .giveaway { background:linear-gradient(180deg,#171310,#0b0e0e); border:2px dashed var(--coral); border-radius:16px; padding:40px 30px; margin:0 auto 60px; max-width:860px; text-align:center; }
-  .giveaway .tag { display:inline-block; background:var(--coral); color:#0b0e0e; font-weight:800; font-size:12px; letter-spacing:.2em; padding:6px 16px; border-radius:20px; margin-bottom:16px; }
-  .giveaway h2 { font-size:32px; margin-bottom:10px; }
+  .pricepill { font-size:13px; font-weight:700; background:rgba(98,223,235,.14); color:var(--cyan);
+    border:1px solid rgba(98,223,235,.4); padding:4px 12px; border-radius:14px; }
+
+  .drops { text-align:center; padding:44px 30px; margin:70px auto; max-width:880px; }
+  .drops h2 { font-size:28px; margin-bottom:10px; }
+  .drops p { color:var(--mut); max-width:620px; margin:0 auto; }
+
+  .giveaway { padding:44px 34px; margin:0 auto 70px; max-width:880px; text-align:center;
+    border:1px dashed rgba(255,121,103,.6); }
+  .giveaway .tag { display:inline-block; background:var(--coral); color:#1a0a06; font-weight:800; font-size:12px;
+    letter-spacing:.2em; padding:6px 16px; border-radius:20px; margin-bottom:18px; }
+  .giveaway h2 { font-size:34px; margin-bottom:10px; }
   .giveaway h2 span { color:var(--coral); }
-  .giveaway p { color:var(--mut); max-width:600px; margin:0 auto 22px; }
-  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:0 auto 24px; max-width:700px; text-align:left; }
-  .step { background:#0b0e0e; border:1px solid #2a3130; border-radius:10px; padding:16px; }
+  .giveaway p { color:var(--mut); max-width:600px; margin:0 auto 24px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:0 auto 26px;
+    max-width:700px; text-align:left; }
+  .step { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:16px; }
   .step .n { font-size:22px; font-weight:800; color:var(--coral); }
   .step p { font-size:14px; margin:6px 0 0; }
-  .counter { font-size:15px; color:var(--mut); margin-bottom:20px; }
+  .counter { font-size:15px; color:var(--mut); margin-bottom:22px; }
   .counter strong { color:var(--txt); font-size:20px; }
-  footer { border-top:1px solid #1e2423; padding:30px 0 50px; text-align:center; color:var(--mut); font-size:14px; }
-  @media (max-width:600px){ .hero h1{font-size:32px;} .bundle-banner{flex-direction:column; text-align:center;} }
+
+  footer { border-top:1px solid rgba(255,255,255,.08); padding:32px 0 90px; text-align:center;
+    color:var(--mut); font-size:14px; background:rgba(7,11,18,.6); backdrop-filter:blur(10px); }
+  footer a { color:var(--cyan); }
+  @media (max-width:600px){ .hero h1{font-size:36px;} .bundle{flex-direction:column; text-align:center;} #zone{display:none;} }
 </style>
 </head>
 <body>
+
+<div id="office-bg"><img src="prompt-packs/office-panorama.jpg" alt="" id="office-img"></div>
+<div id="wash"></div>
+<canvas id="motes"></canvas>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<div id="zone">◉ SERVER ROOM</div>
+
 <header class="nav"><div class="wrap">
   <a class="brand" href="index.html">BITSTREAM</a>
   <a class="navlink" href="index.html">← Back to Bitstream</a>
@@ -75,12 +127,13 @@
     <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
     <h1>Prompt Packs</h1>
     <p>100–250 copy-paste AI prompts per pack. Open a free AI tool, paste, fill in the blanks, done. Works with ChatGPT, Claude, Gemini, and Meta AI.</p>
+    <div class="scrollhint">SCROLL TO TOUR THE OFFICE ↓</div>
   </section>
 
-  <div class="bundle-banner">
+  <div class="bundle glass">
     <div>
       <h2>Any 3 packs for <span>$20</span></h2>
-      <p>Pick any three — get the rest of the shelf's attention free. 400+ prompts, one price.</p>
+      <p>Pick any three — consider the fourth our thank-you. 400+ prompts, one price.</p>
     </div>
     <div style="text-align:center">
       <div class="price-big">$20<small>$31.96</small></div>
@@ -109,12 +162,12 @@
   </section>
   <section class="grid" id="packs-pro"></section>
 
-  <section class="drops">
+  <section class="drops glass">
     <h2>Fresh packs drop daily</h2>
     <p>We're building a full catalog — marketers, realtors, Etsy sellers, teachers, coaches, recruiters and more landing every day. Grab the bundle once and watch the shelf grow.</p>
   </section>
 
-  <section class="giveaway" id="giveaway">
+  <section class="giveaway glass" id="giveaway">
     <div class="tag">GIVEAWAY · FIRST 100 ONLY</div>
     <h2>Win a <span>FREE</span> prompt pack</h2>
     <p>We're giving away 100 prompt packs (winner's pick of any pack). Here's how to claim yours:</p>
@@ -129,10 +182,10 @@
   </section>
 </div>
 
-<footer><div class="wrap">
+<footer>
   <p>© 2026 Bitstream · Zero Filler. All Value. · Packs are for personal use.</p>
   <p style="margin-top:8px"><a href="index.html#join">Join the deals list</a> for new pack drops.</p>
-</div></footer>
+</footer>
 
 <script>
 // >>> PASTE YOUR GUMROAD PRODUCT LINKS HERE (one manual step after creating the products)
@@ -152,32 +205,32 @@ const BUY_LINKS = {
 const PACKS = {
   essential: [
     { slug:"mom-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts That Really Help Moms",
-      img:"prompt-packs/covers/mom.jpg", price:"$7.99",
+      img:"prompt-packs/covers/mom.jpg", price:"$7.99", count:"100 prompts",
       points:["Meal plans & picky-eater fixes","Homework help & kid activities","Family budgeting & saving","Mom's self-care & balance"] },
     { slug:"dad-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for the World's Best Dad",
-      img:"prompt-packs/covers/dad.jpg", price:"$7.99",
+      img:"prompt-packs/covers/dad.jpg", price:"$7.99", count:"100 prompts",
       points:["Bonding & quality time","Coaching & life skills","DIY & home projects","Grilling, money & presence"] },
     { slug:"college-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for College Students",
-      img:"prompt-packs/covers/college.jpg", price:"$7.99",
+      img:"prompt-packs/covers/college.jpg", price:"$7.99", count:"100 prompts",
       points:["Study smarter & exam prep","Essays, outlines & research","Student budgeting","Resumes & internships"] },
     { slug:"small-biz-prompts", tag:"ESSENTIAL PACK · $7.99", tagcolor:"#62dfeb", title:"100 Prompts for Small Business Owners",
-      img:"prompt-packs/covers/biz.jpg", price:"$7.99",
+      img:"prompt-packs/covers/biz.jpg", price:"$7.99", count:"100 prompts",
       points:["Marketing that converts","Pricing & profit math","Customers & reviews","Hiring & operations"] },
   ],
   niche: [
     { slug:"niche-diabetic-kids-parents", tag:"NICHE PACK · $10.99", tagcolor:"#f2c14e", title:"250 Prompts for Parents of Diabetic Kids",
-      img:"prompt-packs/covers/diabetic.jpg", price:"$10.99",
+      img:"prompt-packs/covers/diabetic.jpg", price:"$10.99", count:"250 prompts",
       points:["Blood sugar tracking & logbooks","Carb counting & meal planning","School days & 504 plans","Questions for the diabetes care team"] },
     { slug:"niche-cheer-parents", tag:"NICHE PACK · $10.99", tagcolor:"#f2c14e", title:"250 Prompts for Cheer Parents",
-      img:"prompt-packs/covers/cheer.jpg", price:"$10.99",
+      img:"prompt-packs/covers/cheer.jpg", price:"$10.99", count:"250 prompts",
       points:["Tryout prep & skill tracking","Competition day survival","Budgeting the cheer season","Fundraising ideas"] },
   ],
   pro: [
     { slug:"pro-plumber", tag:"PRO PACK · $14.99", tagcolor:"#ff7967", title:"250 Pro Prompts for Plumbers",
-      img:"prompt-packs/covers/plumber.jpg", price:"$14.99",
+      img:"prompt-packs/covers/plumber.jpg", price:"$14.99", count:"250 prompts",
       points:["Estimates & quoting jobs","Winning more jobs","Scheduling & dispatch","Invoicing & getting paid faster"] },
     { slug:"pro-hvac", tag:"PRO PACK · $14.99", tagcolor:"#ff7967", title:"250 Pro Prompts for HVAC Techs",
-      img:"prompt-packs/covers/hvac.jpg", price:"$14.99",
+      img:"prompt-packs/covers/hvac.jpg", price:"$14.99", count:"250 prompts",
       points:["Estimates & quoting installs","Seasonal tune-up campaigns","Scheduling during heat waves","Troubleshooting checklists"] },
   ]
 };
@@ -190,13 +243,14 @@ function buyBtn(slug, label) {
 
 for (const tier of ["essential","niche","pro"]) {
   document.getElementById('packs-'+tier).innerHTML = PACKS[tier].map(p => `
-    <div class="card">
+    <div class="card glass">
       <img src="${p.img}" alt="${p.title}" loading="lazy">
       <div class="body">
         <div class="tiertag" style="color:${p.tagcolor}">${p.tag}</div>
         <h3>${p.title}</h3>
         <ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul>
-        <div class="buyrow"><div class="price">${p.price}</div>${buyBtn(p.slug, "Get the pack")}</div>
+        <div class="buyrow"><div class="price">${p.price}</div><span class="pricepill">${p.count}</span></div>
+        <div style="margin-top:10px">${buyBtn(p.slug, "Get the pack")}</div>
       </div>
     </div>`).join('');
 }
@@ -206,6 +260,52 @@ document.querySelectorAll('[data-buy]').forEach(a => {
   if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
   else { a.textContent = "Bundle · soon"; a.classList.add('soon'); a.removeAttribute('href'); }
 });
+
+/* ---- scroll-scrubbed office tour ---- */
+const bgImg = document.getElementById('office-img');
+const zoneEl = document.getElementById('zone');
+const ZONES = ['◉ SERVER ROOM', '◉ WORK FLOOR', '◉ COMMAND HUB'];
+let stripW = 0;
+function measure() {
+  const h = window.innerHeight;
+  stripW = bgImg.naturalWidth * (h / bgImg.naturalHeight);
+}
+function onScroll() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+  const shift = Math.max(0, stripW - window.innerWidth);
+  document.getElementById('office-bg').style.transform = `translate3d(${-p * shift}px,0,0)`;
+  zoneEl.textContent = ZONES[p < 0.34 ? 0 : p < 0.67 ? 1 : 2];
+}
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(() => { onScroll(); ticking = false; }); ticking = true; }
+}, { passive:true });
+window.addEventListener('resize', () => { measure(); onScroll(); });
+if (bgImg.complete && bgImg.naturalWidth) { measure(); onScroll(); }
+else bgImg.addEventListener('load', () => { measure(); onScroll(); });
+
+/* ---- ambient data motes (10s loop feel) ---- */
+const cv = document.getElementById('motes'), ctx = cv.getContext('2d');
+let motes = [];
+function sizeCanvas() {
+  cv.width = window.innerWidth; cv.height = window.innerHeight;
+  motes = Array.from({length: 55}, () => ({
+    x: Math.random()*cv.width, y: Math.random()*cv.height,
+    r: Math.random()*2.2+0.6, s: Math.random()*0.35+0.12,
+    o: Math.random()*0.5+0.15, hue: Math.random() < 0.75 ? '98,223,235' : '255,121,103'
+  }));
+}
+sizeCanvas(); window.addEventListener('resize', sizeCanvas);
+(function loop() {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  for (const m of motes) {
+    m.y -= m.s; if (m.y < -6) { m.y = cv.height + 6; m.x = Math.random()*cv.width; }
+    ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 7);
+    ctx.fillStyle = `rgba(${m.hue},${m.o})`; ctx.fill();
+  }
+  requestAnimationFrame(loop);
+})();
 </script>
 </body>
 </html>
