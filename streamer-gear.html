@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamer Gear — Bitstream · Zero Filler. All Value.</title>
+<style>
+  :root { --cyan:#62dfeb; --coral:#ff7967; --gold:#f2c14e; --txt:#f4f6f5; --mut:#c3cfcd; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family: Helvetica, Arial, sans-serif; background:#070b12; color:var(--txt); line-height:1.6; overflow-x:hidden; }
+
+  #wash { position:fixed; inset:0; z-index:-2;
+    background:linear-gradient(180deg, rgba(4,8,14,.72) 0%, rgba(4,8,14,.42) 30%, rgba(4,8,14,.52) 65%, rgba(4,8,14,.85) 100%); }
+  #motes { position:fixed; inset:0; z-index:-1; pointer-events:none; }
+  .orb { position:fixed; border-radius:50%; filter:blur(90px); z-index:-1; pointer-events:none; opacity:.35;
+    animation:drift 10s ease-in-out infinite; }
+  .orb.o1 { width:420px; height:420px; left:-120px; top:12%; background:radial-gradient(circle,#1e6f8e,transparent 70%); }
+  .orb.o2 { width:520px; height:520px; right:-160px; top:44%; background:radial-gradient(circle,#7a2d3f,transparent 70%); animation-delay:-3.3s; }
+  .orb.o3 { width:380px; height:380px; left:30%; bottom:-140px; background:radial-gradient(circle,#1e4a8e,transparent 70%); animation-delay:-6.6s; }
+  @keyframes drift { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(46px,-34px) scale(1.08);} }
+
+  #zone { position:fixed; left:18px; bottom:16px; z-index:5; font-size:11px; letter-spacing:.3em; font-weight:700;
+    color:var(--cyan); background:rgba(7,11,18,.55); border:1px solid rgba(98,223,235,.35);
+    padding:8px 14px; border-radius:20px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+
+  .wrap { max-width:1060px; margin:0 auto; padding:0 20px; position:relative; }
+  .glass { background:rgba(13,20,30,.55); border:1px solid rgba(255,255,255,.14); border-radius:18px;
+    backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
+    box-shadow:0 18px 50px rgba(0,0,0,.45); }
+
+  header.nav { padding:18px 0; position:sticky; top:0; z-index:10;
+    background:rgba(7,11,18,.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08); }
+  header.nav .wrap { display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-weight:800; letter-spacing:.18em; font-size:13px; color:var(--cyan); text-decoration:none; }
+  .navlink { color:var(--mut); text-decoration:none; font-size:14px; }
+
+  .hero { text-align:center; padding:100px 20px 60px; }
+  .kicker { font-weight:700; font-size:12px; letter-spacing:.28em; color:var(--coral); margin-bottom:16px; }
+  .hero h1 { font-size:52px; line-height:1.05; margin-bottom:14px; text-shadow:0 4px 30px rgba(0,0,0,.6); }
+  .hero p { color:var(--mut); font-size:18px; max-width:660px; margin:0 auto 26px; text-shadow:0 2px 12px rgba(0,0,0,.7); }
+  .scrollhint { margin-top:30px; color:var(--mut); font-size:13px; letter-spacing:.2em; animation:bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 0%,100%{transform:translateY(0); opacity:.7;} 50%{transform:translateY(10px); opacity:1;} }
+
+  .tierhead { margin:64px 0 4px; text-shadow:0 3px 18px rgba(0,0,0,.7); }
+  .tierhead .tier { font-size:12px; font-weight:800; letter-spacing:.26em; color:var(--cyan); }
+  .tierhead h2 { font-size:30px; margin:8px 0 4px; }
+  .tierhead p { color:var(--mut); font-size:15px; max-width:640px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px; padding:24px 0 10px; }
+  .card { overflow:hidden; display:flex; flex-direction:column; transition:transform .2s; }
+  .card:hover { transform:translateY(-6px); }
+  .ph { width:100%; aspect-ratio:16/10; display:flex; align-items:center; justify-content:center;
+    font-size:64px; font-weight:800; color:rgba(255,255,255,.92); text-shadow:0 4px 24px rgba(0,0,0,.5); }
+  .ph.g1 { background:linear-gradient(135deg,#123a4d,#0a1c26); }
+  .ph.g2 { background:linear-gradient(135deg,#4d1a2e,#260a14); }
+  .ph.g3 { background:linear-gradient(135deg,#3d3410,#221b08); }
+  .ph.g4 { background:linear-gradient(135deg,#1c2a4d,#0b1226); }
+  .card .body { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .card .tiertag { font-size:11px; font-weight:700; letter-spacing:.2em; color:var(--cyan); }
+  .card h3 { font-size:19px; line-height:1.25; }
+  .card .pitch { color:var(--mut); font-size:14px; }
+  .card .buyrow { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:10px; }
+  .price { font-size:24px; font-weight:800; }
+
+  .btn { display:inline-block; background:var(--cyan); color:#06121a; font-weight:800; padding:13px 30px;
+    border-radius:12px; text-decoration:none; font-size:16px; border:none; cursor:pointer; transition:transform .15s; }
+  .btn:hover { transform:translateY(-2px); filter:brightness(1.08); }
+  .btn.small { padding:10px 20px; font-size:14px; }
+
+  .kits { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:24px; padding:24px 0 10px; }
+  .kit { padding:28px; display:flex; flex-direction:column; gap:6px; border:1px solid rgba(255,255,255,.14); }
+  .kit.hero-kit { border:1px solid rgba(255,121,103,.5); }
+  .kit .tier { font-size:12px; font-weight:800; letter-spacing:.26em; color:var(--gold); }
+  .kit.hero-kit .tier { color:var(--coral); }
+  .kit h3 { font-size:24px; margin:6px 0 2px; }
+  .kit .total { font-size:34px; font-weight:800; color:var(--txt); margin-bottom:8px; }
+  .kit .total small { font-size:14px; color:var(--mut); font-weight:400; }
+  .kit ul { list-style:none; margin:8px 0; }
+  .kit ul li { padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); font-size:14px; color:var(--mut); }
+  .kit ul li:last-child { border-bottom:none; }
+  .kit ul li strong { color:var(--txt); display:block; font-size:15px; }
+  .kit ul li .p { color:var(--gold); font-weight:700; }
+  .kit ul li a { color:var(--cyan); font-size:13px; text-decoration:none; }
+  .kit ul li a:hover { text-decoration:underline; }
+  .kit .note { font-size:13px; color:var(--mut); background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:12px 14px; margin-top:10px; }
+
+  .fine-print { text-align:center; color:var(--mut); font-size:13px; margin:60px auto; max-width:720px; padding:0 20px; }
+
+  footer { border-top:1px solid rgba(255,255,255,.08); padding:32px 0 90px; text-align:center;
+    color:var(--mut); font-size:14px; background:rgba(7,11,18,.6); backdrop-filter:blur(10px); }
+  footer a { color:var(--cyan); }
+  @media (max-width:600px){ .hero h1{font-size:36px;} #zone{display:none;} }
+</style>
+</head>
+<body>
+
+<div id="wash"></div>
+<canvas id="motes"></canvas>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<div id="zone">◉ GEAR ROOM</div>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">BITSTREAM</a>
+  <a class="navlink" href="index.html">← Back to Bitstream</a>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">GLITCHMOBZ · CURATED GEAR</div>
+    <h1>STREAMER GEAR</h1>
+    <p>The exact gear big streamers use — curated by GlitchMobz. Every price checked; links support the page at no extra cost to you.</p>
+    <div class="scrollhint">SCROLL FOR THE GOODS ↓</div>
+  </section>
+
+  <section class="tierhead">
+    <div class="tier">01 · THE SETUP</div>
+    <h2>Sound pro before you look pro</h2>
+    <p>Eight pieces. Start with the mic and the light — that's 80% of the upgrade.</p>
+  </section>
+  <section class="grid">
+
+    <div class="card glass">
+      <div class="ph g1">S</div>
+      <div class="body">
+        <div class="tiertag">MICROPHONE</div>
+        <h3>Shure MV7 USB/XLR Microphone</h3>
+        <p class="pitch">The streamer mic standard: broadcast sound, no interface needed.</p>
+        <div class="buyrow"><div class="price">$249</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Shure+MV7&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g2">L</div>
+      <div class="body">
+        <div class="tiertag">CAMERA</div>
+        <h3>Logitech StreamCam Plus</h3>
+        <p class="pitch">1080p60 face cam, the sweet spot under $100.</p>
+        <div class="buyrow"><div class="price">$99.99</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Logitech+StreamCam+Plus&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g3">E</div>
+      <div class="body">
+        <div class="tiertag">MIC ARM</div>
+        <h3>Elgato Wave Mic Arm LP</h3>
+        <p class="pitch">Low-profile boom arm that stays out of frame.</p>
+        <div class="buyrow"><div class="price">$85.99</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Elgato+Wave+Mic+Arm+LP&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g4">E</div>
+      <div class="body">
+        <div class="tiertag">LIGHTING</div>
+        <h3>Elgato Key Light Neo</h3>
+        <p class="pitch">Good lighting is the cheapest way to look pro.</p>
+        <div class="buyrow"><div class="price">$69.99</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Elgato+Key+Light+Neo&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g1">E</div>
+      <div class="body">
+        <div class="tiertag">CONTROL</div>
+        <h3>Elgato Stream Deck MK.2</h3>
+        <p class="pitch">15 LCD keys for scenes, soundboards, clip triggers.</p>
+        <div class="buyrow"><div class="price">$134.99</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Elgato+Stream+Deck+MK.2&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g2">E</div>
+      <div class="body">
+        <div class="tiertag">CAPTURE</div>
+        <h3>Elgato HD60 X</h3>
+        <p class="pitch">Console-to-PC capture at 1080p60 HDR.</p>
+        <div class="buyrow"><div class="price">$179.99</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Elgato+HD60+X&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g3">E</div>
+      <div class="body">
+        <div class="tiertag">BACKGROUND</div>
+        <h3>Elgato Green Screen MT</h3>
+        <p class="pitch">Retractable wall-mount green screen, zero floor space.</p>
+        <div class="buyrow"><div class="price">~$200</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Elgato+Green+Screen+MT&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div class="ph g4">S</div>
+      <div class="body">
+        <div class="tiertag">MICROPHONE · ASPIRATIONAL</div>
+        <h3>Shure SM7dB</h3>
+        <p class="pitch">The broadcast-desk mic. The &ldquo;you&rsquo;ve made it&rdquo; mic.</p>
+        <div class="buyrow"><div class="price">$549</div></div>
+        <div style="margin-top:10px"><a class="btn small" href="https://www.amazon.com/s?k=Shure+SM7dB&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy now</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="tierhead">
+    <div class="tier">02 · IRL BACKPACK KITS</div>
+    <h2>Take the stream outside</h2>
+    <p>Three tiers of walking-around rigs — from phone-based to tour-grade. Every kit assumes you bring your own cellular data plan.</p>
+  </section>
+  <section class="kits">
+
+    <div class="kit glass">
+      <div class="tier">STARTER</div>
+      <h3>&ldquo;Phone IRL&rdquo;</h3>
+      <div class="total">≈ $1,865 <small>kit total</small></div>
+      <ul>
+        <li><strong>YoloLiv YoloBox Ultra</strong> <span class="p">$1,499</span><br>All-in-one encoder, switcher, monitor &amp; 4G — streams vertical from anywhere.<br><a href="https://www.amazon.com/s?k=YoloLiv+YoloBox+Ultra&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>DJI Osmo Mobile 7</strong> <span class="p">$75</span><br>Phone gimbal for smooth walking shots.<br><a href="https://www.amazon.com/s?k=DJI+Osmo+Mobile+7&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>Anker 737 Power Bank</strong> <span class="p">$109.99</span><br>24K mAh, 120W — a full day of power.<br><a href="https://www.amazon.com/s?k=Anker+737+Power+Bank&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>PGYTECH OneMo 25L Backpack</strong> <span class="p">$179.95</span><br>Tactical pack that swallows the whole rig.<br><a href="https://www.amazon.com/s?k=PGYTECH+OneMo+Backpack&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+      </ul>
+      <div class="note">Your phone is the camera — $0 incremental. Needs a cellular data plan (ongoing cost).</div>
+    </div>
+
+    <div class="kit glass hero-kit">
+      <div class="tier">SERIOUS</div>
+      <h3>&ldquo;Mirrorless + LiveU&rdquo;</h3>
+      <div class="total">≈ $3,860 <small>kit total</small></div>
+      <ul>
+        <li><strong>LiveU Solo PRO HDMI</strong> <span class="p">$2,595</span><br>The bonded-cellular encoder real IRL streamers use. <em>Not on Amazon.</em><br><a href="https://www.bhphotovideo.com/c/product/1732743-REG/liveu_lu_solopro_solo_pro_hdmi_sdi_encoder.html" target="_blank" rel="noopener">Buy direct from B&amp;H →</a> <span style="font-size:12px">(no affiliate — direct link)</span></li>
+        <li><strong>Sony ZV-E10 + 16-50mm kit</strong> <span class="p">≈ $850</span><br>Vlogging camera with clean HDMI out.<br><a href="https://www.amazon.com/s?k=Sony+ZV-E10+16-50mm&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>Anker 737 Power Bank</strong> <span class="p">$109.99</span><br><a href="https://www.amazon.com/s?k=Anker+737+Power+Bank&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>PGYTECH OneMo 25L Backpack</strong> <span class="p">$179.95</span><br><a href="https://www.amazon.com/s?k=PGYTECH+OneMo+Backpack&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>DJI Osmo Mobile 7</strong> <span class="p">$75</span> <span style="font-size:12px">— B-roll phone</span><br><a href="https://www.amazon.com/s?k=DJI+Osmo+Mobile+7&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+      </ul>
+      <div class="note">Needs 2× cellular data plans for bonded connections (ongoing cost). Cables &amp; mounts ≈ $50 extra.</div>
+    </div>
+
+    <div class="kit glass">
+      <div class="tier">PRO</div>
+      <h3>&ldquo;Tour-grade&rdquo;</h3>
+      <div class="total">≈ $9,545 <small>kit total</small></div>
+      <ul>
+        <li><strong>LiveU Solo PRO 4K bundle</strong> <span class="p">$3,045</span><br>SDI/HDMI 4K encoder + 2-modem Solo Connect. <em>Not on Amazon.</em><br><a href="https://www.bhphotovideo.com/c/product/1957008-REG/liveu_solo_pro_sdi_hdmi_4k.html" target="_blank" rel="noopener">Buy direct from B&amp;H →</a> <span style="font-size:12px">(no affiliate — direct link)</span></li>
+        <li><strong>Sony FX6 cinema camera</strong> <span class="p">≈ $6,000</span><br>Speed&rsquo;s reported primary camera.<br><a href="https://www.amazon.com/s?k=Sony+FX6&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>camRade run&amp;gunBackpack MD</strong> <span class="p">≈ $280</span><br>Made for LiveU/TVU backpack rigs.<br><a href="https://www.amazon.com/s?k=camRade+run+gun+Backpack&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+        <li><strong>2× Anker 737 Power Bank</strong> <span class="p">$219.98</span><br><a href="https://www.amazon.com/s?k=Anker+737+Power+Bank&tag=bitstream-20" target="_blank" rel="noopener sponsored">Buy on Amazon →</a></li>
+      </ul>
+      <div class="note">Speed&rsquo;s real rig is $30K TVU enterprise gear — this is the buyable equivalent. Data plans ongoing.</div>
+    </div>
+
+  </section>
+
+  <p class="fine-print">PRICES VERIFIED OCTOBER 7, 2026 · SUBJECT TO CHANGE.<br>AS AN AFFILIATE PARTNER WE MAY EARN A COMMISSION ON QUALIFYING PURCHASES — IT KEEPS THE CLIPS COMING. ZERO FILLER, ALL VALUE.</p>
+</div>
+
+<footer>
+  <p>© 2026 Bitstream · Curated by <a href="https://www.instagram.com/glitchmobz/" target="_blank" rel="noopener">GlitchMobz</a></p>
+  <p style="margin-top:8px"><a href="https://icyunvbankai.github.io/Bitstream/">← Back to Bitstream</a> · <a href="prompt-packs.html">Prompt Packs</a></p>
+</footer>
+
+<script>
+/* ---- ambient data motes ---- */
+const cv = document.getElementById('motes'), ctx = cv.getContext('2d');
+let motes = [];
+function sizeCanvas() {
+  cv.width = window.innerWidth; cv.height = window.innerHeight;
+  motes = Array.from({length: 55}, () => ({
+    x: Math.random()*cv.width, y: Math.random()*cv.height,
+    r: Math.random()*2.2+0.6, s: Math.random()*0.35+0.12,
+    o: Math.random()*0.5+0.15, hue: Math.random() < 0.75 ? '98,223,235' : '255,121,103'
+  }));
+}
+sizeCanvas(); window.addEventListener('resize', sizeCanvas);
+(function loop() {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  for (const m of motes) {
+    m.y -= m.s; if (m.y < -6) { m.y = cv.height + 6; m.x = Math.random()*cv.width; }
+    ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 7);
+    ctx.fillStyle = `rgba(${m.hue},${m.o})`; ctx.fill();
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
