@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>100 Prompts for Nurses — Bitstream</title>
+<style>
+  @page { size: Letter; margin: 2cm 2.2cm; @bottom-center { content: counter(page); font: 10px Helvetica, Arial, sans-serif; color: #888; } }
+  @page :first { margin: 0; @bottom-center { content: none; } }
+  body { font-family: Helvetica, Arial, sans-serif; color: #1c1e1f; line-height: 1.55; font-size: 11.5pt; }
+  .cover { background: #0b0e0e; color: #f4f6f5; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2cm; page-break-after: always; }
+  .cover img { width: 220px; border-radius: 12px; margin-bottom: 28px; }
+  .cover .kicker { font: 700 11pt Helvetica, Arial, sans-serif; letter-spacing: .28em; color: #39FF14; margin-bottom: 14px; }
+  .cover h1 { font-size: 38pt; margin: 0 0 10px; line-height: 1.1; }
+  .cover .sub { font-size: 14pt; color: #b9c2bf; margin-bottom: 26px; }
+  .cover .tag { font: 600 10pt Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #39FF14; }
+  h2.section { font-size: 20pt; color: #0b0e0e; border-bottom: 3px solid #39FF14; padding-bottom: 6px; margin: 34px 0 6px; page-break-after: avoid; }
+  .section-sub { color: #5c6663; font-size: 10.5pt; margin: 0 0 16px; }
+  .prompt { background: #f4f7f7; border-left: 4px solid #39FF14; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; }
+  .prompt .num { font: 700 9pt Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #1a8a2a; }
+  .prompt h3 { font-size: 12pt; margin: 2px 0 6px; }
+  .prompt .text { font-size: 10.5pt; color: #2a2e2d; background: #ffffff; border: 1px solid #dde4e2; border-radius: 6px; padding: 8px 10px; }
+  .prompt .text em { color: #0b7d0b; font-style: normal; font-weight: bold; }
+  .howto { background: #0b0e0e; color: #eef2f1; border-radius: 10px; padding: 18px 22px; margin: 18px 0; page-break-inside: avoid; }
+  .howto h3 { color: #39FF14; margin: 0 0 8px; font-size: 13pt; }
+  .howto ol { margin: 6px 0; padding-left: 20px; }
+  .howto li { margin-bottom: 6px; font-size: 10.5pt; }
+  .rules { display: block; margin: 14px 0; }
+  .rule { background: #fff7f3; border: 1px solid #ffd9cd; border-radius: 8px; padding: 8px 12px; margin: 8px 0; font-size: 10.5pt; page-break-inside: avoid; }
+  .rule strong { color: #d34a2e; }
+  .closing { background: #f4f7f7; border-radius: 10px; padding: 20px 24px; margin-top: 30px; page-break-inside: avoid; }
+  .closing h2 { margin-top: 0; font-size: 16pt; }
+  .fine { font-size: 9pt; color: #888; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img src="cover.jpg" alt="100 Prompts for Nurses">
+  <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
+  <h1>100 Prompts<br>for Nurses</h1>
+  <div class="sub">100 copy-paste prompts for the toughest shifts on earth.<br>Open a free AI tool, paste, fill in the blanks, done.</div>
+  <div class="tag">ESSENTIAL PACK · $7.99</div>
+</div>
+
+<div class="howto">
+  <h3>How to use this pack (60 seconds)</h3>
+  <ol>
+    <li><strong>Open a free AI tool</strong> — ChatGPT (chatgpt.com), Claude (claude.ai), or Gemini (gemini.google.com). No account tricks, no paid plan needed.</li>
+    <li><strong>Copy any prompt</strong> and replace the <em>[BRACKETED]</em> parts with your details.</li>
+    <li><strong>Be specific.</strong> Your unit, your shift, your patient population — specifics in, quality out. "Make a handoff sheet" gets a generic form. "Make a bedside report sheet for a 4-patient med-surg assignment on night shift with two post-ops" gets something you can actually use tonight.</li>
+    <li><strong>Treat the first answer as a draft.</strong> Reply with "make it shorter," "add a falls-risk section," or "plain language for a 6th-grade reading level" until it's right.</li>
+    <li><strong>You're the clinician.</strong> AI is a fast organizer and explainer — never a substitute for clinical judgment. Verify anything that touches patient care with the care team before acting on it.</li>
+  </ol>
+</div>
+
+<div class="rules">
+  <div class="rule"><strong>Rule 1 — Never paste identifiable patient data into a public AI tool.</strong> Use initials, room numbers, or made-up stand-ins like [PATIENT INITIALS]. Follow your facility's privacy policy and HIPAA rules.</div>
+  <div class="rule"><strong>Rule 2 — AI organizes and explains; you decide.</strong> It can draft a care plan, quiz you for the NCLEX, or simplify discharge instructions — but clinical decisions, dosing, and triage stay with you and the care team. Always verify.</div>
+  <div class="rule"><strong>Rule 3 — One shift-saver at a time.</strong> Don't overhaul your whole workflow today. Pick one prompt: the handoff sheet, the patient-education handout, the thing that ate your lunch break last week.</div>
+</div>
+
+<h2 class="section">1 · Shift Prep &amp; Handoff Notes</h2>
+<p class="section-sub">Brain sheets, bedside reports, and shift prep that keep a 4-patient assignment from owning you.</p>
+
+<div class="prompt"><div class="num">PROMPT 01</div><h3>Brain sheet for your assignment</h3><div class="text">Build me a printable nursing brain sheet for a <em>[4-patient]</em> assignment on a <em>[med-surg]</em> unit. Include columns for: room, patient initials, age/sex, diagnosis, code status, allergies, diet, activity, vitals frequency, IV access, drains/tubes, meds due times, labs due, and "to-do / watch for." Leave the cells blank for me to fill in.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 02</div><h3>Pre-shift assignment preview</h3><div class="text">I start a <em>[night]</em> shift on <em>[med-surg]</em> in an hour. Here's my assignment summary (de-identified): <em>[paste it]</em>. List: the 3 things to check first, likely overnight issues for each diagnosis, and what to ask the off-going nurse before she leaves. Clinical organizing help only — I'll verify with the care team.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 03</div><h3>SBAR for a provider call</h3><div class="text">Turn these rough notes into an SBAR I can read off when I call the provider. Situation/Background first, Assessment of what changed, Recommendation of what I'm asking for. Keep it under 60 seconds spoken: <em>[paste your notes, no patient identifiers]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 04</div><h3>Bedside report script</h3><div class="text">Write a bedside report script I can use at change of shift for <em>[med-surg]</em> with the patient present. Cover: who I am, what happened today, the plan, and what the oncoming nurse will be watching. Patient-friendly language, about 2 minutes, with a line that invites the patient to add anything.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 05</div><h3>Off-going nurse questions</h3><div class="text">I'm taking over a <em>[post-op day 2 cholecystectomy]</em> patient mid-shift from another nurse. Give me a 10-question handoff checklist: the must-asks about drains, pain control, ambulation, diet, and what's pending — so I don't miss what the last nurse forgot to mention.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 06</div><h3>Night-shift rounding plan</h3><div class="text">I'm on nights with <em>[6 patients]</em> on <em>[tele]</em>. Build an hourly rounding plan that clusters care: which tasks happen at <em>[midnight, 2am, 4am]</em>, what can wait until morning, and where to build in charting so I don't get buried. Let sleeping patients sleep.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 07</div><h3>Patient prioritization sort</h3><div class="text">Help me prioritize my <em>[5-patient]</em> assignment. Here's my de-identified rundown: <em>[paste it]</em>. Order them for my first rounds by who I see first, second, and why — ABCs first, and flag anyone trending toward unstable. This is organizing help only; I make the final clinical call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 08</div><h3>Admit cheat sheet</h3><div class="text">Make me an admit cheat sheet for <em>[an ED admit to med-surg with new-onset atrial fibrillation]</em>: what to assess on arrival, the labs and meds I'm likely to see, what education to start tonight, and what to hand to the next shift. Organizing checklist only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 09</div><h3>Discharge handoff one-pager</h3><div class="text">Create a one-page discharge handoff template for <em>[CHF patients going home]</em>: what the next nurse needs to confirm — meds reconciled, diet teaching done, follow-up appointment scheduled, weight scale at home, red flags reviewed. De-identified, checklist format.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 10</div><h3>Floating to a new unit</h3><div class="text">I'm floating from <em>[med-surg]</em> to <em>[telemetry]</em> tomorrow. Give me: the 8 things that are different on tele vs med-surg, common alarms and what they usually mean, and 5 questions to ask the charge nurse on arrival. Practical, shift-focused.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 11</div><h3>Rapid-response readiness</h3><div class="text">Quiz me on rapid-response basics for <em>[a patient whose BP is dropping and urine output has stopped]</em>. Ask me what I'd assess, what data I'd gather before calling, and what the team will want to know — walk me through it step by step, then tell me what I missed. Study/review format, not live clinical advice.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 12</div><h3>End-of-shift "did I miss anything" sweep</h3><div class="text">Here's my de-identified end-of-shift rundown: <em>[paste it]</em>. Scan it like a picky charge nurse: what's undocumented, what's pending, what labs haven't resulted, and what could bite the next shift. Give me a punch list to close out before I clock out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 13</div><h3>Overtime exit plan</h3><div class="text">I'm <em>[90 minutes]</em> past shift end with <em>[charting, one discharge, and a new admit]</em> still open. Build a triage plan: what must be done by me, what can be handed off cleanly, and exactly what to say to the charge nurse so I can leave without guilt or loose ends.</div></div>
+
+<h2 class="section">2 · Patient Education in Plain Language</h2>
+<p class="section-sub">Discharge teaching, disease explanations, and handouts patients actually understand — 6th-grade reading level, no jargon.</p>
+
+<div class="prompt"><div class="num">PROMPT 14</div><h3>Discharge instructions, plain English</h3><div class="text">Rewrite these discharge instructions in plain language at a <em>[6th-grade]</em> reading level: <em>[paste them]</em>. Short sentences, no medical jargon, keep every med name and dose exactly as written. I'll review the final before it reaches the patient.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 15</div><h3>Teach-back quiz builder</h3><div class="text">Write 5 teach-back questions I can ask a <em>[new diabetic]</em> after I explain <em>[insulin basics]</em>. Questions should reveal whether they really understood — not yes/no questions. Include what a good answer sounds like so I can coach on the spot.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 16</div><h3>Explain the diagnosis simply</h3><div class="text">Explain <em>[congestive heart failure]</em> to an adult patient in plain language: what it is, what it means day-to-day, and why <em>[daily weights and low-sodium eating]</em> matter. Warm, not scary, about 150 words. Educational text only — I'll adapt it to my patient.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 17</div><h3>Post-op wound care handout</h3><div class="text">Draft a one-page wound care handout for <em>[an abdominal surgery patient going home with staples]</em>: how to keep it clean, what normal healing looks like, and 5 signs to call about. Checklist format, large type feel, plain language. I'll verify against our discharge orders.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 18</div><h3>Med teaching cheat card</h3><div class="text">Make a patient-friendly teaching card for <em>[warfarin]</em>: what it's for, how to take it, what to eat consistently, and the warning signs to call about. No dosing advice — I'll confirm dosing with pharmacy. Plain language, fits on an index card.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 19</div><h3>Pediatric parent instructions</h3><div class="text">Write take-home instructions for a parent of a <em>[4-year-old]</em> with <em>[an ear infection, starting amoxicillin]</em>: how to give the medicine, what to expect, when to call back. Gentle tone for a worried parent, and note what NOT to do. I'll verify against the discharge orders.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 20</div><h3>Diet teaching, real food</h3><div class="text">Give me practical low-sodium teaching for a <em>[newly diagnosed CHF patient]</em>: 10 real meals and snacks under <em>[500mg sodium]</em> each using normal grocery-store food — not a generic "eat healthy" lecture. Plain language with one visual analogy for hidden sodium.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 21</div><h3>Fall prevention at home</h3><div class="text">Write a fall-prevention handout for an <em>[elderly patient going home on blood pressure meds]</em>: room-by-room hazards, what to change this week, and when to use the call light vs. getting up alone. Kind tone, bullet points, big-print friendly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 22</div><h3>Explain the procedure</h3><div class="text">Explain <em>[a cardiac catheterization]</em> to an anxious patient in plain language: what will happen step by step, how long it takes, what they'll feel, and what to expect after. Calm, honest, no false reassurance. Educational text for me to adapt.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 23</div><h3>Chronic disease self-monitoring guide</h3><div class="text">Build a simple daily self-monitoring routine for a <em>[COPD patient]</em>: what to track each morning, green/yellow/red zone thresholds in plain words, and what to do in each zone. I'll verify thresholds with the care team before teaching it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 24</div><h3>Smoking cessation coaching script</h3><div class="text">Write a 3-minute motivational conversation for a <em>[patient who wants to quit smoking but has failed twice]</em>. Non-judgmental, ask-first style, with one concrete next step at the end. Something I can use at the bedside today.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 25</div><h3>Language-barrier teaching</h3><div class="text">I need to teach <em>[wound dressing changes]</em> to a patient who speaks <em>[Spanish]</em> and the interpreter is delayed. Give me: the teaching points as numbered picture-friendly steps, key phrases in <em>[Spanish]</em> with phonetic pronunciation, and what to confirm with the interpreter later.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 26</div><h3>Dementia-friendly instructions</h3><div class="text">Rewrite these care instructions for a <em>[caregiver of a patient with moderate dementia]</em>: one idea per sentence, large-concept headings, visual cues they can point to, and a "call us when" box. <em>[paste the instructions]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 27</div><h3>Postpartum discharge teaching</h3><div class="text">Create a discharge teaching checklist for a <em>[first-time mom, vaginal delivery, going home day 2]</em>: newborn basics, her own recovery, breastfeeding starter tips, and red flags for both. Warm tone, organized by "today / this week / call us if."</div></div>
+
+<h2 class="section">3 · Study &amp; NCLEX Prep</h2>
+<p class="section-sub">Practice questions, memory tricks, and study plans that turn a coffee break into a review session.</p>
+
+<div class="prompt"><div class="num">PROMPT 28</div><h3>NCLEX practice set, custom topic</h3><div class="text">Give me 10 NCLEX-style multiple-choice questions on <em>[fluids and electrolytes]</em>, medium-hard difficulty. One question at a time: I answer, you tell me if I'm right, explain the rationale, and explain why each wrong answer is wrong before the next question.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 29</div><h3>Medication flashcards</h3><div class="text">Make me study flashcards for these <em>[10 cardiac meds]</em>: <em>[list them]</em>. Each card: drug class, what it does in plain words, the top 2 nursing considerations, and the red flag I'd report. Format as Q/A pairs I can quiz myself on.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 30</div><h3>Lab values drill</h3><div class="text">Quiz me on <em>[CBC and BMP values]</em>. Give me a value and ask: normal or abnormal, what it means, and the nursing action. Go one at a time, track my score out of 15, and at the end drill me again on the ones I missed.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 31</div><h3>Mnemonics for pharm</h3><div class="text">Create memory tricks for <em>[the side effects of ACE inhibitors vs. ARBs vs. calcium channel blockers]</em>. Give me one silly-but-sticky mnemonic per class plus a one-line way to keep the two classes from blurring together on test day.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 32</div><h3>Prioritization question practice</h3><div class="text">Give me 8 NCLEX-style prioritization questions ("which patient do you see first") for <em>[med-surg]</em>. After each answer, explain the prioritization rule I should have used — ABCs, acute vs. chronic, expected vs. unexpected — so I learn the pattern, not just the question.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 33</div><h3>Week-by-week NCLEX study plan</h3><div class="text">Build me an <em>[8-week]</em> NCLEX study plan. I work <em>[3 twelve-hour shifts a week]</em> and can study <em>[2 hours on off days]</em>. My weak areas: <em>[pharmacology and prioritization]</em>. Weekly topics, daily tasks, and one practice-exam day per week. Realistic, not heroic.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 34</div><h3>Anatomy of a disease, fast</h3><div class="text">Teach me <em>[diabetic ketoacidosis]</em> like I'm cramming: the 5-minute version — what's happening in the body, the hallmark signs, the key labs, and the nursing priorities in order. Then ask me 3 questions to check I got it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 35</div><h3>Select-all-that-apply trainer</h3><div class="text">Give me 6 SATA (select-all-that-apply) NCLEX questions on <em>[infection control]</em>. These are my weakest format — after each one, break down exactly how to eliminate wrong options and how to think when I'm down to two.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 36</div><h3>Pharmacology by drug class</h3><div class="text">Teach me <em>[beta blockers]</em> for the NCLEX: mechanism in one sentence, the "-olol" drugs I must know, top side effects the test loves, nursing assessments before giving, and the one patient teaching point per drug. Then 5 rapid-fire questions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 37</div><h3>Peds growth-and-development quiz</h3><div class="text">Quiz me on pediatric developmental milestones: give me an age, I list the milestones. Cover <em>[birth to 5 years]</em>, 12 rounds, one at a time. If I miss one, give me a memory hook so it sticks next time.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 38</div><h3>Maternity must-knows</h3><div class="text">Drill me on maternity: <em>[the 3 stages of labor, GTPAL, and postpartum danger signs]</em>. One concept at a time with an NCLEX-style question after each. Correct me fast and don't move on until I nail it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 39</div><h3>Mental health meds crash course</h3><div class="text">Teach me <em>[SSRIs vs. SNRIs vs. benzodiazepines]</em> for the NCLEX: what each treats, the timeline patients need to know, the side effects the test always asks about, and the nursing teaching for each class. Then quiz me with 5 scenarios.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 40</div><h3>Test-day strategy session</h3><div class="text">My NCLEX is in <em>[10 days]</em> and I'm scoring <em>[60%]</em> on practice tests. Give me: a day-by-day final-week plan, the highest-yield topics to hit first, how many questions per day, and a test-day routine for sleep, food, and nerves. Calm, specific, no pep-talk fluff.</div></div>
+
+<h2 class="section">4 · Documentation Shortcuts</h2>
+<p class="section-sub">Chart faster without charting sloppier — templates, clean-ups, and the phrases auditors like.</p>
+
+<div class="prompt"><div class="num">PROMPT 41</div><h3>Assessment note template</h3><div class="text">Build a fill-in-the-blank head-to-toe assessment note template for <em>[med-surg]</em>: systems in order, with the normal findings pre-written and brackets where I'd drop in abnormalities. Professional, concise, defensible. De-identified placeholders only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 42</div><h3>Clean up my charting</h3><div class="text">I dictated this note in a hurry — make it professional, chronological, and objective. Fix grammar, remove opinions, keep the facts: <em>[paste your rough note, de-identified]</em>. Flag anything I wrote that could be a liability problem.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 43</div><h3>Wound documentation helper</h3><div class="text">Turn my wound description into proper documentation: <em>[de-identified description, e.g. sacral wound 3x2cm, red base, some yellow slough, moderate drainage]</em>. Give me objective, measurable language plus the fields I might be forgetting (edges, odor, pain, periwound skin).</div></div>
+
+<div class="prompt"><div class="num">PROMPT 44</div><h3>Pain reassessment note</h3><div class="text">Draft a pain reassessment documentation template for <em>[post-op patients]</em>: pain score before/after intervention, what intervention, patient response, and next plan. Objective language only, with examples of what NOT to write.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 45</div><h3>Fall incident note</h3><div class="text">Help me write an objective, defensible note for <em>[a witnessed patient fall, no injury apparent]</em>. Give me the facts-to-include checklist (time, place, activity, witnesses, assessment findings, notifications, interventions) and the phrasing that keeps it factual — no blame, no speculation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 46</div><h3>Refused-care documentation</h3><div class="text">A patient refused <em>[a blood draw]</em>. Give me defensible documentation language covering: what was refused, my education attempt, that they verbalized understanding, who I notified, and the plan. De-identified, factual, no judgment words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 47</div><h3>Shift summary narrative</h3><div class="text">Turn my end-of-shift bullet notes into a clean narrative summary note for <em>[a CHF patient on day 3]</em>: <em>[paste de-identified notes]</em>. Chronological, objective, with I&amp;O and response to treatment woven in naturally.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 48</div><h3>Skin assessment phrases</h3><div class="text">Give me 20 professional phrases for skin documentation: intact, blanchable/non-blanchable redness, bruising stages, skin tears, and pressure-injury-adjacent findings. Objective language a wound-care nurse would approve of, with examples of vague phrasing to avoid.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 49</div><h3>Behavioral health observation note</h3><div class="text">Help me document behavioral observations for <em>[a patient on a medical floor with confusion overnight]</em>: quote vs. paraphrase guidance, objective descriptors of behavior, safety measures taken, and provider notification. Factual, respectful, defensible. De-identified.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 50</div><h3>Code/rapid response documentation</h3><div class="text">Give me a rapid-response documentation checklist for <em>[after the event]</em>: timeline format, who did what, meds/fluids given with times, patient response, family notification, and follow-up plan. Then draft a sample de-identified note I can mirror.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 51</div><h3>Phone-order readback note</h3><div class="text">Give me a template for documenting a phone/verbal order: exact phrasing for order details, read-back confirmation, provider name and time, and what to do if the order seems unclear. Keep it audit-proof.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 52</div><h3>Charting-by-exception phrases</h3><div class="text">Give me 25 charting-by-exception phrases for <em>[postpartum]</em>: the "within defined limits" lines for each system plus the full-detail phrasing to use when something IS abnormal. Saves me time on routine checks without looking lazy.</div></div>
+
+<h2 class="section">5 · Difficult Conversations</h2>
+<p class="section-sub">The conversations nobody teaches you — angry families, dying patients, pushy providers, and the words for all of it.</p>
+
+<div class="prompt"><div class="num">PROMPT 53</div><h3>De-escalating an angry family member</h3><div class="text">A family member is <em>[raising their voice at the nurses' station because their mom's pain meds are late]</em>. Give me: what to say in the first 30 seconds, 5 de-escalation phrases that actually work, what NOT to say, and how to end the conversation with a plan they'll trust.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 54</div><h3>Breaking bad news beside the team</h3><div class="text">The provider will be telling a family <em>[their loved one likely won't recover]</em> and I need to be in the room. Give me: my role in the conversation, phrases that support without overstepping, how to read the room, and what to do in the 10 minutes after everyone leaves.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 55</div><h3>Telling a patient they need more help</h3><div class="text">I need to tell an <em>[independent elderly patient]</em> that <em>[they can't safely go home alone anymore]</em>. Write me a compassionate script: acknowledge their fear, explain the why in plain language, offer options (not ultimatums), and handle the "I'm fine" pushback with dignity.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 56</div><h3>Pushing back on a provider respectfully</h3><div class="text">I think a provider's order for <em>[a de-identified situation, e.g. a potassium rider on a patient with rising K+]</em> is unsafe and I need to question it without starting a war. Give me: the exact escalation language (CUS words), how to frame it as patient safety not challenge, and what to document. I'll verify the clinical concern with my chain of command.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 57</div><h3>Comforting a grieving family</h3><div class="text">A patient just died and the family is <em>[arriving in 20 minutes]</em>. Give me: what to say when they walk in, how to give them time with the body, answers to the questions families always ask ("did they suffer?", "what happens now?"), and how to take care of myself after.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 58</div><h3>Talking to a patient who wants to leave AMA</h3><div class="text">A patient wants to leave against medical advice because <em>[they're worried about their kids at home]</em>. Give me a script: explore the real reason, explain risks without threatening, offer alternatives (delayed discharge, social work), and the documentation points if they still leave.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 59</div><h3>Setting boundaries with a demanding patient</h3><div class="text">A patient <em>[rings the call light every 10 minutes for non-urgent requests and yells when I can't come immediately]</em>. Help me set kind, firm boundaries: a script for the conversation, how to involve the charge nurse, and how to keep caring for them well without burning out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 60</div><h3>Apologizing for a mistake</h3><div class="text">I need to be part of disclosing <em>[a de-identified near-miss, e.g. a delayed med]</em> to a patient. Give me: honest, plain-language phrasing that takes responsibility without speculating, what questions to expect, and the line between apologizing and admitting legal liability. I'll coordinate with my manager and risk team.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 61</div><h3>Talking to a scared new nurse (precepting words)</h3><div class="text">My orientee is <em>[crying in the break room after a rough code]</em>. Give me: what to say in the first 2 minutes, how to normalize it without minimizing, 3 questions that help them process, and when to loop in the manager or employee assistance.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 62</div><h3>Addressing a coworker conflict</h3><div class="text">A coworker <em>[keeps dumping tasks on me and taking long breaks]</em> and I'm fed up. Help me write what to say to them directly: specific, non-accusatory, one clear ask, and a plan if nothing changes. Professional, not passive-aggressive.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 63</div><h3>End-of-life wishes conversation</h3><div class="text">A patient with <em>[advanced cancer]</em> is asking me what their options are and the family disagrees. Give me: neutral, compassionate language to explore their wishes, how to clarify without steering, and when/how to bring in palliative care. Educational scripting only — care decisions stay with the patient and team.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 64</div><h3>Responding to "you people don't care"</h3><div class="text">A patient's family just said <em>["you people don't care about us"]</em> after a <em>[long wait for the doctor]</em>. Give me: the 4-sentence response that defuses it, how to separate the valid complaint from the unfair one, and the follow-through that rebuilds trust.</div></div>
+
+<h2 class="section">6 · Self-Care &amp; Burnout</h2>
+<p class="section-sub">You can't pour from an empty cup — recovery plans for night shift, moral injury, and the 3am existential shift thoughts.</p>
+
+<div class="prompt"><div class="num">PROMPT 65</div><h3>Night-shift sleep recovery plan</h3><div class="text">I work <em>[3 night shifts in a row]</em> and my sleep is wrecked. Build a sleep recovery plan: blackout routine, when to sleep on days off, what to eat and when, and how to flip back to days after my stretch. Practical, no "just get 8 hours" nonsense.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 66</div><h3>5-minute post-shift decompression</h3><div class="text">Give me a 5-minute post-shift ritual I can do <em>[in my car before driving home]</em>: something physical to release the shift, one reflection prompt, and a mental "I'm done" switch so I stop replaying the code on the drive.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 67</div><h3>Burnout self-check</h3><div class="text">Ask me 12 questions — one at a time — that screen for nurse burnout: exhaustion, cynicism, detachment, and physical symptoms. Score me at the end and give me 3 concrete next steps based on my score, including when to talk to someone professional. This is self-reflection, not a diagnosis.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 68</div><h3>Moral injury processing</h3><div class="text">I keep replaying <em>[a shift where I couldn't give the care a patient deserved because we were short-staffed]</em>. Walk me through it: what was actually in my control, what wasn't, and a reframing exercise that helps me carry it without it carrying me. Gentle, not clinical.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 69</div><h3>Meal plan for 12-hour shifts</h3><div class="text">Build a 3-day meal plan for <em>[12-hour night shifts]</em>: meals I can prep in under an hour on my day off, snacks that survive a scrub pocket, and what to eat at 3am so I don't crash. Budget: <em>[$60 for the week]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 70</div><h3>Saying no to extra shifts</h3><div class="text">My manager keeps texting me to pick up extra shifts and I feel guilty saying no. Write me 3 text replies: warm but firm, ranging from "not this week" to "please stop asking for a month." No guilt trip, no burned bridges.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 71</div><h3>Off-day reset routine</h3><div class="text">I have <em>[one day off]</em> between shift stretches and I spend it dreading the next shift. Design a reset day: morning, afternoon, evening blocks — part rest, part life admin, part something that reminds me I'm a person. Flexible, not a boot camp.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 72</div><h3>Dealing with a bad patient outcome</h3><div class="text">A patient I cared for <em>[had a bad outcome and I keep wondering what I missed]</em>. Help me process: the difference between a bad outcome and a bad nurse, questions that help me learn vs. questions that just punish me, and when talking to my manager or EAP makes sense. Compassionate, honest.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 73</div><h3>Fitness for the floor</h3><div class="text">I'm on my feet <em>[12 hours]</em> and too tired to work out. Give me a <em>[20-minute, 3x/week]</em> routine for nurses: protect the back, knees, and feet — the body parts nursing destroys. No gym required, quiet-apartment friendly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 74</div><h3>Journaling prompt for hard weeks</h3><div class="text">Give me 7 journaling prompts for nurses — one for each day of a brutal week: the shift that broke me, the patient I'll remember, what I need, what I'm proud of. Short, raw, no toxic positivity.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 75</div><h3>Talking to my family about the job</h3><div class="text">My <em>[partner]</em> doesn't understand why I come home empty. Help me explain nursing burnout to a non-nurse: what's actually draining, what helps, and 3 specific things they can do on my work days. A script I can actually say out loud.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 76</div><h3>Should I leave bedside? decision aid</h3><div class="text">I'm <em>[3 years]</em> into bedside nursing and wondering if I should leave. Ask me 10 questions — one at a time — about what's draining me, what's still good, and what I'd do instead. Then summarize: is this burnout, the unit, or the role — and give me 3 options that aren't "just quit."</div></div>
+
+<h2 class="section">7 · Career Growth &amp; Certifications</h2>
+<p class="section-sub">Resumes, certifications, and the next rung — CCRN, charge nurse, NP school, or a whole new lane.</p>
+
+<div class="prompt"><div class="num">PROMPT 77</div><h3>Nursing resume rewrite</h3><div class="text">Rewrite my nursing resume for <em>[an ICU staff nurse position]</em>. My experience: <em>[2 years med-surg, charge nurse for 6 months, BLS/ACLS]</em>. Keep it to one page, lead with clinical skills not duties, and make my charge experience sound like leadership. Here's my current draft: <em>[paste it]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 78</div><h3>CCRN study plan</h3><div class="text">Build a <em>[12-week]</em> CCRN study plan for a <em>[med-surg nurse moving to ICU]</em> who studies <em>[1 hour a day, 5 days a week]</em>. Weekly topics in exam-weight order, the highest-yield areas first, and 3 practice-question days per week. Realistic for someone working full time.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 79</div><h3>Certification decision: which one</h3><div class="text">I'm a <em>[3-year med-surg nurse]</em> and I can't decide between <em>[CCRN, CMSRN, or going straight to NP school]</em>. Compare: cost, study time, pay bump, career doors opened, and which fits someone who <em>[loves bedside but wants options]</em>. Ask me 5 questions first, then recommend.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 80</div><h3>Charge nurse interview prep</h3><div class="text">I'm interviewing for <em>[charge nurse]</em> on my unit next week. Give me: the 10 questions they'll ask, strong answers using my experience <em>[describe it]</em>, and 3 smart questions to ask them. Include one "tell me about a conflict" story framework.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 81</div><h3>Cover letter for a specialty unit</h3><div class="text">Write a cover letter for <em>[an ER staff nurse position]</em>. I'm coming from <em>[med-surg with 2 years experience]</em>. Address the specialty jump head-on: what transfers, why ER, and one story that proves I can handle it. Under 250 words, confident.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 82</div><h3>NP school personal statement</h3><div class="text">Help me outline a personal statement for <em>[FNP school]</em>. My story: <em>[4 years med-surg, drawn to primary care after working with underserved patients]</em>. Give me: the 4-paragraph structure, what admissions actually wants to hear, and 3 opening hooks to choose from. I write the draft, you refine it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 83</div><h3>Preceptor portfolio builder</h3><div class="text">I want to become a preceptor. Help me build a one-page case for my manager: my qualifications <em>[list them]</em>, what makes a good preceptor (in my own words), and a 30-day orientee plan I'd use. Something that makes the "yes" easy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 84</div><h3>Asking for a raise</h3><div class="text">I've been at <em>[my hospital]</em> for <em>[2 years]</em>, picked up <em>[charge duties and precepting]</em>, and I'm paid <em>[$X/hr]</em>. Help me build the case: market rates for <em>[my city]</em>, my contributions in numbers, and exactly what to say in the meeting — plus how to respond if they say no.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 85</div><h3>LinkedIn for nurses</h3><div class="text">Rewrite my LinkedIn for nursing career growth. I'm <em>[an ICU nurse interested in flight nursing]</em>. Give me: a headline that stands out, an About section that tells my story, and which 10 skills to list. Current text: <em>[paste it]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 86</div><h3>CEU plan for license renewal</h3><div class="text">My license renews in <em>[6 months]</em> in <em>[Florida]</em> and I need <em>[24 CEUs]</em>. Build a plan: which requirements my state actually has, where to get cheap or free CEUs, and a month-by-month schedule so I'm not cramming in week 23.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 87</div><h3>Conference abstract draft</h3><div class="text">I want to submit an abstract to <em>[a nursing conference]</em> about <em>[a fall-prevention project on my unit that cut falls 30%]</em>. Draft a 250-word abstract: background, methods, results, conclusion — plus a title that gets accepted. De-identified, no facility names.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 88</div><h3>Non-bedside career map</h3><div class="text">I'm burned out on bedside after <em>[5 years]</em> but I love nursing. Map 10 non-bedside nursing careers: what each actually does day-to-day, typical pay range, what extra training each needs, and which fit someone who <em>[is good with people but done with 12s]</em>. Rank by lowest barrier to entry.</div></div>
+
+<h2 class="section">8 · Travel Nursing &amp; Side Income</h2>
+<p class="section-sub">Contracts, per-diem math, and income beyond the bedside — for nurses who want options.</p>
+
+<div class="prompt"><div class="num">PROMPT 89</div><h3>First travel contract checklist</h3><div class="text">I'm considering my first travel contract in <em>[Texas]</em>. Give me: the full checklist — license (compact or not?), housing options, what to ask the recruiter, red flags in the contract, and what to pack. Step-by-step for a first-timer.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 90</div><h3>Contract pay breakdown</h3><div class="text">A recruiter offered me <em>[paste the pay package: hourly, stipends, hours guaranteed]</em>. Break it down: what's taxable vs. stipend, my real weekly take-home, and whether the housing stipend covers <em>[my target city]</em>. Flag anything sketchy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 91</div><h3>Recruiter comparison questions</h3><div class="text">I'm talking to <em>[3 recruiters]</em> about <em>[ICU contracts]</em>. Give me 15 questions to ask each one — pay transparency, cancellation policy, overtime rules, housing, first-day logistics — and a scorecard to compare their answers side by side.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 92</div><h3>Travel nurse tax basics</h3><div class="text">Explain travel nurse taxes in plain language: tax home rules, why duplicating expenses matters, what stipends are tax-free and why, and the 3 mistakes that trigger audits. Educational overview only — I'll confirm everything with a tax professional.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 93</div><h3>Per-diem vs. staff math</h3><div class="text">I make <em>[$38/hr]</em> as staff with benefits. A per-diem gig pays <em>[$55/hr]</em> with no benefits. Do the real math: what benefits am I actually giving up (health insurance, PTO, retirement match), and at how many shifts per month does per-diem win? Show the numbers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 94</div><h3>Side hustle ideas for nurses</h3><div class="text">I'm an <em>[ER nurse, 4 years]</em> who wants a side income that isn't more shifts. Give me 10 realistic options: what each involves, startup cost, realistic monthly income, and which fit <em>[someone with 2 days off a week and zero business experience]</em>. No MLM, no fluff.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 95</div><h3>Start a nurse coaching offer</h3><div class="text">I want to offer <em>[NCLEX tutoring for nursing students]</em> at <em>[$40/hr]</em>. Help me: define the offer, write a simple booking page description, figure out where to find first clients, and price the first 5 sessions as a beta. Practical launch plan, no business degree needed.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 96</div><h3>Legal nurse consulting intro</h3><div class="text">Explain legal nurse consulting as a career: what the work actually looks like, how nurses get started, typical pay, and whether it fits someone with <em>[6 years med-surg, strong charting skills]</em>. Honest about the ramp-up time and costs.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 97</div><h3>Travel contract cancellation plan</h3><div class="text">My contract got cancelled <em>[2 weeks in]</em>. Give me: what to ask the agency (cancellation pay? next contract?), how to handle housing I've already paid for, and a 48-hour action plan to land the next assignment. Calm, practical.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 98</div><h3>Negotiating with the agency</h3><div class="text">The agency won't budge on <em>[the hourly rate]</em> for my <em>[tele contract]</em>. Give me 8 other things to negotiate instead: completion bonus, travel reimbursement, guaranteed hours, overtime threshold, housing upgrade, and the exact language to ask for each.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 99</div><h3>PRN stacking schedule</h3><div class="text">I work <em>[full-time days]</em> and want to add <em>[PRN shifts]</em> without burning out. Build a sustainable monthly schedule: max shifts per week, where to put recovery days, and the income math at <em>[$50/hr]</em>. Include the "when to say no" rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 100</div><h3>One-year income upgrade plan</h3><div class="text">I make <em>[$75k]</em> as a staff nurse and want to hit <em>[$100k]</em> in 12 months without destroying my health. Build the plan: certification pay bumps, PRN strategy, one side income stream, and quarterly milestones. Show me the math for each piece.</div></div>
+
+<div class="closing">
+  <h2>That's the pack. Now go save someone's shift.</h2>
+  <p>These 100 prompts were built for real nurses — shift prep, patient education, NCLEX study, documentation, the hard conversations, and a life beyond the bedside. Zero filler, all value.</p>
+  <p><strong>Want more?</strong> New prompts drop with new episodes. Join the deals list at <strong>icyunvbankai.github.io/Bitstream</strong> and you'll never miss one.</p>
+  <p class="fine">© 2026 Bitstream. This pack is for your personal use — share the show, not the file. Prompts are starting points: AI is an organizer and explainer, not a clinician. Never paste identifiable patient data into a public AI tool, and always verify anything that touches patient care with the care team before acting on it.</p>
+</div>
+
+</body>
+</html>
