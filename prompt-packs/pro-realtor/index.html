@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>250 Pro Prompts for Real Estate Agents — Bitstream</title>
+<style>
+  @page { size: Letter; margin: 2cm 2.2cm; @bottom-center { content: counter(page); font: 10px Helvetica, Arial, sans-serif; color: #888; } }
+  @page :first { margin: 0; @bottom-center { content: none; } }
+  body { font-family: Helvetica, Arial, sans-serif; color: #1c1e1f; line-height: 1.55; font-size: 11.5pt; }
+  .cover { background: #0b0e0e; color: #f4f6f5; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2cm; page-break-after: always; }
+  .cover img { width: 220px; border-radius: 12px; margin-bottom: 28px; }
+  .cover .kicker { font: 700 11pt Helvetica, Arial, sans-serif; letter-spacing: .28em; color: #62dfeb; margin-bottom: 14px; }
+  .cover h1 { font-size: 38pt; margin: 0 0 10px; line-height: 1.1; }
+  .cover .sub { font-size: 14pt; color: #b9c2bf; margin-bottom: 26px; }
+  .cover .tag { font: 600 10pt Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #ff7967; }
+  h2.section { font-size: 20pt; color: #0b0e0e; border-bottom: 3px solid #62dfeb; padding-bottom: 6px; margin: 34px 0 6px; page-break-after: avoid; }
+  .section-sub { color: #5c6663; font-size: 10.5pt; margin: 0 0 16px; }
+  .prompt { background: #f4f7f7; border-left: 4px solid #62dfeb; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; }
+  .prompt .num { font: 700 9pt Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #ff7967; }
+  .prompt h3 { font-size: 12pt; margin: 2px 0 6px; }
+  .prompt .text { font-size: 10.5pt; color: #2a2e2d; background: #ffffff; border: 1px solid #dde4e2; border-radius: 6px; padding: 8px 10px; }
+  .prompt .text em { color: #0b7d8c; font-style: normal; font-weight: bold; }
+  .howto { background: #0b0e0e; color: #eef2f1; border-radius: 10px; padding: 18px 22px; margin: 18px 0; page-break-inside: avoid; }
+  .howto h3 { color: #62dfeb; margin: 0 0 8px; font-size: 13pt; }
+  .howto ol { margin: 6px 0; padding-left: 20px; }
+  .howto li { margin-bottom: 6px; font-size: 10.5pt; }
+  .rules { display: block; margin: 14px 0; }
+  .rule { background: #fff7f3; border: 1px solid #ffd9cd; border-radius: 8px; padding: 8px 12px; margin: 8px 0; font-size: 10.5pt; page-break-inside: avoid; }
+  .rule strong { color: #d34a2e; }
+  .closing { background: #f4f7f7; border-radius: 10px; padding: 20px 24px; margin-top: 30px; page-break-inside: avoid; }
+  .closing h2 { margin-top: 0; font-size: 16pt; }
+  .fine { font-size: 9pt; color: #888; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img src="cover.jpg" alt="Bitstream">
+  <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
+  <h1>250 Pro Prompts<br>for Real Estate Agents</h1>
+  <div class="sub">250 copy-paste prompts for listings, buyers, sellers, and social.<br>Open a free AI tool, paste, fill in the blanks, close more deals.</div>
+  <div class="tag">PRO PACK · $14.99</div>
+</div>
+
+<div class="howto">
+  <h3>How to use this pack (60 seconds)</h3>
+  <ol>
+    <li><strong>Open a free AI tool</strong> — ChatGPT (chatgpt.com), Claude (claude.ai), Gemini (gemini.google.com), or Meta AI. No paid plan needed.</li>
+    <li><strong>Copy any prompt</strong> and replace the <em>[BRACKETED]</em> parts with your listing, client, or market details.</li>
+    <li><strong>Be specific.</strong> Bed/bath count, neighborhood, price, client type — specifics in, quality out. "Write a listing description" gets generic copy. "Write a 200-word listing description for a 4-bed, 2.5-bath pool home in Fort Pierce under $425k" gets copy that sells.</li>
+    <li><strong>Treat the first answer as a draft.</strong> Reply with "make it warmer," "add urgency," or "cut it to 150 words" until it's right.</li>
+    <li><strong>Save your winners.</strong> When a prompt produces copy you love, paste it back in and say "use this tone for all my listing descriptions."</li>
+  </ol>
+</div>
+
+<div class="rules">
+  <div class="rule"><strong>Rule 1 — AI drafts, your broker verifies.</strong> Anything touching contracts, disclosures, pricing strategy, or fair housing: let the AI organize and draft, then verify with your broker and legal counsel before it reaches a client. Never let AI give legal conclusions or definitive contract advice.</div>
+  <div class="rule"><strong>Rule 2 — Describe the house, not the people.</strong> Keep every listing, ad, and neighborhood description fair-housing safe: talk about the property, the amenities, and the facts — never who should live there. When in doubt, run prompt 025.</div>
+  <div class="rule"><strong>Rule 3 — Protect client data.</strong> Strip names, addresses, and financial details before pasting anything into a free AI tool. Use "[Client]" and "[address]" — specifics about the house, not the humans.</div>
+</div>
+
+<h2 class="section">1 · Listing Descriptions That Sell</h2>
+<p class="section-sub">Copy that gets the click, the showing, and the offer — tailored to every property type.</p>
+
+<div class="prompt"><div class="num">PROMPT 001</div><h3>Standard MLS listing description</h3><div class="text">Write a 200-word MLS listing description for <em>[4-bed, 2.5-bath, 2,100 sqft home at address/neighborhood]</em> priced at <em>[$X]</em>. Key features: <em>[pool, updated kitchen, fenced yard]</em>. Lead with the strongest selling point, end with a call to schedule a showing. Fair-housing safe: describe the property only, never who should live there.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 002</div><h3>Luxury listing storytelling</h3><div class="text">Write a 300-word luxury listing narrative for <em>[$1.2M waterfront home, 5 beds, resort pool, summer kitchen]</em>. Cinematic, sensory tone — morning light, evening entertaining. No clichés like "stunning" or "must-see." Fair-housing safe language throughout.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 003</div><h3>Starter home for first-time buyers</h3><div class="text">Write a warm, encouraging 150-word listing description for <em>[3-bed, 2-bath starter home, $289k]</em> that makes homeownership feel achievable. Mention <em>[low-maintenance yard, updated appliances]</em>. End with a nudge toward the monthly payment angle, not investment promises.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 004</div><h3>Condo / townhome description</h3><div class="text">Write a 175-word listing description for <em>[2-bed, 2-bath condo, $215k, HOA $340/mo]</em>. Sell the lifestyle: <em>[rooftop pool, gym, gated entry, 10 min to beach]</em>. Address the HOA fee as value, not a cost. Fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 005</div><h3>New construction from builder specs</h3><div class="text">Turn these builder specs into a 200-word listing description that sells the NEW factor — warranties, energy efficiency, choosing finishes: <em>[paste specs: beds, baths, sqft, community, price]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 006</div><h3>Fixer-upper framed as opportunity</h3><div class="text">Write an honest-but-optimistic 175-word description for <em>[3-bed, 1-bath, $199k, needs kitchen and bath updates, solid roof and foundation]</em>. Frame the upside without hiding the work. Attract <em>[handy buyers and investors]</em> without making promises about profit.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 007</div><h3>Waterfront listing, lifestyle copy</h3><div class="text">Write a 250-word waterfront listing description for <em>[canal-front 4-bed with private dock, $875k]</em>. Sell the daily ritual: coffee on the dock, sunset boat rides. Include the practical details: <em>[water depth, dock size, seawall age]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 008</div><h3>Land / lot listing</h3><div class="text">Write a 150-word listing description for <em>[1.2-acre vacant lot, $89k, no HOA, well/septic needed]</em>. Sell the blank-canvas vision and include practical notes a buyer needs: <em>[zoning, utilities status, road access]</em>. No lifestyle promises about what will be built.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 009</div><h3>Multi-family / investment listing</h3><div class="text">Write a 200-word listing description for <em>[duplex, 2 units × 2-bed/1-bath, $385k, both rented at $1,400/mo]</em>. Lead with the numbers — gross rent, unit mix, condition. Stick to verifiable facts; do not project future returns or appreciation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 010</div><h3>Rewrite a stale listing</h3><div class="text">This listing has sat 90 days. Rewrite it completely — new angle, new headline, new first paragraph. Keep all facts the same, change the story: <em>[paste current description + property facts]</em>. Fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 011</div><h3>10 listing headlines</h3><div class="text">Write 10 MLS/portal headline options (under 60 characters each) for <em>[4-bed pool home, $450k, Fort Pierce]</em>. Mix styles: feature-led, lifestyle-led, curiosity-led. No ALL CAPS, no exclamation spam.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 012</div><h3>Bullet-point feature list</h3><div class="text">Turn these property facts into 12 punchy MLS feature bullets, most compelling first. Cut anything a buyer won't care about: <em>[paste features]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 013</div><h3>Open house flyer description</h3><div class="text">Write short, scannable flyer copy for <em>[open house Sat 11–2, 3-bed, $325k]</em>: headline, 5 bullet highlights, and a CTA. Must read in under 30 seconds. Fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 014</div><h3>Remarkable feature spotlight</h3><div class="text">Write a 100-word spotlight paragraph on this home's standout feature — make it the reason someone books a showing: <em>[chef's kitchen with double ovens and butler's pantry / 40-ft saltwater pool / detached 1,200 sqft workshop]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 015</div><h3>Seasonal listing description</h3><div class="text">Rewrite this listing description with a <em>[summer / holiday / spring]</em> angle — what does this home feel like in this season? Keep the facts, change the mood: <em>[paste description + property facts]</em>. Fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 016</div><h3>Location-first description</h3><div class="text">Write a 175-word listing description that leads with LOCATION for <em>[home 5 min to beach, walkable to downtown]</em>. Name specific distances and landmarks: <em>[list them]</em>. Describe access and amenities, not the type of people who live nearby.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 017</div><h3>Pet-friendly home description</h3><div class="text">Write a 150-word listing description highlighting pet-friendly features — <em>[fenced yard, tile floors, nearby dog park]</em> — for <em>[3-bed home, $340k]</em>. Describe the property features only; never describe ideal occupants.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 018</div><h3>Work-from-home angle</h3><div class="text">Write a 150-word listing description for <em>[4-bed with dedicated office + flex room]</em> aimed at remote workers. Sell the workspace: <em>[natural light, quiet street, fiber internet available]</em>. Verify internet claims with the provider before publishing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 019</div><h3>Multigenerational home description</h3><div class="text">Write a 175-word listing description for <em>[5-bed with in-law suite: separate entrance, kitchenette, private bath]</em>. Describe the layout and privacy features factually — two living spaces, separate entrances — without prescribing who should occupy them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 020</div><h3>Historic home description</h3><div class="text">Write a 200-word listing description for <em>[1925 bungalow, original hardwoods, updated electrical/plumbing]</em>. Honor the character, be transparent about what's original vs. updated. No claims about historical designation unless verified.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 021</div><h3>Green / energy-efficient features</h3><div class="text">Write a 150-word listing description highlighting <em>[solar panels (owned, not leased), impact windows, tankless water heater]</em> for <em>[4-bed, $475k]</em>. Stick to verified features and utility-bill facts the seller provides — no savings promises.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 022</div><h3>Small space that lives large</h3><div class="text">Write a 150-word listing description for <em>[1,100 sqft 2-bed cottage, $249k]</em> that makes it feel spacious: <em>[vaulted ceilings, open plan, big lanai, smart storage]</em>. Honest about size, generous about livability.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 023</div><h3>Pool home description</h3><div class="text">Write a 175-word listing description for <em>[3-bed pool home, screened enclosure, $389k]</em>. Sell the backyard as a second living room. Include practical pool facts: <em>[screen age, equipment age, salt vs chlorine]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 024</div><h3>Garage / workshop / hobby space</h3><div class="text">Write a 150-word listing description spotlighting <em>[3-car garage + 800 sqft air-conditioned workshop]</em> on a <em>[4-bed, $520k]</em> property. Describe the space and its specs factually — let the buyer's imagination do the rest.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 025</div><h3>Fair-housing safety check</h3><div class="text">Review this listing description for fair-housing violations. Flag any language describing ideal occupants, demographics, or steering. Rewrite the flagged lines to describe the property instead: <em>[paste description]</em>. Note: this is a drafting aid, not legal advice — verify with your broker and legal counsel.</div></div>
+
+<h2 class="section">2 · Neighborhood &amp; Community Guides</h2>
+<p class="section-sub">Become the local expert on paper — guides buyers actually read and sellers actually forward.</p>
+
+<div class="prompt"><div class="num">PROMPT 026</div><h3>Neighborhood one-pager</h3><div class="text">Write a one-page neighborhood overview for <em>[neighborhood name]</em>: housing styles, price ranges, amenities, commute facts, and 3 things locals love. Fact-based, no demographic descriptions of residents. Fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 027</div><h3>Relocation buyer's area guide</h3><div class="text">Write a relocation guide for a buyer moving from <em>[New York]</em> to <em>[Port St. Lucie, FL]</em>: cost-of-living differences, climate adjustment, commute realities, top 5 newcomer questions answered. Practical, honest, warm.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 028</div><h3>Schools overview (facts only)</h3><div class="text">Write a factual schools overview for <em>[area]</em>: list the zoned public schools by level, plus notable private/charter options, with links to official rating sources. No opinions on school quality, no steering language — direct the buyer to verify zoning with the district. Verify with your broker and legal counsel that this complies with your state's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 029</div><h3>Commute breakdown guide</h3><div class="text">Write a commute guide from <em>[neighborhood]</em>: drive times to <em>[downtown, airport, major employers]</em> at peak and off-peak, plus public transit options. Use realistic ranges, not best-case numbers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 030</div><h3>55+ / active adult community guide</h3><div class="text">Write a community guide for <em>[55+ community name]</em>: amenities, HOA details, age-restriction facts as stated in community docs, and lifestyle highlights. Describe the community's stated features factually; verify age-restriction details with the HOA and your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 031</div><h3>Gated community guide</h3><div class="text">Write a gated-community overview for <em>[community name]</em>: entry types, HOA fees and what they cover, amenities, and guest policies. Pull only from official HOA documents the seller or association provides.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 032</div><h3>Coastal town guide</h3><div class="text">Write a coastal living guide for <em>[town]</em>: beach access points, boating/fishing facts, flood zone basics (direct readers to FEMA maps), and seasonal rhythms. Honest about hurricane prep realities without fear-mongering.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 033</div><h3>Rural / acreage living guide</h3><div class="text">Write an acreage-living guide for buyers considering <em>[2+ acre properties]</em>: wells, septic, zoning, maintenance realities, and the questions to ask before buying rural. Straight talk, no romance.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 034</div><h3>Up-and-coming area spotlight</h3><div class="text">Write a 300-word spotlight on <em>[emerging neighborhood]</em>: what's changing (new businesses, infrastructure), current price points, and honest caveats. No appreciation promises, no "next [hot area]" hype — facts only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 035</div><h3>Neighborhood market stats summary</h3><div class="text">Turn these raw market stats into a plain-English one-page summary a buyer can understand: median price, days on market, list-to-sale ratio, inventory trend: <em>[paste stats]</em>. Explain what each number means for them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 036</div><h3>Amenities &amp; walkability summary</h3><div class="text">Write an amenities summary for <em>[neighborhood]</em>: parks, grocery, dining, healthcare, and recreation within a <em>[10-minute]</em> drive. Distances and names only — describe places, never the people who frequent them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 037</div><h3>Property tax explainer</h3><div class="text">Write a plain-English property tax explainer for <em>[St. Lucie County, FL]</em>: how assessed value works, homestead exemption basics, and where to look up a specific property's taxes. This is general information, not tax advice — tell readers to verify with the property appraiser and a tax professional.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 038</div><h3>HOA explainer for buyers</h3><div class="text">Write a buyer-friendly HOA explainer: what HOA fees typically cover, how to read HOA docs, special assessments, and 7 questions to ask before buying in an HOA. General information only — have your broker review this before sending to clients.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 039</div><h3>Insurance considerations guide</h3><div class="text">Write a homeowner's insurance overview for <em>[Florida coastal buyers]</em>: windstorm, flood zones, what affects premiums, and why to get quotes during the inspection period. General information, not insurance advice — direct readers to licensed insurance agents.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 040</div><h3>"Hot streets" email</h3><div class="text">Write a monthly email to my buyer list: 5 streets or subdivisions in <em>[my farm area]</em> seeing the most activity, with one line on why each is worth watching. Data-driven, no hype, fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 041</div><h3>New-to-the-area buyer FAQ</h3><div class="text">Write a 12-question FAQ for buyers new to <em>[my market]</em>: insurance, taxes, HOAs, flood zones, commute, seasonality, and the questions newcomers are embarrassed to ask. Plain language, honest answers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 042</div><h3>Cost-of-living comparison</h3><div class="text">Compare cost of living between <em>[Chicago, IL]</em> and <em>[Fort Pierce, FL]</em>: housing, taxes (including no state income tax facts), insurance, and everyday costs. Use current published data sources and cite them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 043</div><h3>Seasonal market timing explainer</h3><div class="text">Write a one-page explainer: how <em>[my market]</em>'s buying season actually works — when inventory peaks, when competition is fiercest, and the real pros/cons of buying in <em>[summer vs winter]</em>. Based on local patterns, no guarantees.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 044</div><h3>Neighborhood video script</h3><div class="text">Write a 90-second video script touring <em>[neighborhood]</em>: hook in the first 5 seconds, 5 stops with one line each, and a CTA to DM for the full area guide. Describe places and amenities, never resident demographics.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 045</div><h3>"Day in the life" narrative</h3><div class="text">Write a "day in the life" narrative set in <em>[neighborhood]</em>: morning coffee spot, midday errands, evening routine — all real local places. Vivid but factual; describe the routine, not the type of person living it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 046</div><h3>Downsizing guide for empty nesters</h3><div class="text">Write a downsizing guide: the financial math of selling the big house, what to look for in a smaller home (one-level living, low maintenance), and the emotional side of letting go. Empathetic, practical, no pressure.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 047</div><h3>First-time buyer area orientation</h3><div class="text">Write a first-time buyer orientation for <em>[my market]</em>: the 3 most affordable starter neighborhoods, what $X actually buys, commute trade-offs, and where to start looking. Data-driven, encouraging, fair-housing safe.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 048</div><h3>Investment neighborhood snapshot</h3><div class="text">Write a rental-demand snapshot for <em>[neighborhood]</em>: proximity to employers, typical rent ranges from published listings, vacancy signals. Facts only — no ROI promises or appreciation predictions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 049</div><h3>Side-by-side community comparison</h3><div class="text">Compare these 3 communities side by side for a buyer: price range, HOA, amenities, commute, home styles. End with "best fit if…" lines based on lifestyle facts, not buyer demographics: <em>[community A, B, C + key facts]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 050</div><h3>Local events calendar email</h3><div class="text">Write a monthly "what's happening" email for <em>[my farm area]</em>: 6-8 local events with dates and one-line descriptions. Friendly tone that keeps me top-of-mind without selling anything.</div></div>
+
+<h2 class="section">3 · Buyer Email Sequences &amp; Drip Campaigns</h2>
+<p class="section-sub">Every touchpoint from first click to clear-to-close — written once, working forever.</p>
+
+<div class="prompt"><div class="num">PROMPT 051</div><h3>New buyer lead welcome email</h3><div class="text">Write a welcome email to a new buyer lead from <em>[Zillow / my website]</em>: introduce me in 2 lines, set expectations for how I work, and ask 3 qualifying questions. Warm, confident, under 150 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 052</div><h3>Buyer consultation follow-up</h3><div class="text">Write a follow-up email after a buyer consultation: recap what we discussed <em>[budget, timeline, must-haves]</em>, attach next steps, and include a soft nudge to get pre-approved. Professional, not pushy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 053</div><h3>5-email buyer drip sequence</h3><div class="text">Write a 5-email drip sequence for new buyer leads over 30 days: email 1 welcome, 2 market education, 3 financing basics, 4 success story, 5 soft CTA to book a call. Each under 150 words, one idea per email.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 054</div><h3>New listing alert email</h3><div class="text">Write a "this just hit the market and matches your search" email for <em>[3-bed under $350k in Port St. Lucie]</em>: property highlights in 4 bullets, why it fits their criteria, and urgency without pressure. Under 120 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 055</div><h3>Price-drop alert email</h3><div class="text">Write a price-drop alert email: <em>[123 Main St, reduced from $425k to $399k]</em>. State the facts, remind them why they liked it, and suggest a second showing. No manufactured urgency.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 056</div><h3>90-day long-term nurture plan</h3><div class="text">Build a 90-day nurture plan for a buyer who's 6+ months out: 8 touches mixing market updates, educational content, and check-ins. Give me the topic and one-line angle for each touch.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 057</div><h3>Relocation buyer email series</h3><div class="text">Write a 4-email series for a relocation buyer moving to <em>[my market]</em> in <em>[3 months]</em>: area orientation, virtual tour offer, trip-planning help, and pre-arrival checklist. Reassuring tone for a big life move.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 058</div><h3>First-time buyer education series</h3><div class="text">Write a 5-email education series for first-time buyers: pre-approval, house hunting, making an offer, inspections, closing. One concept per email, plain language, zero jargon without explanation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 059</div><h3>Pre-approval nudge email</h3><div class="text">Write a friendly nudge email to a buyer who hasn't gotten pre-approved yet: why it matters (especially in a competitive market), what the lender needs, and an offer to introduce <em>[2-3 local lenders]</em>. Encouraging, not scolding.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 060</div><h3>"Still looking?" re-engagement email</h3><div class="text">Write a re-engagement email to a buyer who's gone quiet for <em>[60 days]</em>: acknowledge life gets busy, share one relevant market update, and make it easy to restart with a single question. No guilt trips.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 061</div><h3>Under-contract congratulations email</h3><div class="text">Write a congratulations email to buyers going under contract on <em>[address]</em>: celebrate, then clearly lay out what happens next (inspection, appraisal, timeline). Excitement first, roadmap second.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 062</div><h3>Inspection-week check-in</h3><div class="text">Write an inspection-week check-in email: what to expect at the inspection, whether they should attend, and how we'll handle findings. Calm, steady tone that reduces anxiety.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 063</div><h3>Appraisal gap explainer</h3><div class="text">Write a plain-English email explaining an appraisal gap: what it means when the appraisal comes in <em>[$15k]</em> under contract price, their options, and my recommendation framework. General information — have your broker review this before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 064</div><h3>Clear-to-close email</h3><div class="text">Write a clear-to-close email: what "clear to close" means, the final walkthrough plan, what to bring to closing, and what NOT to do before closing (no new credit, no big purchases). Checklist format.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 065</div><h3>Post-closing thank-you email</h3><div class="text">Write a post-closing thank-you email: genuine gratitude, a reminder I'm here for contractor recommendations and questions, and a soft ask for a review. Warm, personal, under 150 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 066</div><h3>Buyer holiday touch email</h3><div class="text">Write a <em>[Thanksgiving / holiday season]</em> touch email to past buyers: genuine warmth, one useful seasonal homeowner tip, zero sales pitch. The kind of email people actually reply to.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 067</div><h3>Rate-change buyer update</h3><div class="text">Write an email to active buyers about a <em>[rate drop to X% / rate increase]</em>: what it means for their monthly payment on a <em>[$350k]</em> loan in plain numbers, and whether it changes our strategy. Factual, no predictions about future rates.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 068</div><h3>Open house invitation email</h3><div class="text">Write an open house invitation to my buyer list: <em>[Sat 11–2, address, 3-bed $325k]</em>. Make it feel exclusive and worth the trip — 3 highlights, easy RSVP. Under 100 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 069</div><h3>Coming-soon teaser email</h3><div class="text">Write a coming-soon teaser email for <em>[4-bed pool home hitting market next week, ~$450k]</em>: build anticipation without revealing the address, invite early interest, and note compliance with <em>[my MLS]</em> coming-soon rules. Verify the rules with your broker before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 070</div><h3>Buyer testimonial request</h3><div class="text">Write a testimonial request email to a closed buyer: make it easy (3 prompt questions they can answer), explain where it'll appear, and thank them sincerely. Low-friction, high-response.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 071</div><h3>Referral ask email</h3><div class="text">Write a referral ask email to a happy past buyer: specific about who to refer (anyone thinking of buying/selling in the next year), easy to act on (just reply with a name), and genuinely appreciative. Not desperate.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 072</div><h3>"Market shift" buyer advisory</h3><div class="text">Write an advisory email to active buyers about a market shift: <em>[inventory rising, price reductions increasing]</em>. What it means for their negotiating position, in plain English. Honest, steady, no hype in either direction.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 073</div><h3>Lease-ending buyer timeline email</h3><div class="text">Write a timeline email for a buyer whose lease ends in <em>[4 months]</em>: work backward from the lease end to show when we need to be under contract, and the buffer for closing delays. Clear dates, calm tone.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 074</div><h3>Showing feedback request</h3><div class="text">Write a post-showing feedback text/email: 3 quick questions (favorite, concerns, scale of 1–10) that take 60 seconds to answer. Casual tone that gets replies.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 075</div><h3>Second showing / decision-time email</h3><div class="text">Write an email to a buyer torn between <em>[two homes]</em>: a side-by-side comparison framework (must-haves scorecard), plus the honest questions that clarify a decision. Advisor tone, not closer tone.</div></div>
+
+<h2 class="section">4 · Seller Follow-Up &amp; Nurture</h2>
+<p class="section-sub">Listings are won in the follow-up — every seller touch, from appointment to anniversary.</p>
+
+<div class="prompt"><div class="num">PROMPT 076</div><h3>Listing appointment confirmation</h3><div class="text">Write a listing appointment confirmation email: date/time, what I'll bring (CMA, marketing plan), what I need from them (15 minutes, any questions), and one line that builds confidence. Professional, warm.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 077</div><h3>Pre-listing packet outline</h3><div class="text">Outline a pre-listing packet I can email before the appointment: my bio, recent sales, marketing plan summary, and 3 questions for them to think about. Give me section headers and one-line descriptions for each.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 078</div><h3>Listing presentation follow-up</h3><div class="text">Write a follow-up email after a listing presentation where they haven't decided: thank them, recap my 3 differentiators, attach the CMA summary, and propose a decision timeline. Confident, zero pressure.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 079</div><h3>"Thanks for listing with me" email</h3><div class="text">Write a thank-you email to a new seller client: excitement about the partnership, a clear list of what happens in the next 7 days (photos, staging, go-live date), and my direct contact info. Sets the tone for everything.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 080</div><h3>Weekly seller update report</h3><div class="text">Write a weekly seller update template: showings this week, portal views/saves, feedback themes, market changes, and next steps. Fill-in-the-blank format I can reuse every Friday. Data first, opinions labeled as opinions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 081</div><h3>Showing feedback summary</h3><div class="text">Turn these raw showing feedback notes into a clear seller email: the themes (not every comment), what buyers loved, the one concern repeating, and my recommendation: <em>[paste feedback]</em>. Honest, constructive, solution-oriented.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 082</div><h3>No-showings check-in</h3><div class="text">Write a check-in email to a seller with zero showings in <em>[2 weeks]</em>: acknowledge the frustration, present the 3 levers (price, presentation, promotion) with data, and propose a specific action. Empathetic but direct.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 083</div><h3>Price reduction conversation email</h3><div class="text">Write an email teeing up a price reduction conversation: the market data since listing, days-on-market context, and 2-3 specific new price options with reasoning. Frame it as strategy, not failure. Have your broker review pricing advice before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 084</div><h3>Staging suggestions email</h3><div class="text">Write a diplomatic staging suggestions email for <em>[cluttered living room, dark bedrooms, dated bedding]</em>: frame every suggestion as "what photographs best," give 5 specific low-cost actions, and offer my stager's contact. Kind, never critical.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 085</div><h3>Photo day prep email</h3><div class="text">Write a photo-day prep email: room-by-room checklist (declutter, lights on, toilet lids down, cars out of driveway), timing, and how long it takes. Make it foolproof — assume they've never done this.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 086</div><h3>Pre-open-house seller email</h3><div class="text">Write a pre-open-house email to the seller: what time to leave/return, how I'll handle sign-ins and feedback, and what a great open house looks like. Reassuring — many sellers are nervous about strangers in their home.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 087</div><h3>Offer received email</h3><div class="text">Write an "offer received" email template: the key terms (price, contingencies, timeline) in a clean table, my initial read, and the 3 response options (accept, counter, reject) explained plainly. Factual presentation — verify with your broker and legal counsel before advising on contract terms.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 088</div><h3>Multiple offers email</h3><div class="text">Write a multiple-offers email template: how I'll present each offer side by side, the factors beyond price to weigh (contingencies, proof of funds, timeline), and next steps. Organized, calm, no hype. Verify with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 089</div><h3>Inspection objections response</h3><div class="text">Write an email walking a seller through buyer inspection objections: categorize each item (safety, major, cosmetic), the 3 response strategies (repair, credit, as-is), and my recommendation framework. General information — have your broker review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 090</div><h3>Appraisal came in low (seller version)</h3><div class="text">Write an email to a seller whose buyer's appraisal came in <em>[$12k]</em> low: explain what it means in plain English, the options (reduce price, buyer covers gap, meet halfway, dispute), and a calm path forward. Verify with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 091</div><h3>Seller net sheet explainer</h3><div class="text">Write a plain-English email explaining a seller net sheet: walk through each line (sale price, mortgage payoff, commissions, closing costs, estimated net) so a first-time seller understands where every dollar goes. Numbers from the actual net sheet: <em>[paste figures]</em>. Verify with your broker before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 092</div><h3>Closing week seller email</h3><div class="text">Write a closing-week email to the seller: final walkthrough expectations, what to bring to closing, move-out checklist, and key/remote handoff plan. Everything they need, nothing they don't.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 093</div><h3>Post-closing seller thank-you</h3><div class="text">Write a post-closing thank-you to the seller: genuine gratitude, well-wishes in their next chapter, a reminder I'm a resource for their new area, and a soft review ask. Under 150 words, personal tone.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 094</div><h3>Past seller 6-month check-in</h3><div class="text">Write a 6-month check-in to a past seller: hope they're loving the new place, one useful homeowner tip, and an open door for referrals. No pitch — relationship only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 095</div><h3>Past seller anniversary email</h3><div class="text">Write a 1-year "happy home anniversary" email to a past seller: celebrate the milestone, include their home's current estimated value range from public data (labeled as an estimate), and invite them to reply for a full update.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 096</div><h3>"Thinking of selling again?" campaign</h3><div class="text">Write a 3-email campaign to past sellers who might move again: email 1 market update, 2 "what your home could sell for now," 3 soft CTA for a no-pressure valuation. Spaced 2 weeks apart, respectful tone.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 097</div><h3>Seller tax-document reminder</h3><div class="text">Write a January email reminding past sellers about sale-related tax documents (1099-S, closing statement): what to gather, where to find it, and a nudge to talk to their CPA. General information only — not tax advice; direct them to a tax professional.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 098</div><h3>Sensitive sale (divorce/estate) email</h3><div class="text">Write a compassionate email template for <em>[divorce / estate]</em> sellers: acknowledge the difficulty in one line, then focus on clarity — the process, the timeline, how I'll keep things simple and private. Dignified, never intrusive.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 099</div><h3>Seller referral ask</h3><div class="text">Write a referral ask to a satisfied seller: who to think of (neighbors, coworkers considering a move), how easy it is (just an intro text), and sincere thanks. Confident, not needy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 100</div><h3>Withdrawn listing re-engagement</h3><div class="text">Write a re-engagement email to a seller who withdrew their listing <em>[6 months ago]</em>: acknowledge the pause was the right call then, share what's changed in the market since, and offer a fresh no-pressure valuation. Respectful, data-led.</div></div>
+
+<h2 class="section">5 · Open House Scripts &amp; Scripts for Showings</h2>
+<p class="section-sub">Word-for-word confidence for every door you open — open houses, showings, and the follow-up that converts.</p>
+
+<div class="prompt"><div class="num">PROMPT 101</div><h3>Open house welcome script</h3><div class="text">Write a 60-second open house welcome script: greet, set the tour flow ("start here, end at the lanai"), mention the sign-in, and one hook about the home. Warm, unhurried, confident.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 102</div><h3>Sign-in sheet intro script</h3><div class="text">Write a natural sign-in request script for open houses: why I ask (follow-up + seller feedback), what I'll do with their info (and won't do), in 3 sentences that don't sound like a timeshare pitch.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 103</div><h3>Room-by-room tour script</h3><div class="text">Write a room-by-room open house tour script for <em>[4-bed, 2.5-bath, 2,100 sqft]</em>: one selling line per room, one question per room to engage the visitor, and a smooth transition between rooms. Conversational, not a lecture.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 104</div><h3>Kitchen selling-point script</h3><div class="text">Write a 45-second kitchen spotlight script for <em>[updated kitchen: quartz counters, gas range, walk-in pantry]</em>: 3 features to physically point at, one lifestyle line, and one question to the buyer. Make them picture cooking there.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 105</div><h3>Primary suite script</h3><div class="text">Write a 45-second primary suite script for <em>[spacious primary with en-suite bath, dual vanities, walk-in closet, lanai access]</em>: sell the retreat feeling, point out the practical wins, end with a question about their morning routine.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 106</div><h3>Outdoor space script</h3><div class="text">Write a 45-second outdoor space script for <em>[screened pool, covered lanai, fenced yard]</em>: sell the indoor-outdoor living, mention the practical facts (screen age, fence material), and paint one vivid evening scene.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 107</div><h3>Handling the "just looking" visitor</h3><div class="text">Write a script for the "we're just looking" open house visitor: a gracious response that gives them space, 2 light questions that open conversation naturally, and a no-pressure close. Never chase.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 108</div><h3>Qualifying questions script</h3><div class="text">Write 7 natural qualifying questions for open house visitors: timeline, financing, current situation, agent status — phrased conversationally so it feels like chat, not interrogation. Include what each answer tells me.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 109</div><h3>Neighbor visitor conversion script</h3><div class="text">Write a script for nosy-neighbor open house visitors: welcome them warmly, turn curiosity into a conversation about their own plans, and plant the seed for a future listing. Neighbors become sellers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 110</div><h3>Open house closing questions</h3><div class="text">Write 5 soft closing questions for the end of an open house visit: gauge interest, uncover concerns, and secure a follow-up — without pressure. Include responses for "we love it" and "we need to think."</div></div>
+
+<div class="prompt"><div class="num">PROMPT 111</div><h3>Follow-up text after open house</h3><div class="text">Write 3 follow-up text templates for open house visitors: one for hot prospects (same evening), one for warm (next day), one for neighbors. Each under 40 words, personal, with a clear next step.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 112</div><h3>Private showing confirmation text</h3><div class="text">Write a private showing confirmation text: date/time, address, where to meet, parking notes, and one line of excitement. Professional and warm, under 50 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 113</div><h3>Showing day script (agent to buyer)</h3><div class="text">Write a showing-day script: the car-ride opener (set expectations for the day), what to say walking in ("take it in first, I'll point out the big things after"), and the car-ride debrief questions. Guide, don't sell.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 114</div><h3>Showing 3 homes back-to-back plan</h3><div class="text">Build a plan for showing 3 homes in one afternoon: order logic (save the best for last?), 5 minutes of talk-track per home highlighting what distinguishes each, and debrief questions that force a ranking. Homes: <em>[brief descriptions of all 3]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 115</div><h3>Post-showing debrief script</h3><div class="text">Write a post-showing debrief script: 5 questions that reveal true feelings (not just politeness), how to read "it's nice" vs. real interest, and how to transition a "maybe" into a second showing or an offer conversation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 116</div><h3>Virtual showing script</h3><div class="text">Write a virtual/video showing script for a remote buyer: camera flow (start at the street), what to narrate vs. let them see, how to handle questions you can't answer on the spot, and a strong close. Steady, thorough, honest about limitations.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 117</div><h3>New construction model tour script</h3><div class="text">Write a model-home tour script: sell the floor plan and the lifestyle, explain upgrades vs. standard clearly, and handle the "when will it be done" and lot-premium questions. Include the questions to ask the builder's rep.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 118</div><h3>Twilight / evening showing script</h3><div class="text">Write an evening showing script: how to use lighting to the home's advantage, what to point out after dark (lighting, street feel, lanai ambiance), and honest handling of anything harder to see at night. Schedule a daylight return for serious buyers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 119</div><h3>Co-broke showing etiquette email</h3><div class="text">Write a professional email to the listing agent requesting a showing: proposed times, buyer pre-approval status, lockbox/showing instructions confirmation, and feedback commitment. The kind of email that gets a fast yes.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 120</div><h3>Open house social posts (pre/during/post)</h3><div class="text">Write 3 social posts for an open house: pre-event hype (48 hours out), day-of "we're live" post, and post-event recap. Each under 80 words with a clear CTA. Property: <em>[address, 3-bed, $325k, Sat 11–2]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 121</div><h3>Door-knocking invite script</h3><div class="text">Write a 30-second door-knocking script inviting neighbors to an open house: friendly opener, the invitation, and 2 lines that turn "we're not moving" into a market conversation. Respectful of their time.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 122</div><h3>Open house feedback form questions</h3><div class="text">Write 8 open house feedback form questions: capture contact info naturally, rate the home, surface objections, and identify buyer vs. neighbor vs. curious. Short enough that people actually finish it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 123</div><h3>Safety script for solo open houses</h3><div class="text">Write a personal safety plan for hosting solo open houses: pre-event steps (tell someone your schedule), during-event habits (positioning, phone), and red-flag responses. Practical and serious — safety first, always.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 124</div><h3>"What's the catch?" transparency script</h3><div class="text">Write an honest script for when buyers ask "what's the catch?": how to disclose known issues plainly (per your state's disclosure rules), frame fixable vs. dealbreaker items, and build trust through transparency. Verify disclosure obligations with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 125</div><h3>Open house lead follow-up sequence</h3><div class="text">Write a 3-touch follow-up sequence for open house leads over 7 days: touch 1 thank-you text (same day), touch 2 value email (day 3: similar listings), touch 3 check-in call script (day 7). Each touch earns the next.</div></div>
+
+<h2 class="section">6 · Objection Handlers &amp; Buyer Consultations</h2>
+<p class="section-sub">The conversations that make or break deals — handled with confidence, never pressure.</p>
+
+<div class="prompt"><div class="num">PROMPT 126</div><h3>First-time buyer consultation script</h3><div class="text">Write a full first-time buyer consultation script: agenda, the 10 questions that reveal budget/timeline/must-haves, plain-English process walkthrough, and a confident close to working together. Educational, never salesy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 127</div><h3>"We want to wait for rates to drop"</h3><div class="text">Write a response script for buyers waiting for rates to drop: the math of waiting (prices vs. rates), the refinance-later angle, and 3 questions that uncover whether it's really about rates. Facts, not forecasts — never predict future rates.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 128</div><h3>"We can find it on Zillow ourselves"</h3><div class="text">Write a value-proposition script for the "we'll just use Zillow" buyer: what portals get wrong (stale data, no context), what I do beyond search (off-market, negotiation, problem-solving), in 5 confident lines. No portal-bashing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 129</div><h3>"Your commission is too high"</h3><div class="text">Write a calm, professional response to commission objections: break down what the work actually involves (with specifics), offer transparent options per my brokerage's policies, and reframe around net outcome. Verify compensation rules with your broker — never improvise on commission law.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 130</div><h3>Buyer wants to lowball 20%</h3><div class="text">Write a script for a buyer who wants to offer 20% under asking: show them the likely outcome with recent comp data, explain the seller's perspective, and channel the aggression into winnable terms (escalation, appraisal gap). Honest about odds.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 131</div><h3>"We need to think about it"</h3><div class="text">Write a response to "we need to think about it": 3 questions that uncover the real hesitation (it's rarely thinking), how to give space without losing momentum, and a specific follow-up plan. Respectful, diagnostic.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 132</div><h3>Spouse disagreement handler</h3><div class="text">Write a script for when partners disagree on a home: how to validate both sides, the must-have vs. nice-to-have sorting exercise, and questions that find the compromise home. Neutral facilitator, never taking sides.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 133</div><h3>"We have a friend who's an agent"</h3><div class="text">Write a gracious response to "our friend is an agent": respect the relationship, 3 questions that reveal whether the friend is the right fit (local expertise, availability, full-time), and a no-awkwardness close either way.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 134</div><h3>Buyer consultation agenda</h3><div class="text">Write a buyer consultation agenda I can send in advance: 6 topics we'll cover, what they should bring (pre-approval, wish list), and how long it takes. Professional framing that positions me as the expert from minute one.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 135</div><h3>Budget reality-check conversation</h3><div class="text">Write a kind but honest script for buyers whose wishlist exceeds their budget: show the math plainly, reframe around priorities (which 3 matter most), and pivot to what their budget DOES buy. Preserve the relationship and the dream.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 136</div><h3>Pre-approval conversation script</h3><div class="text">Write a script explaining pre-approval to a hesitant buyer: why sellers require it, the difference between pre-qual and pre-approval, what the lender will ask for, and how it actually strengthens their negotiating position. Reassuring, jargon-free.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 137</div><h3>"We want new construction only"</h3><div class="text">Write a script for new-construction-only buyers: validate the appeal, then honestly compare new vs. resale on price per sqft, timeline, location, and negotiation room. Include the case for representation with builders — verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 138</div><h3>Competing with cash buyers script</h3><div class="text">Write a script for financed buyers discouraged by cash competition: the strengths they do have (flexible timeline, fewer contingencies where appropriate), offer strategies that compete, and honest odds-setting. Verify any contingency-waiver advice with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 139</div><h3>Relocation buyer consultation</h3><div class="text">Write a relocation buyer consultation script: the unique anxieties of buying sight-unseen, my virtual buying process (video tours, local eyes on the ground), and the 8 questions that matter most when you can't visit. Confidence-building throughout.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 140</div><h3>Investor buyer consultation</h3><div class="text">Write an investor buyer consultation script: their goals (cash flow vs. appreciation), my market's rental fundamentals, the numbers I need from them, and how I source deals. Facts and process — no return promises.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 141</div><h3>"The inspection found issues" negotiation script</h3><div class="text">Write a script for delivering bad inspection news to buyers: lead with perspective (every inspection finds things), sort findings into negotiate vs. accept vs. walk-away buckets, and frame the repair request strategy. Calm, clear, decisive. Verify negotiation strategy with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 142</div><h3>Escalation clause explainer</h3><div class="text">Write a plain-English escalation clause explainer for buyers: how it works, when it helps, the risks, and whether it fits their situation. General information only — this touches contract terms, so verify with your broker and legal counsel before using it with clients.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 143</div><h3>Waiving contingencies conversation</h3><div class="text">Write a careful script for the waiving-contingencies conversation: what each contingency protects, the real risks of waiving, and the questions that reveal the buyer's true risk tolerance. This is high-stakes — verify with your broker and legal counsel, never advise waiving lightly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 144</div><h3>Buyer remorse call script</h3><div class="text">Write a script for a buyer panicking after going under contract: normalize the feeling (it's the biggest purchase of their life), revisit WHY they chose this home, walk through the numbers once more, and distinguish cold feet from real red flags. Steady counselor tone.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 145</div><h3>"We lost the bidding war" follow-up</h3><div class="text">Write a follow-up script for buyers who lost a bidding war: genuine empathy, what we learned about the market, 2 strategy adjustments for next time, and a backup-plan conversation. Keep them in the game.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 146</div><h3>Rent vs. buy math conversation</h3><div class="text">Write a rent-vs-buy conversation framework: the real math (monthly cost, equity, tax considerations, timeline), the 5-year rule of thumb, and the non-financial factors. Present both sides honestly — general information, not financial advice.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 147</div><h3>"We need to sell first" contingency plan</h3><div class="text">Write a script for buyers who need to sell before buying: the contingent-offer option explained, the bridge alternatives, timing strategy, and honest talk about the risks in this market. Verify contract options with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 148</div><h3>First-generation buyer education script</h3><div class="text">Write an education-first consultation script for first-generation homebuyers: extra patience on the process, plain-language explanations of every step, common family-involvement dynamics handled with respect, and resources for down-payment assistance programs to research together.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 149</div><h3>"Is this a good investment?" answer framework</h3><div class="text">Write a framework for answering "is this a good investment?": the factors to discuss (location fundamentals, condition, holding timeline), what I can share (market data), and what I can't promise (future value). Honest, data-grounded, no predictions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 150</div><h3>Consultation-to-client close script</h3><div class="text">Write a natural close for the end of a buyer consultation: recap their goals, state plainly how I'll help them win, address the "we'll think about it" stall, and ask for the commitment directly. Confident, assumptive, respectful.</div></div>
+
+<h2 class="section">7 · Expired Listings &amp; FSBO Outreach</h2>
+<p class="section-sub">The highest-ROI prospecting in the business — scripts that open doors, not burn bridges.</p>
+
+<div class="prompt"><div class="num">PROMPT 151</div><h3>Expired listing phone script</h3><div class="text">Write an expired listing cold-call script: a disarming opener (not "I saw your home expired"), 3 diagnostic questions about why it didn't sell, and a soft close for a 15-minute meeting. Empathetic — they just went through a failure.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 152</div><h3>Expired listing door-knock script</h3><div class="text">Write a 60-second expired door-knock script: respectful opener acknowledging the awkwardness, one value statement (what I'd do differently, specifically), and a leave-behind offer. Low pressure, high professionalism.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 153</div><h3>Expired listing letter (mail)</h3><div class="text">Write a one-page expired listing letter: empathy first, 3 specific reasons homes expire (price, presentation, promotion) with brief explanations, my track record, and a no-pressure CTA. Personal tone — not a template that screams mass mail.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 154</div><h3>Expired listing email</h3><div class="text">Write a short expired listing email: subject line that gets opened, 3 sentences of empathy + insight, one proof point, and a soft ask for 15 minutes. Under 120 words — respect the inbox.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 155</div><h3>Expired follow-up sequence (5 touches)</h3><div class="text">Write a 5-touch expired follow-up sequence over 30 days: call, letter, email with market data, value-drop (CMA teaser), final check-in. Each touch different, each adding value, none desperate.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 156</div><h3>"Why didn't it sell?" diagnosis script</h3><div class="text">Write a diagnostic script for the expired listing appointment: questions that reveal the real story (pricing history, showing feedback, marketing actually done), and how to present my honest assessment without trashing the previous agent.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 157</div><h3>Expired with price reduction history</h3><div class="text">Write a script for an expired listing that already had 3 price cuts: explain why reductions without a strategy don't work, present the "relaunch like it's new" plan (new photos, new description, new price), and reset expectations honestly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 158</div><h3>Expired luxury listing approach</h3><div class="text">Write a discreet, high-touch approach script for an expired luxury listing <em>[$1M+]</em>: elevated tone, privacy-respecting language, marketing plan specifics (targeted, not mass), and credentials that matter at this level. No cold-call energy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 159</div><h3>Withdrawn listing outreach</h3><div class="text">Write an outreach script for a withdrawn (not expired) listing: acknowledge they chose to pause, ask what would need to change for them to reconsider, and position yourself as the fresh start — without criticizing their current/past agent.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 160</div><h3>FSBO cold call script</h3><div class="text">Write a FSBO cold-call script: respectful opener ("I'm not calling to list your home"), 3 questions about their process so far, one value nugget (a buyer-side insight), and a permission-based follow-up. Never argue with a FSBO.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 161</div><h3>FSBO door-knock script</h3><div class="text">Write a 45-second FSBO door-knock script: introduce yourself as the neighborhood specialist, offer something useful (recent sales data for their street), and leave gracefully. The goal is the relationship, not the listing — today.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 162</div><h3>FSBO letter</h3><div class="text">Write a FSBO letter: congratulate their initiative, share 2-3 things FSBO sellers commonly underestimate (with data, not scare tactics), offer a free resource, and keep the door open. Respectful peer tone.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 163</div><h3>FSBO "what if it doesn't sell" follow-up</h3><div class="text">Write a 30-day FSBO follow-up script: check in on their progress, ask what's working and what isn't, and gently introduce the "plan B" conversation. Timing and tone are everything — helpful, never "I told you so."</div></div>
+
+<div class="prompt"><div class="num">PROMPT 164</div><h3>FSBO commission objection handler</h3><div class="text">Write a response to "I don't want to pay commission": the math of FSBO net vs. listed net (with typical data), what the commission actually covers, and flexible options per my brokerage. Verify compensation rules with your broker — never improvise on commission law.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 165</div><h3>FSBO safety &amp; qualification script</h3><div class="text">Write a script raising FSBO safety and buyer-qualification concerns: unvetted strangers touring the home, unqualified buyers wasting time, and how agents screen — framed as genuine concern, not a scare tactic.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 166</div><h3>FSBO 30-day check-in</h3><div class="text">Write a 30-day FSBO check-in message: acknowledge the effort, share one relevant market data point, ask how showings are going, and offer a no-strings second opinion. Consistent, kind, patient.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 167</div><h3>Canceled listing outreach</h3><div class="text">Write an outreach script for a canceled listing: extra sensitivity required (something went wrong with the last agent), questions that uncover what broke down, and how to position yourself as the opposite experience. Listen more than pitch.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 168</div><h3>"Interview me" expired seller pitch</h3><div class="text">Write a pitch for an expired seller to interview you: 3 specific things you'll do differently (with examples), your relaunch plan in 60 seconds, and a confident close. You're auditioning — make every word count.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 169</div><h3>Expired seller CMA teaser</h3><div class="text">Write a CMA teaser for an expired seller: 3 fresh comps they haven't seen, what the data says about their old price, and an invitation to see the full analysis. Data as the door-opener.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 170</div><h3>Expired social proof email</h3><div class="text">Write a social proof email to an expired seller: 2-3 brief stories of expired listings I relisted and sold (address, days on market before/after, result), and the common thread. Proof, not promises.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 171</div><h3>FSBO open house offer script</h3><div class="text">Write a script offering to host an open house for a FSBO seller: what's in it for them (foot traffic, professional presentation), what's in it for you (buyer leads — be transparent), and clear boundaries. Honest about motives.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 172</div><h3>Expired listing text message</h3><div class="text">Write 3 short expired-listing text templates: initial outreach, value follow-up, and final check-in. Each under 40 words, compliant with texting regulations — confirm opt-in/consent rules with your broker before sending marketing texts.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 173</div><h3>Past expired, 6 months later</h3><div class="text">Write a 6-month-later re-engagement message to an expired seller who didn't list: reference the market changes since then, share their home's current estimated range (labeled as an estimate), and reopen the conversation lightly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 174</div><h3>Expired objection: "we're taking a break"</h3><div class="text">Write a response to "we're taking a break from selling": respect the decision completely, ask what a good outcome looks like when they're ready, and secure permission for periodic market updates. Plant the seed, walk away gracefully.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 175</div><h3>Expired objection: "we'll just rent it"</h3><div class="text">Write a response to "we'll just rent it out": the honest landlord math (rent vs. costs vs. hassle), questions that reveal if they're ready for landlording, and a door left open for a future sale. Advisor, not closer.</div></div>
+
+<h2 class="section">8 · CMA Narratives &amp; Pricing Conversations</h2>
+<p class="section-sub">Pricing is where trust is built or broken — data-driven conversations sellers respect.</p>
+
+<div class="prompt"><div class="num">PROMPT 176</div><h3>CMA cover letter / narrative</h3><div class="text">Write a one-page CMA cover narrative: what a CMA is (and isn't), how I selected the comps, the price range the data supports, and my recommended strategy. Sets up the pricing conversation before it starts. Data presentation only — verify pricing advice with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 177</div><h3>Pricing conversation (overpriced seller)</h3><div class="text">Write a script for a seller whose price expectation is <em>[15%]</em> above the comps: lead with agreement on the home's merits, present the data visually described, explain buyer psychology on overpricing, and land on a testable price. Firm, kind, data-led.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 178</div><h3>"Zillow says it's worth more"</h3><div class="text">Write a response to "Zillow says it's worth <em>[$X]</em>": explain automated valuations vs. human CMA in plain English (what the algorithm can't see), without trashing the tool, then bridge to your comp-based number. Respectful, educational.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 179</div><h3>Explaining comps to a seller</h3><div class="text">Write a plain-English walkthrough of 4 comparable sales for a seller: why each comp was chosen, the adjustments for differences (condition, size, location), and what the adjusted range tells us. Make the methodology transparent — no black box.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 180</div><h3>Pricing strategy options (3-tier)</h3><div class="text">Write a 3-tier pricing strategy presentation: aggressive (below market, drive competition), market value (steady), and aspirational (test the ceiling) — with honest pros, cons, and likely outcomes of each. Let the seller choose with eyes open. Verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 181</div><h3>Price reduction script</h3><div class="text">Write a price reduction recommendation script: the data since listing day, the cost of waiting (carrying costs + stigma), 2 specific new price points with reasoning, and a confident repositioning plan. Strategy, not surrender. Verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 182</div><h3>"Let's test the market high" response</h3><div class="text">Write a response to "let's start high and come down": the data on overpriced listings (days on market, final sale vs. list), the "new listing" window you only get once, and a compromise that respects their instinct. Honest about the gamble.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 183</div><h3>Days-on-market risk explainer</h3><div class="text">Write a plain-English explainer on days-on-market risk: why stale listings get fewer showings and lower offers, with local DOM data context. Educational — helps sellers understand urgency without pressure tactics.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 184</div><h3>Seller net proceeds walkthrough</h3><div class="text">Write a script walking a seller through estimated net proceeds at 3 different sale prices: mortgage payoff, commissions, closing costs, and walk-away number for each. Make the trade-offs tangible. Verify figures and advice with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 185</div><h3>Pricing for multiple offers strategy</h3><div class="text">Write a pricing strategy memo for generating multiple offers: the underpricing psychology, the exact list price recommendation with comp support, offer deadline strategy, and the risks if it doesn't work. Bold strategy, honest about downside. Verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 186</div><h3>Pricing a unique / no-comp property</h3><div class="text">Write a pricing narrative for a truly unique property with no direct comps: <em>[describe: waterfront acreage, historic, etc.]</em>. Explain the bracketing method, the wider range, and why pricing is part art here — with the guardrails that keep it grounded. Verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 187</div><h3>Pricing after inspection issues</h3><div class="text">Write a pricing adjustment conversation for after inspection reveals <em>[$20k in roof/HVAC issues]</em>: the options (repair, credit, price cut), how each affects net, and my recommendation logic. Clear-eyed, solution-focused. Verify with your broker and legal counsel.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 188</div><h3>Seasonal pricing adjustment explainer</h3><div class="text">Write an explainer on seasonal pricing for <em>[my market]</em>: how demand shifts by season, what it means for list price timing, and whether waiting for "season" is worth it. Local patterns, no guarantees.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 189</div><h3>New construction vs. resale pricing</h3><div class="text">Write a pricing comparison for a seller competing with new construction nearby: where resale wins (lot size, established area, no wait), where it loses (shiny and new), and the pricing position that competes. Honest competitive analysis.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 190</div><h3>Investment property pricing basics</h3><div class="text">Write a plain-English investment pricing overview for a seller: how investors evaluate price (rent multiples, cap rate basics), why investor offers look "low," and how to price to attract both retail and investor buyers. General information — no return promises.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 191</div><h3>Land pricing conversation</h3><div class="text">Write a land pricing conversation script: the factors that actually drive lot value (location, utilities, zoning, usability), why land comps are tricky, and realistic expectations on time to sell. Straight talk for land sellers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 192</div><h3>Pricing conversation for divorce sellers</h3><div class="text">Write a sensitive pricing conversation script for divorcing sellers: acknowledge the tension (one wants high, one wants fast), the neutral data both can trust, and a process for reaching agreement. Neutral facilitator tone throughout.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 193</div><h3>Pre-listing price opinion email</h3><div class="text">Write a pre-listing price opinion email: a preliminary range based on public data, clearly labeled as preliminary (not a CMA, not an appraisal), and an invitation for the full in-person analysis. Sets up the appointment.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 194</div><h3>"What if we don't get asking?" prep talk</h3><div class="text">Write a pre-listing "what if" conversation: normalize that list price is a starting point, walk through the scenarios (multiple offers, asking, below asking), and agree in advance on how we'll evaluate offers. Removes the fear before it starts.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 195</div><h3>CMA for expired re-list pricing</h3><div class="text">Write a CMA narrative for an expired listing relist: what changed in the market since it expired, why the old price failed (data, not blame), and the relaunch price with a clear rationale. Fresh start, honest numbers. Verify with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 196</div><h3>Pricing presentation one-pager</h3><div class="text">Write a one-page pricing presentation: the recommended price in big type, 3 supporting comps in a clean table, the strategy in 3 bullets, and one line on what happens if we're wrong. Leave-behind quality.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 197</div><h3>Appraisal vs. market value explainer</h3><div class="text">Write a plain-English explainer: market value vs. appraised value vs. assessed value — what each means, who uses which, and why they differ. The confusion-killer for sellers and buyers alike.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 198</div><h3>Price improvement announcement copy</h3><div class="text">Write price improvement announcement copy for all channels: MLS remarks update, email to buyer agents, and a social post. Frame as opportunity ("new price"), never desperation. Property: <em>[address, old price, new price]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 199</div><h3>Pricing FAQ for sellers</h3><div class="text">Write a 10-question pricing FAQ for sellers: "should we price high?", "what if we get no offers?", "how do price reductions look to buyers?", and 7 more sellers actually ask. Honest, data-grounded answers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 200</div><h3>Annual home value update letter</h3><div class="text">Write an annual home value update letter to past clients: their home's current estimated range from public data (clearly labeled as an estimate), 2-3 local market highlights, and a no-pressure offer for a full CMA. The farming letter that actually gets replies.</div></div>
+
+<h2 class="section">9 · Social Media Content</h2>
+<p class="section-sub">Stop staring at a blank caption box — a month of content ideas in one section.</p>
+
+<div class="prompt"><div class="num">PROMPT 201</div><h3>Just-listed post (3 platforms)</h3><div class="text">Write a just-listed post in 3 versions: Instagram (visual, hashtags), Facebook (community-friendly, shareable), and LinkedIn (professional). Property: <em>[4-bed, $450k, Fort Pierce]</em>. Fair-housing safe copy on all three.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 202</div><h3>Just-sold post</h3><div class="text">Write a just-sold celebration post: congratulate the clients (first names only, with permission), share one detail about the win (multiple offers / above asking), and end with a CTA for anyone thinking of selling. Grateful, not braggy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 203</div><h3>Under-contract post</h3><div class="text">Write an under-contract post: build excitement without revealing the address or terms, congratulate the buyers, and add a line for sellers watching ("this is what a priced-right listing does"). Under 80 words.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 204</div><h3>Price improvement post</h3><div class="text">Write a price improvement social post: frame as fresh opportunity, lead with the home's best feature, include the new price and 3 highlights. Urgency without desperation. Property: <em>[address area, new price]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 205</div><h3>Open house announcement post</h3><div class="text">Write an open house announcement post: date/time/address, 3 irresistible highlights, and a CTA to share with anyone house-hunting. Make it feel like an event, not an ad.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 206</div><h3>Before/after staging carousel captions</h3><div class="text">Write captions for a 5-slide before/after staging carousel: hook on slide 1, one line per transformation, and a final slide CTA about presentation selling homes. Fair-housing safe — describe rooms, not people.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 207</div><h3>Monthly market update post</h3><div class="text">Write a monthly market update post from these stats: median price, inventory, days on market, and the one trend that matters. Plain English, one takeaway for buyers and one for sellers: <em>[paste stats]</em>. No jargon.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 208</div><h3>"Did you know" homeowner tip post</h3><div class="text">Write 5 "did you know" homeowner tip posts: one surprising fact each (homestead exemption, AC maintenance, insurance reviews, etc.) in under 60 words per post. Value-first, shareable.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 209</div><h3>Client testimonial post</h3><div class="text">Turn this client testimonial into a social post: pull the best 2 lines as the hook, add minimal context, and close with a CTA. Keep it authentic — their words, not mine: <em>[paste testimonial]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 210</div><h3>New agent / team intro post</h3><div class="text">Write a personal intro post for <em>[a new agent joining my team / my own brand refresh]</em>: who I am in 3 lines, why I do this work, and one fun fact. Human first, credentials second.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 211</div><h3>Day-in-the-life reel script</h3><div class="text">Write a 60-second "day in the life of a realtor" reel script: 6 scenes with one line each (morning, showing, listing appointment, negotiation call, closing, evening), hook in the first 3 seconds. Authentic, not glam.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 212</div><h3>Listing video tour script</h3><div class="text">Write a 90-second listing video tour script for <em>[3-bed pool home, $389k]</em>: hook, room-by-room in flow order, one line per space, strong CTA. Written to be spoken — short sentences, natural pauses.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 213</div><h3>Neighborhood spotlight reel script</h3><div class="text">Write a 60-second neighborhood spotlight reel script for <em>[neighborhood]</em>: 5 stops, one vivid line each, hook that stops the scroll. Describe places and amenities — never resident demographics.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 214</div><h3>Myth-busting post</h3><div class="text">Write a myth-busting post: pick <em>[one real estate myth: "you need 20% down" / "spring is the only time to sell" / "Zillow prices are accurate"]</em>, bust it with facts in under 100 words, and end with an invitation to ask questions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 215</div><h3>Q&amp;A story prompts</h3><div class="text">Write 10 Instagram story Q&A prompts that get real questions from followers: mix of fun ("craziest thing I've seen in a home") and useful ("ask me anything about buying your first home"). Engagement-first.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 216</div><h3>Poll / quiz engagement post</h3><div class="text">Write 5 poll/quiz post ideas for stories: "this or that" home features, market predictions, local favorites. Each with the question, two options, and a follow-up line that starts a DM conversation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 217</div><h3>Closing day celebration post</h3><div class="text">Write a closing day post: celebrate the clients' milestone (with permission, first names only), one line about the journey, and a warm CTA. Joyful, personal, never about me.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 218</div><h3>Referral thank-you post</h3><div class="text">Write a referral thank-you post: genuine gratitude (no names without permission), why referrals mean everything to my business, and a soft invitation for others. Sincere, not transactional.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 219</div><h3>Local business spotlight post</h3><div class="text">Write a local business spotlight post for <em>[coffee shop / restaurant name]</em>: why I love it, one specific recommendation, and a community angle. Positions me as the local expert without selling anything.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 220</div><h3>Holiday homeowner post</h3><div class="text">Write a <em>[4th of July / Thanksgiving / holiday season]</em> post for homeowners: genuine greeting, one useful seasonal home tip, zero sales pitch. The post people remember you by.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 221</div><h3>Rate / market news explainer post</h3><div class="text">Write a social post explaining <em>[this week's rate move / inventory shift]</em> in plain English: what happened, what it means for buyers and sellers locally, in under 100 words. Facts only — no rate predictions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 222</div><h3>"3 things I wish buyers knew" post</h3><div class="text">Write a "3 things I wish every buyer knew" post: surprising, genuinely useful insights (not sales pitches), each in 2 lines. The kind of post that gets saved and shared.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 223</div><h3>Carousel: home buying steps</h3><div class="text">Write a 7-slide carousel on the home buying steps: one step per slide, one clear sentence each, final slide CTA to DM questions. Beginner-friendly, jargon-free.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 224</div><h3>Local hashtag set generator</h3><div class="text">Generate 3 hashtag sets for <em>[my market]</em> real estate posts: 10 hashtags each — mix of broad (#realestate), local (#[city]realestate), and niche (#firsttimehomebuyer). Rotate to avoid shadowban patterns.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 225</div><h3>30-day content calendar</h3><div class="text">Build a 30-day social content calendar for a real estate agent: 1 post per day mixing listings, market updates, educational, personal, and engagement content. Give me the topic + hook line for each day. Sustainable — no burnout posting.</div></div>
+
+<h2 class="section">10 · Review Requests, Farm Marketing &amp; Closing Checklists</h2>
+<p class="section-sub">Reputation, repeat business, and flawless closings — the systems behind the success.</p>
+
+<div class="prompt"><div class="num">PROMPT 226</div><h3>Google review request text</h3><div class="text">Write a Google review request text to send after closing: warm, specific about how much it helps, with the direct review link placeholder. Under 50 words — easy to say yes to: <em>[paste your review link]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 227</div><h3>Zillow review request email</h3><div class="text">Write a Zillow review request email: thank them for trusting you, explain reviews help future clients find you, and make it one click. Include 2 sentence-starters for anyone staring at a blank box.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 228</div><h3>Video testimonial request script</h3><div class="text">Write a script for asking a happy client for a 60-second video testimonial: make it comfortable (phone video is fine), give them 3 questions to answer, and reassure them there's no pressure. Most people say yes when it's this easy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 229</div><h3>Review follow-up nudge</h3><div class="text">Write a gentle review follow-up nudge for the client who said "sure!" but never posted: friendly, zero guilt, one line on how long it takes (2 minutes), and the link again. One nudge only — then let it go.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 230</div><h3>Responding to a 5-star review</h3><div class="text">Write 5 varied responses to 5-star reviews: personal, specific (reference something from their review), and never copy-pasted sounding. Each under 40 words. Reviews: <em>[paste 1-2 examples for tone]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 231</div><h3>Responding to a negative review</h3><div class="text">Write a professional response template for a negative review: acknowledge without admitting fault, take it offline (phone number, not email), and show future readers you handle issues with class. Calm, brief, dignified. Verify approach with your broker.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 232</div><h3>Geographic farm postcard copy</h3><div class="text">Write postcard copy for my geographic farm: front headline (7 words or less), back message in 60 words — one market fact, one personal line, one CTA. Scannable from 3 feet away. Farm area: <em>[neighborhood, home count]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 233</div><h3>Farm "market stats" mailer</h3><div class="text">Write a quarterly farm mailer from these stats: homes sold, median price, days on market, and the headline trend. One page, homeowner-focused ("what this means for your equity"): <em>[paste stats]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 234</div><h3>Farm introduction letter (new agent)</h3><div class="text">Write a farm introduction letter for a new agent: who I am, why I chose this neighborhood, what I'll be sending (and how often), and one genuinely useful thing in this first letter. Earn the mailbox, don't just occupy it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 235</div><h3>Farm just-sold mailer</h3><div class="text">Write a just-sold mailer for the farm area: the result (sold price vs. list, days on market), what it means for neighbors' values, and a CTA for a free home valuation. Proof that you're the area expert. Address area only — respect client privacy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 236</div><h3>Door-knocking farm script</h3><div class="text">Write a 30-second geographic farm door-knocking script: friendly opener, one value item (recent sale on their street), and a question that starts a real conversation. Respectful of "not interested" — leave a card, move on.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 237</div><h3>Buyer closing checklist</h3><div class="text">Write a buyer closing checklist from contract to keys: inspections, appraisal, insurance, final walkthrough, wire safety (verify wiring instructions by phone — wire fraud is real), and closing day items. Chronological, checkbox format.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 238</div><h3>Seller closing checklist</h3><div class="text">Write a seller closing checklist: repairs agreed to, move-out timeline, utility shutoffs, key/remote/garage-door handoff, forwarding address, and closing day documents. Everything handled, nothing forgotten.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 239</div><h3>Moving checklist email for clients</h3><div class="text">Write a moving checklist email: 4-week timeline (book movers, change address, transfer utilities, pack room by room), plus moving-day essentials box list. The email clients forward to their friends.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 240</div><h3>Utility transfer checklist</h3><div class="text">Write a utility transfer checklist for <em>[my county]</em>: electric, water, gas, trash, internet — with typical lead times and "call by" dates relative to closing. Practical, local, specific.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 241</div><h3>New homeowner maintenance calendar</h3><div class="text">Write a 12-month new homeowner maintenance calendar for <em>[Florida homes]</em>: monthly and seasonal tasks (AC filters, hurricane prep, water heater flush), in plain language. The value-add email of the year.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 242</div><h3>Closing gift note</h3><div class="text">Write 3 closing gift note options: warm, funny, and heartfelt — each under 60 words, personal enough to keep. Match the note to a <em>[local restaurant gift card / custom cutting board / home toolkit]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 243</div><h3>Post-closing 30/60/90-day check-ins</h3><div class="text">Write 3 post-closing check-in messages: day 30 (how's the move?), day 60 (any contractor needs?), day 90 (review ask + referral seed). Each under 60 words, genuinely caring, never salesy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 244</div><h3>Annual client appreciation event invite</h3><div class="text">Write a client appreciation event invitation: <em>[BBQ / pie giveaway / movie night]</em> — warm details (date, time, place), why you're hosting it (gratitude, not business), and an easy RSVP. The invite people actually accept.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 245</div><h3>Referral program announcement</h3><div class="text">Write a referral program announcement to past clients: how it works (just make the intro), what they'll get (my thanks + <em>[gift card / donation to their charity]</em>), and why referrals are the highest compliment. Check your state's referral fee rules with your broker before offering compensation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 246</div><h3>Sphere of influence reactivation email</h3><div class="text">Write a sphere reactivation email to contacts I haven't talked to in <em>[a year]</em>: honest about losing touch, a real personal line, one useful market nugget, and an easy reply question. Rebuilds relationships, not just pipelines.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 247</div><h3>Past client birthday / home anniversary text</h3><div class="text">Write 4 short past-client texts: birthday, home purchase anniversary, holiday greeting, and "thinking of you" check-in. Each under 30 words, personal, with no ask attached. The touches that generate referrals.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 248</div><h3>Vendor list email for new homeowners</h3><div class="text">Write a trusted vendor list email for new homeowners: my recommended <em>[handyman, AC tech, plumber, electrician, landscaper, pool service]</em> with one line on why I trust each. The email that makes you unforgettable. (Only recommend vendors you'd hire yourself.)</div></div>
+
+<div class="prompt"><div class="num">PROMPT 249</div><h3>Tax-time homeowner email</h3><div class="text">Write a January tax-time email for homeowner clients: common homeowner tax topics to discuss with their CPA (mortgage interest, property taxes, home office basics), documents to gather, and a clear "talk to your tax professional" line. General information only — not tax advice; verify with your broker before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 250</div><h3>Year-end review + goal email</h3><div class="text">Write a year-end email to my sphere: genuine gratitude for the year, 2-3 highlights (homes sold, families helped — no private client details), and an open door for anyone thinking of a move next year. Reflective, warm, forward-looking.</div></div>
+
+<div class="closing">
+  <h2>That's the pack. Now go close.</h2>
+  <p>These 250 prompts were built for working real estate agents — the daily tech podcast with zero filler and all value. Three episodes a day, 7am · 11am · 4pm ET.</p>
+  <p><strong>Want more?</strong> New prompts drop with new episodes. Join the deals list at <strong>icyunvbankai.github.io/Bitstream</strong> and you'll never miss one.</p>
+  <p class="fine">© 2026 Bitstream. This pack is for your personal use — share the show, not the file. Prompts are starting points: always verify prices, legal, contract, and fair-housing details with your broker and legal counsel.</p>
+</div>
+
+</body>
+</html>
