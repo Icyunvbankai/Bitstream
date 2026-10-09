@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>250 Pro Prompts for Attorneys — Bitstream</title>
+<style>
+  @page { size: Letter; margin: 2cm 2.2cm; @bottom-center { content: counter(page); font: 10px Helvetica, Arial, sans-serif; color: #888; } }
+  @page :first { margin: 0; @bottom-center { content: none; } }
+  body { font-family: Helvetica, Arial, sans-serif; color: #1c1e1f; line-height: 1.55; font-size: 11.5pt; }
+  .cover { background: #0b0e0e; color: #f4f6f5; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2cm; page-break-after: always; }
+  .cover img { width: 220px; border-radius: 12px; margin-bottom: 28px; }
+  .cover .kicker { font: 700 11pt Helvetica, Arial, sans-serif; letter-spacing: .28em; color: #f5a623; margin-bottom: 14px; }
+  .cover h1 { font-size: 38pt; margin: 0 0 10px; line-height: 1.1; }
+  .cover .sub { font-size: 14pt; color: #b9c2bf; margin-bottom: 26px; }
+  .cover .tag { font: 600 10pt Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #ff7967; }
+  h2.section { font-size: 20pt; color: #0b0e0e; border-bottom: 3px solid #f5a623; padding-bottom: 6px; margin: 34px 0 6px; page-break-after: avoid; }
+  .section-sub { color: #5c6663; font-size: 10.5pt; margin: 0 0 16px; }
+  .prompt { background: #f4f7f7; border-left: 4px solid #f5a623; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; }
+  .prompt .num { font: 700 9pt Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #ff7967; }
+  .prompt h3 { font-size: 12pt; margin: 2px 0 6px; }
+  .prompt .text { font-size: 10.5pt; color: #2a2e2d; background: #ffffff; border: 1px solid #dde4e2; border-radius: 6px; padding: 8px 10px; }
+  .prompt .text em { color: #b26a00; font-style: normal; font-weight: bold; }
+  .howto { background: #0b0e0e; color: #eef2f1; border-radius: 10px; padding: 18px 22px; margin: 18px 0; page-break-inside: avoid; }
+  .howto h3 { color: #f5a623; margin: 0 0 8px; font-size: 13pt; }
+  .howto ol { margin: 6px 0; padding-left: 20px; }
+  .howto li { margin-bottom: 6px; font-size: 10.5pt; }
+  .rules { display: block; margin: 14px 0; }
+  .rule { background: #fff7f3; border: 1px solid #ffd9cd; border-radius: 8px; padding: 8px 12px; margin: 8px 0; font-size: 10.5pt; page-break-inside: avoid; }
+  .rule strong { color: #d34a2e; }
+  .closing { background: #f4f7f7; border-radius: 10px; padding: 20px 24px; margin-top: 30px; page-break-inside: avoid; }
+  .closing h2 { margin-top: 0; font-size: 16pt; }
+  .fine { font-size: 9pt; color: #888; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img src="cover.jpg" alt="250 Pro Prompts for Attorneys">
+  <div class="kicker">BITSTREAM · ZERO FILLER. ALL VALUE.</div>
+  <h1>250 Pro Prompts<br>for Attorneys</h1>
+  <div class="sub">250 copy-paste AI prompts for solo &amp; small-firm practice.<br>Open a free AI tool, paste, fill in the blanks, done.</div>
+  <div class="tag">PRO PACK · $14.99</div>
+</div>
+
+<div class="howto">
+  <h3>How to use this pack (60 seconds)</h3>
+  <ol>
+    <li><strong>Open a free AI tool</strong> — ChatGPT (chatgpt.com), Claude (claude.ai), or Gemini (gemini.google.com). No account tricks, no paid plan needed.</li>
+    <li><strong>Copy any prompt</strong> and replace the <em>[BRACKETED]</em> parts with your matter details.</li>
+    <li><strong>Sanitize before you paste.</strong> Never feed client names, privileged facts, or opposing-party details into a public AI tool. Use placeholders like "Client A" and "the opposing party" — you decide what goes in.</li>
+    <li><strong>AI drafts, you decide.</strong> Every output is a starting draft. Check citations against real sources, confirm deadlines against your jurisdiction's rules, and make the legal judgment yourself.</li>
+    <li><strong>Talk instead of typing.</strong> Every one of these tools has a voice mode — dictate case notes while you walk, let it turn the ramble into a clean draft.</li>
+  </ol>
+</div>
+
+<div class="rules">
+  <div class="rule"><strong>Rule 1 — You are the lawyer, AI is the paralegal.</strong> These prompts produce outlines, checklists, first drafts, and client-friendly explanations. They never make legal conclusions for you — every output gets your review against real sources and your jurisdiction's rules before it touches a client or a court.</div>
+  <div class="rule"><strong>Rule 2 — No privileged data in, no exceptions.</strong> Strip client identities, dates of birth, account numbers, and privileged facts before pasting anything into a free AI tool. Placeholders in, real names only in your firm's systems.</div>
+  <div class="rule"><strong>Rule 3 — One workflow at a time.</strong> Don't overhaul your whole practice today. Pick one: intake, drafting, or client communication — and start there.</div>
+</div>
+
+<h2 class="section">1 · Intake &amp; Client Qualification</h2>
+<p class="section-sub">Qualify faster, spot conflicts early, and send every new client home with something useful.</p>
+
+<div class="prompt"><div class="num">PROMPT 001</div><h3>Intake questionnaire builder</h3><div class="text">Draft a client intake questionnaire for a <em>[family law / personal injury / estate planning]</em> practice. Include: contact info, the facts of the matter, timeline, prior attorneys, and a conflict-check field. Organize it as a clean checklist a new client can finish in 15 minutes. No legal advice — just data gathering.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 002</div><h3>Practice-area fit screener</h3><div class="text">Turn this practice-area description into a 10-question phone screener I can use to decide whether a caller's matter fits my practice: <em>[paste your practice description]</em>. For each question, note what a "good fit" answer looks like and what red flags to listen for.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 003</div><h3>Red-flag case screener</h3><div class="text">List 15 warning signs that a <em>[personal injury]</em> matter may be a poor fit for a solo practice (low damages, liability problems, prior counsel issues, fee-collection risk). Format as an intake checklist with a one-line explanation of each flag so my staff can screen calls.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 004</div><h3>Conflict-check intake form</h3><div class="text">Draft a conflict-of-interest intake form section for new consultations. List every field I should capture: full names of all parties, related entities, adverse parties, witnesses, and prior law firms involved. Add a one-line instruction telling staff how to run it against our existing client list. For internal screening only — not legal advice.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 005</div><h3>Phone consult script</h3><div class="text">Write a 10-minute initial phone consultation script for <em>[estate planning]</em> prospects. Structure: warm opening, 6 fact-finding questions, fee-structure explanation, and a clear close ("here's what happens next"). Professional and reassuring, not salesy. I'll review for bar compliance before use.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 006</div><h3>Fee conversation opener</h3><div class="text">Draft a plain-English explanation of how <em>[contingency / flat-fee / hourly]</em> billing works for <em>[personal injury]</em> clients. Cover: what the fee is, what costs are separate, and when payment happens. Keep it at a 6th-grade reading level so a nervous first-time client understands. I'll verify it against my fee agreement.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 007</div><h3>Retainer terms explainer</h3><div class="text">Turn my engagement letter into a one-page plain-English summary a client can read before signing. Keep all the substance, lose the legalese: scope of work, fees, costs, termination, and what I need from the client. Use this as the base: <em>[paste engagement letter or key terms]</em>. For explanation only — the signed letter governs.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 008</div><h3>Document request letter to new client</h3><div class="text">Draft a friendly document-request letter for a newly retained <em>[divorce]</em> client. List every document they'll typically need: financial records, tax returns, bank statements, mortgage docs, and account logins inventory. Add deadlines for each batch and a note that incomplete documents delay their case. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 009</div><h3>Case acceptance checklist</h3><div class="text">Build a case-acceptance decision checklist for my <em>[criminal defense]</em> practice. Include: conflict check, statute of limitations status, collectability, scope of likely work, client reliability signals, and my calendar capacity. End with a simple "accept / decline / refer" scoring guide. Decision support only — I make the call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 010</div><h3>Declination letter template</h3><div class="text">Draft a professional declination letter for prospective clients whose matters I can't take. Tone: respectful, brief, no reason given. Include: no-attorney-client-relationship disclaimer, a reminder about deadlines that may apply to their matter, and a suggestion to consult other counsel promptly. I'll adapt to my jurisdiction's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 011</div><h3>Referral letter to another attorney</h3><div class="text">Draft a warm referral letter/email to send when I refer a <em>[workers' compensation]</em> matter to <em>[attorney name/firm]</em>. Include the matter type, what makes it a good fit for them, and a note that I'm sending the client with context so they don't start cold. Professional courtesy, no fee-splitting discussion.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 012</div><h3>Client welcome packet outline</h3><div class="text">Outline a new-client welcome packet for my firm: what to include (engagement letter, fee summary, timeline overview, contact info, client responsibilities), in what order, and one page that answers the 5 questions every client asks first. This is an organizing document — I'll draft the final versions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 013</div><h3>Intake call summary template</h3><div class="text">Create an intake call summary template for my staff: caller facts, matter type, jurisdiction, urgency/trigger events, fee discussion notes, and a follow-up action list. Make it a fill-in form so nothing gets lost between the call and my review. Internal use only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 014</div><h3>Prospective client follow-up email</h3><div class="text">Draft a follow-up email for a consultation that didn't close. Tone: helpful, no pressure. Remind them of the key point I made in the consult, offer one useful next step they can take on their own, and leave the door open. Professional and bar-compliant — no promises of outcomes. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 015</div><h3>Non-engagement confirmation letter</h3><div class="text">Draft a non-engagement letter confirming I am NOT representing <em>[prospective client]</em> after their consultation. Clear, kind, and firm: no representation, no ongoing duty, reminder to watch their own deadlines. I'll customize to my jurisdiction's requirements.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 016</div><h3>Second-opinion consult outline</h3><div class="text">Build a 20-minute second-opinion consultation outline for clients currently represented elsewhere. Cover: what I'll review, what I can and can't say about their current lawyer, what information I need from them, and how to close without disparaging their counsel. Ethical boundaries built in — I'll verify against my bar's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 017</div><h3>Emergency intake triage guide</h3><div class="text">Create an after-hours intake triage guide for my <em>[criminal defense]</em> practice staff: which calls are true emergencies (arrests, imminent deadlines), what questions to ask immediately, what to tell the caller to do right now, and when to page me. Organized as a decision tree my staff can follow at midnight.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 018</div><h3>Practice-area landing FAQ</h3><div class="text">Draft 10 FAQs for my website's <em>[landlord-tenant]</em> page: what I handle, what I don't, typical timelines, how fees work, and what to bring to a consult. Plain English, no legal advice, no guarantees — a screening tool that also educates. I'll review for advertising-rule compliance.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 019</div><h3>Client onboarding timeline</h3><div class="text">Build a week-one client onboarding timeline for a new <em>[business formation]</em> matter: Day 1 (engagement + docs), Day 3 (first deliverable draft), Day 5 (review call), Day 7 (filing checklist). For each step list who does it, what the client provides, and the status update the client gets. Organizer only — I set the actual pace.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 020</div><h3>Fee agreement checklist</h3><div class="text">Build a checklist of everything a compliant fee agreement in my practice should contain: scope, rate/fee, costs and expenses, billing frequency, retainer/replenishment terms, and termination. General organizing checklist only — I'll confirm against my state's bar rules before using it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 021</div><h3>Matter opening checklist</h3><div class="text">Create a new-matter opening checklist: conflict check, engagement letter signed, retainer received, calendar deadlines, document requests sent, and client welcome email. One page, checkboxes, in the order my staff should do them. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 022</div><h3>Client communication preferences form</h3><div class="text">Draft a short client communication preferences form: preferred channel (email/phone/text), best times, who else may be looped in, and how they want urgent updates delivered. Add a one-line privacy note about texting security. I'll adapt to my firm's systems.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 023</div><h3>Intake notes to case summary</h3><div class="text">Turn these raw intake notes into a clean one-page case summary: facts, parties (use placeholders Client A/B), key dates, documents received, open questions, and recommended next steps for MY review. Organize the facts — don't draw conclusions: <em>[paste sanitized intake notes]</em>.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 024</div><h3>Budget estimate worksheet</h3><div class="text">Build a litigation budget estimate worksheet for a <em>[breach of contract]</em> matter: phases (filing, discovery, motion practice, trial prep, trial), hours per phase, my rate, and likely costs. Format as a table with a low/high range. Planning tool only — I'll set the real numbers with my experience.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 025</div><h3>Referral source thank-you note</h3><div class="text">Draft a thank-you note to <em>[past client / colleague]</em> who referred a new matter to my firm. Warm, professional, mentions nothing confidential about the new client. Compliant with my bar's solicitation rules — I'll review before sending.</div></div>
+<h2 class="section">2 · Research Outlines &amp; Briefs</h2>
+<p class="section-sub">Organize your research before you write — outlines, issue trees, and citation trackers.</p>
+
+<div class="prompt"><div class="num">PROMPT 026</div><h3>Issue-spotting checklist</h3><div class="text">Build an issue-spotting checklist for a <em>[slip-and-fall premises liability]</em> matter. Organize by legal issue: duty, breach, causation, damages, defenses. Under each, list the sub-questions I need to research and the fact categories that answer them. Checklist only — I verify every answer against real authority.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 027</div><h3>Research plan for a novel issue</h3><div class="text">Outline a research plan for this question in <em>[my state]</em>: <em>[describe the legal issue in one sentence]</em>. List the research path in order: controlling statutes, key cases to look for, secondary sources, and jurisdiction-specific traps. I'll do the actual research on Westlaw/Lexis — this is just the roadmap.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 028</div><h3>Case brief template</h3><div class="text">Create a case-brief template I can reuse: caption, court/date, facts, procedural history, issues, holdings, reasoning, and "how it helps my matter" field. Clean format, one page per case. Internal tool — I'll fill it from the actual opinions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 029</div><h3>50-state comparison framework</h3><div class="text">Build a comparison framework for researching how <em>[non-compete enforceability]</em> is treated across <em>[5 states]</em>. Columns: controlling statute, key factors courts weigh, notable case names to pull, and practice pointers. I'll populate it from real sources — this is the skeleton only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 030</div><h3>Statute decoding worksheet</h3><div class="text">Turn this statute into a working worksheet: break it into elements, list what each element requires, and leave space for the cases I'll find interpreting each one: <em>[paste statute text]</em>. Formatting and organizing only — I do the legal analysis.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 031</div><h3>Argument outline builder</h3><div class="text">Build a blank argument outline for a <em>[summary judgment motion]</em> in <em>[my jurisdiction]</em>: standard of review, each element of the claim with a facts slot and an authority slot, anticipated counterarguments, and a conclusion slot. Structure only — I fill in the law and decide the strategy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 032</div><h3>Opposing argument preview</h3><div class="text">Help me brainstorm what opposing counsel will likely argue against my <em>[negligence]</em> claim given these facts: <em>[paste sanitized facts]</em>. For each likely argument, suggest the fact I'd need to strengthen my response. This is a stress-test brainstorm — not a prediction, and I make the strategy call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 033</div><h3>Citation tracker sheet</h3><div class="text">Build a citation tracking table for my brief: columns for citation, page, proposition it supports, and "verified against the source (yes/no)". Add a reminder row at the top: every quote and holding must be verified against the actual opinion before filing. Internal quality control only.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 034</div><h3>Standard-of-review cheat sheet</h3><div class="text">Draft a one-page standard-of-review reference for <em>[my state's appellate court]</em>: common motions and appeals, the review standard for each, and where to find the controlling rule. Leave the citations blank for me to fill from real sources. Reference sheet only — I'll verify every standard.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 035</div><h3>Jury instruction research list</h3><div class="text">List the pattern jury instructions likely relevant to a <em>[breach of fiduciary duty]</em> claim in <em>[my state]</em>, organized by element of the claim. For each, leave space for the instruction number and source I'll confirm. Research roadmap only — I pull and verify the real instructions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 036</div><h3>Damages element breakdown</h3><div class="text">Break <em>[compensatory damages in a contract case]</em> into its elements as a research worksheet: each element, what proof it needs, what documents typically prove it, and a slot for the controlling authority I'll find. Worksheet only — I do the legal work.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 037</div><h3>Affirmative defenses checklist</h3><div class="text">Build an affirmative defenses screening checklist for a <em>[debt collection defense]</em> matter: common defenses, the facts that support each, and the deadline to plead them. Format as checkboxes with "facts needed" under each. I'll verify every defense against real authority before pleading it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 038</div><h3>Expert topic research outline</h3><div class="text">Outline what a <em>[forensic accountant]</em> expert will likely need to opine on in my <em>[business valuation dispute]</em>: the standard of proof, the methodology questions, and the documents they typically review. Organizing outline only — I select and qualify the actual expert.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 039</div><h3>Legislative history tracker</h3><div class="text">Build a tracker for researching the legislative history of <em>[statute name/number]</em>: what sources to check in order (committee reports, floor debates, amendments), what question each answers, and where to record findings. Roadmap only — I pull and read the actual sources.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 040</div><h3>Distinguishing unfavorable cases</h3><div class="text">Help me organize a distinguishing analysis. The unfavorable case says: <em>[paste the holding in your own words]</em>. My facts are: <em>[paste sanitized facts]</em>. List the factual differences point by point and leave a slot for me to decide which ones matter. Brainstorm only — I verify the case and make the argument.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 041</div><h3>Memorandum of law skeleton</h3><div class="text">Build the skeleton of an internal memorandum of law: question presented, brief answer, facts, discussion (organized by issue with sub-slots for rules and application), and conclusion. Include formatting notes for headings. Structure only — all analysis and conclusions are mine.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 042</div><h3>Deadlines-from-statute calculator</h3><div class="text">This rule sets a deadline: <em>[paste rule text]</em>. Break down the computation step by step: trigger event, counting method, weekend/holiday treatment, and any extension provisions mentioned. I'll verify the math against the actual rule and local practice before calendaring.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 043</div><h3>Local rules compliance checklist</h3><div class="text">Build a pre-filing compliance checklist template for <em>[my court]</em>: font/margins/page limits, certificate requirements, service rules, exhibit formatting, and filing method. Leave each item for me to confirm against the current local rules — courts update these, and I'll verify before every filing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 044</div><h3>Privileged research memo template</h3><div class="text">Create a reusable template for internal research memoranda: matter reference (placeholder only, no client names in AI), date, question, short answer, analysis with authority slots, open questions, and "to verify" list. Marked "ATTORNEY WORK PRODUCT — internal only" as a header. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 045</div><h3>Case law update summary format</h3><div class="text">Create a format for a monthly case-law update I can send clients in <em>[my practice area]</em>: 3 recent decisions, one plain-English paragraph each, and "why it matters to you" line. No predictions, no advice to non-clients — informational only. I'll write the actual summaries from the real opinions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 046</div><h3>Choice-of-law analysis worksheet</h3><div class="text">Build a choice-of-law worksheet for a matter touching <em>[two states]</em>: the connecting factors, the test the forum court uses, and a slot for the authority I'll find on each factor. Worksheet only — I research and decide.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 047</div><h3>Evidence admissibility checklist</h3><div class="text">Build an evidence admissibility checklist for <em>[text messages in a civil trial]</em>: authentication requirements, hearsay analysis slots, exceptions to check, and objections to anticipate. Organized by step. I'll verify every rule against real authority before the hearing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 048</div><h3>Oral argument prep outline</h3><div class="text">Build an oral argument preparation outline: the 3 points I must make, the 5 hardest questions the panel might ask (brainstormed from my brief's weak spots), and a one-line answer draft for each. Prep tool only — I verify every case cited and make the strategic calls.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 049</div><h3>Regulatory compliance checklist</h3><div class="text">Build a general compliance checklist for a <em>[small business client]</em> in <em>[my state]</em> covering: entity filings, licenses, employment basics, and tax registrations. High-level organizing checklist only — I'll verify each item against current regulations and have licensed counsel review before any client sees it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 050</div><h3>Research-to-writing handoff template</h3><div class="text">Create a research handoff template: issue, the rule I found (with source citation for me to verify), the key facts it maps to, quotes worth using (with page refs), and gaps still open. Clean format so research turns into a draft without losing anything. Internal tool — all conclusions mine.</div></div>
+
+<h2 class="section">3 · Drafting &amp; Document Templates</h2>
+<p class="section-sub">First drafts at drafting speed — contracts, letters, and forms you review before anyone else sees.</p>
+
+<div class="prompt"><div class="num">PROMPT 051</div><h3>NDA first draft</h3><div class="text">Draft a mutual non-disclosure agreement template for <em>[two small businesses discussing a partnership]</em>. Include: definition of confidential info, exclusions, term, permitted disclosures, and return-of-materials clause. Mark every placeholder clearly. First draft only — I'll review for enforceability in my jurisdiction before any client uses it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 052</div><h3>Independent contractor agreement draft</h3><div class="text">Draft an independent contractor agreement template for <em>[a freelance marketing consultant]</em>: scope, payment terms, term/termination, IP ownership, confidentiality, and non-solicitation. Plain but professional. First draft only — I'll tailor it to my state's classification rules before use.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 053</div><h3>LLC operating agreement starter</h3><div class="text">Draft a starter operating agreement for a <em>[two-member LLC in my state]</em>: ownership splits, capital contributions, management structure, distributions, and buyout provisions. Clear placeholders throughout. Starting point only — I'll finalize it against my state's LLC statute.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 054</div><h3>Residential lease template</h3><div class="text">Draft a residential lease template: parties, term, rent and due date, security deposit terms, maintenance responsibilities, and default/notice provisions. Leave jurisdiction-specific items as <em>[CHECK LOCAL LAW]</em> flags. Draft only — I'll complete it against my state's landlord-tenant code.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 055</div><h3>Demand-response letter framework</h3><div class="text">Build a response-to-demand-letter framework: opening acknowledgment, factual corrections section, legal position section, and a closing that preserves options. Neutral and professional. Structure only — I decide the substance and review every word before it goes out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 056</div><h3>Settlement agreement template</h3><div class="text">Draft a settlement agreement template for a <em>[civil dispute]</em>: recitals, settlement amount and payment terms, mutual releases, confidentiality clause, dismissal provision, and governing law. Clear placeholders. Template only — I'll negotiate the real terms and review against my jurisdiction's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 057</div><h3>Cease-and-desist first draft</h3><div class="text">Draft a cease-and-desist letter for <em>[trademark infringement of my client's mark]</em>: identify the mark, describe the infringing use, state the demand with a deadline, and close with next steps. Firm but professional. First draft only — I'll verify the facts and legal basis before it goes out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 058</div><h3>Power of attorney template</h3><div class="text">Draft a <em>[durable financial]</em> power of attorney template: appointment of agent, powers granted (organized by category), effective date, and revocation clause. Flag every spot that needs my state's statutory language with <em>[CHECK STATE STATUTE]</em>. Draft only — I'll complete it against the actual statute.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 059</div><h3>Simple will outline-to-draft</h3><div class="text">Draft a simple will template: executor appointment, beneficiary designations, guardianship nomination for minor children, and residuary clause. Plain structure with clear placeholders. Starting point only — estate plans get my full review against my state's probate code before any client signs.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 060</div><h3>Client letter: status update</h3><div class="text">Draft a client status-update letter for a <em>[personal injury]</em> matter at the <em>[discovery]</em> stage. Explain what's happening, what's next, and what the client should (and shouldn't) do right now. Warm, plain English, no predictions about outcomes. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 061</div><h3>Engagement scope amendment</h3><div class="text">Draft an engagement-letter amendment for when a matter expands: reference the original agreement, describe the new scope, adjust the fee terms, and get a fresh signature line. Template only — I'll confirm it meets my bar's fee-agreement requirements.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 062</div><h3>Subpoena cover letter</h3><div class="text">Draft a professional cover letter to accompany a subpoena to <em>[a bank / medical provider]</em>: identify the matter generically, list what's requested, state the compliance deadline, and give my contact for questions. Courteous and precise. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 063</div><h3>Mediation statement framework</h3><div class="text">Build a mediation statement framework: case summary, strengths to highlight, weaknesses to acknowledge privately, and a settlement-range analysis section. Organized for the mediator's eyes, with a private section for my eyes only. Framework only — I make the strategy calls.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 064</div><h3>Expert retention letter</h3><div class="text">Draft an expert retention letter: scope of work, fee arrangement, confidentiality expectations, document delivery process, and report deadline. Professional and thorough. Template only — I'll customize for the engagement.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 065</div><h3>Closing checklist letter</h3><div class="text">Draft a matter-closing letter to a <em>[real estate transaction]</em> client: what was completed, documents they're receiving, where records are stored, and a reminder about any post-closing deadlines (tax filings, renewals). Warm and complete. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 066</div><h3>Bill of sale template</h3><div class="text">Draft a bill of sale for <em>[a used vehicle]</em>: seller, buyer, item description, price, "as-is" language, and signature lines. Simple and complete. Template only — I'll verify it meets my state's requirements.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 067</div><h3>Promissory note template</h3><div class="text">Draft a promissory note template: principal, interest rate, payment schedule, late fees, and default provisions. Clear placeholders for the numbers. Template only — I'll review the terms before any client signs.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 068</div><h3>Employment offer letter draft</h3><div class="text">Draft an employment offer letter for a <em>[small business hiring an office manager]</em>: title, start date, salary, at-will statement, and benefits summary. Flag at-will language with <em>[VERIFY STATE LAW]</em>. Draft only — I'll complete it against my state's employment rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 069</div><h3>Liability waiver template</h3><div class="text">Draft a liability waiver for <em>[a fitness studio]</em>: assumption of risk, release language, and a medical-emergency authorization. Mark enforceability-sensitive sections with <em>[VERIFY STATE LAW]</em> — waivers are jurisdiction-sensitive. Draft only, reviewed by me before use.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 070</div><h3>Meeting minutes template</h3><div class="text">Create corporate meeting minutes template for a small LLC: attendees, quorum, resolutions passed, votes, and action items. Formal but simple. Internal template — I'll verify it meets my state's corporate formalities.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 071</div><h3>Letter of intent framework</h3><div class="text">Build a letter-of-intent framework for a <em>[small business acquisition]</em>: deal terms section, binding vs. non-binding sections clearly labeled, exclusivity period, and closing timeline. Framework only — I decide what's binding and review every term.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 072</div><h3>Privacy policy plain-English draft</h3><div class="text">Draft a plain-English privacy policy for a <em>[small business website]</em>: what data is collected, how it's used, how it's protected, and user rights. Flag state-specific requirements with <em>[VERIFY APPLICABLE LAW]</em>. Draft only — I'll complete it against the actual privacy statutes.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 073</div><h3>Terms of service starter</h3><div class="text">Draft starter terms of service for <em>[an online coaching business]</em>: services described, payment terms, cancellation policy, IP ownership, and limitation of liability. Mark jurisdiction-sensitive spots. Starting point only — reviewed by me before publication.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 074</div><h3>Demand letter for unpaid invoice</h3><div class="text">Draft a demand letter for an unpaid <em>[contractor]</em> invoice of <em>[$X]</em>, <em>[60]</em> days overdue: state the amount owed, reference the agreement, demand payment by a date, and note next steps without threats. Professional and firm. First draft only — I'll verify the facts before it goes out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 075</div><h3>Document versioning checklist</h3><div class="text">Build a document version-control checklist for my practice: naming convention, redline protocol, client-review copy labeling, and final-execution copy safeguards. One page my staff can follow. Internal process tool.</div></div>
+<h2 class="section">4 · Pleadings &amp; Motion Support</h2>
+<p class="section-sub">Structural help for filings — formatting, checklists, and first-draft scaffolding you complete.</p>
+
+<div class="prompt"><div class="num">PROMPT 076</div><h3>Complaint structure builder</h3><div class="text">Build the structural skeleton of a <em>[negligence]</em> complaint in <em>[my court]</em>: caption, parties, jurisdiction/venue, factual allegations organized by element, counts with element slots, and prayer for relief. Structure only — I write the facts, verify the law, and decide what to plead.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 077</div><h3>Answer and affirmative defenses draft</h3><div class="text">Draft a template answer to a <em>[breach of contract]</em> complaint: numbered admissions/denials format, general denial options, and a menu of common affirmative defenses as placeholders. Template only — I verify each defense against real authority and decide what to assert.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 078</div><h3>Motion to dismiss outline</h3><div class="text">Outline a motion to dismiss for <em>[failure to state a claim]</em> in <em>[my court]</em>: standard of review, argument headings organized by each pleaded count, and a slot for the controlling authority I'll cite. Outline only — I verify every citation and make the strategic call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 079</div><h3>Summary judgment brief skeleton</h3><div class="text">Build a summary judgment brief skeleton: statement of undisputed facts (numbered, with exhibit slots), standard of review, argument per element with "fact + authority" slots, and conclusion. Structure only — I do the research, verify the facts against exhibits, and write the argument.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 080</div><h3>Opposition brief framework</h3><div class="text">Build an opposition-to-summary-judgment framework: introduction, counter-statement of facts highlighting disputes, legal standard favoring the non-movant, and argument headings attacking each of movant's points. Framework only — I verify the law and decide the strategy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 081</div><h3>Motion in limine template</h3><div class="text">Draft a motion in limine template to <em>[exclude hearsay testimony]</em>: caption, relief requested, factual background slots, legal argument slots, and proposed order. Template only — I'll fill in the facts, verify the evidentiary rules, and decide whether to file.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 082</div><h3>Discovery motion outline</h3><div class="text">Outline a motion to compel discovery in <em>[my court]</em>: the meet-and-confer certification section, the disputed requests organized one by one, and a legal argument slot for each. Outline only — I verify the rules and complete the arguments.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 083</div><h3>Protective order motion framework</h3><div class="text">Build a protective order motion framework: good-cause statement slots, the specific protections requested, and a proposed order with blank fields for the judge. Framework only — I verify the standard and decide the scope.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 084</div><h3>Default judgment motion checklist</h3><div class="text">Build a default judgment motion checklist: proof of service verification, clerk's default status, damages documentation needed, and the affidavit slots. Checklist only — I'll verify service and damages against the real record.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 085</div><h3>Amendment motion template</h3><div class="text">Draft a motion-for-leave-to-amend template: the proposed changes summarized, the standard for granting leave, and a slot for the prejudice argument. Template only — I verify the rule and decide the timing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 086</div><h3>Extension of time motion</h3><div class="text">Draft a motion for extension of time template: the deadline at issue, the reason (stated generally), the new date requested, and a certification of conferral. Professional and concise. Template only — I verify the rule and the real deadline.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 087</div><h3>Sanctions opposition framework</h3><div class="text">Build a framework for opposing a sanctions motion: factual timeline slots, the legal standard for sanctions, and mitigation points to develop. Framework only — I verify the facts and make the strategic decisions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 088</div><h3>Proposed order template</h3><div class="text">Draft a proposed order template to accompany my motion: caption, findings slots, ordered relief with blank fields, and signature line. Clean formatting matching <em>[my court]</em>'s conventions. Template only — the judge decides.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 089</div><h3>Certificate of service template</h3><div class="text">Draft a certificate of service template: document title, service date, method of service, parties served, and signature block. One page, reusable. I'll verify it meets my court's requirements.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 090</div><h3>Notice of hearing template</h3><div class="text">Draft a notice of hearing template: caption, matter reference, hearing date/time/location, and what will be addressed. Simple and complete. I'll confirm the details against the court's scheduling order.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 091</div><h3>Stipulation template</h3><div class="text">Draft a stipulation template for <em>[extending a discovery deadline]</em>: the parties' agreement stated plainly, the new date, and signature lines. Template only — I'll confirm it complies with my court's rules on stipulations.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 092</div><h3>Exhibit list formatter</h3><div class="text">Create an exhibit list template: exhibit number, description, date, bates range, and "admitted / for identification" columns. Clean table format. Internal organizational tool — I verify every exhibit against the real documents.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 093</div><h3>Table of authorities builder</h3><div class="text">Build a table-of-authorities worksheet: columns for case/statute/rule, the page numbers where cited, and a "verified against source" checkbox. Formatting guide included for <em>[my court]</em>'s requirements. I'll verify every citation against the real sources.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 094</div><h3>Pre-filing motion checklist</h3><div class="text">Build a pre-filing checklist for motions in <em>[my court]</em>: page limits, font and spacing, required certificates, service completed, exhibits attached and labeled, proposed order included. One page. I'll verify against current local rules before every filing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 095</div><h3>Oral argument one-pager</h3><div class="text">Build a one-page oral argument cheat sheet template: the 3 points I must land, the relief I'm asking for, the weakest point of my position (with my planned answer), and the case names I must pronounce correctly. Prep tool — I verify every cite and make the calls.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 096</div><h3>Reply brief outline</h3><div class="text">Outline a reply brief structure: the 3 points from the opposition that need answers (with slots), new-authority section, and a tight conclusion. Outline only — I verify the law and decide what to concede.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 097</div><h3>Emergency motion triage list</h3><div class="text">Build an emergency-motion triage checklist: what makes a motion truly emergent, the notice requirements, the declaration slots needed, and the proposed order. Checklist only — I verify the court's emergency procedures and make the call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 098</div><h3>Settlement conference statement outline</h3><div class="text">Outline a settlement conference statement: confidential section for the judge (case valuation analysis slots), the non-confidential summary, and settlement authority documentation. Outline only — I set the numbers and strategy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 099</div><h3>Post-hearing follow-up letter</h3><div class="text">Draft a post-hearing letter to the client: what happened in plain English, what the judge decided or took under advisement, what's next, and the timeline. No predictions — just facts and next steps. I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 100</div><h3>Filing deadline tracker</h3><div class="text">Build a filing-deadline tracking sheet template: matter reference (placeholder), document due, rule that sets the deadline, computed date, and "verified against rule" checkbox. One page per matter. I'll verify every date against the actual rules before calendaring.</div></div>
+
+<h2 class="section">5 · Discovery Planning</h2>
+<p class="section-sub">Plan discovery like a checklist, not a scramble — requests, timelines, and review workflows.</p>
+
+<div class="prompt"><div class="num">PROMPT 101</div><h3>Discovery plan outline</h3><div class="text">Build a discovery plan for a <em>[breach of contract]</em> matter: what I need to prove, the documents that prove it, who to depose, and the order to do it in. Organized as a phased checklist. Planning tool only — I set the strategy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 102</div><h3>Interrogatory drafting assistant</h3><div class="text">Draft 20 interrogatories for a <em>[personal injury]</em> case: organized by topic (liability, damages, insurance, prior incidents), each one targeted and specific. Numbered, with <em>[CHECK LOCAL LIMITS]</em> noted. First drafts only — I review every question before serving.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 103</div><h3>Document request builder</h3><div class="text">Draft 25 document requests for a <em>[employment discrimination]</em> matter: personnel files, communications, policies, and compensation records — organized by category. Specific and proportional. First drafts only — I tailor them to the facts before serving.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 104</div><h3>Request for admissions draft</h3><div class="text">Draft 15 requests for admission for a <em>[car accident]</em> case: ownership, insurance coverage, and undisputed facts. Short, single-fact statements. First drafts only — I verify each fact against my file before serving.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 105</div><h3>Deposition topic list</h3><div class="text">Build a deposition topic outline for deposing <em>[the defendant driver]</em> in a <em>[car accident]</em> case: background, the incident, post-incident conduct, damages knowledge, and impeachment setup. Organized by phase with time estimates. Outline only — I run the deposition.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 106</div><h3>ESI preservation letter</h3><div class="text">Draft a litigation-hold / preservation letter for <em>[a small business defendant]</em>: what to preserve (emails, texts, files, backups), the date range, and the consequences of spoliation stated plainly. Professional and thorough. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 107</div><h3>Discovery response organizer</h3><div class="text">Turn these opposing discovery requests into a response worksheet: each request, a "responsive documents located" slot, an objection slot, and a production-status checkbox: <em>[paste requests]</em>. Organizing tool only — I decide the objections.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 108</div><h3>Privilege log template</h3><div class="text">Create a privilege log template: document ID, date, author, recipients, subject, and privilege basis columns. Clean table format. Internal tool — I determine what's actually privileged.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 109</div><h3>Document review protocol</h3><div class="text">Build a document-review protocol for a <em>[10,000-document]</em> production: review categories (responsive, privileged, hot), coding fields, escalation rules, and quality-check sampling rate. One page my reviewers can follow. Internal process tool — I set the legal standards.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 110</div><h3>Subpoena duces tecum draft</h3><div class="text">Draft a subpoena duces tecum template for <em>[bank records]</em>: the records described with specificity, the date range, and the compliance deadline. Template only — I verify the scope and procedure against my jurisdiction's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 111</div><h3>Expert discovery checklist</h3><div class="text">Build an expert discovery checklist: expert disclosures due, report requirements, the documents my expert needs, and deposition prep milestones. Organized by deadline. Checklist only — I verify every date against the scheduling order.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 112</div><h3>Deposition notice template</h3><div class="text">Draft a deposition notice template: deponent, date/time/location, the records to bring (with specificity), and method of recording. Clean format. Template only — I verify the notice requirements in my jurisdiction.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 113</div><h3>Meet-and-confer letter</h3><div class="text">Draft a meet-and-confer letter about deficient discovery responses: list the deficiencies one by one, state what's needed to cure each, and propose a call date. Professional, specific, and documented. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 114</div><h3>Discovery deadline calendar</h3><div class="text">Build a discovery deadline worksheet from a scheduling order: each deadline, the rule or order that sets it, the computed date, and a "verified" checkbox: <em>[paste scheduling order deadlines]</em>. Worksheet only — I verify every computation before calendaring.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 115</div><h3>Third-party records request list</h3><div class="text">List the third-party records typically worth subpoenaing in a <em>[personal injury]</em> case: medical providers, employers, insurers, and phone carriers — with what each usually proves. Checklist with a "requested / received" status column. Planning tool — I decide what's proportional.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 116</div><h3>Social media preservation checklist</h3><div class="text">Build a social media evidence checklist for my <em>[personal injury]</em> practice: platforms to check, what to preserve, how to authenticate later, and the ethical boundaries on viewing opposing parties' accounts. Checklist only — I'll verify against my bar's ethics opinions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 117</div><h3>Deposition exhibit organizer</h3><div class="text">Create a deposition exhibit organizer: exhibit number, description, the witness it goes with, and the point it proves. Table format. Internal prep tool — I verify every exhibit against the real documents.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 118</div><h3>Discovery cost estimate</h3><div class="text">Build a discovery cost estimate worksheet: depositions (court reporter, transcripts), document review hours, expert fees, and e-discovery costs. Low/high ranges. Planning tool only — I'll set the real numbers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 119</div><h3>Objection bank builder</h3><div class="text">Build a reusable objection bank for responding to discovery: common objections organized by type (overbroad, unduly burdensome, privileged, vague), each with a fill-in template. Template only — I decide which objections apply and verify against real authority.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 120</div><h3>Deposition summary template</h3><div class="text">Create a deposition summary template: witness, date, page-line references organized by topic, key admissions, and impeachment material flagged. Clean format my staff can fill in. Internal tool — summaries are my staff's work product from the real transcript.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 121</div><h3>Discovery dispute escalation plan</h3><div class="text">Build a discovery dispute escalation plan: informal resolution steps, the meet-and-confer documentation needed, when to involve the court, and the motion checklist. Organized as a decision tree. Planning tool — I make the calls.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 122</div><h3>Medical records chronology request</h3><div class="text">Draft a cover letter to a medical records retrieval service: the providers to request from, the date range, and the format needed (certified copies). Professional and specific. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 123</div><h3>Site inspection checklist</h3><div class="text">Build a site inspection checklist for a <em>[premises liability]</em> case: what to photograph, what to measure, who to bring, and what to document in writing. One page for the field. Planning tool — I decide what matters.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 124</div><h3>Discovery closeout checklist</h3><div class="text">Build a discovery closeout checklist: all requests answered, productions complete, depositions done, expert disclosures exchanged, and outstanding disputes resolved. One page with checkboxes. Internal quality control before the deadline hits.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 125</div><h3>Client discovery-prep letter</h3><div class="text">Draft a letter preparing my client for responding to discovery: what interrogatories are, how to answer truthfully and completely, what not to do with documents, and the timeline. Plain English, reassuring. I'll review before sending.</div></div>
+<h2 class="section">6 · Demand Letters &amp; Settlement</h2>
+<p class="section-sub">Demand packages that get read, settlement math that holds up, and negotiation prep.</p>
+
+<div class="prompt"><div class="num">PROMPT 126</div><h3>Pre-suit demand letter draft</h3><div class="text">Draft a pre-suit demand letter for a <em>[breach of contract]</em> matter: facts stated plainly, the amount demanded with a breakdown, a response deadline, and next steps stated professionally. Firm, not threatening. First draft only — I verify every fact and decide the demand amount.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 127</div><h3>Personal injury demand package outline</h3><div class="text">Outline a personal injury demand package: cover letter, liability summary, medical chronology section, damages breakdown (medical, lost wages, pain and suffering categories), and exhibit list. Organized for the adjuster's eyes. Outline only — I set the demand and verify every number.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 128</div><h3>Demand letter damages breakdown</h3><div class="text">Build a damages breakdown worksheet for a demand letter: economic damages (itemized), non-economic categories, and a total with a "verified against file" column: <em>[paste sanitized damages info]</em>. Worksheet only — I verify every dollar against the real records.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 129</div><h3>Insurance policy limits demand</h3><div class="text">Draft a policy-limits demand letter framework: the liability facts summarized, the damages that exceed limits, the deadline to tender, and the bad-faith warning stated professionally. Framework only — I verify the facts, the limits, and my jurisdiction's bad-faith law before it goes out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 130</div><h3>Counter-demand response draft</h3><div class="text">Draft a response to a low settlement offer: acknowledge the offer, restate the damages plainly, explain why the offer is insufficient without posturing, and counter with a specific number and deadline. Professional and firm. Draft only — I set the numbers and strategy.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 131</div><h3>Settlement authority memo</h3><div class="text">Build a settlement-authority memo template for the client file: case valuation range, the strengths and risks affecting it, my recommendation, and the client's written authorization line. Organized for the file. Template only — the client decides, I advise.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 132</div><h3>Negotiation talking points</h3><div class="text">Build negotiation talking points for a mediation in a <em>[employment dispute]</em>: my 3 strongest facts, the 2 weaknesses to manage, and responses to the 4 objections the other side will likely raise. Prep tool only — I make the strategy calls. Facts from my file only, no privileged data.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 133</div><h3>Walk-away number worksheet</h3><div class="text">Build a walk-away analysis worksheet: best/worst/likely trial outcomes, the costs of continuing, the client's net at each settlement number, and a "decision factors" section. Math organizer only — the client makes the decision with my advice.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 134</div><h3>Mediator selection brief</h3><div class="text">Draft a mediator-selection brief template: the case type, the style of mediator needed (evaluative vs. facilitative), and questions to ask references. Template only — I choose the mediator.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 135</div><h3>Settlement term sheet template</h3><div class="text">Draft a settlement term sheet template: payment amount and schedule, release scope, confidentiality, dismissal terms, and deadline to finalize. Clear placeholders. Template only — I negotiate the real terms and review against my jurisdiction's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 136</div><h3>Structured settlement explainer</h3><div class="text">Draft a plain-English explainer for a client considering a structured settlement: how it works, the tax treatment basics, the trade-offs vs. lump sum, and questions to ask the broker. Educational only — I'll have them consult a qualified professional before deciding.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 137</div><h3>Lien resolution checklist</h3><div class="text">Build a settlement lien-resolution checklist: medical liens, ERISA plans, Medicare/Medicaid, and child support intercepts — with a "verify and negotiate" status column for each. Checklist only — I verify every lien against the real records.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 138</div><h3>Client settlement recommendation letter</h3><div class="text">Draft a settlement recommendation letter to the client: the offer on the table, the risks of continuing in plain English, my recommendation and why, and a clear statement that the decision is theirs. Draft only — I'll review and personalize before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 139</div><h3>Rejection-of-offer documentation</h3><div class="text">Draft a file memo documenting a client's rejection of a settlement offer: the offer terms, my advice given, the client's stated reasons, and their signature line. Template only — I complete it from the real conversation.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 140</div><h3>Post-settlement distribution statement</h3><div class="text">Build a settlement distribution statement template: gross amount, attorney's fees, costs advanced, liens paid, and net to client — with a line for client acknowledgment. Template only — I verify every number against the real accounting.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 141</div><h3>Bad-faith letter framework</h3><div class="text">Build a bad-faith demand letter framework: the claim history timeline slots, the insurer's conduct described factually, the statutory basis slots, and the demand. Framework only — I verify the facts and my jurisdiction's bad-faith law before it goes out.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 142</div><h3>Demand follow-up sequence</h3><div class="text">Draft a 3-touch demand follow-up sequence: the initial demand, a 14-day nudge, and a 30-day final notice before filing. Each one firmer than the last, all professional. Drafts only — I set the timing and review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 143</div><h3>Settlement conference prep sheet</h3><div class="text">Build a settlement conference prep sheet: my opening number, my target, my walk-away, the 3 facts I'll lead with, and the concessions I'm willing to trade. One page for my eyes only. Prep tool — I set every number.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 144</div><h3>Offer comparison table</h3><div class="text">Build an offer-comparison table template: each offer's gross, fees, costs, liens, net to client, and non-monetary terms — side by side. Template only — I verify the numbers and advise; the client decides.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 145</div><h3>Confidentiality clause explainer</h3><div class="text">Draft a plain-English explainer of a settlement confidentiality clause for the client: what they can and can't say, to whom, and what happens if they breach. Educational only — I'll review the actual clause with them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 146</div><h3>Minor settlement checklist</h3><div class="text">Build a minor-settlement checklist: court approval requirements, guardian ad litem considerations, structured settlement options, and the petition slots. Checklist only — I'll verify every requirement against my jurisdiction's rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 147</div><h3>Settlement press statement</h3><div class="text">Draft a brief public statement about a settled <em>[civil]</em> matter: confirms resolution, no admission language, no confidential terms disclosed. Neutral and short. Draft only — I'll review for compliance with the settlement terms before release.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 148</div><h3>Demand package exhibit index</h3><div class="text">Create a demand-package exhibit index template: exhibit letter, description, and the point it proves. Clean format for the adjuster's desk. Internal tool — I verify every exhibit against the real file.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 149</div><h3>Negotiation debrief template</h3><div class="text">Create a post-negotiation debrief template: what was offered, what moved, what the other side signaled, and my read on their next move. For the file and my eyes only. Template — my judgment fills it in.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 150</div><h3>Settlement-to-dismissal workflow</h3><div class="text">Build a settlement-to-dismissal workflow checklist: executed agreement, funds received and cleared, liens resolved, dismissal filed, client notified, file closed. One page in order. Internal process tool.</div></div>
+
+<h2 class="section">7 · Case Chronology &amp; Fact Management</h2>
+<p class="section-sub">Turn a messy file into a clean timeline — chronologies, fact maps, and witness trackers.</p>
+
+<div class="prompt"><div class="num">PROMPT 151</div><h3>Chronology builder from notes</h3><div class="text">Turn these case notes into a clean chronological timeline: date, event, source document, and a "disputed / confirmed" flag for each entry: <em>[paste sanitized notes]</em>. Organizing only — I verify every date against the source documents.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 152</div><h3>Medical chronology template</h3><div class="text">Create a medical chronology template: date, provider, treatment, and cost columns — plus a "records received" status column. Clean table format. Internal tool — my staff fills it from the real records.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 153</div><h3>Fact-to-element mapper</h3><div class="text">Map these facts to the elements of a <em>[negligence]</em> claim: for each element, list the facts that support it and flag where the proof is thin: <em>[paste sanitized facts]</em>. Mapping exercise only — I verify the law and decide what the gaps mean.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 154</div><h3>Witness list organizer</h3><div class="text">Build a witness list template: name (placeholder), role, what they know, contact status, and "friendly / neutral / hostile" designation. Table format. Internal tool — designations are my judgment call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 155</div><h3>Key documents index</h3><div class="text">Create a key-documents index template: document ID, date, description, the issue it relates to, and bates range. One table for the whole file. Internal organizational tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 156</div><h3>Disputed vs. undisputed facts chart</h3><div class="text">Build a disputed/undisputed facts chart template: the fact, our position, their position, and the evidence for each side. Table format for summary judgment prep. Template — I fill it from the real record.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 157</div><h3>Damages evidence tracker</h3><div class="text">Build a damages evidence tracker: each damage claimed, the document that proves it, the amount, and a "verified" checkbox. Table format. Internal tool — I verify every dollar against the real records.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 158</div><h3>Communication log template</h3><div class="text">Create a client communication log template: date, method, summary, and follow-up needed. Simple table. Internal file documentation — my staff fills it from real communications.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 159</div><h3>Case theory one-pager</h3><div class="text">Build a case-theory one-pager template: the theme in one sentence, the 3 facts that prove it, the 2 facts that hurt it, and the story arc from opening to close. Template for my eyes only — the theory is mine to build.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 160</div><h3>Timeline gap finder</h3><div class="text">Review this chronology and flag the gaps: periods with no documented events, missing records, and questions the timeline raises: <em>[paste sanitized chronology]</em>. Analysis aid only — I investigate the gaps myself.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 161</div><h3>Prior statements tracker</h3><div class="text">Build a prior-statements tracker: each statement by <em>[the key witness]</em>, the date, the source, and whether it's consistent with their current position. Table format. Internal impeachment prep — I verify against the real transcripts.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 162</div><h3>Expert file organizer</h3><div class="text">Build an expert-file organizer: the expert's CV, the materials provided, the report, and the deposition transcript — with a "received / reviewed" status column. Internal tool for keeping expert work straight.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 163</div><h3>Statute of limitations tracker</h3><div class="text">Build a limitations-period tracking sheet: each claim, the applicable period, the accrual date, the computed deadline, and a "verified against statute" checkbox. Template only — I verify every deadline against the real statute before relying on it.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 164</div><h3>Client-provided documents log</h3><div class="text">Create a client-documents log template: document description, date received, format, and review status. Simple table my staff can maintain. Internal tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 165</div><h3>Opposing party profile sheet</h3><div class="text">Build an opposing-party profile template: background facts from public sources, litigation history (public records), known counsel, and negotiation tendencies observed. Organized for strategy prep. Template — I verify every fact and draw my own conclusions.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 166</div><h3>Case budget vs. actual tracker</h3><div class="text">Build a case budget tracker: budgeted vs. actual hours and costs by phase, with a variance column and a client-notification threshold. Table format. Internal financial control — I set the numbers.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 167</div><h3>Task delegation list</h3><div class="text">Turn this week's case tasks into a delegation list: task, who owns it, deadline, and what "done" looks like: <em>[paste task list]</em>. Organizing only — I assign and supervise.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 168</div><h3>File closing checklist</h3><div class="text">Build a file-closing checklist: final billing done, documents returned or stored, retention calendar set, client notified, and conflict file updated. One page in order. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 169</div><h3>Case status dashboard template</h3><div class="text">Create a one-page case status dashboard template: phase, next deadline, pending tasks, recent developments, and client communication status. Clean format for weekly review. Internal tool — populated from the real file.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 170</div><h3>Conflict update form</h3><div class="text">Draft a mid-case conflict update form: new parties, new witnesses, and new entities discovered since intake — with a prompt to re-run the conflict check. Internal compliance tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 171</div><h3>Document production log</h3><div class="text">Create a document production log template: bates range, date produced, to whom, and what's included. Simple table. Internal record-keeping.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 172</div><h3>Calendar critical-dates sheet</h3><div class="text">Build a critical-dates sheet template: the event, the rule that sets it, the computed date, and a double-check sign-off line. One page per matter. I'll verify every date against the actual rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 173</div><h3>Evidence custodian list</h3><div class="text">Build an evidence custodian list template: each item of physical or digital evidence, who has it, where it's stored, and the chain-of-custody notes. Table format. Internal tool — I verify the chain.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 174</div><h3>Case handoff memo template</h3><div class="text">Create a case handoff memo template: status summary, open tasks, upcoming deadlines, key contacts, and "things only I know" section. For when a case moves between attorneys in the firm. Internal tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 175</div><h3>Lessons-learned debrief</h3><div class="text">Build a post-case debrief template: what went well, what surprised me, what I'd do differently, and one process improvement for the firm. For my eyes only — honest reflection, not a report card.</div></div>
+<h2 class="section">8 · Client Communication &amp; Plain-English Explanations</h2>
+<p class="section-sub">Say it so clients actually understand — status updates, explainers, and hard conversations.</p>
+
+<div class="prompt"><div class="num">PROMPT 176</div><h3>Legal concept explainer</h3><div class="text">Explain <em>[negligence]</em> to a client in plain English at a 6th-grade reading level: what it means, what has to be proven, and what it means for their case — in 5 sentences. No legal advice to non-clients — for my own client's education. I'll review before sharing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 177</div><h3>Litigation timeline explainer</h3><div class="text">Draft a plain-English litigation timeline for a new <em>[civil]</em> client: the phases in order, roughly how long each takes, and what the client does in each phase. Reassuring and honest about the slow parts. Educational only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 178</div><h3>"What happens at a deposition" guide</h3><div class="text">Write a client guide to depositions: what it is, where it happens, who's in the room, the 5 rules to follow, and what to wear. Calm, plain English, one page. Educational only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 179</div><h3>"What happens at trial" guide</h3><div class="text">Write a client guide to trial day: the order of events, how long things take, where they sit, and how to behave. Reassuring plain English. Educational only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 180</div><h3>Bad news delivery draft</h3><div class="text">Draft a letter delivering difficult news: <em>[the motion was denied]</em>. State what happened plainly, explain what it means in plain English, lay out the options and my recommendation, and end with next steps. Honest and compassionate. Draft only — I'll personalize before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 181</div><h3>Good news delivery draft</h3><div class="text">Draft a letter sharing good news: <em>[summary judgment granted in our favor]</em>. Explain what it means, what's still left to do, and what the client should expect next. Celebrate briefly, stay grounded. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 182</div><h3>Fee increase notice</h3><div class="text">Draft a professional fee-increase notice to existing clients: the new rate, when it takes effect, why the change, and appreciation for their business. Respectful and brief. Draft only — I'll verify it complies with my fee agreements and bar rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 183</div><h3>Scope change notice</h3><div class="text">Draft a letter telling a client their matter now requires additional scope: what changed, why, what it will cost, and their options. Transparent and professional. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 184</div><h3>Withdrawal letter template</h3><div class="text">Draft a motion-to-withdraw / withdrawal letter template: the reason stated generally, the client's upcoming deadlines flagged, and a recommendation to seek new counsel promptly. Template only — I'll verify my jurisdiction's withdrawal requirements before filing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 185</div><h3>Unresponsive client nudge</h3><div class="text">Draft a firm-but-kind nudge to a client who hasn't responded in <em>[3 weeks]</em>: what I need, why it matters, the deadline, and what happens if I don't hear back. Professional urgency without threats. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 186</div><h3>Document explanation cover note</h3><div class="text">Draft a cover note explaining a <em>[settlement agreement]</em> to the client: what each section means in plain English, what they're agreeing to, and the questions they should ask me before signing. Educational only — I'll review the actual document with them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 187</div><h3>Invoice explanation email</h3><div class="text">Draft an email explaining a larger-than-usual invoice: what drove the hours, what was accomplished, and what's coming next. Transparent and professional. Draft only — I'll verify the billing before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 188</div><h3>Holiday / check-in message</h3><div class="text">Draft a brief holiday check-in message for past clients: warm, professional, no solicitation, no legal content. Just staying in touch. Draft only — I'll review for advertising-rule compliance.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 189</div><h3>Referral request (ethical)</h3><div class="text">Draft a referral request to a satisfied past client: thank them, explain the kind of matters I handle, and invite them to pass my name along if someone they know needs help. Warm and compliant. Draft only — I'll verify against my bar's solicitation rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 190</div><h3>Testimonial request</h3><div class="text">Draft a testimonial request to a happy client: ask for honest feedback, suggest 2-3 specific questions they can answer, and note they should only share what they're comfortable making public. Draft only — I'll verify against my bar's advertising rules on testimonials.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 191</div><h3>Client survey</h3><div class="text">Build a 10-question client satisfaction survey: communication, responsiveness, clarity of billing, and overall experience. Mix of ratings and open-ended. One page. Internal feedback tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 192</div><h3>"Why your case is slow" explainer</h3><div class="text">Draft a plain-English explainer for frustrated clients: why litigation takes so long, what's happening during the quiet periods, and what we're doing behind the scenes. Reassuring without making promises. Educational only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 193</div><h3>Settlement vs. trial explainer</h3><div class="text">Draft a plain-English comparison of settling vs. going to trial: the trade-offs, the timeline differences, and the risk factors — without recommending either. Educational only; the decision is the client's with my advice. I'll review before sharing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 194</div><h3>Appeal options explainer</h3><div class="text">Draft a plain-English explainer of appeal options after an unfavorable ruling: what an appeal is, the timeline, the cost range, and the realistic odds framework. Educational only — I'll advise on their specific situation directly.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 195</div><h3>Client portal welcome message</h3><div class="text">Draft a welcome message for a new client portal: how to log in, what they'll find there, how to message me, and what NOT to put in the portal. Clear and friendly. Draft only — I'll adapt to my firm's system.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 196</div><h3>Voicemail-to-email triage template</h3><div class="text">Create a template for staff to summarize client voicemails: caller, callback number, urgency level, the issue in one line, and the action needed. Simple form. Internal tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 197</div><h3>Difficult client conversation prep</h3><div class="text">Help me prepare for a hard conversation: telling a client <em>[their expectations are unrealistic]</em>. Give me talking points: how to open, the facts to lay out, how to redirect to realistic goals, and how to close. Prep aid only — the conversation is mine.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 198</div><h3>Third-party authorization form</h3><div class="text">Draft a client authorization form allowing me to discuss the matter with <em>[a family member]</em>: scope of what's shared, the right to revoke, and a signature line. Template only — I'll verify it meets my confidentiality obligations.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 199</div><h3>Case milestone announcement</h3><div class="text">Draft a brief client update announcing a case milestone: <em>[discovery complete]</em>. What it means, what happens next, and the timeline. Positive and factual. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 200</div><h3>End-of-matter thank-you</h3><div class="text">Draft a thank-you note at matter close: appreciation, a summary of what was accomplished, where their documents are, and an invitation to reach out in the future. Warm and professional. Draft only — I'll personalize before sending.</div></div>
+
+<h2 class="section">9 · Billing, Practice Management &amp; Marketing</h2>
+<p class="section-sub">Run the business side tighter — billing, time, staff, and ethical marketing.</p>
+
+<div class="prompt"><div class="num">PROMPT 201</div><h3>Time entry rewriter</h3><div class="text">Rewrite these rough time entries into clean, client-ready billing descriptions: specific, professional, and consistent with my fee agreement. Flag any entry that looks block-billed or vague: <em>[paste rough entries]</em>. Formatting only — I verify the hours are accurate.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 202</div><h3>Billing narrative builder</h3><div class="text">Turn this week's work on <em>[matter placeholder]</em> into a clear billing narrative: what was done, why it was necessary, and the outcome. Professional tone a client can understand. Draft only — I verify the time and necessity.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 203</div><h3>Retainer replenishment letter</h3><div class="text">Draft a retainer replenishment request: the current balance, the amount needed, why, and the deadline. Professional and matter-of-fact. Draft only — I'll verify the accounting before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 204</div><h3>Collections email sequence</h3><div class="text">Draft a 3-email past-due sequence: a friendly reminder at 15 days, a firm notice at 30, and a final notice at 60 mentioning next steps. Professional throughout, no threats. Drafts only — I'll verify the balances and my bar's collection rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 205</div><h3>Flat-fee pricing worksheet</h3><div class="text">Build a flat-fee pricing worksheet for <em>[uncontested divorces]</em>: the tasks included, the hours each typically takes, my effective rate, and a margin buffer. Planning tool only — I set the price.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 206</div><h3>Fee schedule document</h3><div class="text">Draft a clean fee schedule document for my website: practice areas, fee types, and starting prices — written to inform, not to solicit. Draft only — I'll verify it complies with my bar's advertising rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 207</div><h3>Monthly financial review template</h3><div class="text">Build a monthly firm financial review template: revenue, expenses by category, realization rate, accounts receivable aging, and cash runway. One page. Internal tool — I fill it from the real books.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 208</div><h3>Staff task SOP template</h3><div class="text">Create a standard operating procedure template for <em>[new-client intake]</em>: the steps in order, who's responsible, the quality check, and what "done" looks like. One page my staff can follow. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 209</div><h3>Paralegal delegation checklist</h3><div class="text">Build a delegation checklist: tasks a paralegal can handle in my practice, what needs my review, and what only I can do. Organized by category. Planning tool — I'll verify against my jurisdiction's unauthorized-practice rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 210</div><h3>Job posting for legal assistant</h3><div class="text">Draft a job posting for a legal assistant at my small firm: the role, the skills needed, the tools we use, and what makes the firm a good place to work. Professional and appealing. Draft only — I'll finalize and post.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 211</div><h3>Interview questions for hires</h3><div class="text">Draft 12 interview questions for hiring a <em>[paralegal]</em>: skills assessment, situational judgment, and culture fit. Organized with what a strong answer sounds like. Hiring aid only — I make the call.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 212</div><h3>Employee handbook outline</h3><div class="text">Outline a small-firm employee handbook: hours and PTO, confidentiality obligations, client communication standards, and tech use policy. Outline only — I'll have employment counsel review before adopting.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 213</div><h3>Website bio rewriter</h3><div class="text">Rewrite my attorney bio for my website: credentials, practice areas, and approach — professional but human, no superlatives I can't back up. Draft only — I'll verify it complies with my bar's advertising rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 214</div><h3>Practice area page outline</h3><div class="text">Outline a website practice-area page for <em>[estate planning]</em>: the headline, what I handle, the process, FAQs, and a compliant call to action. Outline only — I'll verify against my bar's advertising rules before publishing.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 215</div><h3>Blog post outline (educational)</h3><div class="text">Outline an educational blog post: <em>[what to do after a car accident in my state]</em>. General information only, no legal advice, with a disclaimer line. Outline only — I'll write it and have it reviewed for compliance.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 216</div><h3>Social media content calendar</h3><div class="text">Build a 4-week social media content calendar for my firm: educational posts, firm updates, and community involvement — 3 posts per week. No case results, no guarantees, no client info. Draft ideas only — I'll verify every post against my bar's advertising rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 217</div><h3>Networking follow-up email</h3><div class="text">Draft a networking follow-up email after meeting <em>[a CPA]</em> at <em>[an event]</em>: reference the conversation, suggest a coffee, and propose a referral relationship. Professional and genuine. Draft only — I'll personalize before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 218</div><h3>Speaking engagement pitch</h3><div class="text">Draft a pitch to speak at <em>[a local chamber of commerce]</em> on <em>[estate planning basics for business owners]</em>: the topic, why it matters to their audience, and my credentials. Professional. Draft only — I'll personalize before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 219</div><h3>Client intake ad copy</h3><div class="text">Draft compliant ad copy for <em>[Google Ads]</em> for my <em>[personal injury]</em> practice: headline, description, and call to action — informative, no guarantees, no superlatives. Draft only — I'll verify against my bar's advertising rules before running.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 220</div><h3>Review response templates</h3><div class="text">Draft 5 online review response templates: positive review, neutral review, negative review, and fake review — all professional, all protecting confidentiality (never confirm someone is a client). Drafts only — I'll verify against my bar's rules before posting.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 221</div><h3>Quarterly business review</h3><div class="text">Build a quarterly firm review template: revenue vs. goal, top referral sources, marketing spend vs. results, capacity, and the one thing to fix next quarter. One page. Internal planning tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 222</div><h3>Trust account reconciliation checklist</h3><div class="text">Build a monthly trust-account reconciliation checklist: the steps in order, the reports to pull, and the sign-off line. General process checklist only — I'll verify it against my jurisdiction's trust accounting rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 223</div><h3>Malpractice risk self-audit</h3><div class="text">Build a malpractice-risk self-audit checklist for my practice: calendaring controls, engagement letters on file, conflict checks current, client communication frequency, and file documentation. Internal quality tool — I'll review honestly and fix what's weak.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 224</div><h3>CLE tracking sheet</h3><div class="text">Create a CLE tracking sheet: course, date, credits, category, and reporting deadline — with a "reported" checkbox. Simple table. Internal tool — I'll verify requirements against my bar.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 225</div><h3>Succession plan outline</h3><div class="text">Outline a solo-practice succession plan: the designated successor, how clients get notified, file transfer protocol, and trust account handoff steps. Outline only — I'll formalize it with proper counsel and my bar's requirements.</div></div>
+<h2 class="section">10 · Deposition &amp; Trial Preparation</h2>
+<p class="section-sub">Prep like you mean it — witness prep, exhibits, and trial-day checklists.</p>
+
+<div class="prompt"><div class="num">PROMPT 226</div><h3>Witness prep session outline</h3><div class="text">Build a witness prep session outline for <em>[my client]</em> before their deposition: the process explained, the 10 rules of testifying, practice questions organized by topic, and what to do if they don't know an answer. Prep aid only — I run the session and verify the testimony.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 227</div><h3>Deposition question bank</h3><div class="text">Draft 30 deposition questions for <em>[an eyewitness]</em> in a <em>[car accident]</em> case: background, what they saw, what they did after, and impeachment setup. Organized in the order I'd ask them. First drafts only — I run the deposition.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 228</div><h3>Expert deposition outline</h3><div class="text">Build an expert deposition outline for deposing <em>[the opposing medical expert]</em>: qualifications challenge, methodology attack, basis of opinions, and the "agree with me" setup questions. Organized by phase. Outline only — I verify the science and run the deposition.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 229</div><h3>30(b)(6) topic list</h3><div class="text">Draft a Rule 30(b)(6) deposition topic list for <em>[a corporate defendant in a contract case]</em>: the topics described with reasonable particularity, organized by issue. First draft only — I verify the rule's requirements and finalize.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 230</div><h3>Deposition errata review guide</h3><div class="text">Build a deposition errata review guide for my client: what errata sheets are for, what changes are allowed, and the deadline to return them. Plain English. Educational only — I'll review the transcript with them.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 231</div><h3>Trial exhibit binder index</h3><div class="text">Create a trial exhibit binder index template: tab number, exhibit description, admitted status, and the witness who introduces it. Clean format for the courtroom table. Internal tool — I verify every exhibit.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 232</div><h3>Opening statement outline</h3><div class="text">Build an opening statement outline template: the theme, the story in 3 acts, the 3 facts the jury must remember, and what to ask the jury to do at the end. Structure only — the story and the strategy are mine.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 233</div><h3>Direct examination outline</h3><div class="text">Build a direct examination outline template for <em>[my client]</em>: background, the story in chronological order, and the damages testimony — with exhibit introduction slots. Template only — I verify the testimony and run the exam.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 234</div><h3>Cross-examination outline</h3><div class="text">Build a cross-examination outline template: the 3 admissions I need, the impeachment material organized by topic, and the safe landing point. Template for my eyes only — I verify every impeachment fact against the transcript.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 235</div><h3>Closing argument framework</h3><div class="text">Build a closing argument framework: return to the theme, the evidence organized by element, answer the other side's best point, and the ask. Structure only — the argument is mine to make.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 236</div><h3>Voir dire question list</h3><div class="text">Draft 20 voir dire questions for a <em>[personal injury]</em> trial: bias detection, life experience relevant to the case, and hardship screening. Organized by topic. First drafts only — I verify against my court's voir dire rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 237</div><h3>Juror profile worksheet</h3><div class="text">Build a juror profile worksheet: seat number, background notes, answers that matter, and strike considerations. Table format for the trial notebook. Internal tool — my judgment fills it in.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 238</div><h3>Trial day checklist</h3><div class="text">Build a trial-day checklist: exhibits packed, witnesses confirmed, technology tested, copies for the court, and the morning-of timeline. One page. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 239</div><h3>Technology check protocol</h3><div class="text">Build a courtroom technology check protocol: what to test the day before (projector, audio, exhibit software), backup plans for each failure, and who to call. One page. Internal process tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 240</div><h3>Witness schedule template</h3><div class="text">Create a trial witness schedule template: witness, day, time, estimated duration, and "on call" status. Simple table. Internal tool — I set the order.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 241</div><h3>Objection cheat sheet</h3><div class="text">Build a one-page objection cheat sheet: the 15 most common trial objections, the one-line basis for each, and when to stand vs. stay seated. Reference only — I'll verify against my jurisdiction's evidence rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 242</div><h3>Impeachment packet organizer</h3><div class="text">Build an impeachment packet organizer: the witness, the prior statement, the source and page-line, and the question that springs the trap. Table format for my trial notebook. Internal tool — I verify every cite against the real transcript.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 243</div><h3>Damages presentation outline</h3><div class="text">Build a damages presentation outline: economic damages with exhibit slots, non-economic categories organized for the jury, and the "day in the life" narrative beats. Structure only — I verify every number and make the argument.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 244</div><h3>Jury instruction conference prep</h3><div class="text">Build a jury instruction conference prep sheet: the instructions I'll request, the ones I'll oppose, and the one-line argument for each. Organized for the charge conference. Prep tool — I verify every instruction against the pattern set.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 245</div><h3>Verdict form review checklist</h3><div class="text">Build a verdict form review checklist: does it track the claims, are the damages questions clear, and are the special interrogatories consistent. Checklist only — I verify against my jurisdiction's requirements.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 246</div><h3>Post-trial motions checklist</h3><div class="text">Build a post-trial motions checklist: the motions available, the deadline for each, and what must be preserved in the record. Checklist only — I verify every deadline against the real rules.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 247</div><h3>Client trial-day briefing</h3><div class="text">Draft a trial-day briefing for my client: what to wear, where to be and when, how to behave in the courtroom, and what to do during breaks. Calm and clear. Draft only — I'll review before sending.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 248</div><h3>Settlement-at-trial decision sheet</h3><div class="text">Build a mid-trial settlement decision sheet: how the trial is going (honest assessment slots), the offer on the table, the client's net, and the risks remaining. For the client's decision with my advice. Template — my judgment fills it in.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 249</div><h3>Trial notebook index</h3><div class="text">Create a trial notebook index template: sections in order (pleadings, discovery, motions in limine, witness files, exhibits, jury instructions, research), with tab labels. Clean format. Internal organizational tool.</div></div>
+
+<div class="prompt"><div class="num">PROMPT 250</div><h3>Post-verdict client letter</h3><div class="text">Draft a post-verdict letter to the client: the result in plain English, what happens next (judgment, collection, or appeal options), and the timeline. Factual and clear. Draft only — I'll personalize before sending.</div></div>
+
+<div class="closing">
+  <h2>That's the pack. Now go build the practice.</h2>
+  <p>These 250 prompts are starting drafts for solo &amp; small-firm attorneys — intake, research, drafting, discovery, settlement, and trial prep. Three episodes a day on the Bitstream show, 7am · 11am · 4pm ET.</p>
+  <p><strong>Remember:</strong> AI drafts, you decide. Verify every citation against the real source, confirm every deadline against your jurisdiction's rules, and keep privileged client information out of public AI tools.</p>
+  <p><strong>Want more?</strong> New prompts drop with new episodes. Join the deals list at <strong>icyunvbankai.github.io/Bitstream</strong> and you'll never miss one.</p>
+  <p class="fine">© 2026 Bitstream. This pack is for your personal use — share the show, not the file. Prompts are starting points: always verify citations, deadlines, and legal details against real sources and your jurisdiction's rules.</p>
+</div>
+
+</body>
+</html>
