@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Muse Gadget Builds — Bitstream</title>
-<meta name="description" content="10 build-it-yourself Muse gadgets: parts lists with buy links and step-by-step instructions. ESP32 + Muse SDK.">
+<meta name="description" content="12 build-it-yourself Muse gadgets: parts lists with buy links and step-by-step instructions. ESP32 + Muse SDK.">
 <link rel="canonical" href="https://icyunvbankai.github.io/Bitstream/gadget-builds.html">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -48,7 +48,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <header class="hero"><div class="wrap">
 <div class="kicker">Bitstream · Muse Gadgets</div>
 <h1>Build it yourself.</h1>
-<p class="lede">10 gadget builds for Meta's open-source Muse hardware platform. Every build: a real parts list with buy links, and step-by-step instructions. No soldering required — breadboard-friendly.</p>
+<p class="lede">12 gadget builds for Meta's open-source Muse hardware platform. Every build: a real parts list with buy links, and step-by-step instructions. No soldering required — breadboard-friendly.</p>
 </div></header>
 
 <main class="wrap">
@@ -68,11 +68,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <div class="num">BUILD 01</div>
 <h3>Briefing Display</h3>
 <p class="tag">E-paper desk display. Your morning briefing, calendar, and weather — always on, sips power.</p>
-<div class="meta"><span class="pill cost">~$57</span><span class="pill">Easy</span><span class="pill">~1 hr</span></div>
+<div class="meta"><span class="pill cost">~$56</span><span class="pill">Easy</span><span class="pill">~1 hr</span></div>
 <ul class="parts">
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
-<li><span><a class="buy" rel="noopener sponsored" href="https://openelab.com/products/waveshare-epaper-module-4p2-13">Waveshare 4.2" e-paper module</a></span><span class="pr">$31.49</span></li>
-<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-w">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.tme.com/us/en-us/details/wsh-13353/e-paper/waveshare/13353/">Waveshare 4.2" e-paper module</a></span><span class="pr">$30.07</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-with-14-lengths">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
 </ul>
 <ol class="steps">
 <li>Connect the e-paper module to the ESP32 over SPI: <code>MOSI→23, SCK→18, CS→5, DC→17, RST→16, BUSY→4</code>.</li>
@@ -132,7 +132,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <div class="meta"><span class="pill cost">~$19</span><span class="pill">Easy</span><span class="pill">30 min</span></div>
 <ul class="parts">
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
-<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/capacitive-soil-moisture">Capacitive soil moisture sensor</a></span><span class="pr">$6.39</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module">Capacitive soil moisture sensor</a></span><span class="pr">$6.39</span></li>
 </ul>
 <ol class="steps">
 <li>Stick the sensor in the pot; wire <code>AOUT→34, VCC→3V3, GND→GND</code>.</li>
@@ -170,7 +170,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <div class="meta"><span class="pill cost">~$22</span><span class="pill">Easy</span><span class="pill">~1 hr</span></div>
 <ul class="parts">
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
-<li><span><a class="buy" rel="noopener sponsored" href="https://www.robotshop.com/products/elecrow-24-320x240-spi-se">Elecrow 2.4" TFT (ILI9341)</a></span><span class="pr">$8.76</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.robotshop.com/products/elecrow-24-320x240-spi-serial-tft-lcd-module-display-w-driver-ic-ili9341-touch-function">Elecrow 2.4" TFT (ILI9341)</a></span><span class="pr">$8.76</span></li>
 </ul>
 <ol class="steps">
 <li>Wire the TFT over SPI: <code>MOSI→23, SCK→18, CS→5, DC→2, RST→4</code>.</li>
@@ -205,18 +205,18 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <div class="num">BUILD 08</div>
 <h3>NFC Command Tags</h3>
 <p class="tag">Tap a sticker, trigger a Muse routine. One tag by the door for "I'm leaving", one on the desk for "focus mode".</p>
-<div class="meta"><span class="pill cost">~$82</span><span class="pill">Medium</span><span class="pill">~1.5 hrs</span></div>
+<div class="meta"><span class="pill cost">~$73</span><span class="pill">Medium</span><span class="pill">~1.5 hrs</span></div>
 <ul class="parts">
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.newegg.com/p/2S7-09HN-01T23">PN532 NFC module</a></span><span class="pr">$28.88</span></li>
-<li><span><a class="buy" rel="noopener sponsored" href="https://vxb.com/products/50-pcs-nfc-tags-stickers-with-ntag2">NTAG215 stickers (50-pack)</a></span><span class="pr">$39.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.tagstand.com/products/ntag215-round-sticker-25mm-diameter/">NTAG215 stickers (50 × $0.62)</a></span><span class="pr">$31.00</span></li>
 </ul>
 <ol class="steps">
 <li>Wire the PN532 over I2C: <code>SDA→21, SCL→22</code>; set its switch to I2C mode.</li>
 <li>Flash the SDK NFC example; pair in the Muse app.</li>
 <li>Tap each sticker to the reader to register its UID.</li>
 <li>Bind UIDs to routines in the skill: door tag → lock up + lights off; desk tag → focus playlist + do-not-disturb.</li>
-<li>Stick tags everywhere. 50 is more than enough.</li>
+<li>Stick tags everywhere (not on metal — these have no shielding). 50 is more than enough.</li>
 </ol>
 <div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
 </div>
@@ -259,13 +259,51 @@ footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--muted);f
 <div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
 </div>
 
+<div class="card">
+<div class="num">BUILD 11</div>
+<h3>Gesture Controller</h3>
+<p class="tag">Wave, swipe, and point — control Muse without touching a thing.</p>
+<div class="meta"><span class="pill cost">~$20</span><span class="pill">Easy</span><span class="pill">45 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.adafruit.com/products/3595">Adafruit APDS9960 gesture sensor</a></span><span class="pr">$7.50</span></li>
+</ul>
+<ol class="steps">
+<li>Wire the sensor over I2C: <code>VIN→3V3, GND→GND, SDA→21, SCL→22</code>. Leave INT unconnected (polling mode) — no soldering, jumper wires only.</li>
+<li>Flash the SDK gesture example (APDS9960 library); pair in the Muse app.</li>
+<li>Test at 4–8 in / 10–20 cm from the sensor: swipe right, left, up, down, then hold your hand still to check proximity.</li>
+<li>Bind gestures to routines: swipe right → next briefing item, swipe left → previous item, swipe up → volume up / start briefing, swipe down → volume down, hold hand / wave → pause / resume.</li>
+<li>Mount the sensor facing outward on your desk or shelf — keep the lens clear and out of direct sunlight.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
+<div class="card">
+<div class="num">BUILD 12</div>
+<h3>Desk Presence</h3>
+<p class="tag">Ultrasonic radar for your chair. Muse knows when you sit down, greets you, and pauses when you walk away.</p>
+<div class="meta"><span class="pill cost">~$17</span><span class="pill">Easy</span><span class="pill">30 min</span></div>
+<ul class="parts">
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/esp32-board">ESP32 dev board</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.adafruit.com/product/4007">Ultrasonic distance sensor, 3V/5V HC-SR04-compatible (RCWL-1601)</a></span><span class="pr">$3.95</span></li>
+</ul>
+<ol class="steps">
+<li>Mount the sensor on your desk or monitor edge, facing your chair, ~60–100 cm from where you sit. Wire it: <code>VCC→3V3, GND→GND, Trig→5, Echo→18</code>. No divider needed — this sensor runs at 3.3V logic.</li>
+<li>Flash the SDK sensor example; add a rolling median over 5 readings (1 per second) so a leaned-back stretch doesn't read as "away".</li>
+<li>Pair in the Muse app.</li>
+<li>Calibrate once: sit normally, note your distance, then set thresholds — present = under ~80 cm for 5 seconds, away = over ~120 cm (or no echo) for 30 seconds.</li>
+<li>Bind the presence skill: sit down → greeting + briefing; walk away → pause; come back → "welcome back" + what you missed.</li>
+</ol>
+<div class="cta"><a class="btn" href="https://github.com/facebookincubator/muse-gadget-sdk">Get the SDK</a></div>
+</div>
+
 </div>
 
 <div class="start">
 <h2>Starter bench kit</h2>
 <p style="margin:0 0 12px;color:var(--muted)">Building more than one? These two cover every build above.</p>
 <ul class="parts">
-<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-w">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
+<li><span><a class="buy" rel="noopener sponsored" href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-with-14-lengths">Jumper wire kit (560pc)</a></span><span class="pr">$12.99</span></li>
 <li><span><a class="buy" rel="noopener sponsored" href="https://www.microcenter.com/product/486799/inland-uno-breadb">Breadboard kit</a></span><span class="pr">$17.99</span></li>
 </ul>
 </div>
